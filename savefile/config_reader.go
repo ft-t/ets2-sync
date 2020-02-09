@@ -101,6 +101,18 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 			if parsed[0] == "permanent_data:" {
 				currentSection.(*CompanyConfigSection).permanentData = parsed[1]
 			}
+			if parsed[0] == "delivered_trailer:" {
+				currentSection.(*CompanyConfigSection).deliveredTrailer = parsed[1]
+			}
+			if parsed[0] == "delivered_pos:" {
+				currentSection.(*CompanyConfigSection).deliveredPos = parsed[1]
+			}
+			if parsed[0] == "discovered:" {
+				currentSection.(*CompanyConfigSection).discovered = parsed[1]
+			}
+			if parsed[0] == "reserved_trailer_slot:" {
+				currentSection.(*CompanyConfigSection).reservedTrailerSlot = parsed[1]
+			}
 
 			if strings.Contains(parsed[0], "job_offer[") {
 				sect := currentSection.(*CompanyConfigSection)

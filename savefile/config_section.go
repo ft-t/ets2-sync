@@ -15,11 +15,15 @@ type IConfigSection interface {
 }
 
 type CompanyConfigSection struct {
-	name          string
-	nameValue     string // nameless
-	permanentData string
-	raw           bytes.Buffer
-	Jobs          []*JobOffer
+	name                string
+	nameValue           string // nameless
+	permanentData       string
+	deliveredTrailer    string
+	deliveredPos        string
+	reservedTrailerSlot string
+	discovered		    string
+	raw                 bytes.Buffer
+	Jobs                []*JobOffer
 }
 
 func (c *CompanyConfigSection) NameValue() string {
@@ -28,8 +32,8 @@ func (c *CompanyConfigSection) NameValue() string {
 
 func (c *CompanyConfigSection) Write(w io.Writer, newLine string) (n int64, err error) {
 	_, _ = w.Write([]byte(fmt.Sprintf(" permanent_data: %s%s", c.permanentData, newLine)))  // todo
-	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_trailer: %s%s", c.permanentData, newLine)))  // todo
-	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_pos: %s%s", c.permanentData, newLine)))  // todo
+	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_trailer: %s%s", c.deliveredTrailer, newLine)))  // todo
+	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_pos: %s%s", c.deliveredPos, newLine)))  // todo
 	_, _ = w.Write([]byte(fmt.Sprintf(" job_offer: %d%s", len(c.Jobs), newLine)))  // todo
 
 	for i, j := range c.Jobs {
@@ -37,8 +41,8 @@ func (c *CompanyConfigSection) Write(w io.Writer, newLine string) (n int64, err 
 	}
 
 	_, _ = c.raw.WriteTo(w)                                             // cargo_offer_seeds
-	_, _ = w.Write([]byte(fmt.Sprintf(" discovered: true%s", newLine))) // todo check
-	_, _ = w.Write([]byte(fmt.Sprintf(" reserved_trailer_slot: %s%s", c.permanentData, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" discovered: %s%s", c.discovered, newLine))) // todo check
+	_, _ = w.Write([]byte(fmt.Sprintf(" reserved_trailer_slot: %s%s", c.reservedTrailerSlot, newLine)))
 
 	return 1, nil
 }
