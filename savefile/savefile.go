@@ -9,9 +9,13 @@ import (
 )
 
 type SaveFile struct {
-	source           []byte
-	offset           int
-	lineEndingFormat string
+	source              []byte
+	offset              int
+	lineEndingFormat    string
+	availableCompanies  []string
+	availableCargoTypes []string
+	currentJob          string
+	selectedJob         string
 }
 
 func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
@@ -27,12 +31,7 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 	}
 
 	r := &SaveFile{source: decrypted}
-
-	if string(decrypted[8:10]) == "\r\n" {
-		r.lineEndingFormat = "\r\n"
-	} else {
-		r.lineEndingFormat = "\n"
-	}
+	r.parseConfig(decrypted)
 
 	return r, nil
 }
