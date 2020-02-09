@@ -45,7 +45,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				continue
 			}
 			if parsed[0] == "company" {
-				currentSection = &CompanyConfigSection{name: parsed[0], nameValue: parsed[2]}
+				currentSection = &CompanyConfigSection{name: parsed[0], nameValue: parsed[2], Jobs: map[string]*JobOffer{}}
 				continue
 			}
 
@@ -56,6 +56,10 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 		if len(parsed) == 1 && parsed[len(parsed)-1] == "}" { // end section
 			if currentSection == nil {
 				break
+			}
+
+			if currentSection.Name() == "company" {
+				s.companies = append(s.companies, currentSection.(*CompanyConfigSection))
 			}
 
 			s.configSections = append(s.configSections, currentSection)
@@ -81,19 +85,19 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 
 		if currentSection.Name() == "economy" && len(parsed) > 0 {
 			if strings.Contains(parsed[0], "companies[") {
-				s.availableCompanies = append(s.availableCompanies, parsed[1])
+				s.AvailableCompanies = append(s.AvailableCompanies, parsed[1])
 			}
 			if strings.Contains(parsed[0], "transported_cargo_types[") {
-				s.availableCargoTypes = append(s.availableCompanies, parsed[1])
+				s.AvailableCargoTypes = append(s.AvailableCompanies, parsed[1])
 			}
 		}
 
 		if currentSection.Name() == "player" {
 			if parsed[0] == "current_job:" && parsed[1] != "null" {
-				s.currentJob = parsed[1]
+				s.CurrentJob = parsed[1]
 			}
 			if parsed[0] == "selected_job:" && parsed[1] != "null" {
-				s.selectedJob = parsed[1]
+				s.SelectedJob = parsed[1]
 			}
 		}
 
@@ -128,7 +132,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 		}
 		for _, jobId := range v {
 			if offer, ok := offers[jobId]; ok {
-				k.Jobs = append(k.Jobs, offer)
+				k.Jobs[jobId] = offer
 			}
 		}
 	}

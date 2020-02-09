@@ -21,9 +21,9 @@ type CompanyConfigSection struct {
 	deliveredTrailer    string
 	deliveredPos        string
 	reservedTrailerSlot string
-	discovered		    string
+	discovered          string
 	raw                 bytes.Buffer
-	Jobs                []*JobOffer
+	Jobs                map[string]*JobOffer
 }
 
 func (c *CompanyConfigSection) NameValue() string {
@@ -31,16 +31,19 @@ func (c *CompanyConfigSection) NameValue() string {
 }
 
 func (c *CompanyConfigSection) Write(w io.Writer, newLine string) (n int64, err error) {
-	_, _ = w.Write([]byte(fmt.Sprintf(" permanent_data: %s%s", c.permanentData, newLine)))  // todo
-	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_trailer: %s%s", c.deliveredTrailer, newLine)))  // todo
-	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_pos: %s%s", c.deliveredPos, newLine)))  // todo
-	_, _ = w.Write([]byte(fmt.Sprintf(" job_offer: %d%s", len(c.Jobs), newLine)))  // todo
+	_, _ = w.Write([]byte(fmt.Sprintf(" permanent_data: %s%s", c.permanentData, newLine)))       // todo
+	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_trailer: %s%s", c.deliveredTrailer, newLine))) // todo
+	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_pos: %s%s", c.deliveredPos, newLine)))         // todo
+	_, _ = w.Write([]byte(fmt.Sprintf(" job_offer: %d%s", len(c.Jobs), newLine)))                // todo
 
-	for i, j := range c.Jobs {
-		_, _ = w.Write([]byte(fmt.Sprintf(" job_offer[%d]: %s%s", i, j.id, newLine)))
+	index := 0
+
+	for _, j := range c.Jobs {
+		_, _ = w.Write([]byte(fmt.Sprintf(" job_offer[%d]: %s%s", index, j.id, newLine)))
+		index++
 	}
 
-	_, _ = c.raw.WriteTo(w)                                             // cargo_offer_seeds
+	_, _ = c.raw.WriteTo(w)                                                         // cargo_offer_seeds
 	_, _ = w.Write([]byte(fmt.Sprintf(" discovered: %s%s", c.discovered, newLine))) // todo check
 	_, _ = w.Write([]byte(fmt.Sprintf(" reserved_trailer_slot: %s%s", c.reservedTrailerSlot, newLine)))
 

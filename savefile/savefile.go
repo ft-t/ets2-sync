@@ -13,11 +13,12 @@ type SaveFile struct {
 	source              []byte
 	offset              int
 	lineEndingFormat    string
-	availableCompanies  []string
-	availableCargoTypes []string
-	currentJob          string
-	selectedJob         string
+	AvailableCompanies  []string
+	AvailableCargoTypes []string
+	CurrentJob          string
+	SelectedJob         string
 	configSections      []IConfigSection
+	companies           []*CompanyConfigSection
 }
 
 func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
