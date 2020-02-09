@@ -2,13 +2,16 @@ package savefile
 
 import (
 	"bytes"
+	"fmt"
+	"io"
 	"strings"
 )
 
 type IConfigSection interface {
 	Name() string
+	NameValue() string
 	AppendLine(line string)
-	//	Write() string // todo
+	Write(w io.Writer, newLine string) (n int64, err error)
 }
 
 type CompanyConfigSection struct {
@@ -17,6 +20,27 @@ type CompanyConfigSection struct {
 	permanentData string
 	raw           bytes.Buffer
 	Jobs          []*JobOffer
+}
+
+func (c *CompanyConfigSection) NameValue() string {
+	return c.nameValue
+}
+
+func (c *CompanyConfigSection) Write(w io.Writer, newLine string) (n int64, err error) {
+	_, _ = w.Write([]byte(fmt.Sprintf(" permanent_data: %s%s", c.permanentData, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_trailer: %s%s", c.permanentData, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_pos: %s%s", c.permanentData, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" job_offer: %d%s", len(c.Jobs), newLine)))
+
+	for i, j := range c.Jobs {
+		_, _ = w.Write([]byte(fmt.Sprintf(" job_offer[%d]: %s%s", i, j.id, newLine)))
+	}
+
+	_, _ = c.raw.WriteTo(w)                                             // cargo_offer_seeds
+	_, _ = w.Write([]byte(fmt.Sprintf(" discovered: true%s", newLine))) // todo check
+	_, _ = w.Write([]byte(fmt.Sprintf(" reserved_trailer_slot: %s%s", c.permanentData, newLine)))
+
+	return 1, nil
 }
 
 func (c *CompanyConfigSection) Name() string {
@@ -43,12 +67,21 @@ type JobOffer struct {
 	unitsCount         string
 	fillRatio          string
 	trailerPlace       string
+	id                 string // nameParam
 }
 
 type JobOfferConfigSection struct {
 	name      string
 	nameValue string // nameless
 	Offer     *JobOffer
+}
+
+func (s *JobOfferConfigSection) NameValue() string {
+	return s.nameValue
+}
+
+func (s *JobOfferConfigSection) Write(w io.Writer, newLine string) (n int64, err error) {
+	panic("implement me")
 }
 
 func (s *JobOfferConfigSection) Name() string {
@@ -104,6 +137,9 @@ func (s *JobOfferConfigSection) FillOfferData(fieldName string, value string) {
 	case "trailer_place":
 		s.Offer.trailerPlace = value
 		break
+	case "id":
+		s.Offer.id = value
+		break
 	}
 }
 
@@ -111,6 +147,14 @@ type RawConfigSection struct {
 	name      string
 	nameValue string // nameless
 	raw       bytes.Buffer
+}
+
+func (r *RawConfigSection) NameValue() string {
+	return r.nameValue
+}
+
+func (r *RawConfigSection) Write(w io.Writer, newLine string) (n int64, err error) {
+	return r.raw.WriteTo(w)
 }
 
 func (r *RawConfigSection) AppendLine(line string) {

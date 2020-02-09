@@ -3,7 +3,6 @@ package savefile
 import (
 	"bufio"
 	"bytes"
-	"fmt"
 	"strings"
 )
 
@@ -59,9 +58,12 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				break
 			}
 
+			s.configSections = append(s.configSections, currentSection)
+
 			if currentSection.Name() == "job_offer_data" {
 				m := currentSection.(*JobOfferConfigSection)
 				offers[m.nameValue] = m.Offer
+				m.FillOfferData("id", m.nameValue)
 			}
 			currentSection = nil
 			continue
@@ -118,6 +120,4 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 			}
 		}
 	}
-
-	fmt.Println(i)
 }

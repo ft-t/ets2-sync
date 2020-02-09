@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"compress/zlib"
 	"errors"
+	"fmt"
 	"io"
 	"io/ioutil"
 )
@@ -16,6 +17,7 @@ type SaveFile struct {
 	availableCargoTypes []string
 	currentJob          string
 	selectedJob         string
+	configSections      []IConfigSection
 }
 
 func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
@@ -34,6 +36,29 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 	r.parseConfig(decrypted)
 
 	return r, nil
+}
+
+func (s *SaveFile) Write(w io.Writer) (n int, err error) {
+	n, err = w.Write([]byte(fmt.Sprintf("SiiNunit%s", s.lineEndingFormat)))
+
+	if err != nil {
+		return n, err
+	}
+
+	n, err = w.Write([]byte(fmt.Sprintf("{%s", s.lineEndingFormat)))
+
+	if err != nil {
+		return n, err
+	}
+
+	for _, k := range s.configSections {
+		_, _ = w.Write([]byte(fmt.Sprintf("%s : %s {%s", k.Name(), k.NameValue(), s.lineEndingFormat)))
+		_, _ = k.Write(w, s.lineEndingFormat) // write struct
+		_, _ = w.Write([]byte(fmt.Sprintf("}%s", s.lineEndingFormat)))
+		_, _ = w.Write([]byte(fmt.Sprintf("%s", s.lineEndingFormat)))
+	}
+
+	return 0, nil // todo
 }
 
 func tryDecrypt(reader *bytes.Reader) ([]byte, error) {
