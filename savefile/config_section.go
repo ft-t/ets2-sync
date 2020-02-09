@@ -61,6 +61,7 @@ func (c *CompanyConfigSection) AppendLine(line string) {
 }
 
 type JobOffer struct {
+	SourceCompany      string
 	Target             string
 	ExpirationTime     string
 	Urgency            string
@@ -121,13 +122,13 @@ func (s *JobOfferConfigSection) FillOfferData(fieldName string, value string) {
 	}
 
 	switch strings.Trim(fieldName, ":") {
-	case "Target":
+	case "target":
 		s.Offer.Target = value
 		break
 	case "expiration_time":
 		s.Offer.ExpirationTime = value
 		break
-	case "Urgency":
+	case "urgency":
 		s.Offer.Urgency = value
 		break
 	case "shortest_distance_km":

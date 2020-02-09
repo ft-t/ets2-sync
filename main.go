@@ -3,22 +3,34 @@ package main
 import (
 	"bufio"
 	"bytes"
+	"encoding/json"
 	"fmt"
 	"html/template"
 	"io"
+	"io/ioutil"
 	"net/http"
+	"os"
 	"strings"
 	"time"
 
 	"ets2-sync/savefile"
 )
 
-func main() {
-	/*d, err := ioutil.ReadFile("/home/skydev//go/src/ets2-sync/game.sii")
+func tryMerge() {
+	b, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/test.json")
+	var jobs []*savefile.JobOffer
+
+	json.Unmarshal(b, &jobs)
+
+	d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game.sii")
 	r, _ := savefile.NewSaveFile(bytes.NewReader(d))
 
 	save, _ := savefile.NewSaveManager(r)
-	save.ClearJobs()
+	save.ClearOffers()
+
+	for _, j := range jobs {
+		save.TryAddOffer(j)
+	}
 
 	targetPath := "/home/skydev/go/src/ets2-sync/game.sii_2"
 	os.Remove(targetPath)
@@ -26,25 +38,51 @@ func main() {
 
 	wr := bufio.NewWriter(f)
 
-	_, err = r.Write(wr)
+	_, _ = r.Write(wr)
 
-	if err != nil {
-		fmt.Println(err)
-	}
+	//if err != nil {
+	//	fmt.Println(err)
+	//}
 
-	_ = wr.Flush()*/
+	_ = wr.Flush()
+}
 
-	Start()
+func main() {
+	tryMerge()
+	//d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game_damanox.sii")
+	//r, _ := savefile.NewSaveFile(bytes.NewReader(d))
+	//
+	//_, _ = savefile.NewSaveManager(r)
+	//
+	//b, _ := json.Marshal(r.ExportJobs())
+	//x := string(b)
+	//fmt.Print(x)
+	//save.ClearOffers()
+	//
+	//targetPath := "/home/skydev/go/src/ets2-sync/game.sii_2"
+	//os.Remove(targetPath)
+	//f, _ := os.Create(targetPath)
+	//
+	//wr := bufio.NewWriter(f)
+	//
+	//_, err = r.Write(wr)
+	//
+	//if err != nil {
+	//	fmt.Println(err)
+	//}
+	//
+	//_ = wr.Flush()
 
+	//Start()
 
 	//fmt.Println(r, e)
 }
 
 func Start() {
 	server := &http.Server{
-		ReadTimeout:    60 * time.Second,
-		WriteTimeout:   60 * time.Second,
-		Addr: ":8080",
+		ReadTimeout:  60 * time.Second,
+		WriteTimeout: 60 * time.Second,
+		Addr:         ":8080",
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {

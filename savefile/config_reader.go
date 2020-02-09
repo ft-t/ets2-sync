@@ -3,6 +3,7 @@ package savefile
 import (
 	"bufio"
 	"bytes"
+	"fmt"
 	"strings"
 )
 
@@ -59,7 +60,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 			}
 
 			if currentSection.Name() == "company" {
-				s.companies = append(s.companies, currentSection.(*CompanyConfigSection))
+				s.companies[currentSection.NameValue()] = currentSection.(*CompanyConfigSection)
 			}
 
 			if currentSection.Name() == "job_offer_data" {
@@ -90,7 +91,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				s.AvailableCompanies = append(s.AvailableCompanies, parsed[1])
 			}
 			if strings.Contains(parsed[0], "transported_cargo_types[") {
-				s.AvailableCargoTypes = append(s.AvailableCompanies, parsed[1])
+				s.AvailableCargoTypes = append(s.AvailableCargoTypes, fmt.Sprintf("cargo.%s",parsed[1]))
 			}
 		}
 
@@ -125,7 +126,15 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 		}
 		for _, jobId := range v {
 			if offer, ok := offers[jobId]; ok {
+				offer.SourceCompany = k.nameValue
 				k.Jobs[jobId] = offer
+				offer.ExpirationTime = "86400000"
+			}
+		}
+
+		for kJob, job := range k.Jobs {
+			if job.Target == "\"\"" || job.Target == "" || job.Target == "null" || job.Cargo == "null" || job.Cargo == "cargo.caravan"  {
+				delete(k.Jobs, kJob)
 			}
 		}
 	}

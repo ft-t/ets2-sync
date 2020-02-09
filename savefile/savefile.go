@@ -16,7 +16,7 @@ type SaveFile struct {
 	AvailableCompanies  []string
 	AvailableCargoTypes []string
 	configSections      []IConfigSection
-	companies           []*CompanyConfigSection
+	companies           map[string]*CompanyConfigSection
 }
 
 func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
@@ -31,10 +31,26 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 		return nil, err
 	}
 
-	r := &SaveFile{source: decrypted}
+	r := &SaveFile{source: decrypted, companies: map[string]*CompanyConfigSection{}}
 	r.parseConfig(decrypted)
 
 	return r, nil
+}
+
+func (s *SaveFile) ExportJobs() []*JobOffer {
+	var arr []*JobOffer
+
+	for _, k := range s.companies {
+		if k.Jobs == nil {
+			continue
+		}
+
+		for _, j := range k.Jobs {
+			arr = append(arr, j)
+		}
+	}
+
+	return arr
 }
 
 func (s *SaveFile) Write(w io.Writer) (n int, err error) {
