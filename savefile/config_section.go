@@ -39,7 +39,7 @@ func (c *CompanyConfigSection) Write(w io.Writer, newLine string) (n int64, err 
 	index := 0
 
 	for _, j := range c.Jobs {
-		_, _ = w.Write([]byte(fmt.Sprintf(" job_offer[%d]: %s%s", index, j.id, newLine)))
+		_, _ = w.Write([]byte(fmt.Sprintf(" job_offer[%d]: %s%s", index, j.Id, newLine)))
 		index++
 	}
 
@@ -61,36 +61,36 @@ func (c *CompanyConfigSection) AppendLine(line string) {
 }
 
 type JobOffer struct {
-	target             string
-	expirationTime     string
-	urgency            string
-	shortestDistanceKm string
-	ferryTime          string
-	ferryPrice         string
-	cargo              string
-	companyTruck       string
-	trailerVariant     string
-	trailerDefinition  string
-	unitsCount         string
-	fillRatio          string
-	trailerPlace       string
-	id                 string // nameParam
+	Target             string
+	ExpirationTime     string
+	Urgency            string
+	ShortestDistanceKm string
+	FerryTime          string
+	FerryPrice         string
+	Cargo              string
+	CompanyTruck       string
+	TrailerVariant     string
+	TrailerDefinition  string
+	UnitsCount         string
+	FillRatio          string
+	TrailerPlace       string
+	Id                 string // nameParam
 }
 
 func (j *JobOffer) Write(w io.Writer, newLine string){
-	_, _ = w.Write([]byte(fmt.Sprintf(" target: %s%s", j.target, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" expiration_time: %s%s", j.expirationTime, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" urgency: %s%s", j.urgency, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" shortest_distance_km: %s%s", j.shortestDistanceKm, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" ferry_time: %s%s", j.ferryTime, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" ferry_price: %s%s", j.ferryPrice, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" cargo: %s%s", j.cargo, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" company_truck: %s%s", j.companyTruck, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_variant: %s%s", j.trailerVariant, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_definition: %s%s", j.trailerDefinition, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" units_count: %s%s", j.unitsCount, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" fill_ratio: %s%s", j.fillRatio, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_place: %s%s", j.trailerPlace, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" target: %s%s", j.Target, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" expiration_time: %s%s", j.ExpirationTime, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" urgency: %s%s", j.Urgency, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" shortest_distance_km: %s%s", j.ShortestDistanceKm, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" ferry_time: %s%s", j.FerryTime, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" ferry_price: %s%s", j.FerryPrice, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" cargo: %s%s", j.Cargo, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" company_truck: %s%s", j.CompanyTruck, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_variant: %s%s", j.TrailerVariant, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_definition: %s%s", j.TrailerDefinition, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" units_count: %s%s", j.UnitsCount, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" fill_ratio: %s%s", j.FillRatio, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_place: %s%s", j.TrailerPlace, newLine)))
 }
 
 type JobOfferConfigSection struct {
@@ -121,47 +121,47 @@ func (s *JobOfferConfigSection) FillOfferData(fieldName string, value string) {
 	}
 
 	switch strings.Trim(fieldName, ":") {
-	case "target":
-		s.Offer.target = value
+	case "Target":
+		s.Offer.Target = value
 		break
 	case "expiration_time":
-		s.Offer.expirationTime = value
+		s.Offer.ExpirationTime = value
 		break
-	case "urgency":
-		s.Offer.urgency = value
+	case "Urgency":
+		s.Offer.Urgency = value
 		break
 	case "shortest_distance_km":
-		s.Offer.shortestDistanceKm = value
+		s.Offer.ShortestDistanceKm = value
 		break
 	case "ferry_time":
-		s.Offer.ferryTime = value
+		s.Offer.FerryTime = value
 		break
 	case "ferry_price":
-		s.Offer.ferryPrice = value
+		s.Offer.FerryPrice = value
 		break
 	case "cargo":
-		s.Offer.cargo = value
+		s.Offer.Cargo = value
 		break
 	case "company_truck":
-		s.Offer.companyTruck = value
+		s.Offer.CompanyTruck = value
 		break
 	case "trailer_variant":
-		s.Offer.trailerVariant = value
+		s.Offer.TrailerVariant = value
 		break
 	case "trailer_definition":
-		s.Offer.trailerDefinition = value
+		s.Offer.TrailerDefinition = value
 		break
 	case "units_count":
-		s.Offer.unitsCount = value
+		s.Offer.UnitsCount = value
 		break
 	case "fill_ratio":
-		s.Offer.fillRatio = value
+		s.Offer.FillRatio = value
 		break
 	case "trailer_place":
-		s.Offer.trailerPlace = value
+		s.Offer.TrailerPlace = value
 		break
 	case "id":
-		s.Offer.id = value
+		s.Offer.Id = value
 		break
 	}
 }

@@ -66,7 +66,7 @@ func (s *SaveFile) Write(w io.Writer) (n int, err error) {
 		if comp, ok := k.(*CompanyConfigSection); ok {
 			if comp.Jobs != nil {
 				for _, j := range comp.Jobs {
-					writeHeader("job_offer_data", j.id)
+					writeHeader("job_offer_data", j.Id)
 					j.Write(w, s.lineEndingFormat)
 					writeEnd()
 				}

@@ -18,18 +18,18 @@ func NewSaveManager(file *SaveFile) (*SaveManager, error) {
 	return mgr, nil
 }
 
-func (m *SaveManager) ClearJobs() {
+func (m *SaveManager) ClearOffers() {
 	for _, v := range m.file.companies {
 		if v.Jobs == nil {
 			continue
 		}
 
 		for key, _ := range v.Jobs {
-			//for i, s := range m.file.configSections {
-			//	if s.
-			//}
-
 			delete(v.Jobs, key)
 		}
 	}
+}
+
+func (m *SaveManager) TryAddOffer(offer *JobOffer) {
+
 }
