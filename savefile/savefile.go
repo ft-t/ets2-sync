@@ -58,6 +58,8 @@ func (s *SaveFile) Write(w io.Writer) (n int, err error) {
 		_, _ = w.Write([]byte(fmt.Sprintf("%s", s.lineEndingFormat)))
 	}
 
+	n, err = w.Write([]byte(fmt.Sprintf("}%s", s.lineEndingFormat)))
+
 	return 0, nil // todo
 }
 
