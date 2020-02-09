@@ -15,8 +15,6 @@ type SaveFile struct {
 	lineEndingFormat    string
 	AvailableCompanies  []string
 	AvailableCargoTypes []string
-	CurrentJob          string
-	SelectedJob         string
 	configSections      []IConfigSection
 	companies           []*CompanyConfigSection
 }
@@ -52,11 +50,28 @@ func (s *SaveFile) Write(w io.Writer) (n int, err error) {
 		return n, err
 	}
 
-	for _, k := range s.configSections {
-		_, _ = w.Write([]byte(fmt.Sprintf("%s : %s {%s", k.Name(), k.NameValue(), s.lineEndingFormat)))
-		_, _ = k.Write(w, s.lineEndingFormat) // write struct
+	writeHeader := func(name string, nameValue string) {
+		_, _ = w.Write([]byte(fmt.Sprintf("%s : %s {%s", name, nameValue, s.lineEndingFormat)))
+	}
+	writeEnd := func() {
 		_, _ = w.Write([]byte(fmt.Sprintf("}%s", s.lineEndingFormat)))
 		_, _ = w.Write([]byte(fmt.Sprintf("%s", s.lineEndingFormat)))
+	}
+
+	for _, k := range s.configSections {
+		writeHeader(k.Name(), k.NameValue())
+		_, _ = k.Write(w, s.lineEndingFormat) // write struct
+		writeEnd()
+
+		if comp, ok := k.(*CompanyConfigSection); ok {
+			if comp.Jobs != nil {
+				for _, j := range comp.Jobs {
+					writeHeader("job_offer_data", j.id)
+					j.Write(w, s.lineEndingFormat)
+					writeEnd()
+				}
+			}
+		}
 	}
 
 	n, err = w.Write([]byte(fmt.Sprintf("}%s", s.lineEndingFormat)))

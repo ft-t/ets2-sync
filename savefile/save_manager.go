@@ -25,9 +25,9 @@ func (m *SaveManager) ClearJobs() {
 		}
 
 		for key, _ := range v.Jobs {
-			if key == m.file.SelectedJob || key == m.file.CurrentJob {
-				continue
-			}
+			//for i, s := range m.file.configSections {
+			//	if s.
+			//}
 
 			delete(v.Jobs, key)
 		}

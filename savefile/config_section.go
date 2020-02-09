@@ -77,6 +77,22 @@ type JobOffer struct {
 	id                 string // nameParam
 }
 
+func (j *JobOffer) Write(w io.Writer, newLine string){
+	_, _ = w.Write([]byte(fmt.Sprintf(" target: %s%s", j.target, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" expiration_time: %s%s", j.expirationTime, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" urgency: %s%s", j.urgency, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" shortest_distance_km: %s%s", j.shortestDistanceKm, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" ferry_time: %s%s", j.ferryTime, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" ferry_price: %s%s", j.ferryPrice, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" cargo: %s%s", j.cargo, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" company_truck: %s%s", j.companyTruck, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_variant: %s%s", j.trailerVariant, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_definition: %s%s", j.trailerDefinition, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" units_count: %s%s", j.unitsCount, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" fill_ratio: %s%s", j.fillRatio, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_place: %s%s", j.trailerPlace, newLine)))
+}
+
 type JobOfferConfigSection struct {
 	name      string
 	nameValue string // nameless
@@ -88,21 +104,7 @@ func (s *JobOfferConfigSection) NameValue() string {
 }
 
 func (s *JobOfferConfigSection) Write(w io.Writer, newLine string) (n int64, err error) {
-	_, _ = w.Write([]byte(fmt.Sprintf(" target: %s%s", s.Offer.target, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" expiration_time: %s%s", s.Offer.expirationTime, newLine))) // todo
-	_, _ = w.Write([]byte(fmt.Sprintf(" urgency: %s%s", s.Offer.urgency, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" shortest_distance_km: %s%s", s.Offer.shortestDistanceKm, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" ferry_time: %s%s", s.Offer.ferryTime, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" ferry_price: %s%s", s.Offer.ferryPrice, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" cargo: %s%s", s.Offer.cargo, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" company_truck: %s%s", s.Offer.companyTruck, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_variant: %s%s", s.Offer.trailerVariant, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_definition: %s%s", s.Offer.trailerDefinition, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" units_count: %s%s", s.Offer.unitsCount, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" fill_ratio: %s%s", s.Offer.fillRatio, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_place: %s%s", s.Offer.trailerPlace, newLine)))
-
-	return 1, nil
+	panic("should not be called")
 }
 
 func (s *JobOfferConfigSection) Name() string {

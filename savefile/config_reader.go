@@ -62,13 +62,15 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				s.companies = append(s.companies, currentSection.(*CompanyConfigSection))
 			}
 
-			s.configSections = append(s.configSections, currentSection)
-
 			if currentSection.Name() == "job_offer_data" {
 				m := currentSection.(*JobOfferConfigSection)
 				offers[m.nameValue] = m.Offer
 				m.FillOfferData("id", m.nameValue)
+				continue // job_offer_data should not present in configSections
 			}
+
+			s.configSections = append(s.configSections, currentSection)
+
 			currentSection = nil
 			continue
 		}
@@ -89,15 +91,6 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 			}
 			if strings.Contains(parsed[0], "transported_cargo_types[") {
 				s.AvailableCargoTypes = append(s.AvailableCompanies, parsed[1])
-			}
-		}
-
-		if currentSection.Name() == "player" {
-			if parsed[0] == "current_job:" && parsed[1] != "null" {
-				s.CurrentJob = parsed[1]
-			}
-			if parsed[0] == "selected_job:" && parsed[1] != "null" {
-				s.SelectedJob = parsed[1]
 			}
 		}
 
