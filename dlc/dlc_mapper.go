@@ -3,9 +3,10 @@ package dlc
 import (
 	"encoding/json"
 	"errors"
-	"ets2-sync/utils"
 	"fmt"
 	"io/ioutil"
+
+	"ets2-sync/utils"
 )
 
 type Dlc int
@@ -22,6 +23,7 @@ const (
 	Krone              Dlc = 1 << 7
 	Schwarzmuller      Dlc = 1 << 8
 	Scandinavia        Dlc = 1 << 9
+	RoadToTheBlackSea  Dlc = 1 << 10
 )
 
 var allDLCs = []Dlc{BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea}
@@ -50,6 +52,8 @@ func (t Dlc) ToString() string {
 		return "krone"
 	case Schwarzmuller:
 		return "schwarzmuller"
+	case RoadToTheBlackSea:
+		return "road_to_the_black_sea"
 	}
 
 	return "unk"

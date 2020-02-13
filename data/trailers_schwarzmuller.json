@@ -1,0 +1,28 @@
+{
+  "variants": [
+    "trailer.schw_ovrwght.aircond",
+    "trailer.schw_ovrwght.driller",
+    "trailer.schw_ovrwght.helicopter",
+    "trailer.schw_ovrwght.roller",
+    "trailer.schw_ovrwght.tracks",
+    "trailer.schw_ovrwght.tractor",
+    "trailer.schw_ovrwght.tube",
+    "trailer.schw_ovrwght.yacht",
+    "trailer.schw_food",
+    "trailer.schw_ovrwght.boat",
+    "trailer.schw_ovrwght.catg",
+    "trailer.schw_ovrwght.digger500",
+    "trailer.schw_ovrwght.excavator",
+    "trailer.schw_ovrwght.forklifts",
+    "trailer.schw_ovrwght.tractors",
+    "trailer.schw_ovrwght.twocats",
+    "trailer.schw_curtain",
+    "trailer.schw_reefer",
+    "trailer.schw_slidep"
+  ],
+  "definitions": [
+    "trailer_def.schwmuller.curtain.single_3.curtain",
+    "trailer_def.schwmuller.reefer.single_3.reefer",
+    "trailer_def.schwmuller.slidepost.single_3.slidepost"
+  ]
+}

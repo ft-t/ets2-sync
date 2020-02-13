@@ -1,0 +1,13 @@
+{
+  "variants": [
+    "trailer.overweight.aircond",
+    "trailer.overweight.driller",
+    "trailer.overweight.helicopter",
+    "trailer.overweight.roller",
+    "trailer.overweight.tracks",
+    "trailer.overweight.tractor",
+    "trailer.overweight.tube",
+    "trailer.overweight.yacht"
+  ],
+  "definitions": []
+}
