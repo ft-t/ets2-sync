@@ -1,16 +1,13 @@
 {
   "variants": [
-    "trailer.goldhofer.mpa_k.boiler_parts",
-    "trailer.goldhofer.mpa_k.cat_785c",
-    "trailer.goldhofer.mpa_k.ex_bucket",
-    "trailer.goldhofer.mpa_k_flat14.condensator",
-    "trailer.goldhofer.mpa_k_flat14.m_59_80_r63",
-    "trailer.goldhofer.mpa_k_flat14.mystery_cyl",
-    "trailer.goldhofer.mpa_k_flat.heat_exch",
-    "trailer.goldhofer.mpa_k_flat.lattice",
-    "trailer.goldhofer.mpa_k_flat.silo",
-    "trailer.goldhofer.mpa_k.mystery_box",
-    "trailer.goldhofer.stz_vl.pilot_boat"
+    "trailer.goldhofer.mpa_k_flat14.k_d155ax_5",
+    "trailer.goldhofer.mpa_k_flat14.t_c_3160",
+    "trailer.goldhofer.mpa_k_flat14.vossloh_g6",
+    "trailer.goldhofer.mpa_k_flat14.wirtgenw250i",
+    "trailer.goldhofer.stz_vl.coil",
+    "trailer.goldhofer.stz_vl.conc_beam",
+    "trailer.goldhofer.stz_vl.m_centering",
+    "trailer.goldhofer.stz_vl.transformer"
   ],
   "definitions": []
 }

@@ -24,6 +24,7 @@ const (
 	Schwarzmuller      Dlc = 1 << 8
 	Scandinavia        Dlc = 1 << 9
 	RoadToTheBlackSea  Dlc = 1 << 10
+	SpecialTransport   Dlc = 1 << 11
 )
 
 var allDLCs = []Dlc{BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea}
@@ -54,6 +55,8 @@ func (t Dlc) ToString() string {
 		return "schwarzmuller"
 	case RoadToTheBlackSea:
 		return "road_to_the_black_sea"
+	case SpecialTransport:
+		return "special_transport"
 	}
 
 	return "unk"
