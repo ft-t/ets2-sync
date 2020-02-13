@@ -3,5 +3,8 @@
     "trailer.car_it",
     "trailer.van_trans_id"
   ],
-  "definitions": []
+  "definitions": [
+    "trailer_def.car_it.car_it",
+    "trailer_def.iveco_vans.van_trans_id"
+  ]
 }

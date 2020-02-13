@@ -2,5 +2,11 @@
   "variants": [
     "trailer.car_fr"
   ],
-  "definitions": []
+  "definitions": [
+    "trailer_def.cars_fr.car_fr",
+    "trailer_def.fuel_oil.fuel_cistern",
+    "trailer_def.fuel_oil.willig.fuel_cistern",
+    "trailer_def.granite_cube.s_ki_solid.cover",
+    "trailer_def.live_catt_fr.livestock"
+  ]
 }

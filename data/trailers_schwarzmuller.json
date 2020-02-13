@@ -23,6 +23,14 @@
   "definitions": [
     "trailer_def.schwmuller.curtain.single_3.curtain",
     "trailer_def.schwmuller.reefer.single_3.reefer",
-    "trailer_def.schwmuller.slidepost.single_3.slidepost"
+    "trailer_def.schwmuller.slidepost.single_3.slidepost",
+    "trailer_def.digger1000.schw_ovrwght.catg",
+    "trailer_def.digger500.schw_ovrwght.digger500",
+    "trailer_def.diggers.schw_ovrwght.twocats",
+    "trailer_def.excavator.schw_ovrwght.excavator",
+    "trailer_def.forklifts.schw_ovrwght.forklifts",
+    "trailer_def.milk.schw_food",
+    "trailer_def.princess.schw_ovrwght.boat",
+    "trailer_def.tractors.schw_ovrwght.tractors"
   ]
 }
