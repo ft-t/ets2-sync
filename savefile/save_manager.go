@@ -2,6 +2,7 @@ package savefile
 
 import (
 	"errors"
+	"ets2-sync/utils"
 	"strings"
 )
 
@@ -44,19 +45,10 @@ func (m *SaveManager) TryAddOffer(offer *JobOffer) {
 		return // todo
 	}
 
-	if contains(m.file.AvailableCompanies, offer.SourceCompany) &&
-		contains(m.file.AvailableCargoTypes, offer.Cargo) {
+	if utils.Contains(m.file.AvailableCompanies, offer.SourceCompany) &&
+		utils.Contains(m.file.AvailableCargoTypes, offer.Cargo) {
 		if comp, ok := m.file.companies[offer.SourceCompany]; ok {
 			 comp.Jobs[offer.Id] = offer
 		}
 	}
-}
-
-func contains(s []string, e string) bool {
-	for _, a := range s {
-		if a == e {
-			return true
-		}
-	}
-	return false
 }

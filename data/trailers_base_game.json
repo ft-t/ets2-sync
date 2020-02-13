@@ -1,5 +1,5 @@
 {
-  "Variants": [
+  "variants": [
     "trailer.car_trans",
     "trailer.car_trans2",
     "trailer.car_trans3",
@@ -90,7 +90,7 @@
     "trailer.truck_trans.empty",
     "trailer.willig.fuel_cistern"
   ],
-  "Definitions": [
+  "definitions": [
     "trailer_def.scs.box.bdouble_2_2.curtain",
     "trailer_def.scs.box.bdouble_2_2.dryvan",
     "trailer_def.scs.box.bdouble_2_2.dryvan_m",
