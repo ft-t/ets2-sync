@@ -3,6 +3,7 @@ package savefile
 import (
 	"errors"
 	"ets2-sync/utils"
+	"fmt"
 	"strings"
 )
 
@@ -33,6 +34,12 @@ func (m *SaveManager) ClearOffers() {
 }
 
 func (m *SaveManager) TryAddOffer(offer *JobOffer) {
+	tot := offer.MapToDlc()
+
+	if m.file.clientSupportedDlc & tot == tot {
+		fmt.Println(tot)
+	}
+
 	if strings.Contains(offer.TrailerVariant, "schw_")|| strings.Contains(offer.TrailerDefinition, "schw_"){
 		return // todo
 	}

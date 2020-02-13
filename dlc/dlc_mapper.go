@@ -63,11 +63,11 @@ func (t Dlc) ToString() string {
 }
 
 type trailerFile struct {
-	Varians    []string `json:"varians"`
+	Variants   []string `json:"variants"`
 	Definition []string `json:"definitions"`
 }
 
-func readFile(d Dlc) *trailerFile {
+func readTrailerFile(d Dlc) *trailerFile {
 	data, er := ioutil.ReadFile(fmt.Sprintf("./data/trailers_%s.json", d.ToString()))
 
 	if er != nil {
@@ -79,10 +79,52 @@ func readFile(d Dlc) *trailerFile {
 
 	return r
 }
+func readSimpleJsonArr(prefix string, d Dlc) []string {
+	data, er := ioutil.ReadFile(fmt.Sprintf("./data/%s_%s.json", prefix, d.ToString()))
+
+	if er != nil {
+		return nil // todo log
+	}
+
+	var r []string
+	_ = json.Unmarshal(data, r)
+
+	return r
+}
+
+func MapCompanyToDlc(companyName string) (Dlc, error) {
+	for _, d := range allDLCs {
+		if res := readSimpleJsonArr("companies", d); res != nil && utils.Contains(res, companyName) {
+			return d, nil
+		}
+	}
+
+	return None, errors.New("trailer not found")
+}
+
+func MapCargoToDlc(cargoName string) (Dlc, error) {
+	for _, d := range allDLCs {
+		if res := readSimpleJsonArr("cargoes", d); res != nil && utils.Contains(res, cargoName) {
+			return d, nil
+		}
+	}
+
+	return None, errors.New("trailer not found")
+}
+
+func MapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
+	for _, d := range allDLCs {
+		if res := readTrailerFile(d); res != nil && utils.Contains(res.Variants, trailerVariant) {
+			return d, nil
+		}
+	}
+
+	return None, errors.New("trailer not found")
+}
 
 func MapTrailerDefToDlc(trailerDef string) (Dlc, error) {
 	for _, d := range allDLCs {
-		if res := readFile(d); res != nil && utils.Contains(res.Definition, trailerDef) {
+		if res := readTrailerFile(d); res != nil && utils.Contains(res.Definition, trailerDef) {
 			return d, nil
 		}
 	}

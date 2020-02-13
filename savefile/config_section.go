@@ -2,6 +2,7 @@ package savefile
 
 import (
 	"bytes"
+	"ets2-sync/dlc"
 	"fmt"
 	"io"
 	"strings"
@@ -43,7 +44,7 @@ func (c *CompanyConfigSection) Write(w io.Writer, newLine string) (n int64, err 
 		index++
 	}
 
-	_, _ = c.raw.WriteTo(w)                                                         // cargo_offer_seeds
+	_, _ = c.raw.WriteTo(w) // cargo_offer_seeds
 	_, _ = w.Write([]byte(fmt.Sprintf(" discovered: %s%s", c.discovered, newLine)))
 	_, _ = w.Write([]byte(fmt.Sprintf(" reserved_trailer_slot: %s%s", c.reservedTrailerSlot, newLine)))
 
@@ -78,7 +79,26 @@ type JobOffer struct {
 	Id                 string // nameParam
 }
 
-func (j *JobOffer) Write(w io.Writer, newLine string){
+func (j *JobOffer) MapToDlc() dlc.Dlc {
+	cleanTargetCity := j.Target
+
+	if len(cleanTargetCity) > 0 {
+		cleanTargetCity = strings.Replace(cleanTargetCity, "\"", "",2)
+		cleanTargetCity = strings.Split(cleanTargetCity, ".")[0]
+		cleanTargetCity = fmt.Sprintf("company.permanent.%s", cleanTargetCity)
+	}
+
+	dlc1, _ := dlc.MapCargoToDlc(j.Cargo)
+	dlc2, _ := dlc.MapCompanyToDlc(cleanTargetCity)
+	dlc3, _ := dlc.MapTrailerDefToDlc(j.TrailerDefinition)
+	dlc4, _ := dlc.MapTrailerVariantToDlc(j.TrailerVariant)
+
+	totalDlc := dlc1 | dlc2 | dlc3 | dlc4
+
+	return totalDlc
+}
+
+func (j *JobOffer) Write(w io.Writer, newLine string) {
 	_, _ = w.Write([]byte(fmt.Sprintf(" target: %s%s", j.Target, newLine)))
 	_, _ = w.Write([]byte(fmt.Sprintf(" expiration_time: %s%s", j.ExpirationTime, newLine)))
 	_, _ = w.Write([]byte(fmt.Sprintf(" urgency: %s%s", j.Urgency, newLine)))
