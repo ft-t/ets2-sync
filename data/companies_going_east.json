@@ -1,1 +1,171 @@
-[]
+{
+  "bcp": {
+    "cities": [
+      "gdansk",
+      "kosice",
+      "pecs"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "euroacres": {
+    "cities": [
+      "bialystok",
+      "debrecen",
+      "gdansk",
+      "krakow",
+      "pecs",
+      "szeged"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "eurogoodies": {
+    "cities": [
+      "bystrica",
+      "debrecen",
+      "lodz",
+      "lublin",
+      "olsztyn"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "fcp": {
+    "cities": [
+      "olsztyn"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "itcc": {
+    "cities": [
+      "bialystok",
+      "kosice",
+      "ostrava"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "kaarfor": {
+    "cities": [
+      "budapest",
+      "lublin",
+      "ostrava"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "lkwlog": {
+    "cities": [
+      "gdansk",
+      "kosice",
+      "lodz",
+      "lublin",
+      "szeged"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "nbfc": {
+    "cities": [
+      "budapest",
+      "ostrava"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "posped": {
+    "cities": [
+      "bystrica",
+      "katowice",
+      "lodz",
+      "lublin",
+      "szeged",
+      "warszawa"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "quarry": {
+    "cities": [
+      "katowice"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sanbuilders": {
+    "cities": [
+      "debrecen",
+      "gdansk",
+      "krakow",
+      "warszawa"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sellplan": {
+    "cities": [
+      "kosice",
+      "lodz",
+      "olsztyn"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "stokes": {
+    "cities": [
+      "bystrica",
+      "katowice",
+      "warszawa"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "tradeaux": {
+    "cities": [
+      "budapest",
+      "krakow",
+      "olsztyn",
+      "pecs"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "trameri": {
+    "cities": [
+      "budapest",
+      "krakow",
+      "szeged",
+      "warszawa"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "transinet": {
+    "cities": [
+      "bialystok",
+      "debrecen",
+      "ostrava"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "tree_et": {
+    "cities": [
+      "bialystok",
+      "bystrica",
+      "katowice",
+      "olsztyn"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wgcc": {
+    "cities": [
+      "gdansk"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  }
+}

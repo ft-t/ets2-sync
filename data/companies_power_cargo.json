@@ -1,1 +1,798 @@
-[]
+{
+  "agronord": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": []
+  },
+  "aria_fd_albg": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "aria_fd_esbj": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "aria_fd_jnpg": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "aria_fd_trbg": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "batisse_base": {
+    "cities": [],
+    "cargoes_in": [
+      "driller"
+    ],
+    "cargoes_out": []
+  },
+  "batisse_hs": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "batisse_road": {
+    "cities": [],
+    "cargoes_in": [
+      "driller"
+    ],
+    "cargoes_out": [
+      "driller"
+    ]
+  },
+  "bjork": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "boisserie": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": []
+  },
+  "c_navale": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": [
+      "yacht"
+    ]
+  },
+  "cargotras": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "costruzi_bas": {
+    "cities": [],
+    "cargoes_in": [
+      "driller"
+    ],
+    "cargoes_out": []
+  },
+  "costruzi_fla": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "costruzi_hal": {
+    "cities": [],
+    "cargoes_in": [
+      "driller"
+    ],
+    "cargoes_out": [
+      "driller"
+    ]
+  },
+  "dans_jardin": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": []
+  },
+  "drekkar": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ]
+  },
+  "euroacres": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "exomar": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "fattoria_f": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "fui": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": []
+  },
+  "globeur": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "gnt": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "gomme_monde": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "konstnr": {
+    "cities": [],
+    "cargoes_in": [
+      "driller"
+    ],
+    "cargoes_out": []
+  },
+  "konstnr_br": {
+    "cities": [],
+    "cargoes_in": [
+      "driller"
+    ],
+    "cargoes_out": [
+      "driller"
+    ]
+  },
+  "konstnr_hs": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "libellula": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "lisette_log": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "lkwlog": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "marina": {
+    "cities": [],
+    "cargoes_in": [
+      "yacht"
+    ],
+    "cargoes_out": [
+      "yacht"
+    ]
+  },
+  "marina_fr": {
+    "cities": [],
+    "cargoes_in": [
+      "yacht"
+    ],
+    "cargoes_out": [
+      "yacht"
+    ]
+  },
+  "marina_it": {
+    "cities": [],
+    "cargoes_in": [
+      "yacht"
+    ],
+    "cargoes_out": [
+      "yacht"
+    ]
+  },
+  "marmo": {
+    "cities": [],
+    "cargoes_in": [
+      "driller",
+      "tracks"
+    ],
+    "cargoes_out": [
+      "driller",
+      "tracks"
+    ]
+  },
+  "ms_stein": {
+    "cities": [],
+    "cargoes_in": [
+      "driller",
+      "tracks"
+    ],
+    "cargoes_out": [
+      "driller",
+      "tracks"
+    ]
+  },
+  "mvm_carriere": {
+    "cities": [],
+    "cargoes_in": [
+      "driller",
+      "tracks"
+    ],
+    "cargoes_out": [
+      "driller",
+      "tracks"
+    ]
+  },
+  "nbfc": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "tube"
+    ],
+    "cargoes_out": []
+  },
+  "nord_crown": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "nord_sten": {
+    "cities": [],
+    "cargoes_in": [
+      "driller",
+      "tracks"
+    ],
+    "cargoes_out": [
+      "driller",
+      "tracks"
+    ]
+  },
+  "norr_food": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "norrsken": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "nos_pat_brg": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "nos_pat_cf": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "nos_pat_lhv": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "piac": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "posped": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "pp_chimica": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "tube"
+    ],
+    "cargoes_out": []
+  },
+  "quadrelli": {
+    "cities": [],
+    "cargoes_in": [
+      "driller",
+      "tracks"
+    ],
+    "cargoes_out": [
+      "driller",
+      "tracks"
+    ]
+  },
+  "quarry": {
+    "cities": [],
+    "cargoes_in": [
+      "driller",
+      "tracks",
+      "tube"
+    ],
+    "cargoes_out": [
+      "driller",
+      "tracks"
+    ]
+  },
+  "renar": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ]
+  },
+  "sag_tre": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "sal": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "sanbuilders": {
+    "cities": [],
+    "cargoes_in": [
+      "driller",
+      "roller",
+      "tube"
+    ],
+    "cargoes_out": [
+      "driller",
+      "roller"
+    ]
+  },
+  "skoda": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "spinelli": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "stokes": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "subse": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "te_logistica": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "tesore_gust": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "tradeaux": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "trameri": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "tube"
+    ]
+  },
+  "transinet": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "tras_med": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  },
+  "tree_et": {
+    "cities": [],
+    "cargoes_in": [
+      "tractor"
+    ],
+    "cargoes_out": [
+      "tractor"
+    ]
+  },
+  "voitureux": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "vpc": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond"
+    ],
+    "cargoes_out": []
+  },
+  "wgcc": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "tube"
+    ],
+    "cargoes_out": []
+  },
+  "wilnet_trans": {
+    "cities": [],
+    "cargoes_in": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ],
+    "cargoes_out": [
+      "aircond",
+      "driller",
+      "helicopter",
+      "roller",
+      "tracks",
+      "tractor",
+      "tube",
+      "yacht"
+    ]
+  }
+}

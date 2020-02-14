@@ -67,6 +67,12 @@ type trailerFile struct {
 	Definition []string `json:"definitions"`
 }
 
+type companyFile struct {
+	Cities     []string `json:"cities"`
+	CargoesIn  []string `json:"cargoes_in"`
+	CargoesOut []string `json:"cargoes_out"`
+}
+
 func readTrailerFile(d Dlc) *trailerFile {
 	data, er := ioutil.ReadFile(fmt.Sprintf("./data/trailers_%s.json", d.ToString()))
 
@@ -79,6 +85,20 @@ func readTrailerFile(d Dlc) *trailerFile {
 
 	return r
 }
+
+func readCompanyFile(d Dlc) map[string]*companyFile {
+	data, er := ioutil.ReadFile(fmt.Sprintf("./data/companies_%s.json", d.ToString()))
+
+	if er != nil {
+		return nil // todo log
+	}
+
+	r := make(map[string]*companyFile)
+	_ = json.Unmarshal(data, r)
+
+	return r
+}
+
 func readSimpleJsonArr(prefix string, d Dlc) []string {
 	data, er := ioutil.ReadFile(fmt.Sprintf("./data/%s_%s.json", prefix, d.ToString()))
 
@@ -92,10 +112,12 @@ func readSimpleJsonArr(prefix string, d Dlc) []string {
 	return r
 }
 
-func MapCompanyToDlc(companyName string) (Dlc, error) {
+func MapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 	for _, d := range allDLCs {
-		if res := readSimpleJsonArr("companies", d); res != nil && utils.Contains(res, companyName) {
-			return d, nil
+		if res := readCompanyFile(d); res != nil {
+			if company, ok := res[companyName]; ok && utils.Contains(company.Cities, cityName) {
+				return d, nil
+			}
 		}
 	}
 
