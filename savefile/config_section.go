@@ -80,20 +80,33 @@ type JobOffer struct {
 }
 
 func (j *JobOffer) MapToDlc() dlc.Dlc {
-	cleanTargetCity := j.Target
+	targetCompany := j.Target
+	targetCity := j.Target
 
-	if len(cleanTargetCity) > 0 {
-		cleanTargetCity = strings.Replace(cleanTargetCity, "\"", "",2)
-		cleanTargetCity = strings.Split(cleanTargetCity, ".")[0]
-		cleanTargetCity = fmt.Sprintf("company.permanent.%s", cleanTargetCity)
+	if len(targetCity) > 0 || len(targetCompany) > 0 {
+		targetCompany = strings.Replace(targetCompany, "\"", "",2)
+		companyCity := strings.Split(targetCompany, ".")
+		targetCompany = companyCity[0]
+		targetCity = companyCity[1]
+	}
+
+	sourceCompany := j.SourceCompany
+	sourceCity := j.SourceCompany
+
+	if len(sourceCity) > 0 || len(sourceCompany) > 0 {
+		sourceCompany = strings.Replace(sourceCompany, "\"", "",2)
+		companyCity := strings.Split(sourceCompany, ".")
+		sourceCompany = companyCity[0]
+		sourceCity = companyCity[1]
 	}
 
 	dlc1, _ := dlc.MapCargoToDlc(j.Cargo)
-	dlc2, _ := dlc.MapCompanyToDlc(cleanTargetCity)
-	dlc3, _ := dlc.MapTrailerDefToDlc(j.TrailerDefinition)
-	dlc4, _ := dlc.MapTrailerVariantToDlc(j.TrailerVariant)
+	dlc2, _ := dlc.MapCompanyToDlc(targetCompany, targetCity)
+	dlc3, _ := dlc.MapCompanyToDlc(sourceCompany, sourceCity)
+	dlc4, _ := dlc.MapTrailerDefToDlc(j.TrailerDefinition)
+	dlc5, _ := dlc.MapTrailerVariantToDlc(j.TrailerVariant)
 
-	totalDlc := dlc1 | dlc2 | dlc3 | dlc4
+	totalDlc := dlc1 | dlc2 | dlc3 | dlc4 | dlc5
 
 	return totalDlc
 }

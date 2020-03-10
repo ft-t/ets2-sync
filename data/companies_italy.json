@@ -1,23 +1,2723 @@
-[
-  "company.permanent.aaa",
-  "company.permanent.acc",
-  "company.permanent.c_navale",
-  "company.permanent.cnp",
-  "company.permanent.comoto",
-  "company.permanent.cont_port_it",
-  "company.permanent.costruzi_bas",
-  "company.permanent.costruzi_fla",
-  "company.permanent.costruzi_hal",
-  "company.permanent.costruzi_win",
-  "company.permanent.exomar",
-  "company.permanent.fattoria_f",
-  "company.permanent.fui",
-  "company.permanent.ini",
-  "company.permanent.marmo",
-  "company.permanent.piac",
-  "company.permanent.pp_chimica",
-  "company.permanent.quadrelli",
-  "company.permanent.sal",
-  "company.permanent.te_logistica",
-  "company.permanent.tras_med"
-]
+{
+  "aaa": {
+    "cities": [
+      "cagliari",
+      "pescara",
+      "roma",
+      "taranto"
+    ],
+    "cargoes_in": [
+      "brake_pads",
+      "car_it",
+      "iveco_vans",
+      "moto_tires",
+      "motorcycles",
+      "scooters"
+    ],
+    "cargoes_out": [
+      "car_it",
+      "iveco_vans",
+      "motorcycles",
+      "scooters"
+    ]
+  },
+  "acc": {
+    "cities": [
+      "catania",
+      "taranto",
+      "terni"
+    ],
+    "cargoes_in": [
+      "acetylene",
+      "acid",
+      "carbn_pwdr_c",
+      "cement",
+      "chemicals",
+      "coal",
+      "diesel",
+      "electronics",
+      "emptytank",
+      "forklifts",
+      "fueltanker",
+      "graph_grease",
+      "gravel",
+      "hipresstank",
+      "kerosene",
+      "largetubes",
+      "lpg",
+      "magnesium",
+      "motor_oil",
+      "motor_oil_c",
+      "neon",
+      "nitrogen",
+      "oil",
+      "ore",
+      "overweight",
+      "petrol",
+      "sand",
+      "vent_tube",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "brake_pads",
+      "cement",
+      "emptytank",
+      "excavator",
+      "exhausts_c",
+      "floorpanels",
+      "forklifts",
+      "fueltanker",
+      "hipresstank",
+      "iron_pipes",
+      "largetubes",
+      "metal_pipes",
+      "mtl_coil",
+      "outdr_flr_tl",
+      "overweight",
+      "perfor_frks",
+      "precast_strs",
+      "seal_bearing",
+      "sq_tub",
+      "vent_tube",
+      "wallpanels"
+    ]
+  },
+  "aci": {
+    "cities": [
+      "bari",
+      "bologna",
+      "cagliari",
+      "catanzaro",
+      "genova",
+      "roma"
+    ],
+    "cargoes_in": [
+      "frsh_herbs"
+    ],
+    "cargoes_out": [
+      "frsh_herbs"
+    ]
+  },
+  "agronord": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "frsh_herbs"
+    ]
+  },
+  "aria_fd_albg": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "aria_fd_esbj": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "aria_fd_jnpg": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "aria_fd_trbg": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "batisse_base": {
+    "cities": [],
+    "cargoes_in": [
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab",
+      "metal_pipes",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "batisse_hs": {
+    "cities": [],
+    "cargoes_in": [
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab",
+      "metal_pipes",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "batisse_road": {
+    "cities": [],
+    "cargoes_in": [
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "batisse_wind": {
+    "cities": [],
+    "cargoes_in": [
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "bcp": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "car_it",
+      "exhausts_c",
+      "mtl_coil",
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "bhb_raffin": {
+    "cities": [],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "carbn_pwdr_c"
+    ]
+  },
+  "bhv": {
+    "cities": [],
+    "cargoes_in": [
+      "car_it",
+      "iveco_vans",
+      "motorcycles",
+      "scooters"
+    ],
+    "cargoes_out": [
+      "car_it",
+      "iveco_vans",
+      "motorcycles",
+      "scooters"
+    ]
+  },
+  "bjork": {
+    "cities": [],
+    "cargoes_in": [
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "boisserie": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "c_navale": {
+    "cities": [
+      "ancona",
+      "messina",
+      "olbia"
+    ],
+    "cargoes_in": [
+      "diesel",
+      "electronics",
+      "floorpanels",
+      "forklifts",
+      "glass_packed",
+      "hipresstank",
+      "iron_pipes",
+      "metal_pipes",
+      "motor_oil",
+      "motor_oil_c",
+      "mtl_coil",
+      "oil",
+      "oil_filt_c",
+      "oil_filters",
+      "radiators",
+      "vent_tube"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "princess",
+      "scrap_metals",
+      "used_packag"
+    ]
+  },
+  "cargotras": {
+    "cities": [
+      "catanzaro",
+      "livorno",
+      "olbia",
+      "palermo",
+      "pescara",
+      "sassari"
+    ],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ]
+  },
+  "cesare_smar": {
+    "cities": [
+      "palermo",
+      "pescara",
+      "sassari"
+    ],
+    "cargoes_in": [
+      "can_sardines",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "pesto",
+      "prosciutto"
+    ],
+    "cargoes_out": []
+  },
+  "chimi": {
+    "cities": [],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "carbn_pwdr_c"
+    ]
+  },
+  "cnp": {
+    "cities": [
+      "ancona",
+      "catania",
+      "livorno",
+      "napoli",
+      "taranto"
+    ],
+    "cargoes_in": [
+      "chem_sorb_c",
+      "chem_sorbent",
+      "diesel",
+      "empty_palet",
+      "fueltanker",
+      "hipresstank",
+      "kerosene",
+      "lpg",
+      "motor_oil",
+      "motor_oil_c",
+      "oil",
+      "petrol",
+      "vent_tube"
+    ],
+    "cargoes_out": [
+      "carbn_pwdr_c",
+      "diesel",
+      "fueltanker",
+      "kerosene",
+      "lpg",
+      "motor_oil",
+      "motor_oil_c",
+      "oil",
+      "petrol"
+    ]
+  },
+  "comoto": {
+    "cities": [
+      "suzzara"
+    ],
+    "cargoes_in": [
+      "diesel",
+      "electronics",
+      "forklifts",
+      "hipresstank",
+      "iveco_vans",
+      "motor_oil",
+      "motor_oil_c",
+      "oil_filt_c",
+      "oil_filters",
+      "radiators",
+      "vent_tube"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "gifts",
+      "iveco_vans",
+      "scrap_metals",
+      "used_packag"
+    ]
+  },
+  "cont_port": {
+    "cities": [],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "exhausts_c"
+    ],
+    "cargoes_out": [
+      "carbn_pwdr_c",
+      "exhausts_c"
+    ]
+  },
+  "cont_port_fr": {
+    "cities": [],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "exhausts_c"
+    ],
+    "cargoes_out": [
+      "carbn_pwdr_c",
+      "exhausts_c"
+    ]
+  },
+  "cont_port_it": {
+    "cities": [
+      "ancona",
+      "bari",
+      "genova",
+      "livorno",
+      "napoli"
+    ],
+    "cargoes_in": [
+      "apples_c",
+      "beverages_c",
+      "carbn_pwdr_c",
+      "carrots_c",
+      "chem_sorb_c",
+      "clothes_c",
+      "exhausts_c",
+      "motor_oil_c",
+      "oil_filt_c",
+      "rice_c",
+      "used_plast_c",
+      "vinegar_c"
+    ],
+    "cargoes_out": [
+      "apples_c",
+      "beverages_c",
+      "carbn_pwdr_c",
+      "carrots_c",
+      "chem_sorb_c",
+      "clothes_c",
+      "exhausts_c",
+      "motor_oil_c",
+      "oil_filt_c",
+      "rice_c",
+      "used_plast_c",
+      "vinegar_c"
+    ]
+  },
+  "costruzi_bas": {
+    "cities": [
+      "firenze"
+    ],
+    "cargoes_in": [
+      "cement",
+      "concrete",
+      "digger1000",
+      "digger500",
+      "excavator",
+      "floorpanels",
+      "forklifts",
+      "gravel",
+      "hipresstank",
+      "iron_pipes",
+      "largetubes",
+      "lumber",
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab",
+      "metal_pipes",
+      "sand",
+      "sawpanels",
+      "sq_tub",
+      "stones",
+      "vent_tube",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "digger1000",
+      "digger500",
+      "diggers",
+      "excav_soil",
+      "excavator",
+      "forklifts",
+      "hipresstank"
+    ]
+  },
+  "costruzi_fla": {
+    "cities": [
+      "catanzaro"
+    ],
+    "cargoes_in": [
+      "bricks",
+      "chimney_syst",
+      "concrete",
+      "copp_rf_gutt",
+      "floorpanels",
+      "gravel",
+      "iron_pipes",
+      "lumber",
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab",
+      "metal_pipes",
+      "outdr_flr_tl",
+      "precast_strs",
+      "roof_tiles",
+      "roofing_felt",
+      "rooflights",
+      "sand",
+      "sawpanels",
+      "sq_tub",
+      "stones",
+      "wallpanels",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "digger1000",
+      "digger500",
+      "diggers",
+      "empty_palet",
+      "emptytank",
+      "excav_soil",
+      "excavator",
+      "forklifts"
+    ]
+  },
+  "costruzi_hal": {
+    "cities": [
+      "genova",
+      "sassari"
+    ],
+    "cargoes_in": [
+      "concrete",
+      "digger1000",
+      "digger500",
+      "excavator",
+      "glass",
+      "gravel",
+      "hipresstank",
+      "lumber",
+      "sand",
+      "sawpanels",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "digger1000",
+      "digger500",
+      "diggers",
+      "excavator",
+      "hipresstank"
+    ]
+  },
+  "costruzi_win": {
+    "cities": [
+      "cagliari",
+      "palermo",
+      "pescara",
+      "taranto"
+    ],
+    "cargoes_in": [
+      "electronics",
+      "forklifts",
+      "mtl_coil",
+      "seal_bearing",
+      "sq_tub",
+      "vent_tube",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "forklifts"
+    ]
+  },
+  "dans_jardin": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "frsh_herbs"
+    ]
+  },
+  "drekkar": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "eolo_lines": {
+    "cities": [
+      "cagliari",
+      "messina",
+      "napoli",
+      "palermo",
+      "sangiovanni",
+      "sassari"
+    ],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "moto_tires",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "brake_pads",
+      "can_sardines",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "moto_tires",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "seal_bearing",
+      "wrk_cloth"
+    ]
+  },
+  "euroacres": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "eurogoodies": {
+    "cities": [],
+    "cargoes_in": [
+      "can_sardines",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "pesto",
+      "prosciutto"
+    ],
+    "cargoes_out": []
+  },
+  "exomar": {
+    "cities": [
+      "ancona",
+      "bologna",
+      "olbia",
+      "roma",
+      "taranto"
+    ],
+    "cargoes_in": [
+      "almond",
+      "apples",
+      "apples_c",
+      "beans",
+      "beef_meat",
+      "beverages",
+      "beverages_c",
+      "big_bag_seed",
+      "bottle_water",
+      "brake_pads",
+      "can_sardines",
+      "canned_beans",
+      "car_it",
+      "carb_water",
+      "carrots",
+      "carrots_c",
+      "cauliflower",
+      "cement",
+      "cheese",
+      "chem_sorb_c",
+      "chem_sorbent",
+      "chewing_gums",
+      "chimney_syst",
+      "chocolate",
+      "clothes",
+      "clothes_c",
+      "coal",
+      "copp_rf_gutt",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "diggers",
+      "dryers",
+      "drymilk",
+      "electronics",
+      "empty_palet",
+      "emptytank",
+      "excavator",
+      "exhausts_c",
+      "fertilizer",
+      "fireworks",
+      "floorpanels",
+      "flour",
+      "forklifts",
+      "froz_octopi",
+      "frsh_herbs",
+      "fueltanker",
+      "furniture",
+      "gifts",
+      "glass",
+      "glass_packed",
+      "gnocchi",
+      "goat_cheese",
+      "grapes",
+      "graph_grease",
+      "grass_rolls",
+      "gravel",
+      "hipresstank",
+      "honey",
+      "icecream",
+      "iron_pipes",
+      "iveco_vans",
+      "ketchup",
+      "largetubes",
+      "limonades",
+      "logs",
+      "maple_syrup",
+      "mason_jars",
+      "med_equip",
+      "metal_pipes",
+      "milk",
+      "mondeos",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "nonalco_beer",
+      "nuts",
+      "oil",
+      "oil_filt_c",
+      "oil_filters",
+      "olive_oil",
+      "oranges",
+      "ore",
+      "outdr_flr_tl",
+      "overweight",
+      "paper",
+      "pasta",
+      "peas",
+      "perfor_frks",
+      "pesto",
+      "petrol",
+      "plant_substr",
+      "plastic_gra",
+      "plums",
+      "pnut_butter",
+      "potatoes",
+      "precast_strs",
+      "prosciutto",
+      "radiators",
+      "rice",
+      "rice_c",
+      "roof_tiles",
+      "roofing_felt",
+      "rooflights",
+      "sand",
+      "sandwch_pnls",
+      "sawpanels",
+      "scooters",
+      "scrap_metals",
+      "seal_bearing",
+      "straw_bales",
+      "sugar",
+      "tableware",
+      "tomatoes",
+      "toys",
+      "tractors",
+      "tyres",
+      "used_battery",
+      "used_packag",
+      "used_plast",
+      "used_plast_c",
+      "vent_tube",
+      "vinegar",
+      "vinegar_c",
+      "wallpanels",
+      "watermelons",
+      "wrk_cloth",
+      "wshavings",
+      "yogurt"
+    ],
+    "cargoes_out": [
+      "almond",
+      "apples",
+      "apples_c",
+      "beans",
+      "beef_meat",
+      "beverages",
+      "beverages_c",
+      "big_bag_seed",
+      "bottle_water",
+      "brake_pads",
+      "can_sardines",
+      "canned_beans",
+      "car_it",
+      "carb_water",
+      "carrots",
+      "carrots_c",
+      "cauliflower",
+      "cement",
+      "cheese",
+      "chem_sorb_c",
+      "chem_sorbent",
+      "chewing_gums",
+      "chimney_syst",
+      "chocolate",
+      "clothes",
+      "clothes_c",
+      "coal",
+      "concrete",
+      "copp_rf_gutt",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "diggers",
+      "dryers",
+      "drymilk",
+      "electronics",
+      "empty_palet",
+      "emptytank",
+      "excavator",
+      "exhausts_c",
+      "fertilizer",
+      "fireworks",
+      "floorpanels",
+      "flour",
+      "forklifts",
+      "froz_octopi",
+      "frsh_herbs",
+      "fueltanker",
+      "furniture",
+      "gifts",
+      "glass",
+      "glass_packed",
+      "gnocchi",
+      "goat_cheese",
+      "grapes",
+      "graph_grease",
+      "gravel",
+      "hipresstank",
+      "honey",
+      "icecream",
+      "iron_pipes",
+      "iveco_vans",
+      "ketchup",
+      "largetubes",
+      "limonades",
+      "logs",
+      "maple_syrup",
+      "mason_jars",
+      "med_equip",
+      "metal_pipes",
+      "milk",
+      "mondeos",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "nonalco_beer",
+      "nuts",
+      "oil",
+      "oil_filt_c",
+      "oil_filters",
+      "olive_oil",
+      "oranges",
+      "ore",
+      "outdr_flr_tl",
+      "overweight",
+      "paper",
+      "pasta",
+      "peas",
+      "perfor_frks",
+      "pesto",
+      "petrol",
+      "plant_substr",
+      "plastic_gra",
+      "plums",
+      "pnut_butter",
+      "potatoes",
+      "precast_strs",
+      "princess",
+      "prosciutto",
+      "radiators",
+      "rice",
+      "rice_c",
+      "roof_tiles",
+      "roofing_felt",
+      "rooflights",
+      "sand",
+      "sandwch_pnls",
+      "sawpanels",
+      "scooters",
+      "scrap_metals",
+      "seal_bearing",
+      "sq_tub",
+      "straw_bales",
+      "sugar",
+      "tableware",
+      "tomatoes",
+      "toys",
+      "tractors",
+      "tyres",
+      "used_packag",
+      "used_plast",
+      "used_plast_c",
+      "vent_tube",
+      "vinegar",
+      "vinegar_c",
+      "wallpanels",
+      "watermelons",
+      "wrk_cloth",
+      "wshavings",
+      "yogurt"
+    ]
+  },
+  "fattoria_f": {
+    "cities": [
+      "napoli",
+      "roma"
+    ],
+    "cargoes_in": [
+      "big_bag_seed",
+      "cont_trees",
+      "copp_rf_gutt",
+      "diesel",
+      "digger1000",
+      "emptytank",
+      "hipresstank",
+      "lumber",
+      "outdr_flr_tl",
+      "roofing_felt",
+      "sawpanels",
+      "straw_bales",
+      "tractors",
+      "vent_tube",
+      "wrk_cloth",
+      "wshavings"
+    ],
+    "cargoes_out": [
+      "beef_meat",
+      "cheese",
+      "drymilk",
+      "milk",
+      "mozzarela",
+      "prosciutto",
+      "tractors"
+    ]
+  },
+  "fcp": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "car_it",
+      "exhausts_c",
+      "iveco_vans",
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "fle": {
+    "cities": [],
+    "cargoes_in": [
+      "frsh_herbs"
+    ],
+    "cargoes_out": [
+      "frsh_herbs"
+    ]
+  },
+  "fui": {
+    "cities": [
+      "catania",
+      "catanzaro",
+      "firenze",
+      "olbia",
+      "roma"
+    ],
+    "cargoes_in": [
+      "diesel",
+      "digger1000",
+      "emptytank",
+      "excav_soil",
+      "fertilizer",
+      "forklifts",
+      "lumber",
+      "pesticide",
+      "potassium",
+      "sawpanels",
+      "tractors",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "apples",
+      "apples_c",
+      "carrots",
+      "carrots_c",
+      "frsh_herbs",
+      "nuts",
+      "olive_oil",
+      "peas",
+      "pesto",
+      "potatoes",
+      "tomatoes"
+    ]
+  },
+  "gallia_ferry": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "moto_tires",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "globeur": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "gnt": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "gomme_monde": {
+    "cities": [],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "moto_tires"
+    ]
+  },
+  "huilant": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "ika_bohag": {
+    "cities": [
+      "ancona",
+      "bologna",
+      "catania",
+      "firenze",
+      "napoli",
+      "pescara",
+      "roma"
+    ],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "ini": {
+    "cities": [
+      "bologna",
+      "catania",
+      "catanzaro",
+      "genova",
+      "napoli",
+      "parma",
+      "pescara",
+      "roma",
+      "suzzara",
+      "taranto"
+    ],
+    "cargoes_in": [
+      "diesel",
+      "lpg",
+      "petrol"
+    ],
+    "cargoes_out": []
+  },
+  "itcc": {
+    "cities": [],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "mtl_coil",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "kaarfor": {
+    "cities": [],
+    "cargoes_in": [
+      "can_sardines",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "pesto",
+      "prosciutto"
+    ],
+    "cargoes_out": []
+  },
+  "konstnr": {
+    "cities": [],
+    "cargoes_in": [
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab",
+      "metal_pipes",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "konstnr_br": {
+    "cities": [],
+    "cargoes_in": [
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "konstnr_hs": {
+    "cities": [],
+    "cargoes_in": [
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab",
+      "metal_pipes",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "konstnr_wind": {
+    "cities": [],
+    "cargoes_in": [
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "libellula": {
+    "cities": [
+      "ancona",
+      "bologna",
+      "livorno"
+    ],
+    "cargoes_in": [
+      "exhausts_c",
+      "moto_tires",
+      "mtl_coil",
+      "perfor_frks",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "motorcycles",
+      "scooters"
+    ]
+  },
+  "lisette_log": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "froz_octopi",
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "lkwlog": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "marina_it": {
+    "cities": [
+      "ancona",
+      "bari",
+      "cagliari",
+      "catania",
+      "genova",
+      "napoli",
+      "olbia",
+      "taranto"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "marmo": {
+    "cities": [
+      "firenze",
+      "livorno",
+      "olbia",
+      "palermo",
+      "sassari"
+    ],
+    "cargoes_in": [
+      "concrete",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "dynamite",
+      "emptytank",
+      "excavator",
+      "explosives",
+      "fueltanker",
+      "hipresstank",
+      "sand",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "digger1000",
+      "excav_soil",
+      "excavator",
+      "gravel",
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab",
+      "stone_dust",
+      "stones"
+    ]
+  },
+  "ms_stein": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "mvm_carriere": {
+    "cities": [],
+    "cargoes_in": [
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab"
+    ]
+  },
+  "nbfc": {
+    "cities": [],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "carbn_pwdr_c"
+    ]
+  },
+  "nord_crown": {
+    "cities": [],
+    "cargoes_in": [
+      "froz_octopi",
+      "prosciutto"
+    ],
+    "cargoes_out": []
+  },
+  "nord_sten": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "norr_food": {
+    "cities": [],
+    "cargoes_in": [
+      "can_sardines",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "pesto",
+      "prosciutto"
+    ],
+    "cargoes_out": []
+  },
+  "norrsken": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "nos_pat_brg": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "nos_pat_cf": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "nos_pat_lhv": {
+    "cities": [],
+    "cargoes_in": [
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "ns_chem": {
+    "cities": [],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "carbn_pwdr_c"
+    ]
+  },
+  "ns_oil": {
+    "cities": [],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "nucleon": {
+    "cities": [],
+    "cargoes_in": [
+      "mtl_coil",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "piac": {
+    "cities": [
+      "bologna",
+      "cassino",
+      "napoli",
+      "parma"
+    ],
+    "cargoes_in": [
+      "electronics",
+      "exhausts_c",
+      "forklifts",
+      "motor_oil",
+      "motor_oil_c",
+      "mtl_coil",
+      "oil_filt_c",
+      "oil_filters",
+      "perfor_frks",
+      "radiators",
+      "seal_bearing",
+      "sq_tub",
+      "tyres",
+      "vent_tube",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "car_it",
+      "empty_palet",
+      "gifts",
+      "scrap_metals",
+      "used_battery",
+      "used_packag",
+      "used_plast",
+      "used_plast_c"
+    ]
+  },
+  "polar_fish": {
+    "cities": [],
+    "cargoes_in": [
+      "can_sardines",
+      "froz_octopi"
+    ],
+    "cargoes_out": []
+  },
+  "polarislines": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "exhausts_c",
+      "moto_tires",
+      "motorcycles",
+      "perfor_frks",
+      "scooters",
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "posped": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "pp_chimica": {
+    "cities": [
+      "bologna",
+      "olbia",
+      "roma",
+      "terni"
+    ],
+    "cargoes_in": [
+      "acetylene",
+      "acid",
+      "ammunition",
+      "arsenic",
+      "carbn_pwdr_c",
+      "chemicals",
+      "chlorine",
+      "coal",
+      "contamin",
+      "cyanide",
+      "diesel",
+      "emptytank",
+      "fertilizer",
+      "fluorine",
+      "forklifts",
+      "fueltanker",
+      "hchemicals",
+      "hipresstank",
+      "hmetal",
+      "hydrochlor",
+      "hydrogen",
+      "kerosene",
+      "largetubes",
+      "lead",
+      "lpg",
+      "magnesium",
+      "mercuric",
+      "motor_oil",
+      "motor_oil_c",
+      "neon",
+      "nitrocel",
+      "nitrogen",
+      "oil",
+      "overweight",
+      "pesticide",
+      "petrol",
+      "phosphor",
+      "potahydro",
+      "potassium",
+      "sodchlor",
+      "sodhydro",
+      "sodium",
+      "sulfuric",
+      "vent_tube",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "acetylene",
+      "acid",
+      "ammunition",
+      "arsenic",
+      "carbn_pwdr_c",
+      "chemicals",
+      "chlorine",
+      "contamin",
+      "cyanide",
+      "diesel",
+      "dynamite",
+      "emptytank",
+      "explosives",
+      "fertilizer",
+      "fluorine",
+      "forklifts",
+      "fueltanker",
+      "graph_grease",
+      "hchemicals",
+      "hipresstank",
+      "hmetal",
+      "hydrochlor",
+      "hydrogen",
+      "kerosene",
+      "lead",
+      "lpg",
+      "magnesium",
+      "mercuric",
+      "motor_oil",
+      "motor_oil_c",
+      "neon",
+      "nitrocel",
+      "nitrogen",
+      "oil",
+      "pesticide",
+      "petrol",
+      "phosphor",
+      "potahydro",
+      "potassium",
+      "sodchlor",
+      "sodhydro",
+      "sodium",
+      "sulfuric",
+      "vent_tube"
+    ]
+  },
+  "quadrelli": {
+    "cities": [
+      "bari",
+      "catania",
+      "pescara"
+    ],
+    "cargoes_in": [
+      "concrete",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "dynamite",
+      "emptytank",
+      "excavator",
+      "explosives",
+      "fueltanker",
+      "hipresstank",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "digger1000",
+      "excav_soil",
+      "excavator",
+      "gravel",
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab",
+      "sand",
+      "stone_dust",
+      "stones"
+    ]
+  },
+  "quarry": {
+    "cities": [],
+    "cargoes_in": [
+      "metal_pipes",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "renar": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "sag_tre": {
+    "cities": [],
+    "cargoes_in": [
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "sal": {
+    "cities": [
+      "livorno",
+      "pescara",
+      "sassari",
+      "terni"
+    ],
+    "cargoes_in": [
+      "acid",
+      "chemicals",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "diggers",
+      "excavator",
+      "forklifts",
+      "fueltanker",
+      "hipresstank",
+      "kerosene",
+      "logs",
+      "lpg",
+      "oil",
+      "pesticide",
+      "petrol",
+      "seal_bearing",
+      "tractors",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "digger1000",
+      "digger500",
+      "diggers",
+      "empty_palet",
+      "excavator",
+      "gifts",
+      "logs",
+      "lumber",
+      "sawpanels",
+      "tractors",
+      "wshavings"
+    ]
+  },
+  "sanbuilders": {
+    "cities": [],
+    "cargoes_in": [
+      "marb_blck",
+      "marb_blck2",
+      "marb_slab",
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "scania_fac": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "sellplan": {
+    "cities": [],
+    "cargoes_in": [
+      "can_sardines",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "pesto",
+      "prosciutto"
+    ],
+    "cargoes_out": []
+  },
+  "skoda": {
+    "cities": [],
+    "cargoes_in": [
+      "exhausts_c",
+      "mtl_coil",
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "spinelli": {
+    "cities": [
+      "cassino",
+      "parma"
+    ],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "mtl_coil",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "moto_tires"
+    ]
+  },
+  "stokes": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "subse": {
+    "cities": [],
+    "cargoes_in": [
+      "gnocchi",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "pesto",
+      "prosciutto"
+    ],
+    "cargoes_out": []
+  },
+  "te_logistica": {
+    "cities": [
+      "cagliari",
+      "firenze",
+      "messina",
+      "napoli",
+      "parma",
+      "sassari"
+    ],
+    "cargoes_in": [
+      "almond",
+      "apples",
+      "apples_c",
+      "beans",
+      "beef_meat",
+      "beverages",
+      "beverages_c",
+      "big_bag_seed",
+      "bottle_water",
+      "brake_pads",
+      "can_sardines",
+      "canned_beans",
+      "carb_water",
+      "carrots",
+      "carrots_c",
+      "cauliflower",
+      "cement",
+      "cheese",
+      "chem_sorb_c",
+      "chem_sorbent",
+      "chewing_gums",
+      "chimney_syst",
+      "chocolate",
+      "clothes",
+      "clothes_c",
+      "coal",
+      "copp_rf_gutt",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "diggers",
+      "dryers",
+      "drymilk",
+      "electronics",
+      "empty_palet",
+      "emptytank",
+      "excavator",
+      "exhausts_c",
+      "fertilizer",
+      "fireworks",
+      "floorpanels",
+      "flour",
+      "forklifts",
+      "froz_octopi",
+      "frsh_herbs",
+      "fueltanker",
+      "furniture",
+      "gifts",
+      "glass",
+      "glass_packed",
+      "gnocchi",
+      "goat_cheese",
+      "grapes",
+      "graph_grease",
+      "grass_rolls",
+      "gravel",
+      "hipresstank",
+      "honey",
+      "icecream",
+      "iron_pipes",
+      "ketchup",
+      "largetubes",
+      "limonades",
+      "logs",
+      "maple_syrup",
+      "mason_jars",
+      "med_equip",
+      "metal_pipes",
+      "milk",
+      "mondeos",
+      "moto_tires",
+      "mozzarela",
+      "nonalco_beer",
+      "nuts",
+      "oil",
+      "oil_filt_c",
+      "oil_filters",
+      "olive_oil",
+      "oranges",
+      "ore",
+      "outdr_flr_tl",
+      "overweight",
+      "paper",
+      "pasta",
+      "peas",
+      "perfor_frks",
+      "pesto",
+      "petrol",
+      "plant_substr",
+      "plastic_gra",
+      "plums",
+      "pnut_butter",
+      "potatoes",
+      "precast_strs",
+      "prosciutto",
+      "radiators",
+      "rice",
+      "rice_c",
+      "roof_tiles",
+      "roofing_felt",
+      "rooflights",
+      "sand",
+      "sandwch_pnls",
+      "sawpanels",
+      "scrap_metals",
+      "seal_bearing",
+      "straw_bales",
+      "sugar",
+      "tableware",
+      "tomatoes",
+      "toys",
+      "tractors",
+      "tyres",
+      "used_battery",
+      "used_packag",
+      "used_plast",
+      "used_plast_c",
+      "vent_tube",
+      "vinegar",
+      "vinegar_c",
+      "wallpanels",
+      "watermelons",
+      "wrk_cloth",
+      "wshavings",
+      "yogurt"
+    ],
+    "cargoes_out": [
+      "almond",
+      "apples",
+      "apples_c",
+      "beans",
+      "beef_meat",
+      "beverages",
+      "beverages_c",
+      "big_bag_seed",
+      "bottle_water",
+      "can_sardines",
+      "canned_beans",
+      "car_it",
+      "carb_water",
+      "carrots",
+      "carrots_c",
+      "cauliflower",
+      "cement",
+      "cheese",
+      "chem_sorb_c",
+      "chem_sorbent",
+      "chewing_gums",
+      "chimney_syst",
+      "chocolate",
+      "clothes",
+      "clothes_c",
+      "coal",
+      "concrete",
+      "copp_rf_gutt",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "diggers",
+      "dryers",
+      "drymilk",
+      "electronics",
+      "empty_palet",
+      "emptytank",
+      "excavator",
+      "exhausts_c",
+      "fertilizer",
+      "fireworks",
+      "floorpanels",
+      "flour",
+      "forklifts",
+      "froz_octopi",
+      "frsh_herbs",
+      "fueltanker",
+      "furniture",
+      "gifts",
+      "glass",
+      "glass_packed",
+      "gnocchi",
+      "goat_cheese",
+      "grapes",
+      "graph_grease",
+      "gravel",
+      "hipresstank",
+      "honey",
+      "icecream",
+      "iron_pipes",
+      "ketchup",
+      "largetubes",
+      "limonades",
+      "logs",
+      "maple_syrup",
+      "mason_jars",
+      "med_equip",
+      "metal_pipes",
+      "milk",
+      "mondeos",
+      "moto_tires",
+      "mozzarela",
+      "mtl_coil",
+      "nonalco_beer",
+      "nuts",
+      "oil",
+      "oil_filt_c",
+      "oil_filters",
+      "olive_oil",
+      "oranges",
+      "ore",
+      "outdr_flr_tl",
+      "overweight",
+      "paper",
+      "pasta",
+      "peas",
+      "perfor_frks",
+      "pesto",
+      "petrol",
+      "plant_substr",
+      "plastic_gra",
+      "plums",
+      "pnut_butter",
+      "potatoes",
+      "precast_strs",
+      "princess",
+      "prosciutto",
+      "radiators",
+      "rice",
+      "rice_c",
+      "roof_tiles",
+      "roofing_felt",
+      "rooflights",
+      "sand",
+      "sandwch_pnls",
+      "sawpanels",
+      "scrap_metals",
+      "seal_bearing",
+      "sq_tub",
+      "straw_bales",
+      "sugar",
+      "tableware",
+      "tomatoes",
+      "toys",
+      "tractors",
+      "tyres",
+      "used_packag",
+      "used_plast",
+      "used_plast_c",
+      "vent_tube",
+      "vinegar",
+      "vinegar_c",
+      "wallpanels",
+      "watermelons",
+      "wrk_cloth",
+      "wshavings",
+      "yogurt"
+    ]
+  },
+  "tesore_gust": {
+    "cities": [
+      "firenze",
+      "napoli",
+      "parma",
+      "roma"
+    ],
+    "cargoes_in": [
+      "froz_octopi",
+      "frsh_herbs",
+      "prosciutto"
+    ],
+    "cargoes_out": [
+      "can_sardines",
+      "froz_octopi",
+      "gnocchi",
+      "mozzarela",
+      "olive_oil",
+      "pasta",
+      "pesto",
+      "prosciutto"
+    ]
+  },
+  "tradeaux": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "trameri": {
+    "cities": [],
+    "cargoes_in": [
+      "mtl_coil",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "transinet": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "tras_med": {
+    "cities": [
+      "bari",
+      "cagliari",
+      "catania",
+      "genova",
+      "roma"
+    ],
+    "cargoes_in": [
+      "almond",
+      "apples",
+      "apples_c",
+      "beans",
+      "beef_meat",
+      "beverages",
+      "beverages_c",
+      "big_bag_seed",
+      "bottle_water",
+      "brake_pads",
+      "can_sardines",
+      "canned_beans",
+      "carb_water",
+      "carbn_pwdr_c",
+      "carrots",
+      "carrots_c",
+      "cauliflower",
+      "cement",
+      "cheese",
+      "chem_sorb_c",
+      "chem_sorbent",
+      "chewing_gums",
+      "chimney_syst",
+      "chocolate",
+      "clothes",
+      "clothes_c",
+      "coal",
+      "copp_rf_gutt",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "diggers",
+      "dryers",
+      "drymilk",
+      "electronics",
+      "empty_palet",
+      "emptytank",
+      "excavator",
+      "exhausts_c",
+      "fertilizer",
+      "fireworks",
+      "floorpanels",
+      "flour",
+      "forklifts",
+      "froz_octopi",
+      "frsh_herbs",
+      "fueltanker",
+      "furniture",
+      "gifts",
+      "glass",
+      "glass_packed",
+      "gnocchi",
+      "goat_cheese",
+      "grapes",
+      "graph_grease",
+      "grass_rolls",
+      "gravel",
+      "hipresstank",
+      "honey",
+      "icecream",
+      "iron_pipes",
+      "ketchup",
+      "largetubes",
+      "limonades",
+      "logs",
+      "maple_syrup",
+      "mason_jars",
+      "med_equip",
+      "metal_pipes",
+      "milk",
+      "mondeos",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "nonalco_beer",
+      "nuts",
+      "oil",
+      "oil_filt_c",
+      "oil_filters",
+      "olive_oil",
+      "oranges",
+      "ore",
+      "outdr_flr_tl",
+      "overweight",
+      "paper",
+      "pasta",
+      "peas",
+      "perfor_frks",
+      "pesto",
+      "petrol",
+      "plant_substr",
+      "plastic_gra",
+      "plums",
+      "pnut_butter",
+      "potatoes",
+      "precast_strs",
+      "prosciutto",
+      "radiators",
+      "rice",
+      "rice_c",
+      "roof_tiles",
+      "roofing_felt",
+      "rooflights",
+      "sand",
+      "sandwch_pnls",
+      "sawpanels",
+      "scooters",
+      "scrap_metals",
+      "seal_bearing",
+      "sq_tub",
+      "straw_bales",
+      "sugar",
+      "tableware",
+      "tomatoes",
+      "toys",
+      "tractors",
+      "tyres",
+      "used_battery",
+      "used_packag",
+      "used_plast",
+      "used_plast_c",
+      "vent_tube",
+      "vinegar",
+      "vinegar_c",
+      "wallpanels",
+      "watermelons",
+      "wrk_cloth",
+      "wshavings",
+      "yogurt"
+    ],
+    "cargoes_out": [
+      "almond",
+      "apples",
+      "apples_c",
+      "beans",
+      "beef_meat",
+      "beverages",
+      "beverages_c",
+      "big_bag_seed",
+      "bottle_water",
+      "brake_pads",
+      "can_sardines",
+      "canned_beans",
+      "carb_water",
+      "carbn_pwdr_c",
+      "carrots",
+      "carrots_c",
+      "cauliflower",
+      "cement",
+      "cheese",
+      "chem_sorb_c",
+      "chem_sorbent",
+      "chewing_gums",
+      "chimney_syst",
+      "chocolate",
+      "clothes",
+      "clothes_c",
+      "coal",
+      "concrete",
+      "copp_rf_gutt",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "diggers",
+      "dryers",
+      "drymilk",
+      "electronics",
+      "empty_palet",
+      "emptytank",
+      "excavator",
+      "exhausts_c",
+      "fertilizer",
+      "fireworks",
+      "floorpanels",
+      "flour",
+      "forklifts",
+      "froz_octopi",
+      "frsh_herbs",
+      "fueltanker",
+      "furniture",
+      "gifts",
+      "glass",
+      "glass_packed",
+      "gnocchi",
+      "goat_cheese",
+      "grapes",
+      "graph_grease",
+      "gravel",
+      "hipresstank",
+      "honey",
+      "icecream",
+      "iron_pipes",
+      "ketchup",
+      "largetubes",
+      "limonades",
+      "logs",
+      "maple_syrup",
+      "mason_jars",
+      "med_equip",
+      "metal_pipes",
+      "milk",
+      "mondeos",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "nonalco_beer",
+      "nuts",
+      "oil",
+      "oil_filt_c",
+      "oil_filters",
+      "olive_oil",
+      "oranges",
+      "ore",
+      "outdr_flr_tl",
+      "overweight",
+      "paper",
+      "pasta",
+      "peas",
+      "perfor_frks",
+      "pesto",
+      "petrol",
+      "plant_substr",
+      "plastic_gra",
+      "plums",
+      "pnut_butter",
+      "potatoes",
+      "precast_strs",
+      "princess",
+      "prosciutto",
+      "radiators",
+      "rice",
+      "rice_c",
+      "roof_tiles",
+      "roofing_felt",
+      "rooflights",
+      "sand",
+      "sandwch_pnls",
+      "sawpanels",
+      "scooters",
+      "scrap_metals",
+      "seal_bearing",
+      "sq_tub",
+      "straw_bales",
+      "sugar",
+      "tableware",
+      "tomatoes",
+      "toys",
+      "tractors",
+      "tyres",
+      "used_packag",
+      "used_plast",
+      "used_plast_c",
+      "vent_tube",
+      "vinegar",
+      "vinegar_c",
+      "wallpanels",
+      "watermelons",
+      "wrk_cloth",
+      "wshavings",
+      "yogurt"
+    ]
+  },
+  "tree_et": {
+    "cities": [],
+    "cargoes_in": [
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "vitas_pwr": {
+    "cities": [
+      "taranto"
+    ],
+    "cargoes_in": [
+      "mtl_coil",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "voitureux": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "car_it",
+      "exhausts_c",
+      "iveco_vans",
+      "mtl_coil",
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "volvo_dlr": {
+    "cities": [
+      "napoli"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "volvo_fac": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "exhausts_c",
+      "mtl_coil",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "vpc": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "car_it",
+      "iveco_vans",
+      "mtl_coil",
+      "seal_bearing",
+      "wrk_cloth"
+    ],
+    "cargoes_out": []
+  },
+  "wgcc": {
+    "cities": [],
+    "cargoes_in": [
+      "carbn_pwdr_c",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "carbn_pwdr_c"
+    ]
+  },
+  "wilnet_trans": {
+    "cities": [],
+    "cargoes_in": [
+      "brake_pads",
+      "can_sardines",
+      "car_it",
+      "carbn_pwdr_c",
+      "exhausts_c",
+      "froz_octopi",
+      "frsh_herbs",
+      "gnocchi",
+      "iveco_vans",
+      "metal_pipes",
+      "moto_tires",
+      "motorcycles",
+      "mozzarela",
+      "mtl_coil",
+      "olive_oil",
+      "pasta",
+      "perfor_frks",
+      "pesto",
+      "prosciutto",
+      "scooters",
+      "seal_bearing",
+      "sq_tub",
+      "wrk_cloth"
+    ],
+    "cargoes_out": [
+      "metal_pipes",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  }
+}
