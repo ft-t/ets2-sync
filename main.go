@@ -4,6 +4,8 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/json"
+	"ets2-sync/db"
+	"ets2-sync/global"
 	"fmt"
 	"html/template"
 	"io"
@@ -48,6 +50,13 @@ func tryMerge() {
 }
 
 func main() {
+	global.IsDebug = true
+	err := db.InitializeDb()
+
+	if err != nil {
+		panic(err)
+	}
+
 	tryMerge()
 	//d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game_damanox.sii")
 	//r, _ := savefile.NewSaveFile(bytes.NewReader(d))
