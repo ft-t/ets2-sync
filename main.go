@@ -3,67 +3,77 @@ package main
 import (
 	"bufio"
 	"bytes"
-	"encoding/json"
 	"ets2-sync/db"
 	"ets2-sync/global"
 	"fmt"
 	"html/template"
 	"io"
 	"io/ioutil"
+	"math/rand"
 	"net/http"
-	"os"
 	"strings"
 	"time"
 
 	"ets2-sync/savefile"
 )
-
-func tryMerge() {
-	b, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/test.json")
-	var jobs []*savefile.JobOffer
-
-	json.Unmarshal(b, &jobs)
-
-	d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game.sii")
-	r, _ := savefile.NewSaveFile(bytes.NewReader(d))
-
-	save, _ := savefile.NewSaveManager(r)
-	save.ClearOffers()
-
-	for _, j := range jobs {
-		save.TryAddOffer(j)
-	}
-
-	targetPath := "/home/skydev/go/src/ets2-sync/game.sii_2"
-	os.Remove(targetPath)
-	f, _ := os.Create(targetPath)
-
-	wr := bufio.NewWriter(f)
-
-	_, _ = r.Write(wr)
-
-	//if err != nil {
-	//	fmt.Println(err)
-	//}
-
-	_ = wr.Flush()
-}
+//
+//func tryMerge() {
+//	b, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/test.json")
+//	var jobs []*savefile.JobOffer
+//
+//	json.Unmarshal(b, &jobs)
+//
+//	d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game.sii")
+//	r, _ := savefile.NewSaveFile(bytes.NewReader(d))
+//
+//	save, _ := savefile.NewSaveManager(r)
+//	save.ClearOffers()
+//
+//	for _, j := range jobs {
+//		save.TryAddOffer(j)
+//	}
+//
+//	targetPath := "/home/skydev/go/src/ets2-sync/game.sii_2"
+//	os.Remove(targetPath)
+//	f, _ := os.Create(targetPath)
+//
+//	wr := bufio.NewWriter(f)
+//
+//	_, _ = r.Write(wr)
+//
+//	//if err != nil {
+//	//	fmt.Println(err)
+//	//}
+//
+//	_ = wr.Flush()
+//}
 
 func main() {
+	rand.Seed(time.Now().UTC().UnixNano())
 	global.IsDebug = true
-	err := db.InitializeDb()
 
-	if err != nil {
+	if err := db.InitializeDb(); err != nil {
 		panic(err)
 	}
 
-	tryMerge()
-	//d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game_damanox.sii")
-	//r, _ := savefile.NewSaveFile(bytes.NewReader(d))
+	if err := initOfferManager(); err != nil {
+		panic(err)
+	}
+
+	fmt.Println("xer")
+
+	d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game_damanox.sii")
+	r, _ := savefile.NewSaveFile(bytes.NewReader(d))
+
+	FillDbWithJobs(r.ExportOffers())
+
+	time.Sleep(1000 * time.Second)
+	//tryMerge()
+
 	//
 	//_, _ = savefile.NewSaveManager(r)
 	//
-	//b, _ := json.Marshal(r.ExportJobs())
+	//b, _ := json.Marshal(r.ExportOffers())
 	//x := string(b)
 	//fmt.Print(x)
 	//save.ClearOffers()
@@ -116,7 +126,13 @@ func Start() {
 			return
 		}
 
-		newSaveFile, _ := savefile.NewSaveFile(bytes.NewReader(buf.Bytes()))
+		newSaveFile, er := savefile.NewSaveFile(bytes.NewReader(buf.Bytes()))
+
+		if er != nil {
+			// todo
+		}
+
+		newSaveFile.ExportOffers()
 
 		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%s", header.Filename))
 		w.Header().Set("Content-Type", r.Header.Get("Content-Type"))

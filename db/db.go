@@ -6,7 +6,10 @@ import (
 	"fmt"
 	"github.com/go-xorm/xorm"
 	"github.com/go-xorm/xorm/migrate"
+	_ "github.com/lib/pq"
+	"github.com/mitchellh/hashstructure"
 	"os"
+	"strconv"
 	"time"
 	"xorm.io/core"
 )
@@ -14,8 +17,9 @@ import (
 var db *xorm.Engine
 
 type DbOffer struct {
+	Id                 string `xorm:"pk text"`
 	RequiredDlc        dlc.Dlc
-	SourceCompany      string
+	SourceCompany      string `xorm:"text"`
 	Target             string
 	ExpirationTime     string
 	Urgency            string
@@ -29,7 +33,21 @@ type DbOffer struct {
 	UnitsCount         string
 	FillRatio          string
 	TrailerPlace       string
-	Id                 string // nameParam
+	NameParam          string // nameParam
+}
+
+func (o *DbOffer) CalculateHash() string {
+	hash, err := hashstructure.Hash(struct {
+		S string
+		T string
+		C string
+	}{o.SourceCompany, o.Target, o.Cargo}, nil)
+
+	if err != nil {
+		return ""
+	}
+
+	return strconv.FormatUint(hash, 10)
 }
 
 func InitializeDb() error {
@@ -39,8 +57,8 @@ func InitializeDb() error {
 
 	getConnectionString := func(dbName string) string {
 		return fmt.Sprintf("host=%v port=%v user=%v password=%v dbname=%v sslmode=disable",
-			os.Getenv("ets2-db-host"), os.Getenv("ets2-db-port"),
-			os.Getenv("ets2-db-user"), os.Getenv("ets2-db-password"), dbName)
+			os.Getenv("db-host"), os.Getenv("db-port"),
+			os.Getenv("db-user"), os.Getenv("db-password"), dbName)
 	}
 
 	engine, err := xorm.NewEngine("postgres", getConnectionString("postgres"))
@@ -49,7 +67,7 @@ func InitializeDb() error {
 		return err
 	}
 
-	realDbName := os.Getenv("ets2-db-host")
+	realDbName := os.Getenv("db-name")
 
 	if engine != nil {
 		_, _ = engine.Exec(fmt.Sprintf("CREATE DATABASE %s;", realDbName))
@@ -86,5 +104,8 @@ func InitializeDb() error {
 	}
 
 	return err
+}
 
+func GetDb() *xorm.Engine {
+	return db
 }

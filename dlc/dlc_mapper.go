@@ -3,8 +3,10 @@ package dlc
 import (
 	"encoding/json"
 	"errors"
+	"ets2-sync/savefile"
 	"fmt"
 	"io/ioutil"
+	"strings"
 
 	"ets2-sync/utils"
 )
@@ -73,6 +75,38 @@ type companyFile struct {
 	CargoesOut []string `json:"cargoes_out"`
 }
 
+func GetRequiredDlc(j *savefile.JobOffer) Dlc {
+	targetCompany := j.Target
+	targetCity := j.Target
+
+	if len(targetCity) > 0 || len(targetCompany) > 0 {
+		targetCompany = strings.Replace(targetCompany, "\"", "", 2)
+		companyCity := strings.Split(targetCompany, ".")
+		targetCompany = companyCity[0]
+		targetCity = companyCity[1]
+	}
+
+	sourceCompany := j.SourceCompany
+	sourceCity := j.SourceCompany
+
+	if len(sourceCity) > 0 || len(sourceCompany) > 0 {
+		sourceCompany = strings.Replace(sourceCompany, "\"", "", 2)
+		companyCity := strings.Split(sourceCompany, ".")
+		sourceCompany = companyCity[0]
+		sourceCity = companyCity[1]
+	}
+
+	dlc1, _ := mapCargoToDlc(j.Cargo)
+	dlc2, _ := mapCompanyToDlc(targetCompany, targetCity)
+	dlc3, _ := mapCompanyToDlc(sourceCompany, sourceCity)
+	dlc4, _ := mapTrailerDefToDlc(j.TrailerDefinition)
+	dlc5, _ := mapTrailerVariantToDlc(j.TrailerVariant)
+
+	totalDlc := dlc1 | dlc2 | dlc3 | dlc4 | dlc5
+
+	return totalDlc
+}
+
 func readTrailerFile(d Dlc) *trailerFile {
 	data, er := ioutil.ReadFile(fmt.Sprintf("./data/trailers_%s.json", d.ToString()))
 
@@ -112,7 +146,7 @@ func readSimpleJsonArr(prefix string, d Dlc) []string {
 	return r
 }
 
-func MapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
+func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 	for _, d := range allDLCs {
 		if res := readCompanyFile(d); res != nil {
 			if company, ok := res[companyName]; ok && utils.Contains(company.Cities, cityName) {
@@ -121,10 +155,10 @@ func MapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 		}
 	}
 
-	return None, errors.New("trailer not found")
+	return None, errors.New("company not found")
 }
 
-func MapCargoToDlc(cargoName string) (Dlc, error) {
+func mapCargoToDlc(cargoName string) (Dlc, error) {
 	for _, d := range allDLCs {
 		if res := readSimpleJsonArr("cargoes", d); res != nil && utils.Contains(res, cargoName) {
 			return d, nil
@@ -134,7 +168,7 @@ func MapCargoToDlc(cargoName string) (Dlc, error) {
 	return None, errors.New("trailer not found")
 }
 
-func MapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
+func mapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
 	for _, d := range allDLCs {
 		if res := readTrailerFile(d); res != nil && utils.Contains(res.Variants, trailerVariant) {
 			return d, nil
@@ -144,7 +178,7 @@ func MapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
 	return None, errors.New("trailer not found")
 }
 
-func MapTrailerDefToDlc(trailerDef string) (Dlc, error) {
+func mapTrailerDefToDlc(trailerDef string) (Dlc, error) {
 	for _, d := range allDLCs {
 		if res := readTrailerFile(d); res != nil && utils.Contains(res.Definition, trailerDef) {
 			return d, nil

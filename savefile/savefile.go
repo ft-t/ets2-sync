@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"compress/zlib"
 	"errors"
-	"ets2-sync/dlc"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -18,7 +17,6 @@ type SaveFile struct {
 	AvailableCargoTypes []string
 	configSections      []IConfigSection
 	companies           map[string]*CompanyConfigSection
-	clientSupportedDlc  dlc.Dlc
 }
 
 func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
@@ -39,7 +37,7 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 	return r, nil
 }
 
-func (s *SaveFile) ExportJobs() []*JobOffer {
+func (s *SaveFile) ExportOffers() []*JobOffer {
 	var arr []*JobOffer
 
 	for _, k := range s.companies {
