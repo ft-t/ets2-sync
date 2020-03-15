@@ -23,3 +23,7 @@ game.sii_2
 test.json
 
 vendor/
+
+.deploy/inventory.yml
+
+dist/

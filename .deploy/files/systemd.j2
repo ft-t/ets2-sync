@@ -1,0 +1,21 @@
+[Unit]
+Description={{systemd_service_name}} service
+After=network.target
+
+[Service]
+WorkingDirectory={{app_folder}}
+User={{app_user}}
+Group={{app_user}}
+ExecStart={{app_folder}}/{{app_name}}
+Restart=always
+RestartSec=1
+TimeoutStopSec=5
+SyslogIdentifier={{app_name}}
+
+Environment=environment={{env}}
+{% for item in database %}
+Environment={{item}}={{database[item]}}
+{% endfor %}
+
+[Install]
+WantedBy=multi-user.target

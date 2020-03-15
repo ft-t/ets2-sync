@@ -1,0 +1,45 @@
+- hosts: app
+  gather_facts: no
+  tasks:
+    - name: "cleanup dist"
+      local_action:
+        path: "../dist"
+        module: file
+        state: absent
+    - name: "build app"
+      local_action:
+        module: shell
+        chdir: "../"
+        cmd: "GOOS=linux GOARCH=amd64 go build -o dist/{{app_name}}"
+    - name: "deploy files"
+      become: true
+      block:
+        - name: "copy executable"
+          copy:
+            src: "../dist/{{app_name}}"
+            dest: "{{app_folder}}/{{app_name}}"
+            mode: 0744
+            force: yes
+        - name: "copy static files"
+          copy:
+            src: "../data"
+            dest: "{{app_folder}}/data"
+            mode: 0744
+            force: yes
+    - name: "generate systemd template"
+      become: true
+      template:
+        src: "./files/systemd.j2"
+        dest: "/etc/systemd/system/{{systemd_service_name}}.service"
+    - name: "restart service"
+      become: true
+      systemd:
+        daemon_reload: yes
+        enabled: yes
+        state: restarted
+        name: "{{systemd_service_name}}"
+    - name: "cleanup local"
+      local_action:
+        path: "../dist"
+        module: file
+        state: absent
