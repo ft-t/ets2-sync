@@ -24,6 +24,12 @@
             dest: "{{app_folder}}/{{app_name}}"
             mode: 0744
             force: yes
+        - name: "copy index.html"
+          copy:
+            src: "../index.html"
+            dest: "{{app_folder}}"
+            mode: 0744
+            force: yes
         - name: "copy static files"
           copy:
             src: "../data"

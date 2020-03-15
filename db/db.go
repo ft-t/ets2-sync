@@ -57,8 +57,8 @@ func InitializeDb() error {
 
 	getConnectionString := func(dbName string) string {
 		return fmt.Sprintf("host=%v port=%v user=%v password=%v dbname=%v sslmode=disable",
-			os.Getenv("db-host"), os.Getenv("db-port"),
-			os.Getenv("db-user"), os.Getenv("db-password"), dbName)
+			os.Getenv("dbHost"), os.Getenv("dbPort"),
+			os.Getenv("dbUser"), os.Getenv("dbPassword"), dbName)
 	}
 
 	engine, err := xorm.NewEngine("postgres", getConnectionString("postgres"))
@@ -67,7 +67,7 @@ func InitializeDb() error {
 		return err
 	}
 
-	realDbName := os.Getenv("db-name")
+	realDbName := os.Getenv("dbName")
 
 	if engine != nil {
 		_, _ = engine.Exec(fmt.Sprintf("CREATE DATABASE %s;", realDbName))

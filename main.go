@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"html/template"
 	"io"
-	"io/ioutil"
 	"math/rand"
 	"net/http"
+	"os"
 	"strings"
 	"time"
 
@@ -60,48 +60,55 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println("xer")
-
-	d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game_damanox.sii")
-	r, _ := savefile.NewSaveFile(bytes.NewReader(d))
-
-	FillDbWithJobs(r.ExportOffers())
-
-	time.Sleep(1000 * time.Second)
-	//tryMerge()
-
+	Start()
+	//fmt.Println("xer")
 	//
-	//_, _ = savefile.NewSaveManager(r)
+	//d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game_damanox.sii")
+	//r, _ := savefile.NewSaveFile(bytes.NewReader(d))
 	//
-	//b, _ := json.Marshal(r.ExportOffers())
-	//x := string(b)
-	//fmt.Print(x)
-	//save.ClearOffers()
+	//FillDbWithJobs(r.ExportOffers())
 	//
-	//targetPath := "/home/skydev/go/src/ets2-sync/game.sii_2"
-	//os.Remove(targetPath)
-	//f, _ := os.Create(targetPath)
+	//time.Sleep(1000 * time.Second)
+	////tryMerge()
 	//
-	//wr := bufio.NewWriter(f)
+	////
+	////_, _ = savefile.NewSaveManager(r)
+	////
+	////b, _ := json.Marshal(r.ExportOffers())
+	////x := string(b)
+	////fmt.Print(x)
+	////save.ClearOffers()
+	////
+	////targetPath := "/home/skydev/go/src/ets2-sync/game.sii_2"
+	////os.Remove(targetPath)
+	////f, _ := os.Create(targetPath)
+	////
+	////wr := bufio.NewWriter(f)
+	////
+	////_, err = r.Write(wr)
+	////
+	////if err != nil {
+	////	fmt.Println(err)
+	////}
+	////
+	////_ = wr.Flush()
 	//
-	//_, err = r.Write(wr)
+	////Start()
 	//
-	//if err != nil {
-	//	fmt.Println(err)
-	//}
-	//
-	//_ = wr.Flush()
-
-	//Start()
-
-	//fmt.Println(r, e)
+	////fmt.Println(r, e)
 }
 
 func Start() {
+	port := os.Getenv("httpPort")
+
+	if len(port) == 0 {
+		port = "8080"
+	}
+
 	server := &http.Server{
 		ReadTimeout:  60 * time.Second,
 		WriteTimeout: 60 * time.Second,
-		Addr:         ":8080",
+		Addr:         fmt.Sprintf(":%s",port),
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {

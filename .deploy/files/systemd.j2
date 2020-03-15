@@ -13,7 +13,7 @@ TimeoutStopSec=5
 SyslogIdentifier={{app_name}}
 
 Environment=environment={{env}}
-Environment=http-port={{app_port}}
+Environment=httpPort={{app_port}}
 {% for item in database %}
 Environment={{item}}={{database[item]}}
 {% endfor %}
