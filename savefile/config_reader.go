@@ -3,6 +3,7 @@ package savefile
 import (
 	"bufio"
 	"bytes"
+	"ets2-sync/dlc"
 	"fmt"
 	"strings"
 )
@@ -67,6 +68,8 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				m := currentSection.(*JobOfferConfigSection)
 				offers[m.nameValue] = m.Offer
 				m.FillOfferData("id", m.nameValue)
+
+				s.dlc |= dlc.GetRequiredDlc(m.Offer)
 				continue // job_offer_data should not present in configSections
 			}
 

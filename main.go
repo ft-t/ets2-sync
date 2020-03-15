@@ -16,6 +16,7 @@ import (
 
 	"ets2-sync/savefile"
 )
+
 //
 //func tryMerge() {
 //	b, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/test.json")
@@ -108,7 +109,7 @@ func Start() {
 	server := &http.Server{
 		ReadTimeout:  60 * time.Second,
 		WriteTimeout: 60 * time.Second,
-		Addr:         fmt.Sprintf(":%s",port),
+		Addr:         fmt.Sprintf(":%s", port),
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
@@ -136,10 +137,17 @@ func Start() {
 		newSaveFile, er := savefile.NewSaveFile(bytes.NewReader(buf.Bytes()))
 
 		if er != nil {
-			// todo
+			return // todo
 		}
 
-		newSaveFile.ExportOffers()
+		//_, er := savefile.NewSaveManager(newSaveFile)
+		//
+		//if er != nil {
+		//	return // todo
+		//}
+
+		FillDbWithJobs(newSaveFile.ExportOffers())
+		newSaveFile.ClearOffers()
 
 		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%s", header.Filename))
 		w.Header().Set("Content-Type", r.Header.Get("Content-Type"))

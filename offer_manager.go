@@ -145,7 +145,13 @@ func initOfferManager() error {
 	return nil
 }
 
-func GetOffers(supportedDlc dlc.Dlc, availableSources []string) []db.DbOffer {
+func PopulateOffers(file *savefile.SaveFile, supportedDlc dlc.Dlc) {
+	//for _, offer := range getOffers(supportedDlc, file.AvailableCompanies){
+	//	file.ClearOffers()
+	//}
+}
+
+func getOffers(supportedDlc dlc.Dlc, availableSources []string) []db.DbOffer {
 	offersToAdd := make([]db.DbOffer, 0)
 	for sourceCompany, offers := range currentOffers {
 		if !utils.Contains(availableSources, sourceCompany) {

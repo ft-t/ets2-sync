@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"compress/zlib"
 	"errors"
+	dlc2 "ets2-sync/dlc"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -17,6 +18,7 @@ type SaveFile struct {
 	AvailableCargoTypes []string
 	configSections      []IConfigSection
 	companies           map[string]*CompanyConfigSection
+	dlc                 dlc2.Dlc
 }
 
 func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
@@ -35,6 +37,22 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 	r.parseConfig(decrypted)
 
 	return r, nil
+}
+
+func (s *SaveFile) AddOffer() error {
+	return nil
+}
+
+func (s *SaveFile) ClearOffers() {
+	for _, v := range s.companies {
+		if v.Jobs == nil {
+			continue
+		}
+
+		for key, _ := range v.Jobs {
+			delete(v.Jobs, key)
+		}
+	}
 }
 
 func (s *SaveFile) ExportOffers() []*JobOffer {
