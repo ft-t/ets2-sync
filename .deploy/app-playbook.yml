@@ -14,6 +14,10 @@
     - name: "deploy files"
       become: true
       block:
+        - name: "ensure app directory"
+          file:
+            state: directory
+            path: "{{app_folder}}"
         - name: "copy executable"
           copy:
             src: "../dist/{{app_name}}"
@@ -23,7 +27,7 @@
         - name: "copy static files"
           copy:
             src: "../data"
-            dest: "{{app_folder}}/data"
+            dest: "{{app_folder}}"
             mode: 0744
             force: yes
     - name: "generate systemd template"
