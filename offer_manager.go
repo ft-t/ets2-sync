@@ -183,7 +183,8 @@ func FillDbWithJobs(offers []*savefile.JobOffer) {
 				continue // todo log
 			}
 
-			offer.RequiredDlc = dlc.GetRequiredDlc(v)
+			offer.RequiredDlc = dlc.GetRequiredDlc(v.SourceCompany, v.Target,
+				v.Cargo, v.TrailerDefinition, v.TrailerVariant)
 
 			offer.Id = offer.CalculateHash()
 

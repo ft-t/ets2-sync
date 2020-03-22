@@ -3,7 +3,6 @@ package dlc
 import (
 	"encoding/json"
 	"errors"
-	"ets2-sync/savefile"
 	"fmt"
 	"io/ioutil"
 	"strings"
@@ -75,32 +74,26 @@ type companyFile struct {
 	CargoesOut []string `json:"cargoes_out"`
 }
 
-func GetRequiredDlc(j *savefile.JobOffer) Dlc {
-	targetCompany := j.Target
-	targetCity := j.Target
+func GetRequiredDlc(source string, target string, cargo string, trailerDef string, trailerVariant string) Dlc {
+	getCompanyAndCity := func(str string) (city string, company string) {
+		if len(str) > 0 {
+			str = strings.Replace(str, "\"", "", 2)
+			companyData := strings.Split(str, ".")
+			return companyData[1], companyData[0]
+		}
 
-	if len(targetCity) > 0 || len(targetCompany) > 0 {
-		targetCompany = strings.Replace(targetCompany, "\"", "", 2)
-		companyCity := strings.Split(targetCompany, ".")
-		targetCompany = companyCity[0]
-		targetCity = companyCity[1]
+		return "", ""
 	}
 
-	sourceCompany := j.SourceCompany
-	sourceCity := j.SourceCompany
+	targetCity, targetCompany := getCompanyAndCity(target)
+	sourceCity, sourceCompany := getCompanyAndCity(source)
 
-	if len(sourceCity) > 0 || len(sourceCompany) > 0 {
-		sourceCompany = strings.Replace(sourceCompany, "\"", "", 2)
-		companyCity := strings.Split(sourceCompany, ".")
-		sourceCompany = companyCity[0]
-		sourceCity = companyCity[1]
-	}
 
-	dlc1, _ := mapCargoToDlc(j.Cargo)
+	dlc1, _ := mapCargoToDlc(cargo)
 	dlc2, _ := mapCompanyToDlc(targetCompany, targetCity)
 	dlc3, _ := mapCompanyToDlc(sourceCompany, sourceCity)
-	dlc4, _ := mapTrailerDefToDlc(j.TrailerDefinition)
-	dlc5, _ := mapTrailerVariantToDlc(j.TrailerVariant)
+	dlc4, _ := mapTrailerDefToDlc(trailerDef)
+	dlc5, _ := mapTrailerVariantToDlc(trailerVariant)
 
 	totalDlc := dlc1 | dlc2 | dlc3 | dlc4 | dlc5
 

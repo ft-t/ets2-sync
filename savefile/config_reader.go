@@ -69,7 +69,9 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				offers[m.nameValue] = m.Offer
 				m.FillOfferData("id", m.nameValue)
 
-				s.dlc |= dlc.GetRequiredDlc(m.Offer)
+				s.dlc |= dlc.GetRequiredDlc(m.Offer.SourceCompany, m.Offer.Target, m.Offer.Cargo, m.Offer.TrailerDefinition,
+					m.Offer.TrailerVariant)
+
 				continue // job_offer_data should not present in configSections
 			}
 
