@@ -2,6 +2,8 @@ package savefile
 
 import (
 	"bytes"
+	"ets2-sync/db"
+	"ets2-sync/utils"
 	"fmt"
 	"io"
 	"strings"
@@ -76,6 +78,22 @@ type JobOffer struct {
 	FillRatio          string
 	TrailerPlace       string
 	Id                 string // nameParam
+}
+
+func NewJobOffer(offer db.DbOffer) *JobOffer {
+	job := JobOffer{}
+	_, _ = utils.MapToObject(offer, &job)
+	job.Id = offer.NameParam
+
+	return &job
+}
+
+func (j *JobOffer) ToDbOffer() db.DbOffer {
+	offer := db.DbOffer{}
+	_, _ = utils.MapToObject(j, &offer)
+	offer.NameParam = j.Id
+
+	return offer
 }
 
 func (j *JobOffer) Write(w io.Writer, newLine string) {

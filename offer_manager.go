@@ -146,9 +146,13 @@ func initOfferManager() error {
 }
 
 func PopulateOffers(file *savefile.SaveFile, supportedDlc dlc.Dlc) {
-	//for _, offer := range getOffers(supportedDlc, file.AvailableCompanies){
-	//	file.ClearOffers()
-	//}
+	for _, offer := range getOffers(supportedDlc, file.AvailableCompanies){
+		job := savefile.NewJobOffer(offer)
+
+		if err := file.AddOffer(job); err != nil{
+			fmt.Println(err) // todo
+		}
+	}
 }
 
 func getOffers(supportedDlc dlc.Dlc, availableSources []string) []db.DbOffer {
@@ -175,13 +179,7 @@ func FillDbWithJobs(offers []*savefile.JobOffer) {
 
 	go func() {
 		for _, v := range offers {
-			offer := db.DbOffer{}
-			_, err := utils.MapToObject(v, &offer)
-			offer.NameParam = v.Id
-
-			if err != nil {
-				continue // todo log
-			}
+			offer := v.ToDbOffer()
 
 			offer.RequiredDlc = dlc.GetRequiredDlc(v.SourceCompany, v.Target,
 				v.Cargo, v.TrailerDefinition, v.TrailerVariant)

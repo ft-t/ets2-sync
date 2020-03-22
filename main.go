@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"ets2-sync/db"
+	"ets2-sync/dlc"
 	"ets2-sync/global"
 	"fmt"
 	"html/template"
@@ -62,41 +63,6 @@ func main() {
 	}
 
 	Start()
-	//fmt.Println("xer")
-	//
-	//d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game_damanox.sii")
-	//r, _ := savefile.NewSaveFile(bytes.NewReader(d))
-	//
-	//FillDbWithJobs(r.ExportOffers())
-	//
-	//time.Sleep(1000 * time.Second)
-	////tryMerge()
-	//
-	////
-	////_, _ = savefile.NewSaveManager(r)
-	////
-	////b, _ := json.Marshal(r.ExportOffers())
-	////x := string(b)
-	////fmt.Print(x)
-	////save.ClearOffers()
-	////
-	////targetPath := "/home/skydev/go/src/ets2-sync/game.sii_2"
-	////os.Remove(targetPath)
-	////f, _ := os.Create(targetPath)
-	////
-	////wr := bufio.NewWriter(f)
-	////
-	////_, err = r.Write(wr)
-	////
-	////if err != nil {
-	////	fmt.Println(err)
-	////}
-	////
-	////_ = wr.Flush()
-	//
-	////Start()
-	//
-	////fmt.Println(r, e)
 }
 
 func Start() {
@@ -140,14 +106,9 @@ func Start() {
 			return // todo
 		}
 
-		//_, er := savefile.NewSaveManager(newSaveFile)
-		//
-		//if er != nil {
-		//	return // todo
-		//}
-
 		FillDbWithJobs(newSaveFile.ExportOffers())
 		newSaveFile.ClearOffers()
+		PopulateOffers(newSaveFile, dlc.BaseGame)
 
 		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%s", header.Filename))
 		w.Header().Set("Content-Type", r.Header.Get("Content-Type"))

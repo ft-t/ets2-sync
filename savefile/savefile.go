@@ -39,8 +39,14 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 	return r, nil
 }
 
-func (s *SaveFile) AddOffer() error {
-	return nil
+func (s *SaveFile) AddOffer(offer *JobOffer) error {
+	if v, ok := s.companies[offer.SourceCompany]; ok {
+		v.Jobs[offer.Id] = offer
+
+		return nil
+	}
+
+	return errors.New("can not find company")
 }
 
 func (s *SaveFile) ClearOffers() {
