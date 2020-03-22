@@ -100,44 +100,6 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 	return totalDlc
 }
 
-func readTrailerFile(d Dlc) *trailerFile {
-	data, er := ioutil.ReadFile(fmt.Sprintf("./data/trailers_%s.json", d.ToString()))
-
-	if er != nil {
-		return nil // todo log
-	}
-
-	r := &trailerFile{}
-	_ = json.Unmarshal(data, r)
-
-	return r
-}
-
-func readCompanyFile(d Dlc) map[string]*companyFile {
-	data, er := ioutil.ReadFile(fmt.Sprintf("./data/companies_%s.json", d.ToString()))
-
-	if er != nil {
-		return nil // todo log
-	}
-
-	r := make(map[string]*companyFile)
-	_ = json.Unmarshal(data, r)
-
-	return r
-}
-
-func readSimpleJsonArr(prefix string, d Dlc) []string {
-	data, er := ioutil.ReadFile(fmt.Sprintf("./data/%s_%s.json", prefix, d.ToString()))
-
-	if er != nil {
-		return nil // todo log
-	}
-
-	var r []string
-	_ = json.Unmarshal(data, r)
-
-	return r
-}
 
 func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 	for _, d := range allDLCs {
@@ -179,4 +141,63 @@ func mapTrailerDefToDlc(trailerDef string) (Dlc, error) {
 	}
 
 	return None, errors.New("trailer not found")
+}
+
+
+var parsedTrailerFile *trailerFile
+var parsedCompanyFile map[string]*companyFile
+var dataCache = make(map[string][]string)
+
+func readTrailerFile(d Dlc) *trailerFile {
+	if parsedTrailerFile != nil {
+		return parsedTrailerFile
+	}
+
+	data, er := ioutil.ReadFile(fmt.Sprintf("./data/trailers_%s.json", d.ToString()))
+
+	if er != nil {
+		return nil // todo log
+	}
+
+	_ = json.Unmarshal(data, &parsedTrailerFile)
+
+	return parsedTrailerFile
+}
+
+func readCompanyFile(d Dlc) map[string]*companyFile {
+	if parsedCompanyFile != nil {
+		return parsedCompanyFile
+	}
+
+	data, er := ioutil.ReadFile(fmt.Sprintf("./data/companies_%s.json", d.ToString()))
+
+	if er != nil {
+		return nil // todo log
+	}
+
+	parsedCompanyFile = make(map[string]*companyFile)
+	_ = json.Unmarshal(data, &parsedCompanyFile)
+
+	return parsedCompanyFile
+}
+
+func readSimpleJsonArr(prefix string, d Dlc) []string {
+	path := fmt.Sprintf("./data/%s_%s.json", prefix, d.ToString())
+
+	if v, ok := dataCache[path]; ok {
+		return v
+	}
+
+	data, er := ioutil.ReadFile(path)
+
+	if er != nil {
+		return nil // todo log
+	}
+
+	var r []string
+	_ = json.Unmarshal(data, &r)
+
+	dataCache[path] = r
+
+	return r
 }
