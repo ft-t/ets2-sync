@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"bytes"
 	"ets2-sync/db"
 	"ets2-sync/dlc"
@@ -111,9 +110,9 @@ func Start() {
 		PopulateOffers(newSaveFile, dlc.BaseGame)
 
 		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%s", header.Filename))
-		w.Header().Set("Content-Type", r.Header.Get("Content-Type"))
-		wr := bufio.NewWriter(w)
-		_, _ = newSaveFile.Write(wr)
+		w.Header().Set("Content-Type", "application/octet-stream")
+
+		_, _ = newSaveFile.Write(w)
 	})
 
 	_ = server.ListenAndServe()
