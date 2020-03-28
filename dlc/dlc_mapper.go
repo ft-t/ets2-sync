@@ -79,7 +79,7 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 		if len(str) > 0 {
 			str = strings.Replace(str, "\"", "", 2)
 			companyData := strings.Split(str, ".")
-			return companyData[1], companyData[0]
+			return companyData[len(companyData)-1], companyData[len(companyData)-2]
 		}
 
 		return "", ""
@@ -87,7 +87,6 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 
 	targetCity, targetCompany := getCompanyAndCity(target)
 	sourceCity, sourceCompany := getCompanyAndCity(source)
-
 
 	dlc1, _ := mapCargoToDlc(cargo)
 	dlc2, _ := mapCompanyToDlc(targetCompany, targetCity)
@@ -144,41 +143,51 @@ func mapTrailerDefToDlc(trailerDef string) (Dlc, error) {
 }
 
 
-var parsedTrailerFile *trailerFile
-var parsedCompanyFile map[string]*companyFile
+var parsedTrailerFile = make(map[string]*trailerFile)
+var parsedCompanyFile = make(map[string]map[string]*companyFile)
+
 var dataCache = make(map[string][]string)
 
 func readTrailerFile(d Dlc) *trailerFile {
-	if parsedTrailerFile != nil {
-		return parsedTrailerFile
+	name := fmt.Sprintf("./data/trailers_%s.json", d.ToString())
+
+	if v, ok := parsedTrailerFile[name]; ok {
+		return v
 	}
 
-	data, er := ioutil.ReadFile(fmt.Sprintf("./data/trailers_%s.json", d.ToString()))
+	data, er := ioutil.ReadFile(name)
 
 	if er != nil {
 		return nil // todo log
 	}
 
-	_ = json.Unmarshal(data, &parsedTrailerFile)
+	parsed := &trailerFile{}
+	_ = json.Unmarshal(data, parsed)
 
-	return parsedTrailerFile
+	parsedTrailerFile[name] = parsed
+
+	return parsed
 }
 
 func readCompanyFile(d Dlc) map[string]*companyFile {
-	if parsedCompanyFile != nil {
-		return parsedCompanyFile
+	name := fmt.Sprintf("./data/companies_%s.json", d.ToString())
+
+	if v, ok := parsedCompanyFile[name]; ok  {
+		return v
 	}
 
-	data, er := ioutil.ReadFile(fmt.Sprintf("./data/companies_%s.json", d.ToString()))
+	data, er := ioutil.ReadFile(name)
 
 	if er != nil {
 		return nil // todo log
 	}
 
-	parsedCompanyFile = make(map[string]*companyFile)
-	_ = json.Unmarshal(data, &parsedCompanyFile)
+	parsed := make(map[string]*companyFile)
+	_ = json.Unmarshal(data, &parsed)
 
-	return parsedCompanyFile
+	parsedCompanyFile[name] = parsed
+
+	return parsed
 }
 
 func readSimpleJsonArr(prefix string, d Dlc) []string {
