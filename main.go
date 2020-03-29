@@ -2,17 +2,18 @@ package main
 
 import (
 	"bytes"
-	"ets2-sync/db"
-	"ets2-sync/dlc"
-	"ets2-sync/global"
 	"fmt"
 	"html/template"
 	"io"
 	"math/rand"
 	"net/http"
 	"os"
+	"strconv"
 	"strings"
 	"time"
+
+	"ets2-sync/dlc"
+	"ets2-sync/global"
 
 	"ets2-sync/savefile"
 )
@@ -79,7 +80,7 @@ func Start() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		tmpl := template.Must(template.ParseFiles("index.html"))
-		_ = tmpl.Execute(w, nil)
+		_ = tmpl.Execute(w, []dlc.Dlc{dlc.GoingEast, dlc.Scandinavia, dlc.LaFrance, dlc.Italy, dlc.BeyondTheBalticSea, dlc.RoadToTheBlackSea, dlc.PowerCargo, dlc.HeavyCargo, dlc.SpecialTransport, dlc.Krone, dlc.Schwarzmuller})
 	})
 	http.HandleFunc("/save_upload", func(w http.ResponseWriter, r *http.Request) {
 		_ = r.ParseMultipartForm(32 << 20)
@@ -92,6 +93,13 @@ func Start() {
 
 		if !strings.HasSuffix(header.Filename, ".sii") {
 			return // not a save file
+		}
+
+		dlcs := r.Form["dlc"]
+		offersDlcs := dlc.BaseGame
+		for _, d := range dlcs {
+			val, _ := strconv.Atoi(d)
+			offersDlcs |= dlc.Dlc(val)
 		}
 
 		buf := bytes.NewBuffer(nil)
@@ -107,7 +115,7 @@ func Start() {
 
 		FillDbWithJobs(newSaveFile.ExportOffers())
 		newSaveFile.ClearOffers()
-		PopulateOffers(newSaveFile, dlc.BaseGame)
+		PopulateOffers(newSaveFile, offersDlcs)
 
 		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%s", header.Filename))
 		w.Header().Set("Content-Type", "application/octet-stream")
