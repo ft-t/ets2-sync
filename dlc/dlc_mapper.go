@@ -103,7 +103,7 @@ type companyFile struct {
 	CargoesOut []string `json:"cargoes_out"`
 }
 
-func GetRequiredDlc(source string, target string, cargo string, trailerDef string, trailerVariant string) (Dlc, error) {
+func GetRequiredDlc(source string, target string, cargo string, trailerDef string, trailerVariant string) Dlc {
 	getCompanyAndCity := func(str string) (city string, company string) {
 		if len(str) > 0 {
 			str = strings.Replace(str, "\"", "", 2)
@@ -131,21 +131,17 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 		parsed, er := v()
 
 		if er != nil {
-			return None, er
+			return None
 		}
 
 		if parsed == None {
-			return 0, errors.New("can not map to dlc")
+			return None
 		}
 
-		totalDlc = totalDlc | parsed
+		totalDlc |= parsed
 	}
 
-	if totalDlc == None {
-		return 0, errors.New("total dlc map null")
-	}
-
-	return totalDlc, nil
+	return totalDlc
 }
 
 func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {

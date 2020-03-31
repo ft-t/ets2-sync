@@ -93,7 +93,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				s.AvailableCompanies = append(s.AvailableCompanies, parsed[1])
 			}
 			if strings.Contains(parsed[0], "transported_cargo_types[") {
-				s.AvailableCargoTypes = append(s.AvailableCargoTypes, fmt.Sprintf("cargo.%s",parsed[1]))
+				s.AvailableCargoTypes = append(s.AvailableCargoTypes, fmt.Sprintf("cargo.%s", parsed[1]))
 			}
 		}
 
@@ -132,15 +132,13 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				k.Jobs[jobId] = offer
 				offer.ExpirationTime = "86400000"
 
-				if parsed, dlcErr := dlc.GetRequiredDlc(offer.SourceCompany, offer.Target, offer.Cargo, offer.TrailerDefinition,
-					offer.TrailerVariant); dlcErr == nil {
-					s.dlc |= parsed
-				}
+				s.dlc |= dlc.GetRequiredDlc(offer.SourceCompany, offer.Target, offer.Cargo, offer.TrailerDefinition,
+					offer.TrailerVariant)
 			}
 		}
 
 		for kJob, job := range k.Jobs {
-			if job.Target == "\"\"" || job.Target == "" || job.Target == "null" || job.Cargo == "null" || job.Cargo == "cargo.caravan"  {
+			if job.Target == "\"\"" || job.Target == "" || job.Target == "null" || job.Cargo == "null" || job.Cargo == "cargo.caravan" {
 				delete(k.Jobs, kJob)
 			}
 		}
