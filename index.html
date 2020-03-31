@@ -6,7 +6,10 @@
 </head>
 <body>
     <form id="upload_form" enctype="multipart/form-data" method="post" action="/save_upload">
-        <input type="file" name="savefile">
+        <input type="file" name="savefile"><br><br>
+        {{ range $key, $value := . }}
+            <input name="dlc" type="checkbox" value="{{$value}}">{{$value.ToName}}<br>
+        {{ end }}<br>
         <button type="submit">Upload</button>
     </form>
 </body>

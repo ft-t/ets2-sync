@@ -74,6 +74,7 @@
     "github.com/mitchellh/hashstructure",
     "github.com/mitchellh/mapstructure",
     "github.com/pkg/errors",
+    "xorm.io/builder",
     "xorm.io/core",
   ]
   solver-name = "gps-cdcl"

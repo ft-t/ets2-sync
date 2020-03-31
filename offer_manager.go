@@ -181,8 +181,12 @@ func FillDbWithJobs(offers []*savefile.JobOffer) {
 		for _, v := range offers {
 			offer := v.ToDbOffer()
 
-			offer.RequiredDlc = dlc.GetRequiredDlc(v.SourceCompany, v.Target,
+			offer.RequiredDlc, _ = dlc.GetRequiredDlc(v.SourceCompany, v.Target,
 				v.Cargo, v.TrailerDefinition, v.TrailerVariant)
+
+			if offer.RequiredDlc == dlc.None {
+				continue // skip unverified offers
+			}
 
 			offer.Id = offer.CalculateHash()
 
