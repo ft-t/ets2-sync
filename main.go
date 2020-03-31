@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"encoding/json"
 	"ets2-sync/db"
 	"ets2-sync/dlc"
 	"ets2-sync/global"
@@ -16,38 +17,6 @@ import (
 
 	"ets2-sync/savefile"
 )
-
-//
-//func tryMerge() {
-//	b, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/test.json")
-//	var jobs []*savefile.JobOffer
-//
-//	json.Unmarshal(b, &jobs)
-//
-//	d, _ := ioutil.ReadFile("/home/skydev/go/src/ets2-sync/game.sii")
-//	r, _ := savefile.NewSaveFile(bytes.NewReader(d))
-//
-//	save, _ := savefile.NewSaveManager(r)
-//	save.ClearOffers()
-//
-//	for _, j := range jobs {
-//		save.TryAddOffer(j)
-//	}
-//
-//	targetPath := "/home/skydev/go/src/ets2-sync/game.sii_2"
-//	os.Remove(targetPath)
-//	f, _ := os.Create(targetPath)
-//
-//	wr := bufio.NewWriter(f)
-//
-//	_, _ = r.Write(wr)
-//
-//	//if err != nil {
-//	//	fmt.Println(err)
-//	//}
-//
-//	_ = wr.Flush()
-//}
 
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
@@ -81,6 +50,21 @@ func Start() {
 		tmpl := template.Must(template.ParseFiles("index.html"))
 		_ = tmpl.Execute(w, nil)
 	})
+
+	http.HandleFunc("/dlc", func(w http.ResponseWriter, r *http.Request) {
+		res := make(map[string]int)
+
+		for _, d := range dlc.AllDLCs {
+			res[d.ToString()] = int(d)
+		}
+
+		w.Header().Set("Content-Type", "application/jsons")
+		b, _ := json.Marshal(res)
+
+		_, _ = w.Write(b)
+		return
+	})
+
 	http.HandleFunc("/save_upload", func(w http.ResponseWriter, r *http.Request) {
 		_ = r.ParseMultipartForm(32 << 20)
 

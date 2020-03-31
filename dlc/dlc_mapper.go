@@ -28,7 +28,7 @@ const (
 	SpecialTransport   Dlc = 1 << 11
 )
 
-var allDLCs = []Dlc{BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea}
+var AllDLCs = []Dlc{BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea}
 
 func (t Dlc) ToString() string {
 	switch t {
@@ -74,7 +74,7 @@ type companyFile struct {
 	CargoesOut []string `json:"cargoes_out"`
 }
 
-func GetRequiredDlc(source string, target string, cargo string, trailerDef string, trailerVariant string) Dlc {
+func GetRequiredDlc(source string, target string, cargo string, trailerDef string, trailerVariant string) (Dlc, error) {
 	getCompanyAndCity := func(str string) (city string, company string) {
 		if len(str) > 0 {
 			str = strings.Replace(str, "\"", "", 2)
@@ -88,20 +88,39 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 	targetCity, targetCompany := getCompanyAndCity(target)
 	sourceCity, sourceCompany := getCompanyAndCity(source)
 
-	dlc1, _ := mapCargoToDlc(cargo)
-	dlc2, _ := mapCompanyToDlc(targetCompany, targetCity)
-	dlc3, _ := mapCompanyToDlc(sourceCompany, sourceCity)
-	dlc4, _ := mapTrailerDefToDlc(trailerDef)
-	dlc5, _ := mapTrailerVariantToDlc(trailerVariant)
+	validators := []func() (Dlc, error){
+		func() (Dlc, error) { return mapCargoToDlc(cargo) },
+		func() (Dlc, error) { return mapCompanyToDlc(targetCompany, targetCity) },
+		func() (Dlc, error) { return mapCompanyToDlc(sourceCompany, sourceCity) },
+		func() (Dlc, error) { return mapTrailerDefToDlc(trailerDef) },
+		func() (Dlc, error) { return mapTrailerVariantToDlc(trailerVariant) },
+	}
 
-	totalDlc := dlc1 | dlc2 | dlc3 | dlc4 | dlc5
+	totalDlc := None
 
-	return totalDlc
+	for _, v := range validators {
+		parsed, er := v()
+
+		if er != nil {
+			return None, er
+		}
+
+		if parsed == None {
+			return 0, errors.New("can not map to dlc")
+		}
+
+		totalDlc = totalDlc | parsed
+	}
+
+	if totalDlc == None {
+		return 0, errors.New("total dlc map null")
+	}
+
+	return totalDlc, nil
 }
 
-
 func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
-	for _, d := range allDLCs {
+	for _, d := range AllDLCs {
 		if res := readCompanyFile(d); res != nil {
 			if company, ok := res[companyName]; ok && utils.Contains(company.Cities, cityName) {
 				return d, nil
@@ -113,7 +132,7 @@ func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 }
 
 func mapCargoToDlc(cargoName string) (Dlc, error) {
-	for _, d := range allDLCs {
+	for _, d := range AllDLCs {
 		if res := readSimpleJsonArr("cargoes", d); res != nil && utils.Contains(res, cargoName) {
 			return d, nil
 		}
@@ -123,7 +142,7 @@ func mapCargoToDlc(cargoName string) (Dlc, error) {
 }
 
 func mapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
-	for _, d := range allDLCs {
+	for _, d := range AllDLCs {
 		if res := readTrailerFile(d); res != nil && utils.Contains(res.Variants, trailerVariant) {
 			return d, nil
 		}
@@ -133,7 +152,7 @@ func mapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
 }
 
 func mapTrailerDefToDlc(trailerDef string) (Dlc, error) {
-	for _, d := range allDLCs {
+	for _, d := range AllDLCs {
 		if res := readTrailerFile(d); res != nil && utils.Contains(res.Definition, trailerDef) {
 			return d, nil
 		}
@@ -141,7 +160,6 @@ func mapTrailerDefToDlc(trailerDef string) (Dlc, error) {
 
 	return None, errors.New("trailer not found")
 }
-
 
 var parsedTrailerFile = make(map[string]*trailerFile)
 var parsedCompanyFile = make(map[string]map[string]*companyFile)
@@ -172,7 +190,7 @@ func readTrailerFile(d Dlc) *trailerFile {
 func readCompanyFile(d Dlc) map[string]*companyFile {
 	name := fmt.Sprintf("./data/companies_%s.json", d.ToString())
 
-	if v, ok := parsedCompanyFile[name]; ok  {
+	if v, ok := parsedCompanyFile[name]; ok {
 		return v
 	}
 

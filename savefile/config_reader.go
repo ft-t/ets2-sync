@@ -132,8 +132,10 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				k.Jobs[jobId] = offer
 				offer.ExpirationTime = "86400000"
 
-				s.dlc |= dlc.GetRequiredDlc(offer.SourceCompany, offer.Target, offer.Cargo, offer.TrailerDefinition,
-					offer.TrailerVariant)
+				if parsed, dlcErr := dlc.GetRequiredDlc(offer.SourceCompany, offer.Target, offer.Cargo, offer.TrailerDefinition,
+					offer.TrailerVariant); dlcErr == nil {
+					s.dlc |= parsed
+				}
 			}
 		}
 
