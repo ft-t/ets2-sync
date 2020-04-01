@@ -58,7 +58,8 @@ func Start() {
 			res[d.ToString()] = int(d)
 		}
 
-		w.Header().Set("Content-Type", "application/jsons")
+		w.Header().Set("Content-Type", "application/json")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		b, _ := json.Marshal(res)
 
 		_, _ = w.Write(b)
@@ -102,6 +103,8 @@ func Start() {
 
 		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%s", header.Filename))
 		w.Header().Set("Content-Type", "application/octet-stream")
+		w.Header().Add("Access-Control-Expose-Headers", "Content-Disposition")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 
 		_, _ = newSaveFile.Write(w)
 	})
