@@ -29,6 +29,9 @@ const (
 )
 
 var AllDLCs = []Dlc{BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea, SpecialTransport, RoadToTheBlackSea}
+var ExpansionDLCs = []Dlc{Scandinavia, GoingEast, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea}
+var CargoDLCs = []Dlc{PowerCargo, HeavyCargo, SpecialTransport}
+var TrailerDLCs = []Dlc{Krone, Schwarzmuller}
 
 func (t Dlc) ToString() string {
 	switch t {
