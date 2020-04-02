@@ -32,12 +32,21 @@ func initOfferManager() error {
 	go func() {
 		for {
 			jobToProcessMutex.Lock()
-			jobsCopy := jobsToProcess
+
+			dbOffers := make([]db.DbOffer, 0)
+
+			for _, offer := range jobsToProcess {
+				dbOffer := db.DbOffer{}
+				_, _ = utils.MapToObject(offer, &dbOffer)
+
+				dbOffers = append(dbOffers, dbOffer)
+			}
+
 			jobsToProcess = make([]structs.ApplicableOffer, 0)
 			jobToProcessMutex.Unlock()
 
 			batchSize := 100
-			lenJobs := len(jobsCopy)
+			lenJobs := len(dbOffers)
 
 			context := db.GetDb()
 
@@ -48,17 +57,17 @@ func initOfferManager() error {
 					j = lenJobs
 				}
 
-				currentOffers := jobsCopy[i:j]
-				hashes := make([]string, 0)
+				currentOffers := dbOffers[i:j]
+				ids := make([]string, 0)
 
 				for _, offer := range currentOffers {
-					hashes = append(hashes, offer.Id)
+					ids = append(ids, offer.Id)
 				}
 
 				createNewJobsMutex.Lock()
 				realOffersInDb := make([]db.DbOffer, 0)
 
-				_ = context.Where(builder.In("hash", hashes)).
+				_ = context.Where(builder.In("id", ids)).
 					Find(&realOffersInDb)
 
 				for _, dbOffer := range realOffersInDb { // ideally it should never happen
