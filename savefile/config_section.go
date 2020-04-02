@@ -6,6 +6,7 @@ import (
 	"ets2-sync/utils"
 	"fmt"
 	"io"
+	"sort"
 	"strings"
 )
 
@@ -44,10 +45,18 @@ func (c *CompanyConfigSection) Write(w io.Writer, newLine string) (n int64, err 
 	_, _ = w.Write([]byte(fmt.Sprintf(" delivered_pos: %s%s", c.deliveredPos, newLine)))
 	_, _ = w.Write([]byte(fmt.Sprintf(" job_offer: %d%s", len(c.Jobs), newLine)))
 
+	var jobIds []string
+
+	for k, _ := range c.Jobs {
+		jobIds = append(jobIds, k)
+	}
+
+	sort.Strings(jobIds)
+
 	index := 0
 
-	for _, j := range c.Jobs {
-		_, _ = w.Write([]byte(fmt.Sprintf(" job_offer[%d]: %s%s", index, j.Id, newLine)))
+	for _, id := range jobIds {
+		_, _ = w.Write([]byte(fmt.Sprintf(" job_offer[%d]: %s%s", index, id, newLine)))
 		index++
 	}
 
@@ -55,8 +64,8 @@ func (c *CompanyConfigSection) Write(w io.Writer, newLine string) (n int64, err 
 
 	index = 0
 
-	for _,j := range c.Jobs {
-		_, _ = w.Write([]byte(fmt.Sprintf(" cargo_offer_seeds[%d]: %s%s", index, j.Seed, newLine)))
+	for _, id := range jobIds {
+		_, _ = w.Write([]byte(fmt.Sprintf(" cargo_offer_seeds[%d]: %s%s", index, c.Jobs[id].Seed, newLine)))
 		index++
 	}
 

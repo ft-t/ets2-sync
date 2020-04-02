@@ -10,6 +10,7 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
+	"sort"
 )
 
 type SaveFile struct {
@@ -110,9 +111,16 @@ func (s *SaveFile) Write(w io.Writer) (n int, err error) {
 
 		if comp, ok := k.(*CompanyConfigSection); ok {
 			if comp.Jobs != nil {
-				for _, j := range comp.Jobs {
-					writeHeader("job_offer_data", j.Id)
-					j.Write(w, s.lineEndingFormat)
+				var jobIds []string
+				for k, _ := range comp.Jobs {
+					jobIds = append(jobIds, k)
+				}
+
+				sort.Strings(jobIds)
+
+				for _, j := range jobIds {
+					writeHeader("job_offer_data", comp.Jobs[j].Id)
+					comp.Jobs[j].Write(w, s.lineEndingFormat)
 					writeEnd()
 				}
 			}
