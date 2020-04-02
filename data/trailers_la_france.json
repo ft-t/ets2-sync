@@ -4,19 +4,19 @@
   ],
   "definitions": {
     "trailer_def.cars_fr.car_fr": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.fuel_oil.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.fuel_oil.willig.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.granite_cube.s_ki_solid.cover": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.live_catt_fr.livestock": {
-      "Countries": []
+      "countries": []
     }
   }
 }

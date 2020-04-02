@@ -1,233 +1,233 @@
 {
   "city.aberdeen": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.amsterdam": {
-    "Country": "netherlands"
+    "country": "netherlands"
   },
   "city.berlin": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.bern": {
-    "Country": "switzerland"
+    "country": "switzerland"
   },
   "city.birmingham": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.bratislava": {
-    "Country": "slovakia"
+    "country": "slovakia"
   },
   "city.bremen": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.brno": {
-    "Country": "czech"
+    "country": "czech"
   },
   "city.brussel": {
-    "Country": "belgium"
+    "country": "belgium"
   },
   "city.calais": {
-    "Country": "france"
+    "country": "france"
   },
   "city.cambridge": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.cardiff": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.carlisle": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.dijon": {
-    "Country": "france"
+    "country": "france"
   },
   "city.dortmund": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.dover": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.dresden": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.duisburg": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.dusseldorf": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.edinburgh": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.erfurt": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.europoort": {
-    "Country": "netherlands"
+    "country": "netherlands"
   },
   "city.felixstowe": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.frankfurt": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.geneve": {
-    "Country": "switzerland"
+    "country": "switzerland"
   },
   "city.glasgow": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.graz": {
-    "Country": "austria"
+    "country": "austria"
   },
   "city.grimsby": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.groningen": {
-    "Country": "netherlands"
+    "country": "netherlands"
   },
   "city.hamburg": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.hannover": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.harwich": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.hull": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.ijmuiden": {
-    "Country": "netherlands"
+    "country": "netherlands"
   },
   "city.innsbruck": {
-    "Country": "austria"
+    "country": "austria"
   },
   "city.kassel": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.kiel": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.klagenfurt": {
-    "Country": "austria"
+    "country": "austria"
   },
   "city.koln": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.leipzig": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.liege": {
-    "Country": "belgium"
+    "country": "belgium"
   },
   "city.lille": {
-    "Country": "france"
+    "country": "france"
   },
   "city.linz": {
-    "Country": "austria"
+    "country": "austria"
   },
   "city.liverpool": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.london": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.luxembourg": {
-    "Country": "luxembourg"
+    "country": "luxembourg"
   },
   "city.lyon": {
-    "Country": "france"
+    "country": "france"
   },
   "city.magdeburg": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.manchester": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.mannheim": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.metz": {
-    "Country": "france"
+    "country": "france"
   },
   "city.milano": {
-    "Country": "italy"
+    "country": "italy"
   },
   "city.munchen": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.newcastle": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.nurnberg": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.osnabruck": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.paris": {
-    "Country": "france"
+    "country": "france"
   },
   "city.plymouth": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.poznan": {
-    "Country": "poland"
+    "country": "poland"
   },
   "city.prague": {
-    "Country": "czech"
+    "country": "czech"
   },
   "city.reims": {
-    "Country": "france"
+    "country": "france"
   },
   "city.rostock": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.rotterdam": {
-    "Country": "netherlands"
+    "country": "netherlands"
   },
   "city.salzburg": {
-    "Country": "austria"
+    "country": "austria"
   },
   "city.sheffield": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.southampton": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.strasbourg": {
-    "Country": "france"
+    "country": "france"
   },
   "city.stuttgart": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.swansea": {
-    "Country": "uk"
+    "country": "uk"
   },
   "city.szczecin": {
-    "Country": "poland"
+    "country": "poland"
   },
   "city.torino": {
-    "Country": "italy"
+    "country": "italy"
   },
   "city.travemunde": {
-    "Country": "germany"
+    "country": "germany"
   },
   "city.venezia": {
-    "Country": "italy"
+    "country": "italy"
   },
   "city.verona": {
-    "Country": "italy"
+    "country": "italy"
   },
   "city.wien": {
-    "Country": "austria"
+    "country": "austria"
   },
   "city.wroclaw": {
-    "Country": "poland"
+    "country": "poland"
   },
   "city.zurich": {
-    "Country": "switzerland"
+    "country": "switzerland"
   }
 }
