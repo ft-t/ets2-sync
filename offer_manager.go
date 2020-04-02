@@ -13,7 +13,7 @@ import (
 	"xorm.io/builder"
 )
 
-var currentOffers map[string][]db.DbOffer // key is SourceCompany
+var currentOffers map[string][]*db.DbOffer // key is SourceCompany
 var totalOffersForSync int
 var lastUpdatedSync time.Time
 
@@ -100,38 +100,36 @@ func initOfferManager() error {
 func updateList() error {
 	context := db.GetDb()
 
-	currentOffersArr := make([]db.DbOffer, 0)
+	currentOffersArr := make([]*db.DbOffer, 0)
 
 	if err := context.OrderBy("required_dlc asc").Find(&currentOffersArr); err != nil {
 		return err
 	}
 
-	currentOffers = make(map[string][]db.DbOffer)
+	currentOffers = make(map[string][]*db.DbOffer)
 	totalOffersForSync = 0
 	lastUpdatedSync = time.Now().UTC()
 	maxNonDlcJobs := 5
 	maxCargoThreshold := 20
+	segment3 := 0
+	segment4 := 0
 
 	for _, offer := range currentOffersArr {
 		val, ok := currentOffers[offer.SourceCompany]
 		offersInDb = append(offersInDb, offer.Id)
 		if !ok {
-			val = make([]db.DbOffer, 0)
+			val = make([]*db.DbOffer, 0)
 		}
 
 		currentOffers[offer.SourceCompany] = append(val, offer)
 	}
 
 	for key, offers := range currentOffers {
-		if len(offers) <= maxCargoThreshold {
-			continue
-		}
-
 		rand.Shuffle(len(offers), func(i, j int) {
 			offers[i], offers[j] = offers[j], offers[i]
 		})
 
-		finalOffers := make([]db.DbOffer, 0)
+		finalOffers := make([]*db.DbOffer, 0)
 
 		for _, offer := range offers {
 			if maxNonDlcJobs <= len(finalOffers) {
@@ -153,6 +151,16 @@ func updateList() error {
 			}
 
 			finalOffers = append(finalOffers, offer)
+		}
+
+		for _, offer := range finalOffers {
+			offer.NameParam = fmt.Sprintf("_nameless.19a.%04d.%04d", segment3, segment4)
+			segment4++
+
+			if segment4 == 9999 {
+				segment4 = 0
+				segment3++
+			}
 		}
 
 		totalOffersForSync += len(finalOffers)
@@ -181,7 +189,7 @@ func getOffers(supportedDlc dlc.Dlc, availableSources []string) []db.DbOffer {
 
 		for _, offer := range offers {
 			if (supportedDlc & offer.RequiredDlc) == offer.RequiredDlc {
-				offersToAdd = append(offersToAdd, offer)
+				offersToAdd = append(offersToAdd, *offer)
 			}
 		}
 	}
