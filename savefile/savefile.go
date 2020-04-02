@@ -5,6 +5,7 @@ import (
 	"compress/zlib"
 	"errors"
 	dlc2 "ets2-sync/dlc"
+	"ets2-sync/structs"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -39,9 +40,9 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 	return r, nil
 }
 
-func (s *SaveFile) AddOffer(offer *JobOffer) error {
+func (s *SaveFile) AddOffer(offer structs.ApplicableOffer) error {
 	if v, ok := s.companies[offer.SourceCompany]; ok {
-		v.Jobs[offer.Id] = offer
+		v.Jobs[offer.Id] = newJobOffer(offer)
 
 		return nil
 	}

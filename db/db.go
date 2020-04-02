@@ -21,7 +21,6 @@ type DbOffer struct {
 	RequiredDlc        dlc.Dlc
 	SourceCompany      string `xorm:"text"`
 	Target             string
-	ExpirationTime     string
 	Urgency            string
 	ShortestDistanceKm string
 	FerryTime          string
@@ -33,8 +32,8 @@ type DbOffer struct {
 	UnitsCount         string
 	FillRatio          string
 	TrailerPlace       string
-	NameParam          string // nameParam
 }
+
 
 func (o *DbOffer) CalculateHash() string {
 	hash, err := hashstructure.Hash(struct {

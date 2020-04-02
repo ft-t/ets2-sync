@@ -5,6 +5,7 @@ import (
 	"ets2-sync/db"
 	"ets2-sync/dlc"
 	"ets2-sync/savefile"
+	"ets2-sync/structs"
 	"ets2-sync/utils"
 	"fmt"
 	"math/rand"
@@ -13,7 +14,7 @@ import (
 	"xorm.io/builder"
 )
 
-var currentOffers map[string][]*db.DbOffer // key is SourceCompany
+var currentOffers map[string][]structs.ApplicableOffer // key is SourceCompany
 var totalOffersForSync int
 var lastUpdatedSync time.Time
 
@@ -22,6 +23,7 @@ var jobToProcessMutex sync.Mutex
 var createNewJobsMutex sync.Mutex
 var jobsToProcess = make([]db.DbOffer, 0)
 var jobManagerInitialized bool
+
 
 func initOfferManager() error {
 	if jobManagerInitialized {
@@ -106,7 +108,8 @@ func updateList() error {
 		return err
 	}
 
-	currentOffers = make(map[string][]*db.DbOffer)
+	currentOffers = make(map[string][]structs.ApplicableOffer)
+	tempOffers := make(map[string][]*db.DbOffer)
 	totalOffersForSync = 0
 	lastUpdatedSync = time.Now().UTC()
 	maxNonDlcJobs := 5
@@ -115,16 +118,18 @@ func updateList() error {
 	segment4 := 0
 
 	for _, offer := range currentOffersArr {
-		val, ok := currentOffers[offer.SourceCompany]
+		val, ok := tempOffers[offer.SourceCompany]
 		offersInDb = append(offersInDb, offer.Id)
+
 		if !ok {
 			val = make([]*db.DbOffer, 0)
 		}
 
-		currentOffers[offer.SourceCompany] = append(val, offer)
+		tempOffers[offer.SourceCompany] = append(val, offer)
 	}
 
-	for key, offers := range currentOffers {
+	for key, offers := range tempOffers {
+
 		rand.Shuffle(len(offers), func(i, j int) {
 			offers[i], offers[j] = offers[j], offers[i]
 		})
@@ -153,8 +158,10 @@ func updateList() error {
 			finalOffers = append(finalOffers, offer)
 		}
 
+		result := make([]structs.ApplicableOffer, 0)
+
 		for _, offer := range finalOffers {
-			offer.NameParam = fmt.Sprintf("_nameless.19a.%04d.%04d", segment3, segment4)
+			result = append(result, structs.NewApplicableOffer(offer, fmt.Sprintf("_nameless.19a.%04d.%04d", segment3, segment4)))
 			segment4++
 
 			if segment4 == 9999 {
@@ -164,7 +171,8 @@ func updateList() error {
 		}
 
 		totalOffersForSync += len(finalOffers)
-		currentOffers[key] = finalOffers
+
+		currentOffers[key] = result
 	}
 
 	return nil
@@ -172,16 +180,14 @@ func updateList() error {
 
 func PopulateOffers(file *savefile.SaveFile, supportedDlc dlc.Dlc) {
 	for _, offer := range getOffers(supportedDlc, file.AvailableCompanies) {
-		job := savefile.NewJobOffer(offer)
-
-		if err := file.AddOffer(job); err != nil {
+		if err := file.AddOffer(offer); err != nil {
 			fmt.Println(err) // todo
 		}
 	}
 }
 
-func getOffers(supportedDlc dlc.Dlc, availableSources []string) []db.DbOffer {
-	offersToAdd := make([]db.DbOffer, 0)
+func getOffers(supportedDlc dlc.Dlc, availableSources []string) []structs.ApplicableOffer {
+	offersToAdd := make([]structs.ApplicableOffer, 0)
 	for sourceCompany, offers := range currentOffers {
 		if !utils.Contains(availableSources, sourceCompany) {
 			continue
@@ -189,7 +195,7 @@ func getOffers(supportedDlc dlc.Dlc, availableSources []string) []db.DbOffer {
 
 		for _, offer := range offers {
 			if (supportedDlc & offer.RequiredDlc) == offer.RequiredDlc {
-				offersToAdd = append(offersToAdd, *offer)
+				offersToAdd = append(offersToAdd, offer)
 			}
 		}
 	}

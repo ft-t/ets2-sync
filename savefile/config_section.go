@@ -3,6 +3,7 @@ package savefile
 import (
 	"bytes"
 	"ets2-sync/db"
+	"ets2-sync/structs"
 	"ets2-sync/utils"
 	"fmt"
 	"io"
@@ -80,10 +81,9 @@ type JobOffer struct {
 	Id                 string // nameParam
 }
 
-func NewJobOffer(offer db.DbOffer) *JobOffer {
+func newJobOffer(offer structs.ApplicableOffer) *JobOffer {
 	job := JobOffer{}
 	_, _ = utils.MapToObject(offer, &job)
-	job.Id = offer.NameParam
 
 	return &job
 }
@@ -91,7 +91,6 @@ func NewJobOffer(offer db.DbOffer) *JobOffer {
 func (j *JobOffer) ToDbOffer() db.DbOffer {
 	offer := db.DbOffer{}
 	_, _ = utils.MapToObject(j, &offer)
-	offer.NameParam = j.Id
 
 	return offer
 }
