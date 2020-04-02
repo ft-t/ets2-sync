@@ -8,6 +8,7 @@ import (
 	"ets2-sync/global"
 	"ets2-sync/savefile"
 	"fmt"
+	"github.com/rs/cors"
 	"html/template"
 	"io"
 	"math/rand"
@@ -40,32 +41,29 @@ func Start() {
 		port = "8080"
 	}
 
-	server := &http.Server{
-		ReadTimeout:  60 * time.Second,
-		WriteTimeout: 60 * time.Second,
-		Addr:         fmt.Sprintf(":%s", port),
-	}
+	mux := http.NewServeMux()
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		tmpl := template.Must(template.ParseFiles("index.html"))
 		_ = tmpl.Execute(w, []dlc.Dlc{dlc.GoingEast, dlc.Scandinavia, dlc.LaFrance, dlc.Italy, dlc.BeyondTheBalticSea, dlc.RoadToTheBlackSea, dlc.PowerCargo, dlc.HeavyCargo, dlc.SpecialTransport, dlc.Krone, dlc.Schwarzmuller})
 	})
 
-	http.HandleFunc("/dlc", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/dlc", func(w http.ResponseWriter, r *http.Request) {
 		res := make(map[string]int)
 
 		for _, d := range dlc.AllDLCs {
 			res[d.ToString()] = int(d)
 		}
 
-		w.Header().Set("Content-Type", "application/jsons")
+		w.Header().Set("Content-Type", "application/json")
+
 		b, _ := json.Marshal(res)
 
 		_, _ = w.Write(b)
 		return
 	})
 
-	http.HandleFunc("/save_upload", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/save_upload", func(w http.ResponseWriter, r *http.Request) {
 		_ = r.ParseMultipartForm(32 << 20)
 
 		file, header, err := r.FormFile("savefile")
@@ -106,5 +104,7 @@ func Start() {
 		_, _ = newSaveFile.Write(w)
 	})
 
-	_ = server.ListenAndServe()
+	handler := cors.AllowAll().Handler(mux)
+
+	_ = http.ListenAndServe(fmt.Sprintf(":%s", port),handler)
 }

@@ -49,6 +49,14 @@
   version = "v0.9.1"
 
 [[projects]]
+  digest = "1:c5dfe46811af7e2eff7c11fc84b6c841520338613c056f659f262d5a4fb42fa8"
+  name = "github.com/rs/cors"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "db0fe48135e83b5812a5a31be0eea66984b1b521"
+  version = "v1.7.0"
+
+[[projects]]
   digest = "1:2fe9cf9207310e4d0453160917d1295c1941ff2d0bdcd7cf241bc188b52889d6"
   name = "xorm.io/builder"
   packages = ["."]
@@ -74,6 +82,7 @@
     "github.com/mitchellh/hashstructure",
     "github.com/mitchellh/mapstructure",
     "github.com/pkg/errors",
+    "github.com/rs/cors",
     "xorm.io/builder",
     "xorm.io/core",
   ]
