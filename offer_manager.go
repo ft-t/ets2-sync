@@ -87,7 +87,7 @@ func initOfferManager() error {
 		}
 	}()
 
-	func() {
+	go func() {
 		for {
 			_ = updateList()
 			time.Sleep(time.Hour * 72)
