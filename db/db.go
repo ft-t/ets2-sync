@@ -18,6 +18,7 @@ type DbOffer struct {
 	Id                 string `xorm:"pk text"`
 	RequiredDlc        dlc.Dlc
 	SourceCompany      string `xorm:"text"`
+	Seed               string
 	Target             string
 	Urgency            string
 	ShortestDistanceKm string
