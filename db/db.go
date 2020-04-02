@@ -7,9 +7,7 @@ import (
 	"github.com/go-xorm/xorm"
 	"github.com/go-xorm/xorm/migrate"
 	_ "github.com/lib/pq"
-	"github.com/mitchellh/hashstructure"
 	"os"
-	"strconv"
 	"time"
 	"xorm.io/core"
 )
@@ -32,21 +30,6 @@ type DbOffer struct {
 	UnitsCount         string
 	FillRatio          string
 	TrailerPlace       string
-}
-
-
-func (o *DbOffer) CalculateHash() string {
-	hash, err := hashstructure.Hash(struct {
-		S string
-		T string
-		C string
-	}{o.SourceCompany, o.Target, o.Cargo}, nil)
-
-	if err != nil {
-		return ""
-	}
-
-	return strconv.FormatUint(hash, 10)
 }
 
 func InitializeDb() error {

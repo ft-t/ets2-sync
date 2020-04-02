@@ -21,9 +21,8 @@ var lastUpdatedSync time.Time
 var offersInDb = make([]string, 0)
 var jobToProcessMutex sync.Mutex
 var createNewJobsMutex sync.Mutex
-var jobsToProcess = make([]db.DbOffer, 0)
+var jobsToProcess = make([]structs.ApplicableOffer, 0)
 var jobManagerInitialized bool
-
 
 func initOfferManager() error {
 	if jobManagerInitialized {
@@ -34,7 +33,7 @@ func initOfferManager() error {
 		for {
 			jobToProcessMutex.Lock()
 			jobsCopy := jobsToProcess
-			jobsToProcess = make([]db.DbOffer, 0)
+			jobsToProcess = make([]structs.ApplicableOffer, 0)
 			jobToProcessMutex.Unlock()
 
 			batchSize := 100
@@ -203,17 +202,15 @@ func getOffers(supportedDlc dlc.Dlc, availableSources []string) []structs.Applic
 	return offersToAdd
 }
 
-func FillDbWithJobs(offers []*savefile.JobOffer) {
+func FillDbWithJobs(offers []structs.ApplicableOffer) {
 	if offers == nil || len(offers) == 0 {
 		return
 	}
 
 	go func() {
-		for _, v := range offers {
-			offer := v.ToDbOffer()
-
-			offer.RequiredDlc = dlc.GetRequiredDlc(v.SourceCompany, v.Target,
-				v.Cargo, v.TrailerDefinition, v.TrailerVariant)
+		for _, offer := range offers {
+			offer.RequiredDlc = dlc.GetRequiredDlc(offer.SourceCompany, offer.Target,
+				offer.Cargo, offer.TrailerDefinition, offer.TrailerVariant)
 
 			if offer.RequiredDlc == dlc.None {
 				continue // skip unverified offers

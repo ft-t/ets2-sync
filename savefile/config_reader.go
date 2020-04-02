@@ -20,7 +20,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 	i := 0
 
 	companies := make(map[*CompanyConfigSection][]string, 0)
-	offers := make(map[string]*JobOffer)
+	offers := make(map[string]*jobOffer)
 
 	var currentSection IConfigSection
 
@@ -43,15 +43,15 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 
 		if parsed[len(parsed)-1] == "{" { // opening configuration block
 			if parsed[0] == "job_offer_data" {
-				currentSection = &JobOfferConfigSection{name: parsed[0], nameValue: parsed[2]}
+				currentSection = &jobOfferConfigSection{name: parsed[0], nameValue: parsed[2]}
 				continue
 			}
 			if parsed[0] == "company" {
-				currentSection = &CompanyConfigSection{name: parsed[0], nameValue: parsed[2], Jobs: map[string]*JobOffer{}}
+				currentSection = &CompanyConfigSection{name: parsed[0], nameValue: parsed[2], Jobs: map[string]*jobOffer{}}
 				continue
 			}
 
-			currentSection = &RawConfigSection{name: parsed[0], nameValue: parsed[2]}
+			currentSection = &rawConfigSection{name: parsed[0], nameValue: parsed[2]}
 			continue
 		}
 
@@ -65,7 +65,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 			}
 
 			if currentSection.Name() == "job_offer_data" {
-				m := currentSection.(*JobOfferConfigSection)
+				m := currentSection.(*jobOfferConfigSection)
 				offers[m.nameValue] = m.Offer
 				m.FillOfferData("id", m.nameValue)
 
@@ -85,7 +85,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 		currentSection.AppendLine(line)
 
 		if currentSection.Name() == "job_offer_data" {
-			currentSection.(*JobOfferConfigSection).FillOfferData(parsed[0], parsed[1])
+			currentSection.(*jobOfferConfigSection).FillOfferData(parsed[0], parsed[1])
 		}
 
 		if currentSection.Name() == "economy" && len(parsed) > 0 {

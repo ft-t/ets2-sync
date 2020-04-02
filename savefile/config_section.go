@@ -2,7 +2,6 @@ package savefile
 
 import (
 	"bytes"
-	"ets2-sync/db"
 	"ets2-sync/structs"
 	"ets2-sync/utils"
 	"fmt"
@@ -26,7 +25,7 @@ type CompanyConfigSection struct {
 	reservedTrailerSlot string
 	discovered          string
 	raw                 bytes.Buffer
-	Jobs                map[string]*JobOffer
+	Jobs                map[string]*jobOffer
 }
 
 func (c *CompanyConfigSection) NameValue() string {
@@ -63,7 +62,7 @@ func (c *CompanyConfigSection) AppendLine(line string) {
 	}
 }
 
-type JobOffer struct {
+type jobOffer struct {
 	SourceCompany      string
 	Target             string
 	ExpirationTime     string
@@ -81,21 +80,14 @@ type JobOffer struct {
 	Id                 string // nameParam
 }
 
-func newJobOffer(offer structs.ApplicableOffer) *JobOffer {
-	job := JobOffer{}
+func newJobOffer(offer structs.ApplicableOffer) *jobOffer {
+	job := jobOffer{}
 	_, _ = utils.MapToObject(offer, &job)
 
 	return &job
 }
 
-func (j *JobOffer) ToDbOffer() db.DbOffer {
-	offer := db.DbOffer{}
-	_, _ = utils.MapToObject(j, &offer)
-
-	return offer
-}
-
-func (j *JobOffer) Write(w io.Writer, newLine string) {
+func (j *jobOffer) Write(w io.Writer, newLine string) {
 	_, _ = w.Write([]byte(fmt.Sprintf(" target: \"%s\"%s", j.Target, newLine)))
 	_, _ = w.Write([]byte(fmt.Sprintf(" expiration_time: %s%s", j.ExpirationTime, newLine)))
 	_, _ = w.Write([]byte(fmt.Sprintf(" urgency: %s%s", j.Urgency, newLine)))
@@ -111,31 +103,31 @@ func (j *JobOffer) Write(w io.Writer, newLine string) {
 	_, _ = w.Write([]byte(fmt.Sprintf(" trailer_place: %s%s", j.TrailerPlace, newLine)))
 }
 
-type JobOfferConfigSection struct {
+type jobOfferConfigSection struct {
 	name      string
 	nameValue string // nameless
-	Offer     *JobOffer
+	Offer     *jobOffer
 }
 
-func (s *JobOfferConfigSection) NameValue() string {
+func (s *jobOfferConfigSection) NameValue() string {
 	return s.nameValue
 }
 
-func (s *JobOfferConfigSection) Write(w io.Writer, newLine string) (n int64, err error) {
+func (s *jobOfferConfigSection) Write(w io.Writer, newLine string) (n int64, err error) {
 	panic("should not be called")
 }
 
-func (s *JobOfferConfigSection) Name() string {
+func (s *jobOfferConfigSection) Name() string {
 	return s.name
 }
 
-func (s *JobOfferConfigSection) AppendLine(line string) {
+func (s *jobOfferConfigSection) AppendLine(line string) {
 	return
 }
 
-func (s *JobOfferConfigSection) FillOfferData(fieldName string, value string) {
+func (s *jobOfferConfigSection) FillOfferData(fieldName string, value string) {
 	if s.Offer == nil {
-		s.Offer = &JobOffer{}
+		s.Offer = &jobOffer{}
 	}
 
 	switch strings.Trim(fieldName, ":") {
@@ -184,24 +176,24 @@ func (s *JobOfferConfigSection) FillOfferData(fieldName string, value string) {
 	}
 }
 
-type RawConfigSection struct {
+type rawConfigSection struct {
 	name      string
 	nameValue string // nameless
 	raw       bytes.Buffer
 }
 
-func (r *RawConfigSection) NameValue() string {
+func (r *rawConfigSection) NameValue() string {
 	return r.nameValue
 }
 
-func (r *RawConfigSection) Write(w io.Writer, newLine string) (n int64, err error) {
+func (r *rawConfigSection) Write(w io.Writer, newLine string) (n int64, err error) {
 	return r.raw.WriteTo(w)
 }
 
-func (r *RawConfigSection) AppendLine(line string) {
+func (r *rawConfigSection) AppendLine(line string) {
 	r.raw.WriteString(line)
 }
 
-func (r *RawConfigSection) Name() string {
+func (r *rawConfigSection) Name() string {
 	return r.name
 }

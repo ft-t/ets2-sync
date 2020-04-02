@@ -4,6 +4,8 @@ import (
 	"ets2-sync/db"
 	"ets2-sync/dlc"
 	"ets2-sync/utils"
+	"github.com/mitchellh/hashstructure"
+	"strconv"
 )
 
 type ApplicableOffer struct {
@@ -31,4 +33,18 @@ func NewApplicableOffer(offer *db.DbOffer, id string) ApplicableOffer {
 	newOffer.Id = id
 
 	return newOffer
+}
+
+func (o *ApplicableOffer) CalculateHash() string {
+	hash, err := hashstructure.Hash(struct {
+		S string
+		T string
+		C string
+	}{o.SourceCompany, o.Target, o.Cargo}, nil)
+
+	if err != nil {
+		return ""
+	}
+
+	return strconv.FormatUint(hash, 10)
 }

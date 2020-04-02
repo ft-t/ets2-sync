@@ -6,6 +6,7 @@ import (
 	"errors"
 	dlc2 "ets2-sync/dlc"
 	"ets2-sync/structs"
+	"ets2-sync/utils"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -62,8 +63,8 @@ func (s *SaveFile) ClearOffers() {
 	}
 }
 
-func (s *SaveFile) ExportOffers() []*JobOffer {
-	var arr []*JobOffer
+func (s *SaveFile) ExportOffers() []structs.ApplicableOffer {
+	var arr []structs.ApplicableOffer
 
 	for _, k := range s.companies {
 		if k.Jobs == nil {
@@ -71,7 +72,10 @@ func (s *SaveFile) ExportOffers() []*JobOffer {
 		}
 
 		for _, j := range k.Jobs {
-			arr = append(arr, j)
+			job := structs.ApplicableOffer{}
+			_, _ = utils.MapToObject(j, &job)
+
+			arr = append(arr, job)
 		}
 	}
 
