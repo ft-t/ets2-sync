@@ -101,13 +101,17 @@ type trailerFile struct {
 }
 
 type trailerDefinition struct {
-	Countries []string
+	Countries []string `json:"countries"`
 }
 
 type companyFile struct {
 	Cities     []string `json:"cities"`
 	CargoesIn  []string `json:"cargoes_in"`
 	CargoesOut []string `json:"cargoes_out"`
+}
+
+type cityFile struct {
+	Country string `json:"country"`
 }
 
 func GetRequiredDlc(source string, target string, cargo string, trailerDef string, trailerVariant string) Dlc {
@@ -123,13 +127,15 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 
 	targetCity, targetCompany := getCompanyAndCity(target)
 	sourceCity, sourceCompany := getCompanyAndCity(source)
-	country := ""
+	targetCountry := getCountryByCity(targetCity)
+	sourceCountry := getCountryByCity(sourceCity)
+
 
 	validators := []func() (Dlc, error){
 		func() (Dlc, error) { return mapCargoToDlc(cargo) },
 		func() (Dlc, error) { return mapCompanyToDlc(targetCompany, targetCity) },
 		func() (Dlc, error) { return mapCompanyToDlc(sourceCompany, sourceCity) },
-		func() (Dlc, error) { return mapTrailerDefToDlc(trailerDef, country) },
+		func() (Dlc, error) { return mapTrailerDefToDlc(trailerDef, targetCountry, sourceCountry) },
 		func() (Dlc, error) { return mapTrailerVariantToDlc(trailerVariant) },
 	}
 
@@ -152,6 +158,41 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 	return totalDlc
 }
 
+var cityToCountry map[string]string
+
+func getCountryByCity(city string) string {
+	if cityToCountry != nil {
+		s, _ := cityToCountry[city]
+		return s
+	}
+
+	dir := "data"
+	files, er := ioutil.ReadDir(dir)
+
+	if er != nil {
+		return ""
+	}
+
+	cityToCountry = make(map[string]string)
+	for _, file := range files {
+		input, _ := ioutil.ReadFile(fmt.Sprintf("%s/%s", dir, file.Name()))
+		cityItem := map[string]cityFile{}
+		_ = json.Unmarshal(input, &cityItem)
+
+		for k,v := range cityItem {
+			cityName := k
+			if strings.HasPrefix(cityName,"city."){
+				cityName = cityName[5:]
+			}
+
+			cityToCountry[cityName] = v.Country
+		}
+	}
+
+	s, _ := cityToCountry[city]
+	return s
+}
+
 func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 	for _, d := range AllDLCs {
 		if res := readCompanyFile(d); res != nil {
@@ -163,6 +204,7 @@ func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 
 	return None, errors.New("company not found")
 }
+
 
 func mapCargoToDlc(cargoName string) (Dlc, error) {
 	for _, d := range AllDLCs {
@@ -184,11 +226,19 @@ func mapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
 	return None, errors.New("trailer not found")
 }
 
-func mapTrailerDefToDlc(trailerDef string, country string) (Dlc, error) {
+func mapTrailerDefToDlc(trailerDef string, targetCountry string, sourceCountry string) (Dlc, error) {
 	for _, d := range AllDLCs {
 		if res := readTrailerFile(d); res != nil {
-			if def, ok := res.Definitions[trailerDef]; ok && utils.Contains(def.Countries, country) {
-				return d, nil
+			if def, ok := res.Definitions[trailerDef]; ok  {
+				if len(def.Countries) == 0 { // that trailer is allowed for all counties
+					return d, nil
+				}
+
+				if utils.Contains(def.Countries, targetCountry) && utils.Contains(def.Countries, sourceCountry) {
+					return d, nil
+				}
+
+				return None, errors.New("invalid target or source country")
 			}
 		}
 	}

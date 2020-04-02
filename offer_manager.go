@@ -34,8 +34,12 @@ func initOfferManager() error {
 			jobToProcessMutex.Lock()
 
 			dbOffers := make([]db.DbOffer, 0)
-
+			var ids []string
 			for _, offer := range jobsToProcess {
+				if utils.Contains(ids, offer.Id){
+					continue
+				}
+				ids = append(ids, offer.Id)
 				dbOffer := db.DbOffer{}
 				_, _ = utils.MapToObject(offer, &dbOffer)
 
