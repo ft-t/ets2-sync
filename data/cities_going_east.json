@@ -1,0 +1,50 @@
+{
+  "city.bialystok": {
+    "Country": "poland"
+  },
+  "city.budapest": {
+    "Country": "hungary"
+  },
+  "city.bystrica": {
+    "Country": "slovakia"
+  },
+  "city.debrecen": {
+    "Country": "hungary"
+  },
+  "city.gdansk": {
+    "Country": "poland"
+  },
+  "city.gdyne": {
+    "Country": "poland"
+  },
+  "city.katowice": {
+    "Country": "poland"
+  },
+  "city.kosice": {
+    "Country": "slovakia"
+  },
+  "city.krakow": {
+    "Country": "poland"
+  },
+  "city.lodz": {
+    "Country": "poland"
+  },
+  "city.lublin": {
+    "Country": "poland"
+  },
+  "city.olsztyn": {
+    "Country": "poland"
+  },
+  "city.ostrava": {
+    "Country": "czech"
+  },
+  "city.pecs": {
+    "Country": "Hungary"
+  },
+  "city.szeged": {
+    "Country": "hungary"
+  },
+  "city.warszawa": {
+    "Country": "poland"
+  }
+}

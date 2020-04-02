@@ -1,0 +1,107 @@
+{
+  "city.daugavpils": {
+    "Country": "latvia"
+  },
+  "city.helsinki": {
+    "Country": "finland"
+  },
+  "city.kaliningrad": {
+    "Country": "russia"
+  },
+  "city.kaunas": {
+    "Country": "lithuania"
+  },
+  "city.klaipeda": {
+    "Country": "lithuania"
+  },
+  "city.kotka": {
+    "Country": "finland"
+  },
+  "city.kouvola": {
+    "Country": "finland"
+  },
+  "city.kunda": {
+    "Country": "estonia"
+  },
+  "city.lahti": {
+    "Country": "finland"
+  },
+  "city.liepaja": {
+    "Country": "latvia"
+  },
+  "city.loviisa": {
+    "Country": "finland"
+  },
+  "city.luga": {
+    "Country": "russia"
+  },
+  "city.mazeikiai": {
+    "Country": "lithuania"
+  },
+  "city.naantali": {
+    "Country": "finland"
+  },
+  "city.narva": {
+    "Country": "estonia"
+  },
+  "city.olkiluoto": {
+    "Country": "finland"
+  },
+  "city.paldiski": {
+    "Country": "estonia"
+  },
+  "city.panevezys": {
+    "Country": "lithuania"
+  },
+  "city.parnu": {
+    "Country": "estonia"
+  },
+  "city.petersburg": {
+    "Country": "russia"
+  },
+  "city.pori": {
+    "Country": "finland"
+  },
+  "city.pskov": {
+    "Country": "russia"
+  },
+  "city.rezekne": {
+    "Country": "latvia"
+  },
+  "city.riga": {
+    "Country": "latvia"
+  },
+  "city.siauliai": {
+    "Country": "lithuania"
+  },
+  "city.sosnovy_bor": {
+    "Country": "russia"
+  },
+  "city.tallinn": {
+    "Country": "estonia"
+  },
+  "city.tampere": {
+    "Country": "finland"
+  },
+  "city.tartu": {
+    "Country": "estonia"
+  },
+  "city.turku": {
+    "Country": "finland"
+  },
+  "city.utena": {
+    "Country": "lithuania"
+  },
+  "city.valmiera": {
+    "Country": "latvia"
+  },
+  "city.ventspils": {
+    "Country": "latvia"
+  },
+  "city.vilnius": {
+    "Country": "lithuania"
+  },
+  "city.vyborg": {
+    "Country": "russia"
+  }
+}

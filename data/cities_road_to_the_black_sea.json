@@ -1,0 +1,107 @@
+{
+  "city.artand": {
+    "Country": "romania"
+  },
+  "city.bacau": {
+    "Country": "romania"
+  },
+  "city.brasov": {
+    "Country": "romania"
+  },
+  "city.bucuresti": {
+    "Country": "romania"
+  },
+  "city.burgas": {
+    "Country": "bulgaria"
+  },
+  "city.calarasi": {
+    "Country": "romania"
+  },
+  "city.cernavoda": {
+    "Country": "romania"
+  },
+  "city.cluj_napoca": {
+    "Country": "romania"
+  },
+  "city.constanta": {
+    "Country": "romania"
+  },
+  "city.craiova": {
+    "Country": "romania"
+  },
+  "city.edirne": {
+    "Country": "turkey"
+  },
+  "city.galati": {
+    "Country": "romania"
+  },
+  "city.giurgiu": {
+    "Country": "romania"
+  },
+  "city.hamzabeyli": {
+    "Country": "turkey"
+  },
+  "city.hunedoara": {
+    "Country": "romania"
+  },
+  "city.iasi": {
+    "Country": "romania"
+  },
+  "city.istanbul": {
+    "Country": "turkey"
+  },
+  "city.kapikule": {
+    "Country": "turkey"
+  },
+  "city.karlovo": {
+    "Country": "bulgaria"
+  },
+  "city.kozloduy": {
+    "Country": "bulgaria"
+  },
+  "city.mangalia": {
+    "Country": "romania"
+  },
+  "city.nadlac": {
+    "Country": "romania"
+  },
+  "city.pernik": {
+    "Country": "bulgaria"
+  },
+  "city.pirdop": {
+    "Country": "bulgaria"
+  },
+  "city.pitesti": {
+    "Country": "romania"
+  },
+  "city.pleven": {
+    "Country": "bulgaria"
+  },
+  "city.plovdiv": {
+    "Country": "bulgaria"
+  },
+  "city.resita": {
+    "Country": "romania"
+  },
+  "city.ruse": {
+    "Country": "bulgaria"
+  },
+  "city.sofia": {
+    "Country": "bulgaria"
+  },
+  "city.targu_mures": {
+    "Country": "romania"
+  },
+  "city.tekirdag": {
+    "Country": "turkey"
+  },
+  "city.timisoara": {
+    "Country": "romania"
+  },
+  "city.varna": {
+    "Country": "bulgaria"
+  },
+  "city.veli_tarnovo": {
+    "Country": "bulgaria"
+  }
+}

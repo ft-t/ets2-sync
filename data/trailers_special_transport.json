@@ -12,17 +12,39 @@
     "trailer.goldhofer.mpa_k.mystery_box",
     "trailer.goldhofer.stz_vl.pilot_boat"
   ],
-  "definitions": [
-    "trailer_def.goldhofer.mpa_k.boiler_parts",
-    "trailer_def.goldhofer.mpa_k.cat_785c",
-    "trailer_def.goldhofer.mpa_k_flat14.condensator",
-    "trailer_def.goldhofer.mpa_k.ex_bucket",
-    "trailer_def.goldhofer.mpa_k_flat.heat_exch",
-    "trailer_def.goldhofer.mpa_k_flat.lattice",
-    "trailer_def.goldhofer.mpa_k_flat14.m_59_80_r63",
-    "trailer_def.goldhofer.mpa_k.mystery_box",
-    "trailer_def.goldhofer.mpa_k_flat14.mystery_cyl",
-    "trailer_def.goldhofer.stz_vl.pilot_boat",
-    "trailer_def.goldhofer.mpa_k_flat.silo"
-  ]
+  "definitions": {
+    "trailer_def.goldhofer.mpa_k.boiler_parts": {
+      "Countries": []
+    },
+    "trailer_def.goldhofer.mpa_k.cat_785c": {
+      "Countries": []
+    },
+    "trailer_def.goldhofer.mpa_k.ex_bucket": {
+      "Countries": []
+    },
+    "trailer_def.goldhofer.mpa_k.mystery_box": {
+      "Countries": []
+    },
+    "trailer_def.goldhofer.mpa_k_flat.heat_exch": {
+      "Countries": []
+    },
+    "trailer_def.goldhofer.mpa_k_flat.lattice": {
+      "Countries": []
+    },
+    "trailer_def.goldhofer.mpa_k_flat.silo": {
+      "Countries": []
+    },
+    "trailer_def.goldhofer.mpa_k_flat14.condensator": {
+      "Countries": []
+    },
+    "trailer_def.goldhofer.mpa_k_flat14.m_59_80_r63": {
+      "Countries": []
+    },
+    "trailer_def.goldhofer.mpa_k_flat14.mystery_cyl": {
+      "Countries": []
+    },
+    "trailer_def.goldhofer.stz_vl.pilot_boat": {
+      "Countries": []
+    }
+  }
 }

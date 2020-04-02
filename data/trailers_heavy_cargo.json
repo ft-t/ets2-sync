@@ -9,14 +9,30 @@
     "trailer.goldhofer.stz_vl.m_centering",
     "trailer.goldhofer.stz_vl.transformer"
   ],
-  "definitions": [
-    "trailer_def.asph_miller.goldhofer.mpa_k_flat14.wirtgenw250i",
-    "trailer_def.cable_reel.goldhofer.stz_vl.coil",
-    "trailer_def.concr_beams.goldhofer.stz_vl.conc_beam",
-    "trailer_def.dozer.goldhofer.mpa_k_flat14.k_d155ax_5",
-    "trailer_def.locomotive.goldhofer.mpa_k_flat14.vossloh_g6",
-    "trailer_def.metal_center.goldhofer.stz_vl.m_centering",
-    "trailer_def.mobile_crane.goldhofer.mpa_k_flat14.t_c_3160",
-    "trailer_def.transformat.goldhofer.stz_vl.transformer"
-  ]
+  "definitions": {
+    "trailer_def.asph_miller.goldhofer.mpa_k_flat14.wirtgenw250i": {
+      "Countries": []
+    },
+    "trailer_def.cable_reel.goldhofer.stz_vl.coil": {
+      "Countries": []
+    },
+    "trailer_def.concr_beams.goldhofer.stz_vl.conc_beam": {
+      "Countries": []
+    },
+    "trailer_def.dozer.goldhofer.mpa_k_flat14.k_d155ax_5": {
+      "Countries": []
+    },
+    "trailer_def.locomotive.goldhofer.mpa_k_flat14.vossloh_g6": {
+      "Countries": []
+    },
+    "trailer_def.metal_center.goldhofer.stz_vl.m_centering": {
+      "Countries": []
+    },
+    "trailer_def.mobile_crane.goldhofer.mpa_k_flat14.t_c_3160": {
+      "Countries": []
+    },
+    "trailer_def.transformat.goldhofer.stz_vl.transformer": {
+      "Countries": []
+    }
+  }
 }

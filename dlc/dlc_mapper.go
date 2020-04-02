@@ -96,8 +96,12 @@ func (t Dlc) ToName() string {
 }
 
 type trailerFile struct {
-	Variants   []string `json:"variants"`
-	Definition []string `json:"definitions"`
+	Variants    []string                     `json:"variants"`
+	Definitions map[string]trailerDefinition `json:"definitions"`
+}
+
+type trailerDefinition struct {
+	Countries []string
 }
 
 type companyFile struct {
@@ -119,12 +123,13 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 
 	targetCity, targetCompany := getCompanyAndCity(target)
 	sourceCity, sourceCompany := getCompanyAndCity(source)
+	country := ""
 
 	validators := []func() (Dlc, error){
 		func() (Dlc, error) { return mapCargoToDlc(cargo) },
 		func() (Dlc, error) { return mapCompanyToDlc(targetCompany, targetCity) },
 		func() (Dlc, error) { return mapCompanyToDlc(sourceCompany, sourceCity) },
-		func() (Dlc, error) { return mapTrailerDefToDlc(trailerDef) },
+		func() (Dlc, error) { return mapTrailerDefToDlc(trailerDef, country) },
 		func() (Dlc, error) { return mapTrailerVariantToDlc(trailerVariant) },
 	}
 
@@ -179,10 +184,12 @@ func mapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
 	return None, errors.New("trailer not found")
 }
 
-func mapTrailerDefToDlc(trailerDef string) (Dlc, error) {
+func mapTrailerDefToDlc(trailerDef string, country string) (Dlc, error) {
 	for _, d := range AllDLCs {
-		if res := readTrailerFile(d); res != nil && utils.Contains(res.Definition, trailerDef) {
-			return d, nil
+		if res := readTrailerFile(d); res != nil {
+			if def, ok := res.Definitions[trailerDef]; ok && utils.Contains(def.Countries, country) {
+				return d, nil
+			}
 		}
 	}
 

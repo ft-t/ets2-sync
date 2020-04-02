@@ -1,0 +1,83 @@
+{
+  "city.aalborg": {
+    "Country": "denmark"
+  },
+  "city.bergen": {
+    "Country": "norway"
+  },
+  "city.esbjerg": {
+    "Country": "denmark"
+  },
+  "city.frederikshv": {
+    "Country": "denmark"
+  },
+  "city.gedser": {
+    "Country": "denmark"
+  },
+  "city.goteborg": {
+    "Country": "sweden"
+  },
+  "city.helsingborg": {
+    "Country": "sweden"
+  },
+  "city.hirtshals": {
+    "Country": "denmark"
+  },
+  "city.jonkoping": {
+    "Country": "sweden"
+  },
+  "city.kalmar": {
+    "Country": "sweden"
+  },
+  "city.kapellskar": {
+    "Country": "sweden"
+  },
+  "city.karlskrona": {
+    "Country": "sweden"
+  },
+  "city.kobenhavn": {
+    "Country": "denmark"
+  },
+  "city.kristiansand": {
+    "Country": "norway"
+  },
+  "city.linkoping": {
+    "Country": "sweden"
+  },
+  "city.malmo": {
+    "Country": "sweden"
+  },
+  "city.nynashamn": {
+    "Country": "sweden"
+  },
+  "city.odense": {
+    "Country": "denmark"
+  },
+  "city.orebro": {
+    "Country": "sweden"
+  },
+  "city.oslo": {
+    "Country": "norway"
+  },
+  "city.sodertalje": {
+    "Country": "sweden"
+  },
+  "city.stavanger": {
+    "Country": "norway"
+  },
+  "city.stockholm": {
+    "Country": "sweden"
+  },
+  "city.trelleborg": {
+    "Country": "sweden"
+  },
+  "city.uppsala": {
+    "Country": "sweden"
+  },
+  "city.vasteraas": {
+    "Country": "sweden"
+  },
+  "city.vaxjo": {
+    "Country": "sweden"
+  }
+}

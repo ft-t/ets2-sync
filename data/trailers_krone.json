@@ -10,14 +10,37 @@
     ".profiline17d.second",
     "trailer.profilinehd"
   ],
-  "definitions": [
-    "trailer_def.krone.boxliner.single_3.container",
-    "trailer_def.krone.boxliner.single_3_220.container",
-    "trailer_def.krone.boxliner.single_3_40.container",
-    "trailer_def.krone.coolliner.single_3.reefer",
-    "trailer_def.krone.dryliner.single_3.dryvan",
-    "trailer_def.krone.profiliner.double_3_2.curtain",
-    "trailer_def.krone.profiliner.single_3.curtain",
-    "trailer_def.krone.profilinerhd.single_3.flatbed"
-  ]
+  "definitions": {
+    "trailer_def.krone.boxliner.single_3.container": {
+      "Countries": []
+    },
+    "trailer_def.krone.boxliner.single_3_220.container": {
+      "Countries": []
+    },
+    "trailer_def.krone.boxliner.single_3_40.container": {
+      "Countries": []
+    },
+    "trailer_def.krone.coolliner.single_3.reefer": {
+      "Countries": []
+    },
+    "trailer_def.krone.dryliner.single_3.dryvan": {
+      "Countries": []
+    },
+    "trailer_def.krone.profiliner.double_3_2.curtain": {
+      "Countries": [
+        "denmark",
+        "norway",
+        "sweden",
+        "finland",
+        "germany",
+        "netherlands"
+      ]
+    },
+    "trailer_def.krone.profiliner.single_3.curtain": {
+      "Countries": []
+    },
+    "trailer_def.krone.profilinerhd.single_3.flatbed": {
+      "Countries": []
+    }
+  }
 }

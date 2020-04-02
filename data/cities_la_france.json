@@ -1,0 +1,80 @@
+{
+  "city.ajaccio": {
+    "Country": "france"
+  },
+  "city.alban": {
+    "Country": "france"
+  },
+  "city.bastia": {
+    "Country": "france"
+  },
+  "city.bonifacio": {
+    "Country": "france"
+  },
+  "city.bordeaux": {
+    "Country": "france"
+  },
+  "city.bourges": {
+    "Country": "france"
+  },
+  "city.brest": {
+    "Country": "france"
+  },
+  "city.calvi": {
+    "Country": "france"
+  },
+  "city.civaux": {
+    "Country": "france"
+  },
+  "city.clermont": {
+    "Country": "france"
+  },
+  "city.golfech": {
+    "Country": "france"
+  },
+  "city.larochelle": {
+    "Country": "france"
+  },
+  "city.laurent": {
+    "Country": "france"
+  },
+  "city.lehavre": {
+    "Country": "france"
+  },
+  "city.lemans": {
+    "Country": "france"
+  },
+  "city.lile_rousse": {
+    "Country": "france"
+  },
+  "city.limoges": {
+    "Country": "france"
+  },
+  "city.marseille": {
+    "Country": "france"
+  },
+  "city.montpellier": {
+    "Country": "france"
+  },
+  "city.nantes": {
+    "Country": "france"
+  },
+  "city.nice": {
+    "Country": "france"
+  },
+  "city.paluel": {
+    "Country": "france"
+  },
+  "city.porto_vecchi": {
+    "Country": "france"
+  },
+  "city.rennes": {
+    "Country": "france"
+  },
+  "city.roscoff": {
+    "Country": "france"
+  },
+  "city.toulouse": {
+    "Country": "france"
+  }
+}

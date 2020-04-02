@@ -9,22 +9,54 @@
     "trailer.overweight.tube",
     "trailer.overweight.yacht"
   ],
-  "definitions": [
-    "trailer_def.aircond.overweight.aircond",
-    "trailer_def.aircond.schw_ovrwght.aircond",
-    "trailer_def.driller.overweight.driller",
-    "trailer_def.driller.schw_ovrwght.driller",
-    "trailer_def.helicopter.overweight.helicopter",
-    "trailer_def.helicopter.schw_ovrwght.helicopter",
-    "trailer_def.roller.overweight.roller",
-    "trailer_def.roller.schw_ovrwght.roller",
-    "trailer_def.tracks.overweight.tracks",
-    "trailer_def.tracks.schw_ovrwght.tracks",
-    "trailer_def.tractor.overweight.tractor",
-    "trailer_def.tractor.schw_ovrwght.tractor",
-    "trailer_def.tube.overweight.tube",
-    "trailer_def.tube.schw_ovrwght.tube",
-    "trailer_def.yacht.overweight.yacht",
-    "trailer_def.yacht.schw_ovrwght.yacht"
-  ]
+  "definitions": {
+    "trailer_def.aircond.overweight.aircond": {
+      "Countries": []
+    },
+    "trailer_def.aircond.schw_ovrwght.aircond": {
+      "Countries": []
+    },
+    "trailer_def.driller.overweight.driller": {
+      "Countries": []
+    },
+    "trailer_def.driller.schw_ovrwght.driller": {
+      "Countries": []
+    },
+    "trailer_def.helicopter.overweight.helicopter": {
+      "Countries": []
+    },
+    "trailer_def.helicopter.schw_ovrwght.helicopter": {
+      "Countries": []
+    },
+    "trailer_def.roller.overweight.roller": {
+      "Countries": []
+    },
+    "trailer_def.roller.schw_ovrwght.roller": {
+      "Countries": []
+    },
+    "trailer_def.tracks.overweight.tracks": {
+      "Countries": []
+    },
+    "trailer_def.tracks.schw_ovrwght.tracks": {
+      "Countries": []
+    },
+    "trailer_def.tractor.overweight.tractor": {
+      "Countries": []
+    },
+    "trailer_def.tractor.schw_ovrwght.tractor": {
+      "Countries": []
+    },
+    "trailer_def.tube.overweight.tube": {
+      "Countries": []
+    },
+    "trailer_def.tube.schw_ovrwght.tube": {
+      "Countries": []
+    },
+    "trailer_def.yacht.overweight.yacht": {
+      "Countries": []
+    },
+    "trailer_def.yacht.schw_ovrwght.yacht": {
+      "Countries": []
+    }
+  }
 }

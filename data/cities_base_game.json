@@ -1,0 +1,233 @@
+{
+  "city.aberdeen": {
+    "Country": "uk"
+  },
+  "city.amsterdam": {
+    "Country": "netherlands"
+  },
+  "city.berlin": {
+    "Country": "germany"
+  },
+  "city.bern": {
+    "Country": "switzerland"
+  },
+  "city.birmingham": {
+    "Country": "uk"
+  },
+  "city.bratislava": {
+    "Country": "slovakia"
+  },
+  "city.bremen": {
+    "Country": "germany"
+  },
+  "city.brno": {
+    "Country": "czech"
+  },
+  "city.brussel": {
+    "Country": "belgium"
+  },
+  "city.calais": {
+    "Country": "france"
+  },
+  "city.cambridge": {
+    "Country": "uk"
+  },
+  "city.cardiff": {
+    "Country": "uk"
+  },
+  "city.carlisle": {
+    "Country": "uk"
+  },
+  "city.dijon": {
+    "Country": "france"
+  },
+  "city.dortmund": {
+    "Country": "germany"
+  },
+  "city.dover": {
+    "Country": "uk"
+  },
+  "city.dresden": {
+    "Country": "germany"
+  },
+  "city.duisburg": {
+    "Country": "germany"
+  },
+  "city.dusseldorf": {
+    "Country": "germany"
+  },
+  "city.edinburgh": {
+    "Country": "uk"
+  },
+  "city.erfurt": {
+    "Country": "germany"
+  },
+  "city.europoort": {
+    "Country": "netherlands"
+  },
+  "city.felixstowe": {
+    "Country": "uk"
+  },
+  "city.frankfurt": {
+    "Country": "germany"
+  },
+  "city.geneve": {
+    "Country": "switzerland"
+  },
+  "city.glasgow": {
+    "Country": "uk"
+  },
+  "city.graz": {
+    "Country": "austria"
+  },
+  "city.grimsby": {
+    "Country": "uk"
+  },
+  "city.groningen": {
+    "Country": "netherlands"
+  },
+  "city.hamburg": {
+    "Country": "germany"
+  },
+  "city.hannover": {
+    "Country": "germany"
+  },
+  "city.harwich": {
+    "Country": "uk"
+  },
+  "city.hull": {
+    "Country": "uk"
+  },
+  "city.ijmuiden": {
+    "Country": "netherlands"
+  },
+  "city.innsbruck": {
+    "Country": "austria"
+  },
+  "city.kassel": {
+    "Country": "germany"
+  },
+  "city.kiel": {
+    "Country": "germany"
+  },
+  "city.klagenfurt": {
+    "Country": "austria"
+  },
+  "city.koln": {
+    "Country": "germany"
+  },
+  "city.leipzig": {
+    "Country": "germany"
+  },
+  "city.liege": {
+    "Country": "belgium"
+  },
+  "city.lille": {
+    "Country": "france"
+  },
+  "city.linz": {
+    "Country": "austria"
+  },
+  "city.liverpool": {
+    "Country": "uk"
+  },
+  "city.london": {
+    "Country": "uk"
+  },
+  "city.luxembourg": {
+    "Country": "luxembourg"
+  },
+  "city.lyon": {
+    "Country": "france"
+  },
+  "city.magdeburg": {
+    "Country": "germany"
+  },
+  "city.manchester": {
+    "Country": "uk"
+  },
+  "city.mannheim": {
+    "Country": "germany"
+  },
+  "city.metz": {
+    "Country": "france"
+  },
+  "city.milano": {
+    "Country": "italy"
+  },
+  "city.munchen": {
+    "Country": "germany"
+  },
+  "city.newcastle": {
+    "Country": "uk"
+  },
+  "city.nurnberg": {
+    "Country": "germany"
+  },
+  "city.osnabruck": {
+    "Country": "germany"
+  },
+  "city.paris": {
+    "Country": "france"
+  },
+  "city.plymouth": {
+    "Country": "uk"
+  },
+  "city.poznan": {
+    "Country": "poland"
+  },
+  "city.prague": {
+    "Country": "czech"
+  },
+  "city.reims": {
+    "Country": "france"
+  },
+  "city.rostock": {
+    "Country": "germany"
+  },
+  "city.rotterdam": {
+    "Country": "netherlands"
+  },
+  "city.salzburg": {
+    "Country": "austria"
+  },
+  "city.sheffield": {
+    "Country": "uk"
+  },
+  "city.southampton": {
+    "Country": "uk"
+  },
+  "city.strasbourg": {
+    "Country": "france"
+  },
+  "city.stuttgart": {
+    "Country": "germany"
+  },
+  "city.swansea": {
+    "Country": "uk"
+  },
+  "city.szczecin": {
+    "Country": "poland"
+  },
+  "city.torino": {
+    "Country": "italy"
+  },
+  "city.travemunde": {
+    "Country": "germany"
+  },
+  "city.venezia": {
+    "Country": "italy"
+  },
+  "city.verona": {
+    "Country": "italy"
+  },
+  "city.wien": {
+    "Country": "austria"
+  },
+  "city.wroclaw": {
+    "Country": "poland"
+  },
+  "city.zurich": {
+    "Country": "switzerland"
+  }
+}

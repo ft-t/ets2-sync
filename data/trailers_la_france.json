@@ -2,11 +2,21 @@
   "variants": [
     "trailer.car_fr"
   ],
-  "definitions": [
-    "trailer_def.cars_fr.car_fr",
-    "trailer_def.fuel_oil.fuel_cistern",
-    "trailer_def.fuel_oil.willig.fuel_cistern",
-    "trailer_def.granite_cube.s_ki_solid.cover",
-    "trailer_def.live_catt_fr.livestock"
-  ]
+  "definitions": {
+    "trailer_def.cars_fr.car_fr": {
+      "Countries": []
+    },
+    "trailer_def.fuel_oil.fuel_cistern": {
+      "Countries": []
+    },
+    "trailer_def.fuel_oil.willig.fuel_cistern": {
+      "Countries": []
+    },
+    "trailer_def.granite_cube.s_ki_solid.cover": {
+      "Countries": []
+    },
+    "trailer_def.live_catt_fr.livestock": {
+      "Countries": []
+    }
+  }
 }

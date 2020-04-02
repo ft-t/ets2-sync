@@ -3,8 +3,12 @@
     "trailer.car_trans_b",
     "trailer.car_trans_b2"
   ],
-  "definitions": [
-    "trailer_def.car_balt1.car_trans_b",
-    "trailer_def.car_balt2.car_trans_b2"
-  ]
+  "definitions": {
+    "trailer_def.car_balt1.car_trans_b": {
+      "Countries": []
+    },
+    "trailer_def.car_balt2.car_trans_b2": {
+      "Countries": []
+    }
+  }
 }

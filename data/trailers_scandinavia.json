@@ -4,16 +4,36 @@
     "trailer.overweight.tubeair",
     "trailer.overweight.windplant"
   ],
-  "definitions": [
-    "trailer_def.barley.s_ki_solid.cover",
-    "trailer_def.live_cattle.livestock",
-    "trailer_def.rye.s_ki_solid.cover",
-    "trailer_def.scania_tr.truck_trans.scania",
-    "trailer_def.volvo_cars.car_volvo",
-    "trailer_def.volvo_tr.truck_trans.volvo",
-    "trailer_def.wheat.s_ki_solid.cover",
-    "trailer_def.windml_eng.overweight.windplant",
-    "trailer_def.windml_tube.overweight.tubeair",
-    "trailer_def.wood_bark.s_ki_solid.cover"
-  ]
+  "definitions": {
+    "trailer_def.barley.s_ki_solid.cover": {
+      "Countries": []
+    },
+    "trailer_def.live_cattle.livestock": {
+      "Countries": []
+    },
+    "trailer_def.rye.s_ki_solid.cover": {
+      "Countries": []
+    },
+    "trailer_def.scania_tr.truck_trans.scania": {
+      "Countries": []
+    },
+    "trailer_def.volvo_cars.car_volvo": {
+      "Countries": []
+    },
+    "trailer_def.volvo_tr.truck_trans.volvo": {
+      "Countries": []
+    },
+    "trailer_def.wheat.s_ki_solid.cover": {
+      "Countries": []
+    },
+    "trailer_def.windml_eng.overweight.windplant": {
+      "Countries": []
+    },
+    "trailer_def.windml_tube.overweight.tubeair": {
+      "Countries": []
+    },
+    "trailer_def.wood_bark.s_ki_solid.cover": {
+      "Countries": []
+    }
+  }
 }
