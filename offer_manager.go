@@ -14,6 +14,9 @@ import (
 )
 
 var currentOffers map[string][]db.DbOffer // key is SourceCompany
+var totalOffersForSync int
+var lastUpdatedSync time.Time
+
 var offersInDb = make([]string, 0)
 var jobToProcessMutex sync.Mutex
 var createNewJobsMutex sync.Mutex
@@ -84,6 +87,17 @@ func initOfferManager() error {
 		}
 	}()
 
+	func() {
+		for {
+			_ = updateList()
+			time.Sleep(time.Hour * 72)
+		}
+	}()
+
+	return nil
+}
+
+func updateList() error {
 	context := db.GetDb()
 
 	currentOffersArr := make([]db.DbOffer, 0)
@@ -93,6 +107,8 @@ func initOfferManager() error {
 	}
 
 	currentOffers = make(map[string][]db.DbOffer)
+	totalOffersForSync = 0
+	lastUpdatedSync = time.Now().UTC()
 	maxNonDlcJobs := 5
 	maxCargoThreshold := 20
 
@@ -139,6 +155,7 @@ func initOfferManager() error {
 			finalOffers = append(finalOffers, offer)
 		}
 
+		totalOffersForSync += len(finalOffers)
 		currentOffers[key] = finalOffers
 	}
 
@@ -146,10 +163,10 @@ func initOfferManager() error {
 }
 
 func PopulateOffers(file *savefile.SaveFile, supportedDlc dlc.Dlc) {
-	for _, offer := range getOffers(supportedDlc, file.AvailableCompanies){
+	for _, offer := range getOffers(supportedDlc, file.AvailableCompanies) {
 		job := savefile.NewJobOffer(offer)
 
-		if err := file.AddOffer(job); err != nil{
+		if err := file.AddOffer(job); err != nil {
 			fmt.Println(err) // todo
 		}
 	}

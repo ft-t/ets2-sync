@@ -49,6 +49,18 @@ func Start() {
 		_ = tmpl.Execute(w, []dlc.Dlc{dlc.GoingEast, dlc.Scandinavia, dlc.LaFrance, dlc.Italy, dlc.BeyondTheBalticSea, dlc.RoadToTheBlackSea, dlc.PowerCargo, dlc.HeavyCargo, dlc.SpecialTransport, dlc.Krone, dlc.Schwarzmuller})
 	})
 
+	mux.HandleFunc("/stat", func(w http.ResponseWriter, r *http.Request){
+		w.Header().Set("Content-Type", "application/json")
+
+		b, _ := json.Marshal(map[string]interface{}{
+			"last_sync" : lastUpdatedSync.Format(time.Stamp),
+			"total_offers" : totalOffersForSync,
+		})
+
+		_, _ = w.Write(b)
+		return
+	})
+
 	mux.HandleFunc("/dlc", func(w http.ResponseWriter, r *http.Request) {
 		res := make(map[int]map[string]int)
 
