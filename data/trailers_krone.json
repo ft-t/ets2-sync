@@ -12,22 +12,22 @@
   ],
   "definitions": {
     "trailer_def.krone.boxliner.single_3.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.krone.boxliner.single_3_220.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.krone.boxliner.single_3_40.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.krone.coolliner.single_3.reefer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.krone.dryliner.single_3.dryvan": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.krone.profiliner.double_3_2.curtain": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -37,10 +37,10 @@
       ]
     },
     "trailer_def.krone.profiliner.single_3.curtain": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.krone.profilinerhd.single_3.flatbed": {
-      "Countries": []
+      "countries": []
     }
   }
 }

@@ -1,107 +1,107 @@
 {
   "city.daugavpils": {
-    "Country": "latvia"
+    "country": "latvia"
   },
   "city.helsinki": {
-    "Country": "finland"
+    "country": "finland"
   },
   "city.kaliningrad": {
-    "Country": "russia"
+    "country": "russia"
   },
   "city.kaunas": {
-    "Country": "lithuania"
+    "country": "lithuania"
   },
   "city.klaipeda": {
-    "Country": "lithuania"
+    "country": "lithuania"
   },
   "city.kotka": {
-    "Country": "finland"
+    "country": "finland"
   },
   "city.kouvola": {
-    "Country": "finland"
+    "country": "finland"
   },
   "city.kunda": {
-    "Country": "estonia"
+    "country": "estonia"
   },
   "city.lahti": {
-    "Country": "finland"
+    "country": "finland"
   },
   "city.liepaja": {
-    "Country": "latvia"
+    "country": "latvia"
   },
   "city.loviisa": {
-    "Country": "finland"
+    "country": "finland"
   },
   "city.luga": {
-    "Country": "russia"
+    "country": "russia"
   },
   "city.mazeikiai": {
-    "Country": "lithuania"
+    "country": "lithuania"
   },
   "city.naantali": {
-    "Country": "finland"
+    "country": "finland"
   },
   "city.narva": {
-    "Country": "estonia"
+    "country": "estonia"
   },
   "city.olkiluoto": {
-    "Country": "finland"
+    "country": "finland"
   },
   "city.paldiski": {
-    "Country": "estonia"
+    "country": "estonia"
   },
   "city.panevezys": {
-    "Country": "lithuania"
+    "country": "lithuania"
   },
   "city.parnu": {
-    "Country": "estonia"
+    "country": "estonia"
   },
   "city.petersburg": {
-    "Country": "russia"
+    "country": "russia"
   },
   "city.pori": {
-    "Country": "finland"
+    "country": "finland"
   },
   "city.pskov": {
-    "Country": "russia"
+    "country": "russia"
   },
   "city.rezekne": {
-    "Country": "latvia"
+    "country": "latvia"
   },
   "city.riga": {
-    "Country": "latvia"
+    "country": "latvia"
   },
   "city.siauliai": {
-    "Country": "lithuania"
+    "country": "lithuania"
   },
   "city.sosnovy_bor": {
-    "Country": "russia"
+    "country": "russia"
   },
   "city.tallinn": {
-    "Country": "estonia"
+    "country": "estonia"
   },
   "city.tampere": {
-    "Country": "finland"
+    "country": "finland"
   },
   "city.tartu": {
-    "Country": "estonia"
+    "country": "estonia"
   },
   "city.turku": {
-    "Country": "finland"
+    "country": "finland"
   },
   "city.utena": {
-    "Country": "lithuania"
+    "country": "lithuania"
   },
   "city.valmiera": {
-    "Country": "latvia"
+    "country": "latvia"
   },
   "city.ventspils": {
-    "Country": "latvia"
+    "country": "latvia"
   },
   "city.vilnius": {
-    "Country": "lithuania"
+    "country": "lithuania"
   },
   "city.vyborg": {
-    "Country": "russia"
+    "country": "russia"
   }
 }

@@ -91,121 +91,121 @@
   ],
   "definitions": {
     "trailer_def.acid.chcistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.cement.cement": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.chemicals.chcistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.coal.s_ki_solid.coal": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.concrete.cement_mix": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.diesel.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.diesel.willig.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.digger1000.overweight.digger1000": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.digger500.overweight.digger500": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.diggers.overweight.digger": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.excav_soil.s_ki_solid.cover": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.excavator.overweight.excavator": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.floorpanels.panel_trans.floor": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.forklifts.overweight.forklifts": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.glass.panel_trans.glass": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.glass_packed.gls_trailer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.gravel.s_ki_solid.gravel": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.hchemicals.chcistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.hydrochlor.chcistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.hydrogen.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.kerosene.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.kerosene.willig.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.lpg.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.lpg.willig.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.milk.food_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.mondeos.car_trans": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.mondeos.car_trans2": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.mondeos.car_trans3": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.oil.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.oil.willig.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.ore.s_ki_solid.ore": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.petrol.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.petrol.willig.fuel_cistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.plastic_gra.cement": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.potahydro.chcistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.princess.overweight.boat": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.sand.s_ki_solid.sand": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scrap_metals.s_ki_solid.cover": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.bdouble_2_2.curtain": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -215,7 +215,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2.dryvan": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -225,7 +225,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2.dryvan_m": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -235,7 +235,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2.dryvan_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -245,7 +245,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2.insulated": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -255,7 +255,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2.insulated_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -265,7 +265,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2.reefer": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -275,7 +275,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2.reefer_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -285,7 +285,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2a.curtain": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -295,7 +295,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2a.dryvan": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -305,7 +305,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2a.dryvan_m": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -315,7 +315,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2a.dryvan_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -325,7 +325,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2a.insulated": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -335,7 +335,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2a.insulated_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -345,7 +345,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2a.reefer": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -355,7 +355,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_2_2a.reefer_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -365,7 +365,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3.curtain": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -375,7 +375,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3.dryvan": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -385,7 +385,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3.dryvan_m": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -395,7 +395,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3.dryvan_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -405,7 +405,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3.insulated": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -415,7 +415,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3.insulated_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -425,7 +425,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3.reefer": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -435,7 +435,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3.reefer_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -445,7 +445,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3s.curtain": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -455,7 +455,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3s.dryvan": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -465,7 +465,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3s.dryvan_m": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -475,7 +475,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3s.dryvan_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -485,7 +485,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3s.insulated": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -495,7 +495,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3s.insulated_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -505,7 +505,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3s.reefer": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -515,7 +515,7 @@
       ]
     },
     "trailer_def.scs.box.bdouble_3_3s.reefer_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -525,7 +525,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_1.curtain": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -535,7 +535,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_1.dryvan": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -545,7 +545,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_1.dryvan_m": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -555,7 +555,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_1.dryvan_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -565,7 +565,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_1.insulated": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -575,7 +575,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_1.insulated_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -585,7 +585,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_1.reefer": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -595,7 +595,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_1.reefer_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -605,7 +605,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2.curtain": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -615,7 +615,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2.dryvan": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -625,7 +625,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2.dryvan_m": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -635,7 +635,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2.dryvan_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -645,7 +645,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2.insulated": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -655,7 +655,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2.insulated_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -665,7 +665,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2.reefer": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -675,7 +675,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2.reefer_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -685,7 +685,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2a.curtain": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -695,7 +695,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2a.dryvan": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -705,7 +705,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2a.dryvan_m": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -715,7 +715,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2a.dryvan_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -725,7 +725,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2a.insulated": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -735,7 +735,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2a.insulated_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -745,7 +745,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2a.reefer": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -755,7 +755,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_2a.reefer_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -765,7 +765,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_3.curtain": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -775,7 +775,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_3.dryvan": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -785,7 +785,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_3.dryvan_m": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -795,7 +795,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_3.dryvan_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -805,7 +805,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_3.insulated": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -815,7 +815,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_3.insulated_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -825,7 +825,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_3.reefer": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -835,7 +835,7 @@
       ]
     },
     "trailer_def.scs.box.double_3_3.reefer_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -845,380 +845,380 @@
       ]
     },
     "trailer_def.scs.box.hct_3_2_3.curtain": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2_3.dryvan": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2_3.dryvan_m": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2_3.dryvan_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2_3.insulated": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2_3.insulated_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2_3.reefer": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2_3.reefer_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2s_4.curtain": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2s_4.dryvan": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2s_4.dryvan_m": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2s_4.dryvan_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2s_4.insulated": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2s_4.insulated_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2s_4.reefer": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_3_2s_4.reefer_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2_3.curtain": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2_3.dryvan": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2_3.dryvan_m": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2_3.dryvan_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2_3.insulated": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2_3.insulated_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2_3.reefer": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2_3.reefer_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2s_4.curtain": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2s_4.dryvan": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2s_4.dryvan_m": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2s_4.dryvan_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2s_4.insulated": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2s_4.insulated_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2s_4.reefer": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.hct_4_2s_4.reefer_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.box.single_1.curtain": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_1.dryvan": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_1.dryvan_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_1.dryvan_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_1.insulated": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_1.insulated_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_1.reefer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_1.reefer_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2.curtain": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2.dryvan": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2.dryvan_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2.dryvan_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2.insulated": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2.insulated_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2.reefer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2.reefer_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2.reefer_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2a.curtain": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2a.dryvan": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2a.dryvan_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2a.dryvan_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2a.insulated": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2a.insulated_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2a.reefer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2a.reefer_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_2a.reefer_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3.curtain": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3.dryvan": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3.dryvan_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3.dryvan_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3.insulated": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3.insulated_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3.reefer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3.reefer_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3.reefer_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s.curtain": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s.dryvan": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s.dryvan_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s.dryvan_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s.insulated": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s.insulated_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s.reefer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s.reefer_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s.reefer_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s2.curtain": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s2.dryvan": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s2.dryvan_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s2.dryvan_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s2.insulated": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s2.insulated_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s2.reefer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s2.reefer_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3s2.reefer_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3sa.curtain": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3sa.dryvan": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3sa.dryvan_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3sa.dryvan_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3sa.insulated": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3sa.insulated_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3sa.reefer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3sa.reefer_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_3sa.reefer_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_4.curtain": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_4.dryvan": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_4.dryvan_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_4.dryvan_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_4.insulated": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_4.insulated_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_4.reefer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_4.reefer_m": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.box.single_4.reefer_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.double_3_1.brick": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1228,7 +1228,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_1.brick_crane": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1238,7 +1238,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_1.container": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1248,7 +1248,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_1.flatbed_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1258,7 +1258,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_1.flatbed_w": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1268,7 +1268,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_2.brick": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1278,7 +1278,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_2.brick_crane": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1288,7 +1288,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_2.container": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1298,7 +1298,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_2.flatbed_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1308,7 +1308,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_2.flatbed_w": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1318,7 +1318,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_2a.brick": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1328,7 +1328,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_2a.brick_crane": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1338,7 +1338,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_2a.container": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1348,7 +1348,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_2a.flatbed_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1358,7 +1358,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_2a.flatbed_w": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1368,7 +1368,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_3.brick": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1378,7 +1378,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_3.brick_crane": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1388,7 +1388,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_3.container": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1398,7 +1398,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_3.flatbed_s": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1408,7 +1408,7 @@
       ]
     },
     "trailer_def.scs.flatbed.double_3_3.flatbed_w": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1418,212 +1418,212 @@
       ]
     },
     "trailer_def.scs.flatbed.hct_3_2_3.brick": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_3_2_3.brick_crane": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_3_2_3.container": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_3_2_3.flatbed_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_3_2_3.flatbed_w": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_3_2s_4.brick": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_3_2s_4.brick_crane": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_3_2s_4.container": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_3_2s_4.flatbed_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_3_2s_4.flatbed_w": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_4_2_3.brick": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_4_2_3.brick_crane": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_4_2_3.container": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_4_2_3.flatbed_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_4_2_3.flatbed_w": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_4_2s_4.brick": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_4_2s_4.brick_crane": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_4_2s_4.container": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_4_2s_4.flatbed_s": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.hct_4_2s_4.flatbed_w": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.flatbed.single_2.brick": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_2.brick_crane": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_2.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_2.flatbed_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_2.flatbed_w": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_2a.brick": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_2a.brick_crane": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_2a.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_2a.flatbed_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_2a.flatbed_w": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3.brick": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3.brick_crane": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3.flatbed_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3.flatbed_w": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3s.brick": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3s.brick_crane": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3s.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3s.flatbed_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3s.flatbed_w": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3s2.brick": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3s2.brick_crane": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3s2.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3s2.flatbed_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3s2.flatbed_w": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3sa.brick": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3sa.brick_crane": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3sa.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3sa.flatbed_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_3sa.flatbed_w": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_4.brick": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_4.brick_crane": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_4.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_4.flatbed_s": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.flatbed.single_4.flatbed_w": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.gooseneck.bdouble_2_2.container": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1633,7 +1633,7 @@
       ]
     },
     "trailer_def.scs.gooseneck.bdouble_3_3.container": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1643,7 +1643,7 @@
       ]
     },
     "trailer_def.scs.gooseneck.double_3_2.container": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1653,7 +1653,7 @@
       ]
     },
     "trailer_def.scs.gooseneck.double_3_3.container": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1663,41 +1663,41 @@
       ]
     },
     "trailer_def.scs.gooseneck.hct_3_2_3.container": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.gooseneck.hct_3_2s_3.container": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.gooseneck.singl_3e_20.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.gooseneck.singl_3e_220.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.gooseneck.singl_3e_40.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.gooseneck.singl_3f_220.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.gooseneck.singl_3f_40.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.gooseneck.single_2_20.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.gooseneck.single_3_20.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.gooseneck.single_3_40.container": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.log.bdouble_3_3.steel": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1707,7 +1707,7 @@
       ]
     },
     "trailer_def.scs.log.bdouble_3_3.wood": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1717,7 +1717,7 @@
       ]
     },
     "trailer_def.scs.log.bdouble_3_3s.steel": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1727,7 +1727,7 @@
       ]
     },
     "trailer_def.scs.log.bdouble_3_3s.wood": {
-      "Countries": [
+      "countries": [
         "denmark",
         "norway",
         "sweden",
@@ -1737,86 +1737,86 @@
       ]
     },
     "trailer_def.scs.log.hct_3_2_3.steel": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.log.hct_3_2_3.wood": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.log.hct_3_2s_4.steel": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.log.hct_3_2s_4.wood": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.log.hct_4_2_3.steel": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.log.hct_4_2_3.wood": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.log.hct_4_2s_4.steel": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.log.hct_4_2s_4.wood": {
-      "Countries": [
+      "countries": [
         "finland"
       ]
     },
     "trailer_def.scs.log.single_3.steel": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.log.single_3.wood": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.log.single_3s2.steel": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.log.single_3s2.wood": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.log.single_3sa.steel": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.log.single_3sa.wood": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.log.single_4.steel": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.scs.log.single_4.wood": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.sodchlor.chcistern": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.stone_dust.s_ki_solid.cover": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.stones.s_ki_solid.cover": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.tractors.overweight.tractors": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.wallpanels.panel_trans.wall": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.wshavings.s_ki_solid.cover": {
-      "Countries": []
+      "countries": []
     }
   }
 }

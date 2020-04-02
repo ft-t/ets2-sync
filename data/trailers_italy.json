@@ -5,10 +5,10 @@
   ],
   "definitions": {
     "trailer_def.car_it.car_it": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.iveco_vans.van_trans_id": {
-      "Countries": []
+      "countries": []
     }
   }
 }

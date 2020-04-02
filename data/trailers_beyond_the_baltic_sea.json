@@ -5,10 +5,10 @@
   ],
   "definitions": {
     "trailer_def.car_balt1.car_trans_b": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.car_balt2.car_trans_b2": {
-      "Countries": []
+      "countries": []
     }
   }
 }

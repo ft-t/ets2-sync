@@ -11,28 +11,28 @@
   ],
   "definitions": {
     "trailer_def.asph_miller.goldhofer.mpa_k_flat14.wirtgenw250i": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.cable_reel.goldhofer.stz_vl.coil": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.concr_beams.goldhofer.stz_vl.conc_beam": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.dozer.goldhofer.mpa_k_flat14.k_d155ax_5": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.locomotive.goldhofer.mpa_k_flat14.vossloh_g6": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.metal_center.goldhofer.stz_vl.m_centering": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.mobile_crane.goldhofer.mpa_k_flat14.t_c_3160": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.transformat.goldhofer.stz_vl.transformer": {
-      "Countries": []
+      "countries": []
     }
   }
 }

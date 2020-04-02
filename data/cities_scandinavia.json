@@ -1,83 +1,83 @@
 {
   "city.aalborg": {
-    "Country": "denmark"
+    "country": "denmark"
   },
   "city.bergen": {
-    "Country": "norway"
+    "country": "norway"
   },
   "city.esbjerg": {
-    "Country": "denmark"
+    "country": "denmark"
   },
   "city.frederikshv": {
-    "Country": "denmark"
+    "country": "denmark"
   },
   "city.gedser": {
-    "Country": "denmark"
+    "country": "denmark"
   },
   "city.goteborg": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.helsingborg": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.hirtshals": {
-    "Country": "denmark"
+    "country": "denmark"
   },
   "city.jonkoping": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.kalmar": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.kapellskar": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.karlskrona": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.kobenhavn": {
-    "Country": "denmark"
+    "country": "denmark"
   },
   "city.kristiansand": {
-    "Country": "norway"
+    "country": "norway"
   },
   "city.linkoping": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.malmo": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.nynashamn": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.odense": {
-    "Country": "denmark"
+    "country": "denmark"
   },
   "city.orebro": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.oslo": {
-    "Country": "norway"
+    "country": "norway"
   },
   "city.sodertalje": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.stavanger": {
-    "Country": "norway"
+    "country": "norway"
   },
   "city.stockholm": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.trelleborg": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.uppsala": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.vasteraas": {
-    "Country": "sweden"
+    "country": "sweden"
   },
   "city.vaxjo": {
-    "Country": "sweden"
+    "country": "sweden"
   }
 }

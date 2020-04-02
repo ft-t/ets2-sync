@@ -22,37 +22,37 @@
   ],
   "definitions": {
     "trailer_def.digger1000.schw_ovrwght.catg": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.digger500.schw_ovrwght.digger500": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.diggers.schw_ovrwght.twocats": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.excavator.schw_ovrwght.excavator": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.forklifts.schw_ovrwght.forklifts": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.milk.schw_food": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.princess.schw_ovrwght.boat": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.schwmuller.curtain.single_3.curtain": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.schwmuller.reefer.single_3.reefer": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.schwmuller.slidepost.single_3.slidepost": {
-      "Countries": []
+      "countries": []
     },
     "trailer_def.tractors.schw_ovrwght.tractors": {
-      "Countries": []
+      "countries": []
     }
   }
 }
