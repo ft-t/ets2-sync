@@ -13,6 +13,14 @@
   version = "v0.7.9"
 
 [[projects]]
+  branch = "master"
+  digest = "1:3ce584ef2a91ca82a3350c20257e06a6c4b7ea1510b12a6c5d2018e9aaeb4c5c"
+  name = "github.com/iancoleman/orderedmap"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "ac98e3ecb4b017efb5c5d0fc075c2ded1f5d500d"
+
+[[projects]]
   digest = "1:9ff22c26414baf7deaf74f2a788fe7b97666048bcbe346c52cfe823442abbdfb"
   name = "github.com/lib/pq"
   packages = [
@@ -78,6 +86,7 @@
   input-imports = [
     "github.com/go-xorm/xorm",
     "github.com/go-xorm/xorm/migrate",
+    "github.com/iancoleman/orderedmap",
     "github.com/lib/pq",
     "github.com/mitchellh/hashstructure",
     "github.com/mitchellh/mapstructure",

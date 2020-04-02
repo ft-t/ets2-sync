@@ -3,9 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	"ets2-sync/db"
 	"fmt"
-	"github.com/rs/cors"
 	"html/template"
 	"io"
 	"math/rand"
@@ -15,6 +13,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/iancoleman/orderedmap"
+	"github.com/rs/cors"
+
+	"ets2-sync/db"
 	"ets2-sync/dlc"
 	"ets2-sync/global"
 	"ets2-sync/savefile"
@@ -62,20 +64,20 @@ func Start() {
 	})
 
 	mux.HandleFunc("/dlc", func(w http.ResponseWriter, r *http.Request) {
-		res := make(map[int]map[string]int)
+		res := make(map[int]*orderedmap.OrderedMap)
 
-		res[1] = make(map[string]int)
-		res[2] = make(map[string]int)
-		res[3] = make(map[string]int)
+		res[1] = orderedmap.New()
+		res[2] = orderedmap.New()
+		res[3] = orderedmap.New()
 
 		for _, d := range dlc.ExpansionDLCs {
-			res[1][d.ToString()] = int(d)
+			res[1].Set(d.ToString(), int(d))
 		}
 		for _, d := range dlc.CargoDLCs {
-			res[2][d.ToString()] = int(d)
+			res[2].Set(d.ToString(), int(d))
 		}
 		for _, d := range dlc.TrailerDLCs {
-			res[3][d.ToString()] = int(d)
+			res[3].Set(d.ToString(), int(d))
 		}
 
 		w.Header().Set("Content-Type", "application/json")
