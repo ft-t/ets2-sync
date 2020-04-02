@@ -3,10 +3,6 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	"ets2-sync/db"
-	"ets2-sync/dlc"
-	"ets2-sync/global"
-	"ets2-sync/savefile"
 	"fmt"
 	"github.com/rs/cors"
 	"html/template"
@@ -17,6 +13,10 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"ets2-sync/dlc"
+	"ets2-sync/global"
+	"ets2-sync/savefile"
 )
 
 func main() {
@@ -49,10 +49,20 @@ func Start() {
 	})
 
 	mux.HandleFunc("/dlc", func(w http.ResponseWriter, r *http.Request) {
-		res := make(map[string]int)
+		res := make(map[int]map[string]int)
 
-		for _, d := range dlc.AllDLCs {
-			res[d.ToString()] = int(d)
+		res[1] = make(map[string]int)
+		res[2] = make(map[string]int)
+		res[3] = make(map[string]int)
+
+		for _, d := range dlc.ExpansionDLCs {
+			res[1][d.ToString()] = int(d)
+		}
+		for _, d := range dlc.CargoDLCs {
+			res[2][d.ToString()] = int(d)
+		}
+		for _, d := range dlc.TrailerDLCs {
+			res[3][d.ToString()] = int(d)
 		}
 
 		w.Header().Set("Content-Type", "application/json")
@@ -100,6 +110,8 @@ func Start() {
 
 		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%s", header.Filename))
 		w.Header().Set("Content-Type", "application/octet-stream")
+		w.Header().Add("Access-Control-Expose-Headers", "Content-Disposition")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 
 		_, _ = newSaveFile.Write(w)
 	})
