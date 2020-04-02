@@ -65,7 +65,6 @@ func (c *CompanyConfigSection) AppendLine(line string) {
 type jobOffer struct {
 	SourceCompany      string
 	Target             string
-	ExpirationTime     string
 	Urgency            string
 	ShortestDistanceKm string
 	FerryTime          string
@@ -89,7 +88,7 @@ func newJobOffer(offer structs.ApplicableOffer) *jobOffer {
 
 func (j *jobOffer) Write(w io.Writer, newLine string) {
 	_, _ = w.Write([]byte(fmt.Sprintf(" target: \"%s\"%s", j.Target, newLine)))
-	_, _ = w.Write([]byte(fmt.Sprintf(" expiration_time: %s%s", j.ExpirationTime, newLine)))
+	_, _ = w.Write([]byte(fmt.Sprintf(" expiration_time: %s%s", "86400000", newLine)))
 	_, _ = w.Write([]byte(fmt.Sprintf(" urgency: %s%s", j.Urgency, newLine)))
 	_, _ = w.Write([]byte(fmt.Sprintf(" shortest_distance_km: %s%s", j.ShortestDistanceKm, newLine)))
 	_, _ = w.Write([]byte(fmt.Sprintf(" ferry_time: %s%s", j.FerryTime, newLine)))
@@ -133,9 +132,6 @@ func (s *jobOfferConfigSection) FillOfferData(fieldName string, value string) {
 	switch strings.Trim(fieldName, ":") {
 	case "target":
 		s.Offer.Target = strings.Trim(value, "\"")
-		break
-	case "expiration_time":
-		s.Offer.ExpirationTime = value
 		break
 	case "urgency":
 		s.Offer.Urgency = value

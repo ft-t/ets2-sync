@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"html/template"
 	"io"
@@ -89,15 +90,35 @@ func Start() {
 	})
 
 	mux.HandleFunc("/save_upload", func(w http.ResponseWriter, r *http.Request) {
+		writeError := func (er interface{}){
+			b, _ := json.Marshal(map[string]interface{}{
+				"error" : r,
+			})
+
+			w.WriteHeader(500)
+			_, _ = w.Write(b)
+		}
+		defer func() {
+			if r := recover(); r != nil {
+				writeError(r)
+				return
+			}
+		}()
+
+		w.Header().Add("Access-Control-Expose-Headers", "Content-Disposition")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
 		_ = r.ParseMultipartForm(32 << 20)
 
 		file, header, err := r.FormFile("savefile")
 		if err != nil {
+			writeError(err)
 			return
 		}
 		defer file.Close()
 
 		if !strings.HasSuffix(header.Filename, ".sii") {
+			writeError(errors.New("not a .sii file"))
+
 			return // not a save file
 		}
 
@@ -116,6 +137,7 @@ func Start() {
 		newSaveFile, er := savefile.NewSaveFile(bytes.NewReader(buf.Bytes()))
 
 		if er != nil {
+			writeError(er)
 			return // todo
 		}
 
@@ -125,8 +147,6 @@ func Start() {
 
 		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%s", header.Filename))
 		w.Header().Set("Content-Type", "application/octet-stream")
-		w.Header().Add("Access-Control-Expose-Headers", "Content-Disposition")
-		w.Header().Set("Access-Control-Allow-Origin", "*")
 
 		_, _ = newSaveFile.Write(w)
 	})

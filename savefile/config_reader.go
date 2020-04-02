@@ -85,6 +85,9 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 		currentSection.AppendLine(line)
 
 		if currentSection.Name() == "job_offer_data" {
+			if len(parsed) == 1 {
+				fmt.Println("xer")
+			}
 			currentSection.(*jobOfferConfigSection).FillOfferData(parsed[0], parsed[1])
 		}
 
@@ -130,7 +133,6 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 			if offer, ok := offers[jobId]; ok {
 				offer.SourceCompany = k.nameValue
 				k.Jobs[jobId] = offer
-				offer.ExpirationTime = "86400000"
 
 				s.dlc |= dlc.GetRequiredDlc(offer.SourceCompany, offer.Target, offer.Cargo, offer.TrailerDefinition,
 					offer.TrailerVariant)
