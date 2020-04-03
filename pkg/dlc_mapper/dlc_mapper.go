@@ -28,9 +28,6 @@ const (
 )
 
 var AllDLCs = []Dlc{BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea, SpecialTransport, RoadToTheBlackSea}
-var ExpansionDLCs = []Dlc{GoingEast, Scandinavia, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea}
-var CargoDLCs = []Dlc{PowerCargo, HeavyCargo, SpecialTransport}
-var TrailerDLCs = []Dlc{Schwarzmuller, Krone }
 
 func (t Dlc) ToString() string {
 	switch t {
@@ -63,35 +60,6 @@ func (t Dlc) ToString() string {
 	}
 
 	return "unk"
-}
-
-func (t Dlc) ToName() string {
-	switch t {
-	case Scandinavia:
-		return "Scandinavia"
-	case GoingEast:
-		return "Going East!"
-	case LaFrance:
-		return "Viva La France!"
-	case Italy:
-		return "Italia"
-	case PowerCargo:
-		return "High Power Cargo Pack"
-	case HeavyCargo:
-		return "Heavy Cargo Pack"
-	case BeyondTheBalticSea:
-		return "Beyond The Baltic Sea"
-	case Krone:
-		return "Krone Trailer Pack"
-	case Schwarzmuller:
-		return "Schwarzmuller Trailer Pack"
-	case RoadToTheBlackSea:
-		return "Road To The Black Sea"
-	case SpecialTransport:
-		return "Special Transport"
-	}
-
-	return "Unknown"
 }
 
 type trailerFile struct {

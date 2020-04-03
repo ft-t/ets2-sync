@@ -3,7 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	"ets2-sync/pkg/dlc_mapper"
+	. "ets2-sync/pkg/dlc_mapper"
 	savefile2 "ets2-sync/pkg/savefile"
 	"fmt"
 	"github.com/iancoleman/orderedmap"
@@ -17,6 +17,10 @@ import (
 	"strings"
 	"time"
 )
+
+var expansionDLCs = []Dlc{GoingEast, Scandinavia, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea}
+var cargoDLCs = []Dlc{PowerCargo, HeavyCargo, SpecialTransport}
+var trailerDLCs = []Dlc{Schwarzmuller, Krone }
 
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
@@ -61,13 +65,13 @@ func Start() {
 		res[2] = orderedmap.New()
 		res[3] = orderedmap.New()
 
-		for _, d := range dlc_mapper.ExpansionDLCs {
+		for _, d := range expansionDLCs {
 			res[1].Set(d.ToString(), int(d))
 		}
-		for _, d := range dlc_mapper.CargoDLCs {
+		for _, d := range cargoDLCs {
 			res[2].Set(d.ToString(), int(d))
 		}
-		for _, d := range dlc_mapper.TrailerDLCs {
+		for _, d := range trailerDLCs {
 			res[3].Set(d.ToString(), int(d))
 		}
 
@@ -113,10 +117,10 @@ func Start() {
 		}
 
 		dlcs := r.Form["dlc"]
-		offersDlcs := dlc_mapper.BaseGame
+		offersDlcs := BaseGame
 		for _, d := range dlcs {
 			val, _ := strconv.Atoi(d)
-			offersDlcs |= dlc_mapper.Dlc(val)
+			offersDlcs |= Dlc(val)
 		}
 
 		buf := bytes.NewBuffer(nil)
