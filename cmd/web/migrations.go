@@ -1,4 +1,4 @@
-package db
+package main
 
 import (
 	"github.com/go-xorm/xorm"
@@ -9,10 +9,10 @@ var migrations = []*migrate.Migration{
 	{
 		ID: "initial_202003101829",
 		Migrate: func(tx *xorm.Engine) error {
-			return tx.Sync2(&DbOffer{})
+			return tx.Sync2(&dbOffer{})
 		},
 		Rollback: func(tx *xorm.Engine) error {
-			return tx.DropTables(&DbOffer{})
+			return tx.DropTables(&dbOffer{})
 		},
 	},
 }

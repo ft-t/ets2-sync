@@ -1,8 +1,6 @@
-package structs
+package savefile
 
 import (
-	"ets2-sync/db"
-	"ets2-sync/internal"
 	"ets2-sync/pkg/dlc_mapper"
 	"github.com/mitchellh/hashstructure"
 	"strconv"
@@ -24,15 +22,6 @@ type ApplicableOffer struct {
 	UnitsCount         string
 	FillRatio          string
 	TrailerPlace       string
-}
-
-func NewApplicableOffer(offer *db.DbOffer, id string) ApplicableOffer {
-	newOffer := ApplicableOffer{}
-	_, _ = internal.MapToObject(offer, &newOffer)
-
-	newOffer.Id = id
-
-	return newOffer
 }
 
 func (o *ApplicableOffer) CalculateHash() string {

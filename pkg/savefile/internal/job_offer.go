@@ -1,8 +1,6 @@
 package internal
 
 import (
-	"ets2-sync/internal"
-	"ets2-sync/structs"
 	"fmt"
 	"io"
 )
@@ -22,13 +20,6 @@ type JobOffer struct {
 	FillRatio          string
 	TrailerPlace       string
 	Id                 string // nameParam
-}
-
-func NewJobOffer(offer structs.ApplicableOffer) *JobOffer {
-	job := JobOffer{}
-	_, _ = internal.MapToObject(offer, &job)
-
-	return &job
 }
 
 func (j *JobOffer) Write(w io.Writer, newLine string) {

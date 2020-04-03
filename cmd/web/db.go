@@ -1,7 +1,6 @@
-package db
+package main
 
 import (
-	"ets2-sync/global"
 	"ets2-sync/pkg/dlc_mapper"
 	"fmt"
 	"github.com/go-xorm/xorm"
@@ -14,7 +13,7 @@ import (
 
 var db *xorm.Engine
 
-type DbOffer struct {
+type dbOffer struct {
 	Id                 string `xorm:"pk text"`
 	RequiredDlc        dlc_mapper.Dlc
 	SourceCompany      string `xorm:"text"`
@@ -70,9 +69,7 @@ func InitializeDb() error {
 	engine.SetTZLocation(time.UTC)
 	engine.SetTZDatabase(time.UTC)
 
-	if global.IsDebug {
-		engine.ShowSQL(true)
-	}
+	engine.ShowSQL(true)
 
 	m := migrate.New(engine, &migrate.Options{
 		TableName:    "migrations",

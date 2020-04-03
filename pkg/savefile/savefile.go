@@ -9,7 +9,6 @@ import (
 	"ets2-sync/pkg/dlc_mapper"
 	. "ets2-sync/pkg/savefile/internal"
 	. "ets2-sync/pkg/savefile/internal/sections"
-	"ets2-sync/structs"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -45,9 +44,13 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 	return r, nil
 }
 
-func (s *SaveFile) AddOffer(offer structs.ApplicableOffer) error {
+func (s *SaveFile) AddOffer(offer ApplicableOffer) error {
 	if v, ok := s.companies[offer.SourceCompany]; ok {
-		v.Jobs[offer.Id] = NewJobOffer(offer)
+
+		job := JobOffer{}
+		_, _ = internal.MapToObject(offer, &job)
+
+		v.Jobs[offer.Id] = &job
 
 		return nil
 	}
@@ -67,8 +70,8 @@ func (s *SaveFile) ClearOffers() {
 	}
 }
 
-func (s *SaveFile) ExportOffers() []structs.ApplicableOffer {
-	var arr []structs.ApplicableOffer
+func (s *SaveFile) ExportOffers() []ApplicableOffer {
+	var arr []ApplicableOffer
 
 	for _, k := range s.companies {
 		if k.Jobs == nil {
@@ -76,7 +79,7 @@ func (s *SaveFile) ExportOffers() []structs.ApplicableOffer {
 		}
 
 		for _, j := range k.Jobs {
-			job := structs.ApplicableOffer{}
+			job := ApplicableOffer{}
 			_, _ = internal.MapToObject(j, &job)
 
 			arr = append(arr, job)

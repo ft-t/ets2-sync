@@ -1,10 +1,8 @@
-package web
+package main
 
 import (
 	"bytes"
 	"encoding/json"
-	"ets2-sync/db"
-	"ets2-sync/global"
 	"ets2-sync/pkg/dlc_mapper"
 	savefile2 "ets2-sync/pkg/savefile"
 	"fmt"
@@ -22,9 +20,8 @@ import (
 
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
-	global.IsDebug = true
 
-	if err := db.InitializeDb(); err != nil {
+	if err := InitializeDb(); err != nil {
 		panic(err)
 	}
 
