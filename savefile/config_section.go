@@ -17,14 +17,7 @@ type IConfigSection interface {
 	Write(w io.Writer, newLine string) (n int64, err error)
 }
 
-type jobToSeed struct {
-	jobId string
-	seed string
-}
-
 type CompanyConfigSection struct {
-	jobToSeedIndexer    int
-	jobToSeed			[]jobToSeed
 	name                string
 	nameValue           string // nameless
 	permanentData       string
@@ -32,6 +25,7 @@ type CompanyConfigSection struct {
 	deliveredPos        string
 	reservedTrailerSlot string
 	discovered          string
+	raw                 bytes.Buffer
 	Jobs                map[string]*jobOffer
 }
 
@@ -60,15 +54,7 @@ func (c *CompanyConfigSection) Write(w io.Writer, newLine string) (n int64, err 
 		index++
 	}
 
-	_, _ = w.Write([]byte(fmt.Sprintf(" cargo_offer_seeds: %d%s", len(c.Jobs), newLine)))
-
-	index = 0
-
-	for _, id := range jobIds {
-		_, _ = w.Write([]byte(fmt.Sprintf(" cargo_offer_seeds[%d]: %s%s", index, c.Jobs[id].Seed, newLine)))
-		index++
-	}
-
+	_, _ = c.raw.WriteTo(w) // cargo_offer_seeds
 	_, _ = w.Write([]byte(fmt.Sprintf(" discovered: %s%s", c.discovered, newLine)))
 	_, _ = w.Write([]byte(fmt.Sprintf(" reserved_trailer_slot: %s%s", c.reservedTrailerSlot, newLine)))
 
@@ -80,10 +66,12 @@ func (c *CompanyConfigSection) Name() string {
 }
 
 func (c *CompanyConfigSection) AppendLine(line string) {
+	if strings.Contains(line, "cargo_offer_seeds") {
+		c.raw.WriteString(line)
+	}
 }
 
 type jobOffer struct {
-	Seed               string
 	SourceCompany      string
 	Target             string
 	Urgency            string

@@ -10,7 +10,6 @@ import (
 
 type ApplicableOffer struct {
 	Id                 string // nameparam
-	Seed               string
 	RequiredDlc        dlc.Dlc
 	SourceCompany      string
 	Target             string

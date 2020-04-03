@@ -85,6 +85,9 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 		currentSection.AppendLine(line)
 
 		if currentSection.Name() == "job_offer_data" {
+			if len(parsed) == 1 {
+				fmt.Println("xer")
+			}
 			currentSection.(*jobOfferConfigSection).FillOfferData(parsed[0], parsed[1])
 		}
 
@@ -114,20 +117,8 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				currentSection.(*CompanyConfigSection).reservedTrailerSlot = parsed[1]
 			}
 
-			if strings.Contains(parsed[0], "cargo_offer_seeds["){
-				sect := currentSection.(*CompanyConfigSection)
-
-				if len(sect.jobToSeed) > sect.jobToSeedIndexer {
-					sect.jobToSeed[sect.jobToSeedIndexer].seed = parsed[1]
-				}
-
-				sect.jobToSeedIndexer++
-			}
-
 			if strings.Contains(parsed[0], "job_offer[") {
 				sect := currentSection.(*CompanyConfigSection)
-
-				sect.jobToSeed = append(sect.jobToSeed, jobToSeed{jobId: parsed[1]})
 
 				companies[sect] = append(companies[sect], parsed[1])
 			}
@@ -148,18 +139,8 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 			}
 		}
 
-		for _, seed := range k.jobToSeed {
-			k.Jobs[seed.jobId].Seed = seed.seed
-		}
-
 		for kJob, job := range k.Jobs {
 			if job.Target == "\"\"" || job.Target == "" || job.Target == "null" || job.Cargo == "null" || job.Cargo == "cargo.caravan" {
-				delete(k.Jobs, kJob)
-			}
-		}
-
-		for kJob, job := range k.Jobs {
-			if len(job.Seed) == 0 {
 				delete(k.Jobs, kJob)
 			}
 		}
