@@ -1,8 +1,8 @@
 package internal
 
 import (
+	"ets2-sync/internal"
 	"ets2-sync/structs"
-	"ets2-sync/utils"
 	"fmt"
 	"io"
 )
@@ -26,7 +26,7 @@ type JobOffer struct {
 
 func NewJobOffer(offer structs.ApplicableOffer) *JobOffer {
 	job := JobOffer{}
-	_, _ = utils.MapToObject(offer, &job)
+	_, _ = internal.MapToObject(offer, &job)
 
 	return &job
 }

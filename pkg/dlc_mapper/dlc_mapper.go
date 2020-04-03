@@ -1,13 +1,12 @@
-package dlc
+package dlc_mapper
 
 import (
 	"encoding/json"
 	"errors"
+	"ets2-sync/internal"
 	"fmt"
 	"io/ioutil"
 	"strings"
-
-	"ets2-sync/utils"
 )
 
 type Dlc int
@@ -196,7 +195,7 @@ func getCountryByCity(city string) string {
 func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 	for _, d := range AllDLCs {
 		if res := readCompanyFile(d); res != nil {
-			if company, ok := res[companyName]; ok && utils.Contains(company.Cities, cityName) {
+			if company, ok := res[companyName]; ok && internal.Contains(company.Cities, cityName) {
 				return d, nil
 			}
 		}
@@ -208,7 +207,7 @@ func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 
 func mapCargoToDlc(cargoName string) (Dlc, error) {
 	for _, d := range AllDLCs {
-		if res := readSimpleJsonArr("cargoes", d); res != nil && utils.Contains(res, cargoName) {
+		if res := readSimpleJsonArr("cargoes", d); res != nil && internal.Contains(res, cargoName) {
 			return d, nil
 		}
 	}
@@ -218,7 +217,7 @@ func mapCargoToDlc(cargoName string) (Dlc, error) {
 
 func mapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
 	for _, d := range AllDLCs {
-		if res := readTrailerFile(d); res != nil && utils.Contains(res.Variants, trailerVariant) {
+		if res := readTrailerFile(d); res != nil && internal.Contains(res.Variants, trailerVariant) {
 			return d, nil
 		}
 	}
@@ -234,7 +233,7 @@ func mapTrailerDefToDlc(trailerDef string, targetCountry string, sourceCountry s
 					return d, nil
 				}
 
-				if utils.Contains(def.Countries, targetCountry) && utils.Contains(def.Countries, sourceCountry) {
+				if internal.Contains(def.Countries, targetCountry) && internal.Contains(def.Countries, sourceCountry) {
 					return d, nil
 				}
 

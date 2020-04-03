@@ -1,12 +1,16 @@
-package main
+package web
 
 import (
 	"bytes"
 	"encoding/json"
-	"errors"
+	"ets2-sync/db"
+	"ets2-sync/global"
+	"ets2-sync/pkg/dlc_mapper"
 	savefile2 "ets2-sync/pkg/savefile"
 	"fmt"
-	"html/template"
+	"github.com/iancoleman/orderedmap"
+	"github.com/pkg/errors"
+	"github.com/rs/cors"
 	"io"
 	"math/rand"
 	"net/http"
@@ -14,13 +18,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-
-	"github.com/iancoleman/orderedmap"
-	"github.com/rs/cors"
-
-	"ets2-sync/db"
-	"ets2-sync/dlc"
-	"ets2-sync/global"
 )
 
 func main() {
@@ -48,17 +45,12 @@ func Start() {
 
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		tmpl := template.Must(template.ParseFiles("index.html"))
-		_ = tmpl.Execute(w, []dlc.Dlc{dlc.GoingEast, dlc.Scandinavia, dlc.LaFrance, dlc.Italy, dlc.BeyondTheBalticSea, dlc.RoadToTheBlackSea, dlc.PowerCargo, dlc.HeavyCargo, dlc.SpecialTransport, dlc.Krone, dlc.Schwarzmuller})
-	})
-
-	mux.HandleFunc("/stat", func(w http.ResponseWriter, r *http.Request){
+	mux.HandleFunc("/stat", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 
 		b, _ := json.Marshal(map[string]interface{}{
-			"last_sync" : lastUpdatedSync.Format(time.Stamp),
-			"total_offers" : totalOffersForSync,
+			"last_sync":    lastUpdatedSync.Format(time.Stamp),
+			"total_offers": totalOffersForSync,
 		})
 
 		_, _ = w.Write(b)
@@ -72,13 +64,13 @@ func Start() {
 		res[2] = orderedmap.New()
 		res[3] = orderedmap.New()
 
-		for _, d := range dlc.ExpansionDLCs {
+		for _, d := range dlc_mapper.ExpansionDLCs {
 			res[1].Set(d.ToString(), int(d))
 		}
-		for _, d := range dlc.CargoDLCs {
+		for _, d := range dlc_mapper.CargoDLCs {
 			res[2].Set(d.ToString(), int(d))
 		}
-		for _, d := range dlc.TrailerDLCs {
+		for _, d := range dlc_mapper.TrailerDLCs {
 			res[3].Set(d.ToString(), int(d))
 		}
 
@@ -91,9 +83,9 @@ func Start() {
 	})
 
 	mux.HandleFunc("/save_upload", func(w http.ResponseWriter, r *http.Request) {
-		writeError := func (er interface{}){
+		writeError := func(er interface{}) {
 			b, _ := json.Marshal(map[string]interface{}{
-				"error" : r,
+				"error": r,
 			})
 
 			w.WriteHeader(500)
@@ -124,10 +116,10 @@ func Start() {
 		}
 
 		dlcs := r.Form["dlc"]
-		offersDlcs := dlc.BaseGame
+		offersDlcs := dlc_mapper.BaseGame
 		for _, d := range dlcs {
 			val, _ := strconv.Atoi(d)
-			offersDlcs |= dlc.Dlc(val)
+			offersDlcs |= dlc_mapper.Dlc(val)
 		}
 
 		buf := bytes.NewBuffer(nil)
@@ -157,5 +149,5 @@ func Start() {
 
 	handler := cors.AllowAll().Handler(mux)
 
-	_ = http.ListenAndServe(fmt.Sprintf(":%s", port),handler)
+	_ = http.ListenAndServe(fmt.Sprintf(":%s", port), handler)
 }

@@ -1,8 +1,8 @@
 package db
 
 import (
-	"ets2-sync/dlc"
 	"ets2-sync/global"
+	"ets2-sync/pkg/dlc_mapper"
 	"fmt"
 	"github.com/go-xorm/xorm"
 	"github.com/go-xorm/xorm/migrate"
@@ -16,7 +16,7 @@ var db *xorm.Engine
 
 type DbOffer struct {
 	Id                 string `xorm:"pk text"`
-	RequiredDlc        dlc.Dlc
+	RequiredDlc        dlc_mapper.Dlc
 	SourceCompany      string `xorm:"text"`
 	Target             string
 	Urgency            string

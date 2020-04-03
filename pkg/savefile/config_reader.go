@@ -3,7 +3,7 @@ package savefile
 import (
 	"bufio"
 	"bytes"
-	"ets2-sync/dlc"
+	"ets2-sync/pkg/dlc_mapper"
 	. "ets2-sync/pkg/savefile/internal"
 	. "ets2-sync/pkg/savefile/internal/sections"
 	"fmt"
@@ -136,7 +136,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				offer.SourceCompany = k.NameValue()
 				k.Jobs[jobId] = offer
 
-				s.dlc |= dlc.GetRequiredDlc(offer.SourceCompany, offer.Target, offer.Cargo, offer.TrailerDefinition,
+				s.dlc |= dlc_mapper.GetRequiredDlc(offer.SourceCompany, offer.Target, offer.Cargo, offer.TrailerDefinition,
 					offer.TrailerVariant)
 			}
 		}

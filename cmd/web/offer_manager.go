@@ -1,12 +1,12 @@
-package main
+package web
 
 import (
 	"errors"
 	"ets2-sync/db"
-	"ets2-sync/dlc"
+	"ets2-sync/internal"
+	"ets2-sync/pkg/dlc_mapper"
 	savefile2 "ets2-sync/pkg/savefile"
 	"ets2-sync/structs"
-	"ets2-sync/utils"
 	"fmt"
 	"math/rand"
 	"sync"
@@ -36,12 +36,12 @@ func initOfferManager() error {
 			dbOffers := make([]db.DbOffer, 0)
 			var ids []string
 			for _, offer := range jobsToProcess {
-				if utils.Contains(ids, offer.Id){
+				if internal.Contains(ids, offer.Id){
 					continue
 				}
 				ids = append(ids, offer.Id)
 				dbOffer := db.DbOffer{}
-				_, _ = utils.MapToObject(offer, &dbOffer)
+				_, _ = internal.MapToObject(offer, &dbOffer)
 
 				dbOffers = append(dbOffers, dbOffer)
 			}
@@ -153,13 +153,13 @@ func updateList() error {
 				break
 			}
 
-			if offer.RequiredDlc == dlc.BaseGame {
+			if offer.RequiredDlc == dlc_mapper.BaseGame {
 				finalOffers = append(finalOffers, offer)
 			}
 		}
 
 		for _, offer := range offers {
-			if offer.RequiredDlc == dlc.BaseGame {
+			if offer.RequiredDlc == dlc_mapper.BaseGame {
 				continue
 			}
 
@@ -190,7 +190,7 @@ func updateList() error {
 	return nil
 }
 
-func PopulateOffers(file *savefile2.SaveFile, supportedDlc dlc.Dlc) {
+func PopulateOffers(file *savefile2.SaveFile, supportedDlc dlc_mapper.Dlc) {
 	for _, offer := range getOffers(supportedDlc, file.AvailableCompanies) {
 		if err := file.AddOffer(offer); err != nil {
 			fmt.Println(err) // todo
@@ -198,10 +198,10 @@ func PopulateOffers(file *savefile2.SaveFile, supportedDlc dlc.Dlc) {
 	}
 }
 
-func getOffers(supportedDlc dlc.Dlc, availableSources []string) []structs.ApplicableOffer {
+func getOffers(supportedDlc dlc_mapper.Dlc, availableSources []string) []structs.ApplicableOffer {
 	offersToAdd := make([]structs.ApplicableOffer, 0)
 	for sourceCompany, offers := range currentOffers {
-		if !utils.Contains(availableSources, sourceCompany) {
+		if !internal.Contains(availableSources, sourceCompany) {
 			continue
 		}
 
@@ -222,10 +222,10 @@ func FillDbWithJobs(offers []structs.ApplicableOffer) {
 
 	go func() {
 		for _, offer := range offers {
-			offer.RequiredDlc = dlc.GetRequiredDlc(offer.SourceCompany, offer.Target,
+			offer.RequiredDlc = dlc_mapper.GetRequiredDlc(offer.SourceCompany, offer.Target,
 				offer.Cargo, offer.TrailerDefinition, offer.TrailerVariant)
 
-			if offer.RequiredDlc == dlc.None {
+			if offer.RequiredDlc == dlc_mapper.None {
 				continue // skip unverified offers
 			}
 
@@ -235,7 +235,7 @@ func FillDbWithJobs(offers []structs.ApplicableOffer) {
 				continue
 			}
 
-			if utils.Contains(offersInDb, offer.Id) {
+			if internal.Contains(offersInDb, offer.Id) {
 				continue
 			}
 

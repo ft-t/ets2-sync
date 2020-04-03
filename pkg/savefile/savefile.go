@@ -4,12 +4,12 @@ import (
 	"bytes"
 	"compress/zlib"
 	"errors"
-	dlc2 "ets2-sync/dlc"
+	"ets2-sync/internal"
 	"ets2-sync/pkg/decryptor"
+	"ets2-sync/pkg/dlc_mapper"
 	. "ets2-sync/pkg/savefile/internal"
 	. "ets2-sync/pkg/savefile/internal/sections"
 	"ets2-sync/structs"
-	"ets2-sync/utils"
 	"fmt"
 	"io"
 	"io/ioutil"
@@ -24,7 +24,7 @@ type SaveFile struct {
 	AvailableCargoTypes []string
 	configSections      []ConfigSection
 	companies           map[string]*CompanyConfigSection
-	dlc                 dlc2.Dlc
+	dlc                 dlc_mapper.Dlc
 }
 
 func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
@@ -77,7 +77,7 @@ func (s *SaveFile) ExportOffers() []structs.ApplicableOffer {
 
 		for _, j := range k.Jobs {
 			job := structs.ApplicableOffer{}
-			_, _ = utils.MapToObject(j, &job)
+			_, _ = internal.MapToObject(j, &job)
 
 			arr = append(arr, job)
 		}

@@ -2,15 +2,15 @@ package structs
 
 import (
 	"ets2-sync/db"
-	"ets2-sync/dlc"
-	"ets2-sync/utils"
+	"ets2-sync/internal"
+	"ets2-sync/pkg/dlc_mapper"
 	"github.com/mitchellh/hashstructure"
 	"strconv"
 )
 
 type ApplicableOffer struct {
 	Id                 string // nameparam
-	RequiredDlc        dlc.Dlc
+	RequiredDlc        dlc_mapper.Dlc
 	SourceCompany      string
 	Target             string
 	Urgency            string
@@ -28,7 +28,7 @@ type ApplicableOffer struct {
 
 func NewApplicableOffer(offer *db.DbOffer, id string) ApplicableOffer {
 	newOffer := ApplicableOffer{}
-	_, _ = utils.MapToObject(offer, &newOffer)
+	_, _ = internal.MapToObject(offer, &newOffer)
 
 	newOffer.Id = id
 
