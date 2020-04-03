@@ -2,7 +2,7 @@ package sections
 
 import (
 	"bytes"
-	. "ets2-sync/pkg/savefile/internal"
+	. "ets2-sync/savefile/internal"
 	"fmt"
 	"io"
 	"sort"

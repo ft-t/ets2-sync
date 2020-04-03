@@ -1,7 +1,7 @@
 package sections
 
 import (
-	. "ets2-sync/pkg/savefile/internal"
+	. "ets2-sync/savefile/internal"
 	"io"
 	"strings"
 )

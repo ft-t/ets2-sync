@@ -1,10 +1,10 @@
-package main
+package web
 
 import (
 	"errors"
+	"ets2-sync/dlc_mapper"
 	"ets2-sync/internal"
-	"ets2-sync/pkg/dlc_mapper"
-	savefile2 "ets2-sync/pkg/savefile"
+	savefile2 "ets2-sync/savefile"
 	"fmt"
 	"math/rand"
 	"sync"

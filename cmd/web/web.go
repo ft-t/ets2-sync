@@ -1,10 +1,10 @@
-package main
+package web
 
 import (
 	"bytes"
 	"encoding/json"
-	. "ets2-sync/pkg/dlc_mapper"
-	savefile2 "ets2-sync/pkg/savefile"
+	. "ets2-sync/dlc_mapper"
+	savefile2 "ets2-sync/savefile"
 	"fmt"
 	"github.com/iancoleman/orderedmap"
 	"github.com/pkg/errors"
@@ -20,9 +20,9 @@ import (
 
 var expansionDLCs = []Dlc{GoingEast, Scandinavia, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea}
 var cargoDLCs = []Dlc{PowerCargo, HeavyCargo, SpecialTransport}
-var trailerDLCs = []Dlc{Schwarzmuller, Krone }
+var trailerDLCs = []Dlc{Schwarzmuller, Krone}
 
-func main() {
+func Run() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
 	if err := InitializeDb(); err != nil {
@@ -33,10 +33,10 @@ func main() {
 		panic(err)
 	}
 
-	Start()
+	start()
 }
 
-func Start() {
+func start() {
 	port := os.Getenv("httpPort")
 	adminPass := os.Getenv("adminPass")
 

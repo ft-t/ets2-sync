@@ -1,7 +1,7 @@
-package main
+package web
 
 import (
-	"ets2-sync/pkg/dlc_mapper"
+	"ets2-sync/dlc_mapper"
 	"fmt"
 	"github.com/go-xorm/xorm"
 	"github.com/go-xorm/xorm/migrate"

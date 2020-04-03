@@ -3,9 +3,9 @@ package savefile
 import (
 	"bufio"
 	"bytes"
-	"ets2-sync/pkg/dlc_mapper"
-	. "ets2-sync/pkg/savefile/internal"
-	. "ets2-sync/pkg/savefile/internal/sections"
+	"ets2-sync/dlc_mapper"
+	. "ets2-sync/savefile/internal"
+	. "ets2-sync/savefile/internal/sections"
 	"fmt"
 	"strings"
 )

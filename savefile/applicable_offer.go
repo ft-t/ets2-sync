@@ -1,7 +1,7 @@
 package savefile
 
 import (
-	"ets2-sync/pkg/dlc_mapper"
+	"ets2-sync/dlc_mapper"
 	"github.com/mitchellh/hashstructure"
 	"strconv"
 )
