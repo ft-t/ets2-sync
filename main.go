@@ -40,6 +40,7 @@ func main() {
 
 func Start() {
 	port := os.Getenv("httpPort")
+	adminPass := os.Getenv("adminPass")
 
 	if len(port) == 0 {
 		port = "8080"
@@ -141,7 +142,10 @@ func Start() {
 			return // todo
 		}
 
-		FillDbWithJobs(newSaveFile.ExportOffers())
+		if len(adminPass) > 0 && r.Form.Get("adminPass") == adminPass {
+			FillDbWithJobs(newSaveFile.ExportOffers())
+		}
+
 		newSaveFile.ClearOffers()
 		PopulateOffers(newSaveFile, offersDlcs)
 

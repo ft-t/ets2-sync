@@ -12,6 +12,7 @@ RestartSec=1
 TimeoutStopSec=5
 SyslogIdentifier={{app_name}}
 
+Environment=adminPass={{sync_admin_pass}}
 Environment=environment={{env}}
 Environment=httpPort={{app_port}}
 {% for item in database %}
