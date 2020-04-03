@@ -5,6 +5,9 @@ import (
 	"compress/zlib"
 	"errors"
 	dlc2 "ets2-sync/dlc"
+	"ets2-sync/pkg/decryptor"
+	. "ets2-sync/pkg/savefile/internal"
+	. "ets2-sync/pkg/savefile/internal/sections"
 	"ets2-sync/structs"
 	"ets2-sync/utils"
 	"fmt"
@@ -19,7 +22,7 @@ type SaveFile struct {
 	lineEndingFormat    string
 	AvailableCompanies  []string
 	AvailableCargoTypes []string
-	configSections      []IConfigSection
+	configSections      []ConfigSection
 	companies           map[string]*CompanyConfigSection
 	dlc                 dlc2.Dlc
 }
@@ -44,7 +47,7 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 
 func (s *SaveFile) AddOffer(offer structs.ApplicableOffer) error {
 	if v, ok := s.companies[offer.SourceCompany]; ok {
-		v.Jobs[offer.Id] = newJobOffer(offer)
+		v.Jobs[offer.Id] = NewJobOffer(offer)
 
 		return nil
 	}
@@ -180,8 +183,7 @@ func tryDecrypt(reader *bytes.Reader) ([]byte, error) {
 			return nil, err
 		}
 
-		decrypted, err := decryptSii(encryptedData, []byte{0x2A, 0x5F, 0xCB, 0x17, 0x91, 0xD2, 0x2F, 0xB6, 0x02, 0x45, 0xB3, 0xD8, 0x36,
-			0x9E, 0xD0, 0xB2, 0xC2, 0x73, 0x71, 0x56, 0x3F, 0xBF, 0x1F, 0x3C, 0x9E, 0xDF, 0x6B, 0x11, 0x82, 0x5A, 0x5D, 0x0A}, initVector)
+		decrypted, err := decryptor.NewSiiDecryptor(initVector).Decrypt(encryptedData)
 
 		reader = bytes.NewReader(decrypted) // replace reader with decrypted arr
 

@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
+	savefile2 "ets2-sync/pkg/savefile"
 	"fmt"
 	"html/template"
 	"io"
@@ -20,7 +21,6 @@ import (
 	"ets2-sync/db"
 	"ets2-sync/dlc"
 	"ets2-sync/global"
-	"ets2-sync/savefile"
 )
 
 func main() {
@@ -135,7 +135,7 @@ func Start() {
 			return
 		}
 
-		newSaveFile, er := savefile.NewSaveFile(bytes.NewReader(buf.Bytes()))
+		newSaveFile, er := savefile2.NewSaveFile(bytes.NewReader(buf.Bytes()))
 
 		if er != nil {
 			writeError(er)

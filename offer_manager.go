@@ -4,7 +4,7 @@ import (
 	"errors"
 	"ets2-sync/db"
 	"ets2-sync/dlc"
-	"ets2-sync/savefile"
+	savefile2 "ets2-sync/pkg/savefile"
 	"ets2-sync/structs"
 	"ets2-sync/utils"
 	"fmt"
@@ -190,7 +190,7 @@ func updateList() error {
 	return nil
 }
 
-func PopulateOffers(file *savefile.SaveFile, supportedDlc dlc.Dlc) {
+func PopulateOffers(file *savefile2.SaveFile, supportedDlc dlc.Dlc) {
 	for _, offer := range getOffers(supportedDlc, file.AvailableCompanies) {
 		if err := file.AddOffer(offer); err != nil {
 			fmt.Println(err) // todo
