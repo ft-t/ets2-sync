@@ -1,4 +1,4 @@
-package dlc
+package dlc_mapper
 
 import (
 	"encoding/json"
@@ -7,7 +7,7 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"ets2-sync/utils"
+	"ets2-sync/internal"
 )
 
 type Dlc int
@@ -29,9 +29,6 @@ const (
 )
 
 var AllDLCs = []Dlc{BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea, SpecialTransport, RoadToTheBlackSea}
-var ExpansionDLCs = []Dlc{GoingEast, Scandinavia, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea}
-var CargoDLCs = []Dlc{PowerCargo, HeavyCargo, SpecialTransport}
-var TrailerDLCs = []Dlc{Schwarzmuller, Krone }
 
 func (t Dlc) ToString() string {
 	switch t {
@@ -64,35 +61,6 @@ func (t Dlc) ToString() string {
 	}
 
 	return "unk"
-}
-
-func (t Dlc) ToName() string {
-	switch t {
-	case Scandinavia:
-		return "Scandinavia"
-	case GoingEast:
-		return "Going East!"
-	case LaFrance:
-		return "Viva La France!"
-	case Italy:
-		return "Italia"
-	case PowerCargo:
-		return "High Power Cargo Pack"
-	case HeavyCargo:
-		return "Heavy Cargo Pack"
-	case BeyondTheBalticSea:
-		return "Beyond The Baltic Sea"
-	case Krone:
-		return "Krone Trailer Pack"
-	case Schwarzmuller:
-		return "Schwarzmuller Trailer Pack"
-	case RoadToTheBlackSea:
-		return "Road To The Black Sea"
-	case SpecialTransport:
-		return "Special Transport"
-	}
-
-	return "Unknown"
 }
 
 type trailerFile struct {
@@ -196,7 +164,7 @@ func getCountryByCity(city string) string {
 func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 	for _, d := range AllDLCs {
 		if res := readCompanyFile(d); res != nil {
-			if company, ok := res[companyName]; ok && utils.Contains(company.Cities, cityName) {
+			if company, ok := res[companyName]; ok && internal.Contains(company.Cities, cityName) {
 				return d, nil
 			}
 		}
@@ -208,7 +176,7 @@ func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 
 func mapCargoToDlc(cargoName string) (Dlc, error) {
 	for _, d := range AllDLCs {
-		if res := readSimpleJsonArr("cargoes", d); res != nil && utils.Contains(res, cargoName) {
+		if res := readSimpleJsonArr("cargoes", d); res != nil && internal.Contains(res, cargoName) {
 			return d, nil
 		}
 	}
@@ -218,7 +186,7 @@ func mapCargoToDlc(cargoName string) (Dlc, error) {
 
 func mapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
 	for _, d := range AllDLCs {
-		if res := readTrailerFile(d); res != nil && utils.Contains(res.Variants, trailerVariant) {
+		if res := readTrailerFile(d); res != nil && internal.Contains(res.Variants, trailerVariant) {
 			return d, nil
 		}
 	}
@@ -234,7 +202,7 @@ func mapTrailerDefToDlc(trailerDef string, targetCountry string, sourceCountry s
 					return d, nil
 				}
 
-				if utils.Contains(def.Countries, targetCountry) && utils.Contains(def.Countries, sourceCountry) {
+				if internal.Contains(def.Countries, targetCountry) && internal.Contains(def.Countries, sourceCountry) {
 					return d, nil
 				}
 

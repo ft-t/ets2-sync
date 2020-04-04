@@ -4,13 +4,16 @@ import (
 	"bytes"
 	"compress/zlib"
 	"errors"
-	dlc2 "ets2-sync/dlc"
-	"ets2-sync/structs"
-	"ets2-sync/utils"
 	"fmt"
 	"io"
 	"io/ioutil"
 	"sort"
+
+	"ets2-sync/decryptor"
+	"ets2-sync/dlc_mapper"
+	"ets2-sync/internal"
+	. "ets2-sync/savefile/internal"
+	. "ets2-sync/savefile/internal/sections"
 )
 
 type SaveFile struct {
@@ -19,9 +22,9 @@ type SaveFile struct {
 	lineEndingFormat    string
 	AvailableCompanies  []string
 	AvailableCargoTypes []string
-	configSections      []IConfigSection
+	configSections      []ConfigSection
 	companies           map[string]*CompanyConfigSection
-	dlc                 dlc2.Dlc
+	dlc                 dlc_mapper.Dlc
 }
 
 func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
@@ -42,9 +45,13 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 	return r, nil
 }
 
-func (s *SaveFile) AddOffer(offer structs.ApplicableOffer) error {
+func (s *SaveFile) AddOffer(offer ApplicableOffer) error {
 	if v, ok := s.companies[offer.SourceCompany]; ok {
-		v.Jobs[offer.Id] = newJobOffer(offer)
+
+		job := JobOffer{}
+		_, _ = internal.MapToObject(offer, &job)
+
+		v.Jobs[offer.Id] = &job
 
 		return nil
 	}
@@ -64,8 +71,8 @@ func (s *SaveFile) ClearOffers() {
 	}
 }
 
-func (s *SaveFile) ExportOffers() []structs.ApplicableOffer {
-	var arr []structs.ApplicableOffer
+func (s *SaveFile) ExportOffers() []ApplicableOffer {
+	var arr []ApplicableOffer
 
 	for _, k := range s.companies {
 		if k.Jobs == nil {
@@ -73,8 +80,8 @@ func (s *SaveFile) ExportOffers() []structs.ApplicableOffer {
 		}
 
 		for _, j := range k.Jobs {
-			job := structs.ApplicableOffer{}
-			_, _ = utils.MapToObject(j, &job)
+			job := ApplicableOffer{}
+			_, _ = internal.MapToObject(j, &job)
 
 			arr = append(arr, job)
 		}
@@ -180,8 +187,7 @@ func tryDecrypt(reader *bytes.Reader) ([]byte, error) {
 			return nil, err
 		}
 
-		decrypted, err := decryptSii(encryptedData, []byte{0x2A, 0x5F, 0xCB, 0x17, 0x91, 0xD2, 0x2F, 0xB6, 0x02, 0x45, 0xB3, 0xD8, 0x36,
-			0x9E, 0xD0, 0xB2, 0xC2, 0x73, 0x71, 0x56, 0x3F, 0xBF, 0x1F, 0x3C, 0x9E, 0xDF, 0x6B, 0x11, 0x82, 0x5A, 0x5D, 0x0A}, initVector)
+		decrypted, err := decryptor.NewSiiDecryptor(initVector).Decrypt(encryptedData)
 
 		reader = bytes.NewReader(decrypted) // replace reader with decrypted arr
 

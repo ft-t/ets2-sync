@@ -1,27 +1,26 @@
-package main
+package web
 
 import (
 	"errors"
-	"ets2-sync/db"
-	"ets2-sync/dlc"
-	"ets2-sync/savefile"
-	"ets2-sync/structs"
-	"ets2-sync/utils"
 	"fmt"
 	"math/rand"
 	"sync"
 	"time"
+
+	"ets2-sync/dlc_mapper"
+	"ets2-sync/internal"
+	"ets2-sync/savefile"
 	"xorm.io/builder"
 )
 
-var currentOffers map[string][]structs.ApplicableOffer // key is SourceCompany
+var currentOffers map[string][]savefile.ApplicableOffer // key is SourceCompany
 var totalOffersForSync int
 var lastUpdatedSync time.Time
 
 var offersInDb = make([]string, 0)
 var jobToProcessMutex sync.Mutex
 var createNewJobsMutex sync.Mutex
-var jobsToProcess = make([]structs.ApplicableOffer, 0)
+var jobsToProcess = make([]savefile.ApplicableOffer, 0)
 var jobManagerInitialized bool
 
 func initOfferManager() error {
@@ -33,26 +32,26 @@ func initOfferManager() error {
 		for {
 			jobToProcessMutex.Lock()
 
-			dbOffers := make([]db.DbOffer, 0)
+			dbOffers := make([]dbOffer, 0)
 			var ids []string
 			for _, offer := range jobsToProcess {
-				if utils.Contains(ids, offer.Id){
+				if internal.Contains(ids, offer.Id) {
 					continue
 				}
 				ids = append(ids, offer.Id)
-				dbOffer := db.DbOffer{}
-				_, _ = utils.MapToObject(offer, &dbOffer)
+				dbOffer := dbOffer{}
+				_, _ = internal.MapToObject(offer, &dbOffer)
 
 				dbOffers = append(dbOffers, dbOffer)
 			}
 
-			jobsToProcess = make([]structs.ApplicableOffer, 0)
+			jobsToProcess = make([]savefile.ApplicableOffer, 0)
 			jobToProcessMutex.Unlock()
 
 			batchSize := 100
 			lenJobs := len(dbOffers)
 
-			context := db.GetDb()
+			context := GetDb()
 
 			for i := 0; i < lenJobs; i += batchSize {
 				j := i + batchSize
@@ -69,7 +68,7 @@ func initOfferManager() error {
 				}
 
 				createNewJobsMutex.Lock()
-				realOffersInDb := make([]db.DbOffer, 0)
+				realOffersInDb := make([]dbOffer, 0)
 
 				_ = context.Where(builder.In("id", ids)).
 					Find(&realOffersInDb)
@@ -112,16 +111,16 @@ func initOfferManager() error {
 }
 
 func updateList() error {
-	context := db.GetDb()
+	context := GetDb()
 
-	currentOffersArr := make([]*db.DbOffer, 0)
+	currentOffersArr := make([]*dbOffer, 0)
 
 	if err := context.OrderBy("required_dlc asc").Find(&currentOffersArr); err != nil {
 		return err
 	}
 
-	currentOffers = make(map[string][]structs.ApplicableOffer)
-	tempOffers := make(map[string][]*db.DbOffer)
+	currentOffers = make(map[string][]savefile.ApplicableOffer)
+	tempOffers := make(map[string][]*dbOffer)
 	totalOffersForSync = 0
 	lastUpdatedSync = time.Now().UTC()
 	maxNonDlcJobs := 5
@@ -134,7 +133,7 @@ func updateList() error {
 		offersInDb = append(offersInDb, offer.Id)
 
 		if !ok {
-			val = make([]*db.DbOffer, 0)
+			val = make([]*dbOffer, 0)
 		}
 
 		tempOffers[offer.SourceCompany] = append(val, offer)
@@ -146,20 +145,20 @@ func updateList() error {
 			offers[i], offers[j] = offers[j], offers[i]
 		})
 
-		finalOffers := make([]*db.DbOffer, 0)
+		finalOffers := make([]*dbOffer, 0)
 
 		for _, offer := range offers {
 			if maxNonDlcJobs <= len(finalOffers) {
 				break
 			}
 
-			if offer.RequiredDlc == dlc.BaseGame {
+			if offer.RequiredDlc == dlc_mapper.BaseGame {
 				finalOffers = append(finalOffers, offer)
 			}
 		}
 
 		for _, offer := range offers {
-			if offer.RequiredDlc == dlc.BaseGame {
+			if offer.RequiredDlc == dlc_mapper.BaseGame {
 				continue
 			}
 
@@ -170,10 +169,15 @@ func updateList() error {
 			finalOffers = append(finalOffers, offer)
 		}
 
-		result := make([]structs.ApplicableOffer, 0)
+		result := make([]savefile.ApplicableOffer, 0)
 
 		for _, offer := range finalOffers {
-			result = append(result, structs.NewApplicableOffer(offer, fmt.Sprintf("_nameless.19a.%04d.%04d", segment3, segment4)))
+			newOffer := savefile.ApplicableOffer{}
+			_, _ = internal.MapToObject(offer, &newOffer)
+
+			newOffer.Id = fmt.Sprintf("_nameless.19a.%04d.%04d", segment3, segment4)
+
+			result = append(result, newOffer)
 			segment4++
 
 			if segment4 == 9999 {
@@ -190,7 +194,7 @@ func updateList() error {
 	return nil
 }
 
-func PopulateOffers(file *savefile.SaveFile, supportedDlc dlc.Dlc) {
+func PopulateOffers(file *savefile.SaveFile, supportedDlc dlc_mapper.Dlc) {
 	for _, offer := range getOffers(supportedDlc, file.AvailableCompanies) {
 		if err := file.AddOffer(offer); err != nil {
 			fmt.Println(err) // todo
@@ -198,10 +202,10 @@ func PopulateOffers(file *savefile.SaveFile, supportedDlc dlc.Dlc) {
 	}
 }
 
-func getOffers(supportedDlc dlc.Dlc, availableSources []string) []structs.ApplicableOffer {
-	offersToAdd := make([]structs.ApplicableOffer, 0)
+func getOffers(supportedDlc dlc_mapper.Dlc, availableSources []string) []savefile.ApplicableOffer {
+	offersToAdd := make([]savefile.ApplicableOffer, 0)
 	for sourceCompany, offers := range currentOffers {
-		if !utils.Contains(availableSources, sourceCompany) {
+		if !internal.Contains(availableSources, sourceCompany) {
 			continue
 		}
 
@@ -215,17 +219,17 @@ func getOffers(supportedDlc dlc.Dlc, availableSources []string) []structs.Applic
 	return offersToAdd
 }
 
-func FillDbWithJobs(offers []structs.ApplicableOffer) {
+func FillDbWithJobs(offers []savefile.ApplicableOffer) {
 	if offers == nil || len(offers) == 0 {
 		return
 	}
 
 	go func() {
 		for _, offer := range offers {
-			offer.RequiredDlc = dlc.GetRequiredDlc(offer.SourceCompany, offer.Target,
+			offer.RequiredDlc = dlc_mapper.GetRequiredDlc(offer.SourceCompany, offer.Target,
 				offer.Cargo, offer.TrailerDefinition, offer.TrailerVariant)
 
-			if offer.RequiredDlc == dlc.None {
+			if offer.RequiredDlc == dlc_mapper.None {
 				continue // skip unverified offers
 			}
 
@@ -235,7 +239,7 @@ func FillDbWithJobs(offers []structs.ApplicableOffer) {
 				continue
 			}
 
-			if utils.Contains(offersInDb, offer.Id) {
+			if internal.Contains(offersInDb, offer.Id) {
 				continue
 			}
 

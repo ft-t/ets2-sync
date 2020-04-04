@@ -3,9 +3,12 @@ package savefile
 import (
 	"bufio"
 	"bytes"
-	"ets2-sync/dlc"
 	"fmt"
 	"strings"
+
+	"ets2-sync/dlc_mapper"
+	. "ets2-sync/savefile/internal"
+	. "ets2-sync/savefile/internal/sections"
 )
 
 func (s *SaveFile) parseConfig(decrypted []byte) {
@@ -20,9 +23,9 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 	i := 0
 
 	companies := make(map[*CompanyConfigSection][]string, 0)
-	offers := make(map[string]*jobOffer)
+	offers := make(map[string]*JobOffer)
 
-	var currentSection IConfigSection
+	var currentSection ConfigSection
 
 	for {
 		i++
@@ -43,15 +46,15 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 
 		if parsed[len(parsed)-1] == "{" { // opening configuration block
 			if parsed[0] == "job_offer_data" {
-				currentSection = &jobOfferConfigSection{name: parsed[0], nameValue: parsed[2]}
+				currentSection = NewJobOfferConfigSection(parsed[0], parsed[2])
 				continue
 			}
 			if parsed[0] == "company" {
-				currentSection = &CompanyConfigSection{name: parsed[0], nameValue: parsed[2], Jobs: map[string]*jobOffer{}}
+				currentSection = NewCompanyConfigSection(parsed[0], parsed[2])
 				continue
 			}
 
-			currentSection = &rawConfigSection{name: parsed[0], nameValue: parsed[2]}
+			currentSection = NewRawConfigSection(parsed[0],parsed[2])
 			continue
 		}
 
@@ -65,9 +68,9 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 			}
 
 			if currentSection.Name() == "job_offer_data" {
-				m := currentSection.(*jobOfferConfigSection)
-				offers[m.nameValue] = m.Offer
-				m.FillOfferData("id", m.nameValue)
+				m := currentSection.(*JobOfferConfigSection)
+				offers[m.NameValue()] = m.Offer
+				m.FillOfferData("id", m.NameValue())
 
 				continue // job_offer_data should not present in configSections
 			}
@@ -88,7 +91,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 			if len(parsed) == 1 {
 				fmt.Println("xer")
 			}
-			currentSection.(*jobOfferConfigSection).FillOfferData(parsed[0], parsed[1])
+			currentSection.(*JobOfferConfigSection).FillOfferData(parsed[0], parsed[1])
 		}
 
 		if currentSection.Name() == "economy" && len(parsed) > 0 {
@@ -102,19 +105,19 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 
 		if currentSection.Name() == "company" {
 			if parsed[0] == "permanent_data:" {
-				currentSection.(*CompanyConfigSection).permanentData = parsed[1]
+				currentSection.(*CompanyConfigSection).PermanentData = parsed[1]
 			}
 			if parsed[0] == "delivered_trailer:" {
-				currentSection.(*CompanyConfigSection).deliveredTrailer = parsed[1]
+				currentSection.(*CompanyConfigSection).DeliveredTrailer = parsed[1]
 			}
 			if parsed[0] == "delivered_pos:" {
-				currentSection.(*CompanyConfigSection).deliveredPos = parsed[1]
+				currentSection.(*CompanyConfigSection).DeliveredPos = parsed[1]
 			}
 			if parsed[0] == "discovered:" {
-				currentSection.(*CompanyConfigSection).discovered = parsed[1]
+				currentSection.(*CompanyConfigSection).Discovered = parsed[1]
 			}
 			if parsed[0] == "reserved_trailer_slot:" {
-				currentSection.(*CompanyConfigSection).reservedTrailerSlot = parsed[1]
+				currentSection.(*CompanyConfigSection).ReservedTrailerSlot = parsed[1]
 			}
 
 			if strings.Contains(parsed[0], "job_offer[") {
@@ -131,10 +134,10 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 		}
 		for _, jobId := range v {
 			if offer, ok := offers[jobId]; ok {
-				offer.SourceCompany = k.nameValue
+				offer.SourceCompany = k.NameValue()
 				k.Jobs[jobId] = offer
 
-				s.dlc |= dlc.GetRequiredDlc(offer.SourceCompany, offer.Target, offer.Cargo, offer.TrailerDefinition,
+				s.dlc |= dlc_mapper.GetRequiredDlc(offer.SourceCompany, offer.Target, offer.Cargo, offer.TrailerDefinition,
 					offer.TrailerVariant)
 			}
 		}
