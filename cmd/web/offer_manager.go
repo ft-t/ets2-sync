@@ -2,24 +2,25 @@ package web
 
 import (
 	"errors"
-	"ets2-sync/dlc_mapper"
-	"ets2-sync/internal"
-	savefile2 "ets2-sync/savefile"
 	"fmt"
 	"math/rand"
 	"sync"
 	"time"
+
+	"ets2-sync/dlc_mapper"
+	"ets2-sync/internal"
+	"ets2-sync/savefile"
 	"xorm.io/builder"
 )
 
-var currentOffers map[string][]savefile2.ApplicableOffer // key is SourceCompany
+var currentOffers map[string][]savefile.ApplicableOffer // key is SourceCompany
 var totalOffersForSync int
 var lastUpdatedSync time.Time
 
 var offersInDb = make([]string, 0)
 var jobToProcessMutex sync.Mutex
 var createNewJobsMutex sync.Mutex
-var jobsToProcess = make([]savefile2.ApplicableOffer, 0)
+var jobsToProcess = make([]savefile.ApplicableOffer, 0)
 var jobManagerInitialized bool
 
 func initOfferManager() error {
@@ -44,7 +45,7 @@ func initOfferManager() error {
 				dbOffers = append(dbOffers, dbOffer)
 			}
 
-			jobsToProcess = make([]savefile2.ApplicableOffer, 0)
+			jobsToProcess = make([]savefile.ApplicableOffer, 0)
 			jobToProcessMutex.Unlock()
 
 			batchSize := 100
@@ -118,7 +119,7 @@ func updateList() error {
 		return err
 	}
 
-	currentOffers = make(map[string][]savefile2.ApplicableOffer)
+	currentOffers = make(map[string][]savefile.ApplicableOffer)
 	tempOffers := make(map[string][]*dbOffer)
 	totalOffersForSync = 0
 	lastUpdatedSync = time.Now().UTC()
@@ -168,10 +169,10 @@ func updateList() error {
 			finalOffers = append(finalOffers, offer)
 		}
 
-		result := make([]savefile2.ApplicableOffer, 0)
+		result := make([]savefile.ApplicableOffer, 0)
 
 		for _, offer := range finalOffers {
-			newOffer := savefile2.ApplicableOffer{}
+			newOffer := savefile.ApplicableOffer{}
 			_, _ = internal.MapToObject(offer, &newOffer)
 
 			newOffer.Id = fmt.Sprintf("_nameless.19a.%04d.%04d", segment3, segment4)
@@ -193,7 +194,7 @@ func updateList() error {
 	return nil
 }
 
-func PopulateOffers(file *savefile2.SaveFile, supportedDlc dlc_mapper.Dlc) {
+func PopulateOffers(file *savefile.SaveFile, supportedDlc dlc_mapper.Dlc) {
 	for _, offer := range getOffers(supportedDlc, file.AvailableCompanies) {
 		if err := file.AddOffer(offer); err != nil {
 			fmt.Println(err) // todo
@@ -201,8 +202,8 @@ func PopulateOffers(file *savefile2.SaveFile, supportedDlc dlc_mapper.Dlc) {
 	}
 }
 
-func getOffers(supportedDlc dlc_mapper.Dlc, availableSources []string) []savefile2.ApplicableOffer {
-	offersToAdd := make([]savefile2.ApplicableOffer, 0)
+func getOffers(supportedDlc dlc_mapper.Dlc, availableSources []string) []savefile.ApplicableOffer {
+	offersToAdd := make([]savefile.ApplicableOffer, 0)
 	for sourceCompany, offers := range currentOffers {
 		if !internal.Contains(availableSources, sourceCompany) {
 			continue
@@ -218,7 +219,7 @@ func getOffers(supportedDlc dlc_mapper.Dlc, availableSources []string) []savefil
 	return offersToAdd
 }
 
-func FillDbWithJobs(offers []savefile2.ApplicableOffer) {
+func FillDbWithJobs(offers []savefile.ApplicableOffer) {
 	if offers == nil || len(offers) == 0 {
 		return
 	}

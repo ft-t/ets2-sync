@@ -3,6 +3,7 @@ package decryptor
 import (
 	"crypto/aes"
 	"crypto/cipher"
+
 	"github.com/pkg/errors"
 )
 

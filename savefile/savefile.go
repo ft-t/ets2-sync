@@ -4,15 +4,16 @@ import (
 	"bytes"
 	"compress/zlib"
 	"errors"
+	"fmt"
+	"io"
+	"io/ioutil"
+	"sort"
+
 	"ets2-sync/decryptor"
 	"ets2-sync/dlc_mapper"
 	"ets2-sync/internal"
 	. "ets2-sync/savefile/internal"
 	. "ets2-sync/savefile/internal/sections"
-	"fmt"
-	"io"
-	"io/ioutil"
-	"sort"
 )
 
 type SaveFile struct {

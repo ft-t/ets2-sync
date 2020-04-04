@@ -3,12 +3,7 @@ package web
 import (
 	"bytes"
 	"encoding/json"
-	. "ets2-sync/dlc_mapper"
-	savefile2 "ets2-sync/savefile"
 	"fmt"
-	"github.com/iancoleman/orderedmap"
-	"github.com/pkg/errors"
-	"github.com/rs/cors"
 	"io"
 	"math/rand"
 	"net/http"
@@ -16,6 +11,12 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	. "ets2-sync/dlc_mapper"
+	"ets2-sync/savefile"
+	"github.com/iancoleman/orderedmap"
+	"github.com/pkg/errors"
+	"github.com/rs/cors"
 )
 
 var expansionDLCs = []Dlc{GoingEast, Scandinavia, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea}
@@ -128,7 +129,7 @@ func start() {
 			return
 		}
 
-		newSaveFile, er := savefile2.NewSaveFile(bytes.NewReader(buf.Bytes()))
+		newSaveFile, er := savefile.NewSaveFile(bytes.NewReader(buf.Bytes()))
 
 		if er != nil {
 			writeError(er)

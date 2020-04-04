@@ -1,13 +1,14 @@
 package web
 
 import (
-	"ets2-sync/dlc_mapper"
 	"fmt"
+	"os"
+	"time"
+
+	"ets2-sync/dlc_mapper"
 	"github.com/go-xorm/xorm"
 	"github.com/go-xorm/xorm/migrate"
 	_ "github.com/lib/pq"
-	"os"
-	"time"
 	"xorm.io/core"
 )
 

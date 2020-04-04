@@ -3,10 +3,11 @@ package dlc_mapper
 import (
 	"encoding/json"
 	"errors"
-	"ets2-sync/internal"
 	"fmt"
 	"io/ioutil"
 	"strings"
+
+	"ets2-sync/internal"
 )
 
 type Dlc int

@@ -3,11 +3,12 @@ package savefile
 import (
 	"bufio"
 	"bytes"
+	"fmt"
+	"strings"
+
 	"ets2-sync/dlc_mapper"
 	. "ets2-sync/savefile/internal"
 	. "ets2-sync/savefile/internal/sections"
-	"fmt"
-	"strings"
 )
 
 func (s *SaveFile) parseConfig(decrypted []byte) {

@@ -1,9 +1,10 @@
 package savefile
 
 import (
+	"strconv"
+
 	"ets2-sync/dlc_mapper"
 	"github.com/mitchellh/hashstructure"
-	"strconv"
 )
 
 type ApplicableOffer struct {
