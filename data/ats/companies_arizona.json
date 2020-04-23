@@ -1,0 +1,362 @@
+{
+  "42p_print": {
+    "cities": [
+      "phoenix"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "aport_phx": {
+    "cities": [
+      "phoenix"
+    ],
+    "cargoes_in": [
+      "aircraft_eng",
+      "aromatics",
+      "beverages",
+      "cable",
+      "cars_small",
+      "const_house",
+      "dry_fruit",
+      "electro_comp",
+      "flour",
+      "forklifts",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "fruits",
+      "generator_c",
+      "grain",
+      "gravel",
+      "home_acc",
+      "househd_appl",
+      "meat",
+      "milk",
+      "milk_t",
+      "nuts",
+      "office_suppl",
+      "pellet_afood",
+      "pesticide",
+      "pipes",
+      "rice",
+      "sand",
+      "silica",
+      "soil",
+      "stones",
+      "vegetable"
+    ],
+    "cargoes_out": [
+      "aircraft_eng",
+      "beverages",
+      "bottles",
+      "butter",
+      "cable",
+      "carcomp",
+      "cheese",
+      "clothes",
+      "dry_milk",
+      "electro_comp",
+      "fertilizer",
+      "flour",
+      "food",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "furniture",
+      "home_acc",
+      "househd_appl",
+      "icecream",
+      "lye",
+      "machine_pts",
+      "mercuric",
+      "milk",
+      "milk_t",
+      "office_suppl",
+      "pesticide",
+      "pipes",
+      "potassium",
+      "sawpanels",
+      "tableware",
+      "toys",
+      "ventilation",
+      "wshavings",
+      "yogurt"
+    ]
+  },
+  "bit_rd_grg": {
+    "cities": [
+      "flagstaff",
+      "g_canyon_vlg",
+      "sierra_vista",
+      "tucson"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bit_rd_svc": {
+    "cities": [
+      "g_canyon_vlg",
+      "kingman",
+      "phoenix"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bit_rd_wrk": {
+    "cities": [
+      "g_canyon_vlg",
+      "kingman",
+      "page",
+      "tucson"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bn_farm": {
+    "cities": [
+      "holbrook",
+      "phoenix"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cha_el_mkt": {
+    "cities": [
+      "ehrenberg",
+      "phoenix",
+      "tucson"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cha_el_whs": {
+    "cities": [
+      "phoenix"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "chm_che_plnt": {
+    "cities": [
+      "phoenix"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_qry": {
+    "cities": [
+      "clifton",
+      "holbrook",
+      "kayenta",
+      "nogales",
+      "sierra_vista"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_str": {
+    "cities": [
+      "phoenix"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "du_farm": {
+    "cities": [
+      "camp_verde",
+      "san_simon"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "ed_mkt": {
+    "cities": [
+      "flagstaff",
+      "sierra_vista",
+      "yuma"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gal_oil_gst": {
+    "cities": [
+      "clifton",
+      "ehrenberg",
+      "flagstaff",
+      "g_canyon_vlg",
+      "holbrook",
+      "kayenta",
+      "nogales",
+      "phoenix",
+      "san_simon"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gal_oil_ref": {
+    "cities": [
+      "page"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gal_oil_str": {
+    "cities": [
+      "tucson"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hms_con_svc": {
+    "cities": [
+      "flagstaff",
+      "kingman",
+      "page"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "kw_trk_dlr": {
+    "cities": [
+      "phoenix"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_grg": {
+    "cities": [
+      "kingman",
+      "phoenix"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit": {
+    "cities": [
+      "flagstaff",
+      "yuma"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit1": {
+    "cities": [
+      "holbrook",
+      "nogales"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_whs": {
+    "cities": [
+      "nogales",
+      "tucson"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "re_train": {
+    "cities": [
+      "holbrook",
+      "yuma"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sc_frm": {
+    "cities": [
+      "camp_verde",
+      "san_simon",
+      "yuma"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sc_frm_grg": {
+    "cities": [
+      "kayenta",
+      "nogales",
+      "san_simon"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sg_whs": {
+    "cities": [
+      "camp_verde",
+      "flagstaff",
+      "kingman",
+      "nogales",
+      "phoenix",
+      "show_low"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "tid_mkt": {
+    "cities": [
+      "clifton",
+      "g_canyon_vlg",
+      "holbrook",
+      "kayenta"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "vm_car_dlr": {
+    "cities": [
+      "show_low"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "vm_car_whs": {
+    "cities": [
+      "flagstaff",
+      "nogales",
+      "yuma"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_mkt": {
+    "cities": [
+      "camp_verde",
+      "ehrenberg"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_whs": {
+    "cities": [
+      "flagstaff",
+      "phoenix",
+      "yuma"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_mkt": {
+    "cities": [
+      "kingman",
+      "nogales",
+      "page",
+      "show_low",
+      "sierra_vista",
+      "tucson"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_whs": {
+    "cities": [
+      "kingman",
+      "page",
+      "phoenix",
+      "tucson"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  }
+}

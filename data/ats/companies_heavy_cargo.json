@@ -1,0 +1,360 @@
+{
+  "aport_an124": {
+    "cities": [],
+    "cargoes_in": [
+      "transformer"
+    ],
+    "cargoes_out": [
+      "transformer"
+    ]
+  },
+  "aport_pcc": {
+    "cities": [],
+    "cargoes_in": [
+      "case600",
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer",
+      "wirtgen250"
+    ],
+    "cargoes_out": [
+      "case600",
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer",
+      "wirtgen250"
+    ]
+  },
+  "aport_phx": {
+    "cities": [],
+    "cargoes_in": [
+      "coil",
+      "transformer"
+    ],
+    "cargoes_out": [
+      "coil",
+      "transformer"
+    ]
+  },
+  "bit_rd_grg": {
+    "cities": [],
+    "cargoes_in": [
+      "cat627",
+      "wirtgen250"
+    ],
+    "cargoes_out": [
+      "cat627",
+      "wirtgen250"
+    ]
+  },
+  "bit_rd_svc": {
+    "cities": [],
+    "cargoes_in": [
+      "cat627",
+      "komatsu155"
+    ],
+    "cargoes_out": []
+  },
+  "bit_rd_wrk": {
+    "cities": [],
+    "cargoes_in": [],
+    "cargoes_out": [
+      "cat627",
+      "coil",
+      "wirtgen250"
+    ]
+  },
+  "bn_farm": {
+    "cities": [],
+    "cargoes_in": [
+      "case600"
+    ],
+    "cargoes_out": [
+      "case600"
+    ]
+  },
+  "chm_che_plnt": {
+    "cities": [],
+    "cargoes_in": [
+      "coil",
+      "transformer"
+    ],
+    "cargoes_out": []
+  },
+  "cm_min_plnt": {
+    "cities": [],
+    "cargoes_in": [
+      "komatsu155"
+    ],
+    "cargoes_out": [
+      "komatsu155"
+    ]
+  },
+  "cm_min_qry": {
+    "cities": [],
+    "cargoes_in": [
+      "komatsu155"
+    ],
+    "cargoes_out": []
+  },
+  "cm_min_qryp": {
+    "cities": [],
+    "cargoes_in": [
+      "komatsu155"
+    ],
+    "cargoes_out": []
+  },
+  "cm_min_str": {
+    "cities": [],
+    "cargoes_in": [
+      "coil",
+      "komatsu155",
+      "transformer"
+    ],
+    "cargoes_out": []
+  },
+  "du_farm": {
+    "cities": [],
+    "cargoes_in": [
+      "case600"
+    ],
+    "cargoes_out": [
+      "case600"
+    ]
+  },
+  "dw_air_pln": {
+    "cities": [],
+    "cargoes_in": [
+      "coil",
+      "terex3160",
+      "transformer"
+    ],
+    "cargoes_out": []
+  },
+  "gal_oil_ref": {
+    "cities": [],
+    "cargoes_in": [
+      "transformer"
+    ],
+    "cargoes_out": []
+  },
+  "hms_con_svc": {
+    "cities": [],
+    "cargoes_in": [
+      "case600",
+      "cat627",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "wirtgen250"
+    ],
+    "cargoes_out": [
+      "case600",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "wirtgen250"
+    ]
+  },
+  "kw_trk_pln": {
+    "cities": [],
+    "cargoes_in": [
+      "coil",
+      "transformer"
+    ],
+    "cargoes_out": []
+  },
+  "oak_port": {
+    "cities": [],
+    "cargoes_in": [
+      "case600",
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer",
+      "wirtgen250"
+    ],
+    "cargoes_out": [
+      "case600",
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer",
+      "wirtgen250"
+    ]
+  },
+  "pns_con_grg": {
+    "cities": [],
+    "cargoes_in": [
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer"
+    ],
+    "cargoes_out": [
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer"
+    ]
+  },
+  "pns_con_sit1": {
+    "cities": [],
+    "cargoes_in": [],
+    "cargoes_out": [
+      "komatsu155",
+      "terex3160"
+    ]
+  },
+  "pns_con_sit3": {
+    "cities": [],
+    "cargoes_in": [
+      "kalmar240_s",
+      "terex3160"
+    ],
+    "cargoes_out": [
+      "kalmar240_s",
+      "terex3160"
+    ]
+  },
+  "port_sea": {
+    "cities": [],
+    "cargoes_in": [
+      "case600",
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer",
+      "wirtgen250"
+    ],
+    "cargoes_out": [
+      "case600",
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer",
+      "wirtgen250"
+    ]
+  },
+  "port_tac": {
+    "cities": [],
+    "cargoes_in": [
+      "case600",
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer",
+      "wirtgen250"
+    ],
+    "cargoes_out": [
+      "case600",
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer",
+      "wirtgen250"
+    ]
+  },
+  "re_train": {
+    "cities": [],
+    "cargoes_in": [
+      "case600",
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer",
+      "wirtgen250"
+    ],
+    "cargoes_out": [
+      "case600",
+      "cat627",
+      "coil",
+      "kalmar240",
+      "kalmar240_s",
+      "komatsu155",
+      "terex3160",
+      "transformer",
+      "wirtgen250"
+    ]
+  },
+  "sc_frm": {
+    "cities": [],
+    "cargoes_in": [
+      "case600"
+    ],
+    "cargoes_out": [
+      "case600"
+    ]
+  },
+  "sc_frm_grg": {
+    "cities": [],
+    "cargoes_in": [
+      "case600"
+    ],
+    "cargoes_out": [
+      "case600"
+    ]
+  },
+  "sh_shp_mar": {
+    "cities": [],
+    "cargoes_in": [
+      "terex3160"
+    ],
+    "cargoes_out": [
+      "terex3160"
+    ]
+  },
+  "sh_shp_plnt": {
+    "cities": [],
+    "cargoes_in": [
+      "terex3160"
+    ],
+    "cargoes_out": [
+      "terex3160"
+    ]
+  },
+  "vm_car_pln": {
+    "cities": [],
+    "cargoes_in": [
+      "transformer"
+    ],
+    "cargoes_out": []
+  }
+}

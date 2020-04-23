@@ -1,0 +1,32 @@
+{
+  "city.cedar_city": {
+    "country": "utah"
+  },
+  "city.logan": {
+    "country": "utah"
+  },
+  "city.moab": {
+    "country": "utah"
+  },
+  "city.ogden": {
+    "country": "utah"
+  },
+  "city.price": {
+    "country": "utah"
+  },
+  "city.provo": {
+    "country": "utah"
+  },
+  "city.salina": {
+    "country": "utah"
+  },
+  "city.salt_lake": {
+    "country": "utah"
+  },
+  "city.st_george": {
+    "country": "utah"
+  },
+  "city.vernal": {
+    "country": "utah"
+  }
+}

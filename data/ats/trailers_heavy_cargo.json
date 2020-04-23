@@ -1,0 +1,72 @@
+{
+  "variants": [
+    "trailer.mag_55l_t3.cat_627h",
+    "trailer.mag_55l_t3_t.cat_627h",
+    "trailer.mag_55l_t3.coil",
+    "trailer.mag_55l_t3_t.coil",
+    "trailer.mag_55l_t3.kalmar_rt240",
+    "trailer.mag_55l_t3_t.kalmar_rt240",
+    "trailer.mag_55l_t3.k_d155ax_5",
+    "trailer.mag_55l_t3_t.k_d155ax_5",
+    "trailer.mag_55l_t3.scraper",
+    "trailer.mag_55l_t3_t.scraper",
+    "trailer.mag_55l_t2s.cat_627h",
+    "trailer.mag_55_t2s_t.cat_627h",
+    "trailer.mag_55_s2.cat_627h",
+    "trailer.mag_55l_t2s.coil",
+    "trailer.mag_55_t2s_t.coil",
+    "trailer.mag_55_s2.coil",
+    "trailer.mag_55l_t2s.kalmar_rt240",
+    "trailer.mag_55_t2s_t.kalmar_rt240",
+    "trailer.mag_55_s2.kalmar_rt240",
+    "trailer.mag_55l_t2s.k_d155ax_5",
+    "trailer.mag_55_t2s_t.k_d155ax_5",
+    "trailer.mag_55_s2.k_d155ax_5",
+    "trailer.mag_55l_t2s.t_c_3160",
+    "trailer.mag_55_t2s_t.t_c_3160",
+    "trailer.mag_55_s2.t_c_3160",
+    "trailer.mag_55l_t2s.transformer",
+    "trailer.mag_55_t2s_t.transformer",
+    "trailer.mag_55_s2.transformer",
+    "trailer.mag_55l_t2s.wirtgn_w250i",
+    "trailer.mag_55_t2s_t.wirtgn_w250i",
+    "trailer.mag_55_s2.wirtgn_w250i",
+    "trailer.mag_55l_t3.t_c_3160",
+    "trailer.mag_55l_t3_t.t_c_3160",
+    "trailer.mag_55l_t3.case_ih_600q",
+    "trailer.mag_55l_t3_t.case_ih_600q",
+    "trailer.mag_55l_t3.transformer",
+    "trailer.mag_55l_t3_t.transformer",
+    "trailer.mag_55l_t3.wirtgn_w250i",
+    "trailer.mag_55l_t3_t.wirtgn_w250i"
+  ],
+  "definitions": {
+    "trailer_def.case600.mag_55l_t3.case_ih_600q": {
+      "countries": []
+    },
+    "trailer_def.cat627.mag_55l_t3.cat_627h": {
+      "countries": []
+    },
+    "trailer_def.coil.mag_55l_t3.coil": {
+      "countries": []
+    },
+    "trailer_def.kalmar240.mag_55l_t2s.kalmar_rt240": {
+      "countries": []
+    },
+    "trailer_def.kalmar240_s.mag_55l_t3.kalmar_rt240": {
+      "countries": []
+    },
+    "trailer_def.komatsu155.mag_55l_t3.k_d155ax_5": {
+      "countries": []
+    },
+    "trailer_def.terex3160.mag_55l_t3.t_c_3160": {
+      "countries": []
+    },
+    "trailer_def.transformer.mag_55l_t2s.transformer": {
+      "countries": []
+    },
+    "trailer_def.wirtgen250.mag_55l_t2s.wirtgn_w250i": {
+      "countries": []
+    }
+  }
+}

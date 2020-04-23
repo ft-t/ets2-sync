@@ -1,0 +1,44 @@
+{
+  "city.astoria": {
+    "country": "oregon"
+  },
+  "city.bend": {
+    "country": "oregon"
+  },
+  "city.burns": {
+    "country": "oregon"
+  },
+  "city.coos_bay": {
+    "country": "oregon"
+  },
+  "city.eugene": {
+    "country": "oregon"
+  },
+  "city.klamath_f": {
+    "country": "oregon"
+  },
+  "city.lakeview": {
+    "country": "oregon"
+  },
+  "city.medford": {
+    "country": "oregon"
+  },
+  "city.newport": {
+    "country": "oregon"
+  },
+  "city.ontario": {
+    "country": "oregon"
+  },
+  "city.pendleton": {
+    "country": "oregon"
+  },
+  "city.portland": {
+    "country": "oregon"
+  },
+  "city.salem": {
+    "country": "oregon"
+  },
+  "city.the_dalles": {
+    "country": "oregon"
+  }
+}

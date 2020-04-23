@@ -1,0 +1,438 @@
+{
+  "42p_print": {
+    "cities": [
+      "eugene"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "aport_pcc": {
+    "cities": [
+      "portland"
+    ],
+    "cargoes_in": [
+      "aircraft_eng",
+      "aromatics",
+      "beverages",
+      "bottles",
+      "cable",
+      "carcomp",
+      "cars_big",
+      "cars_mix",
+      "cars_pickup",
+      "cars_small",
+      "clothes",
+      "computers",
+      "const_house",
+      "crude_oil",
+      "curtains",
+      "diesel",
+      "dry_fruit",
+      "dry_milk",
+      "electro_comp",
+      "emptytank",
+      "flour",
+      "food",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "furniture",
+      "generator_c",
+      "grain",
+      "hipresstank",
+      "home_acc",
+      "househd_appl",
+      "hydrochlor",
+      "largetubes",
+      "lumber",
+      "lumber_b",
+      "machine_pts",
+      "nuts",
+      "office_suppl",
+      "pipes",
+      "rice",
+      "salt",
+      "sawpanels",
+      "sugar",
+      "tableware",
+      "toys",
+      "tvs",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "aircraft_eng",
+      "beverages",
+      "bottles",
+      "cable",
+      "carcomp",
+      "cars_big",
+      "cars_mix",
+      "cars_pickup",
+      "cars_small",
+      "clothes",
+      "colors",
+      "computers",
+      "const_house",
+      "crude_oil",
+      "ctubes",
+      "ctubes_b",
+      "curtains",
+      "diesel",
+      "dry_fruit",
+      "dry_milk",
+      "electro_comp",
+      "emptytank",
+      "flour",
+      "food",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "furniture",
+      "generator_c",
+      "grain",
+      "hipresstank",
+      "home_acc",
+      "househd_appl",
+      "largetubes",
+      "machine_pts",
+      "nuts",
+      "office_suppl",
+      "petrol",
+      "pipes",
+      "rice",
+      "salt",
+      "solvents",
+      "sugar",
+      "tableware",
+      "toys",
+      "tvs",
+      "tyres",
+      "ventilation"
+    ]
+  },
+  "avs_met_scr": {
+    "cities": [
+      "klamath_f",
+      "pendleton",
+      "portland"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "avs_met_sml": {
+    "cities": [
+      "salem"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bn_farm": {
+    "cities": [
+      "bend",
+      "medford",
+      "the_dalles"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "chm_che_str": {
+    "cities": [
+      "portland"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_plnt": {
+    "cities": [
+      "astoria",
+      "eugene",
+      "ontario"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_str": {
+    "cities": [
+      "burns",
+      "lakeview",
+      "salem"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dg_wd_hrv": {
+    "cities": [
+      "astoria",
+      "bend",
+      "medford",
+      "newport",
+      "salem"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dg_wd_saw": {
+    "cities": [
+      "bend",
+      "lakeview",
+      "medford",
+      "newport"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dg_wd_saw1": {
+    "cities": [
+      "astoria",
+      "coos_bay",
+      "klamath_f",
+      "pendleton"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "du_farm": {
+    "cities": [
+      "salem"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "ed_mkt": {
+    "cities": [
+      "eugene",
+      "ontario"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gal_oil_gst": {
+    "cities": [
+      "medford",
+      "ontario",
+      "portland"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gm_food_plnt": {
+    "cities": [
+      "ontario"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hds_met_shp": {
+    "cities": [
+      "portland"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hf_wd_pln": {
+    "cities": [
+      "bend",
+      "klamath_f",
+      "lakeview",
+      "medford"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hms_con_svc": {
+    "cities": [
+      "pendleton"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hs_mkt": {
+    "cities": [
+      "newport",
+      "ontario",
+      "salem",
+      "the_dalles"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hs_whs": {
+    "cities": [
+      "bend",
+      "coos_bay",
+      "eugene",
+      "medford"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "kw_trk_dlr": {
+    "cities": [
+      "portland"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "oh_con_hom": {
+    "cities": [
+      "coos_bay",
+      "ontario"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pnp_wd_pln": {
+    "cities": [
+      "eugene",
+      "newport"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_grg": {
+    "cities": [
+      "coos_bay"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit2": {
+    "cities": [
+      "bend",
+      "burns",
+      "lakeview",
+      "medford",
+      "newport"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit3": {
+    "cities": [
+      "salem",
+      "the_dalles"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_whs": {
+    "cities": [
+      "coos_bay"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "re_train": {
+    "cities": [
+      "the_dalles"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sc_frm": {
+    "cities": [
+      "burns",
+      "ontario",
+      "the_dalles"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sc_frm_grg": {
+    "cities": [
+      "coos_bay"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sg_whs": {
+    "cities": [
+      "astoria",
+      "burns",
+      "lakeview"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "st_met_whs": {
+    "cities": [
+      "eugene",
+      "ontario",
+      "the_dalles"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "st_met_wrk": {
+    "cities": [
+      "pendleton"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "tid_mkt": {
+    "cities": [
+      "medford",
+      "newport",
+      "portland"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "vm_car_dlr": {
+    "cities": [
+      "astoria",
+      "bend",
+      "medford",
+      "newport"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "vm_car_whs": {
+    "cities": [
+      "astoria",
+      "eugene",
+      "pendleton"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_mkt": {
+    "cities": [
+      "bend",
+      "burns",
+      "ontario"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_whs": {
+    "cities": [
+      "portland"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_mkt": {
+    "cities": [
+      "astoria",
+      "bend",
+      "coos_bay",
+      "medford",
+      "pendleton",
+      "portland",
+      "salem"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_whs": {
+    "cities": [
+      "eugene",
+      "newport"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  }
+}

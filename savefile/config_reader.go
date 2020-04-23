@@ -11,7 +11,7 @@ import (
 	. "ets2-sync/savefile/internal/sections"
 )
 
-func (s *SaveFile) parseConfig(decrypted []byte) {
+func (s *SaveFile) parseConfig(decrypted []byte, game dlc_mapper.Game) {
 	if string(decrypted[8:10]) == "\r\n" {
 		s.lineEndingFormat = "\r\n"
 	} else {
@@ -138,7 +138,7 @@ func (s *SaveFile) parseConfig(decrypted []byte) {
 				k.Jobs[jobId] = offer
 
 				s.dlc |= dlc_mapper.GetRequiredDlc(offer.SourceCompany, offer.Target, offer.Cargo, offer.TrailerDefinition,
-					offer.TrailerVariant)
+					offer.TrailerVariant, game)
 			}
 		}
 

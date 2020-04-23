@@ -1,0 +1,32 @@
+{
+  "city.carson_city": {
+    "country": "nevada"
+  },
+  "city.elko": {
+    "country": "nevada"
+  },
+  "city.ely": {
+    "country": "nevada"
+  },
+  "city.jackpot": {
+    "country": "nevada"
+  },
+  "city.las_vegas": {
+    "country": "nevada"
+  },
+  "city.pioche": {
+    "country": "nevada"
+  },
+  "city.primm": {
+    "country": "nevada"
+  },
+  "city.reno": {
+    "country": "nevada"
+  },
+  "city.tonopah": {
+    "country": "nevada"
+  },
+  "city.winnemucca": {
+    "country": "nevada"
+  }
+}

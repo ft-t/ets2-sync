@@ -30,6 +30,7 @@ type dbOffer struct {
 	UnitsCount         string
 	FillRatio          string
 	TrailerPlace       string
+	Game               dlc_mapper.Game
 }
 
 func InitializeDb() error {

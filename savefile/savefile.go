@@ -27,7 +27,7 @@ type SaveFile struct {
 	dlc                 dlc_mapper.Dlc
 }
 
-func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
+func NewSaveFile(br *bytes.Reader, game dlc_mapper.Game) (*SaveFile, error) {
 
 	if br == nil || br.Size() < 4 {
 		return nil, errors.New("invalid source input")
@@ -40,7 +40,7 @@ func NewSaveFile(br *bytes.Reader) (*SaveFile, error) {
 	}
 
 	r := &SaveFile{source: decrypted, companies: map[string]*CompanyConfigSection{}}
-	r.parseConfig(decrypted)
+	r.parseConfig(decrypted, game)
 
 	return r, nil
 }
