@@ -30,7 +30,7 @@ type dbOffer struct {
 	UnitsCount         string
 	FillRatio          string
 	TrailerPlace       string
-	Game               dlc_mapper.Game
+	Game               dlc_mapper.Game `xorm:"default(1)"`
 }
 
 func InitializeDb() error {
