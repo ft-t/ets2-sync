@@ -23,6 +23,7 @@ type ApplicableOffer struct {
 	UnitsCount         string
 	FillRatio          string
 	TrailerPlace       string
+	Game               dlc_mapper.Game
 }
 
 func (o *ApplicableOffer) CalculateHash() string {
@@ -30,7 +31,8 @@ func (o *ApplicableOffer) CalculateHash() string {
 		S string
 		T string
 		C string
-	}{o.SourceCompany, o.Target, o.Cargo}, nil)
+		G string
+	}{o.SourceCompany, o.Target, o.Cargo, o.Game.ToString()}, nil)
 
 	if err != nil {
 		return ""

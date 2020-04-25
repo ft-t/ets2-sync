@@ -19,9 +19,9 @@ import (
 	"github.com/rs/cors"
 )
 
-var expansionDLCs = []Dlc{GoingEast, Scandinavia, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea}
-var cargoDLCs = []Dlc{PowerCargo, HeavyCargo, SpecialTransport}
-var trailerDLCs = []Dlc{Schwarzmuller, Krone}
+var expansionDLCs = map[Game][]Dlc{ETS: {GoingEast, Scandinavia, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea}, ATS: {Nevada, Arizona, NewMexico, Oregon, Washington, Utah}}
+var cargoDLCs = map[Game][]Dlc{ETS: {PowerCargo, HeavyCargo, SpecialTransport}, ATS: {HeavyCargo, SpecialTransport}}
+var trailerDLCs = map[Game][]Dlc{ETS: {Schwarzmuller, Krone}, ATS: {}}
 
 func Run() {
 	rand.Seed(time.Now().UTC().UnixNano())
@@ -60,20 +60,29 @@ func start() {
 	})
 
 	mux.HandleFunc("/dlc", func(w http.ResponseWriter, r *http.Request) {
-		res := make(map[int]*orderedmap.OrderedMap)
+		res := make(map[int]map[int]*orderedmap.OrderedMap)
+		for _, game := range AllGames {
+			res[int(game)] = make(map[int]*orderedmap.OrderedMap)
 
-		res[1] = orderedmap.New()
-		res[2] = orderedmap.New()
-		res[3] = orderedmap.New()
+			res[int(game)][1] = orderedmap.New()
+			res[int(game)][2] = orderedmap.New()
+			res[int(game)][3] = orderedmap.New()
+		}
 
-		for _, d := range expansionDLCs {
-			res[1].Set(d.ToString(), int(d))
+		for g, gameDLCs := range expansionDLCs {
+			for _, d := range gameDLCs {
+				res[int(g)][1].Set(d.ToString(), int(d))
+			}
 		}
-		for _, d := range cargoDLCs {
-			res[2].Set(d.ToString(), int(d))
+		for g, gameDLCs := range cargoDLCs {
+			for _, d := range gameDLCs {
+				res[int(g)][2].Set(d.ToString(), int(d))
+			}
 		}
-		for _, d := range trailerDLCs {
-			res[3].Set(d.ToString(), int(d))
+		for g, gameDLCs := range trailerDLCs {
+			for _, d := range gameDLCs {
+				res[int(g)][3].Set(d.ToString(), int(d))
+			}
 		}
 
 		w.Header().Set("Content-Type", "application/json")
@@ -117,7 +126,12 @@ func start() {
 			return // not a save file
 		}
 
+		g := r.Form.Get("game")
 		dlcs := r.Form["dlc"]
+
+		val, _ := strconv.Atoi(g)
+		game := Game(val)
+
 		offersDlcs := BaseGame
 		for _, d := range dlcs {
 			val, _ := strconv.Atoi(d)
@@ -129,7 +143,7 @@ func start() {
 			return
 		}
 
-		newSaveFile, er := savefile.NewSaveFile(bytes.NewReader(buf.Bytes()))
+		newSaveFile, er := savefile.NewSaveFile(bytes.NewReader(buf.Bytes()), game)
 
 		if er != nil {
 			writeError(er)
@@ -137,11 +151,11 @@ func start() {
 		}
 
 		if len(adminPass) > 0 && r.Form.Get("adminPass") == adminPass {
-			FillDbWithJobs(newSaveFile.ExportOffers())
+			FillDbWithJobs(newSaveFile.ExportOffers(), game)
 		}
 
 		newSaveFile.ClearOffers()
-		PopulateOffers(newSaveFile, offersDlcs)
+		PopulateOffers(newSaveFile, game, offersDlcs)
 
 		w.Header().Set("Content-Disposition", fmt.Sprintf("attachment; filename=%s", header.Filename))
 		w.Header().Set("Content-Type", "application/octet-stream")

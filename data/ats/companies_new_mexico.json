@@ -1,0 +1,331 @@
+{
+  "42p_print": {
+    "cities": [
+      "albuquerque"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "aport_abq": {
+    "cities": [
+      "albuquerque"
+    ],
+    "cargoes_in": [
+      "aromatics",
+      "carcomp",
+      "clothes",
+      "computers",
+      "electro_comp",
+      "food",
+      "fruit_juic_t",
+      "fruits",
+      "househd_appl",
+      "lumber",
+      "lumber_b",
+      "machine_pts",
+      "nuts",
+      "rice",
+      "solvents",
+      "tableware",
+      "toys",
+      "tvs"
+    ],
+    "cargoes_out": [
+      "beverages",
+      "cars_big",
+      "cars_mix",
+      "cars_pickup",
+      "cars_small",
+      "clothes",
+      "computers",
+      "dry_fruit",
+      "fertilizer",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "furniture",
+      "home_acc",
+      "lumber",
+      "lumber_b",
+      "machine_pts"
+    ]
+  },
+  "aport_an124": {
+    "cities": [
+      "albuquerque"
+    ],
+    "cargoes_in": [
+      "aircraft_eng",
+      "carcomp",
+      "computers",
+      "electro_comp",
+      "machine_pts",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "aircraft_eng",
+      "carcomp",
+      "computers",
+      "electro_comp",
+      "machine_pts",
+      "ventilation"
+    ]
+  },
+  "bit_rd_grg": {
+    "cities": [
+      "raton",
+      "roswell"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bit_rd_svc": {
+    "cities": [
+      "albuquerque",
+      "las_cruces"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bn_farm": {
+    "cities": [
+      "artesia"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cha_el_mkt": {
+    "cities": [
+      "hobbs",
+      "las_cruces",
+      "santa_fe"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cha_el_whs": {
+    "cities": [
+      "albuquerque",
+      "artesia"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "chm_che_plnt": {
+    "cities": [
+      "artesia",
+      "gallup"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_plnt": {
+    "cities": [
+      "albuquerque",
+      "raton"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_qry": {
+    "cities": [
+      "raton",
+      "santa_fe",
+      "socorro"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_str": {
+    "cities": [
+      "farmington",
+      "gallup",
+      "raton",
+      "santa_fe"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "ed_mkt": {
+    "cities": [
+      "alamogordo",
+      "farmington",
+      "tucumcari"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gal_oil_gst": {
+    "cities": [
+      "alamogordo",
+      "farmington",
+      "las_cruces",
+      "socorro"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gm_chs_plnt": {
+    "cities": [
+      "clovis"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gm_food_plnt": {
+    "cities": [
+      "albuquerque",
+      "roswell"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hms_con_svc": {
+    "cities": [
+      "albuquerque",
+      "farmington",
+      "santa_fe"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "kw_trk_dlr": {
+    "cities": [
+      "hobbs"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_grg": {
+    "cities": [
+      "farmington",
+      "gallup"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit1": {
+    "cities": [
+      "carlsbad_nm",
+      "clovis"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_whs": {
+    "cities": [
+      "gallup",
+      "hobbs",
+      "raton",
+      "socorro"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "re_train": {
+    "cities": [
+      "albuquerque",
+      "artesia",
+      "clovis",
+      "gallup",
+      "raton",
+      "socorro",
+      "tucumcari"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sc_frm": {
+    "cities": [
+      "roswell",
+      "tucumcari"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sc_frm_grg": {
+    "cities": [
+      "tucumcari"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sg_whs": {
+    "cities": [
+      "alamogordo",
+      "las_cruces",
+      "roswell",
+      "santa_fe"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "tid_mkt": {
+    "cities": [
+      "albuquerque",
+      "carlsbad_nm",
+      "socorro"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "vm_car_dlr": {
+    "cities": [
+      "alamogordo",
+      "albuquerque",
+      "carlsbad_nm",
+      "santa_fe"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "vm_car_whs": {
+    "cities": [
+      "albuquerque",
+      "carlsbad_nm",
+      "las_cruces",
+      "santa_fe"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_mkt": {
+    "cities": [
+      "clovis",
+      "raton",
+      "santa_fe"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_whs": {
+    "cities": [
+      "albuquerque",
+      "tucumcari"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_mkt": {
+    "cities": [
+      "gallup",
+      "hobbs",
+      "las_cruces",
+      "roswell",
+      "santa_fe",
+      "socorro"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_whs": {
+    "cities": [
+      "albuquerque",
+      "clovis",
+      "hobbs",
+      "las_cruces"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  }
+}

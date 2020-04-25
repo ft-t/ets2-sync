@@ -10,6 +10,15 @@ import (
 	"ets2-sync/internal"
 )
 
+type Game int
+
+const (
+	ETS = 1
+	ATS = 2
+)
+
+var AllGames = []Game{ETS, ATS}
+
 type Dlc int
 
 const (
@@ -26,9 +35,30 @@ const (
 	Scandinavia        Dlc = 1 << 9
 	RoadToTheBlackSea  Dlc = 1 << 10
 	SpecialTransport   Dlc = 1 << 11
+	Arizona            Dlc = 1 << 12
+	Nevada             Dlc = 1 << 13
+	NewMexico          Dlc = 1 << 14
+	Oregon             Dlc = 1 << 15
+	Utah               Dlc = 1 << 17
+	Washington         Dlc = 1 << 18
+	ForestMachinery    Dlc = 1 << 19
 )
 
-var AllDLCs = []Dlc{BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea, SpecialTransport, RoadToTheBlackSea}
+var AllDLCs = map[Game][]Dlc{
+	ETS: {BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea, SpecialTransport, RoadToTheBlackSea},
+	ATS: {BaseGame, Arizona, Nevada, NewMexico, Oregon, Utah, Washington, ForestMachinery, SpecialTransport, HeavyCargo},
+}
+
+func (t Game) ToString() string {
+	switch t {
+	case ETS:
+		return "ets"
+	case ATS:
+		return "ats"
+	}
+
+	return "unk"
+}
 
 func (t Dlc) ToString() string {
 	switch t {
@@ -58,6 +88,20 @@ func (t Dlc) ToString() string {
 		return "road_to_the_black_sea"
 	case SpecialTransport:
 		return "special_transport"
+	case Arizona:
+		return "arizona"
+	case Nevada:
+		return "nevada"
+	case NewMexico:
+		return "new_mexico"
+	case Oregon:
+		return "oregon"
+	case Utah:
+		return "utah"
+	case Washington:
+		return "washington"
+	case ForestMachinery:
+		return "forest_harvesting"
 	}
 
 	return "unk"
@@ -82,7 +126,7 @@ type cityFile struct {
 	Country string `json:"country"`
 }
 
-func GetRequiredDlc(source string, target string, cargo string, trailerDef string, trailerVariant string) Dlc {
+func GetRequiredDlc(source string, target string, cargo string, trailerDef string, trailerVariant string, game Game) Dlc {
 	getCompanyAndCity := func(str string) (city string, company string) {
 		if len(str) > 0 {
 			str = strings.Replace(str, "\"", "", 2)
@@ -95,16 +139,16 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 
 	targetCity, targetCompany := getCompanyAndCity(target)
 	sourceCity, sourceCompany := getCompanyAndCity(source)
-	targetCountry := getCountryByCity(targetCity)
-	sourceCountry := getCountryByCity(sourceCity)
+	targetCountry := getCountryByCity(targetCity, game)
+	sourceCountry := getCountryByCity(sourceCity, game)
 
 
 	validators := []func() (Dlc, error){
-		func() (Dlc, error) { return mapCargoToDlc(cargo) },
-		func() (Dlc, error) { return mapCompanyToDlc(targetCompany, targetCity) },
-		func() (Dlc, error) { return mapCompanyToDlc(sourceCompany, sourceCity) },
-		func() (Dlc, error) { return mapTrailerDefToDlc(trailerDef, targetCountry, sourceCountry) },
-		func() (Dlc, error) { return mapTrailerVariantToDlc(trailerVariant) },
+		func() (Dlc, error) { return mapCargoToDlc(cargo, game) },
+		func() (Dlc, error) { return mapCompanyToDlc(targetCompany, targetCity, game) },
+		func() (Dlc, error) { return mapCompanyToDlc(sourceCompany, sourceCity, game) },
+		func() (Dlc, error) { return mapTrailerDefToDlc(trailerDef, targetCountry, sourceCountry, game) },
+		func() (Dlc, error) { return mapTrailerVariantToDlc(trailerVariant, game) },
 	}
 
 	totalDlc := None
@@ -128,13 +172,13 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 
 var cityToCountry map[string]string
 
-func getCountryByCity(city string) string {
+func getCountryByCity(city string, game Game) string {
 	if cityToCountry != nil {
 		s, _ := cityToCountry[city]
 		return s
 	}
 
-	dir := "data"
+	dir := fmt.Sprintf("data/%s", game.ToString())
 	files, er := ioutil.ReadDir(dir)
 
 	if er != nil {
@@ -161,9 +205,9 @@ func getCountryByCity(city string) string {
 	return s
 }
 
-func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
-	for _, d := range AllDLCs {
-		if res := readCompanyFile(d); res != nil {
+func mapCompanyToDlc(companyName string, cityName string, game Game) (Dlc, error) {
+	for _, d := range AllDLCs[game] {
+		if res := readCompanyFile(game, d); res != nil {
 			if company, ok := res[companyName]; ok && internal.Contains(company.Cities, cityName) {
 				return d, nil
 			}
@@ -174,9 +218,9 @@ func mapCompanyToDlc(companyName string, cityName string) (Dlc, error) {
 }
 
 
-func mapCargoToDlc(cargoName string) (Dlc, error) {
-	for _, d := range AllDLCs {
-		if res := readSimpleJsonArr("cargoes", d); res != nil && internal.Contains(res, cargoName) {
+func mapCargoToDlc(cargoName string, game Game) (Dlc, error) {
+	for _, d := range AllDLCs[game] {
+		if res := readSimpleJsonArr("cargoes", game, d); res != nil && internal.Contains(res, cargoName) {
 			return d, nil
 		}
 	}
@@ -184,9 +228,9 @@ func mapCargoToDlc(cargoName string) (Dlc, error) {
 	return None, errors.New("trailer not found")
 }
 
-func mapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
-	for _, d := range AllDLCs {
-		if res := readTrailerFile(d); res != nil && internal.Contains(res.Variants, trailerVariant) {
+func mapTrailerVariantToDlc(trailerVariant string, game Game) (Dlc, error) {
+	for _, d := range AllDLCs[game] {
+		if res := readTrailerFile(game, d); res != nil && internal.Contains(res.Variants, trailerVariant) {
 			return d, nil
 		}
 	}
@@ -194,9 +238,9 @@ func mapTrailerVariantToDlc(trailerVariant string) (Dlc, error) {
 	return None, errors.New("trailer not found")
 }
 
-func mapTrailerDefToDlc(trailerDef string, targetCountry string, sourceCountry string) (Dlc, error) {
-	for _, d := range AllDLCs {
-		if res := readTrailerFile(d); res != nil {
+func mapTrailerDefToDlc(trailerDef string, targetCountry string, sourceCountry string, game Game) (Dlc, error) {
+	for _, d := range AllDLCs[game] {
+		if res := readTrailerFile(game, d); res != nil {
 			if def, ok := res.Definitions[trailerDef]; ok  {
 				if len(def.Countries) == 0 { // that trailer is allowed for all counties
 					return d, nil
@@ -219,8 +263,8 @@ var parsedCompanyFile = make(map[string]map[string]*companyFile)
 
 var dataCache = make(map[string][]string)
 
-func readTrailerFile(d Dlc) *trailerFile {
-	name := fmt.Sprintf("./data/trailers_%s.json", d.ToString())
+func readTrailerFile(g Game, d Dlc) *trailerFile {
+	name := fmt.Sprintf("./data/%s/trailers_%s.json", g.ToString(), d.ToString())
 
 	if v, ok := parsedTrailerFile[name]; ok {
 		return v
@@ -240,8 +284,8 @@ func readTrailerFile(d Dlc) *trailerFile {
 	return parsed
 }
 
-func readCompanyFile(d Dlc) map[string]*companyFile {
-	name := fmt.Sprintf("./data/companies_%s.json", d.ToString())
+func readCompanyFile(g Game, d Dlc) map[string]*companyFile {
+	name := fmt.Sprintf("./data/%s/companies_%s.json", g.ToString(), d.ToString())
 
 	if v, ok := parsedCompanyFile[name]; ok {
 		return v
@@ -261,8 +305,8 @@ func readCompanyFile(d Dlc) map[string]*companyFile {
 	return parsed
 }
 
-func readSimpleJsonArr(prefix string, d Dlc) []string {
-	path := fmt.Sprintf("./data/%s_%s.json", prefix, d.ToString())
+func readSimpleJsonArr(prefix string, g Game, d Dlc) []string {
+	path := fmt.Sprintf("./data/%s/%s_%s.json", g.ToString(), prefix, d.ToString())
 
 	if v, ok := dataCache[path]; ok {
 		return v

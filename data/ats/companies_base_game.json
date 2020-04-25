@@ -1,0 +1,1798 @@
+{
+  "42p_print": {
+    "cities": [
+      "los_angeles",
+      "san_diego"
+    ],
+    "cargoes_in": [
+      "bottles",
+      "clothes",
+      "colors"
+    ],
+    "cargoes_out": [
+      "bottles",
+      "clothes",
+      "curtains",
+      "office_suppl"
+    ]
+  },
+  "avs_met_scr": {
+    "cities": [],
+    "cargoes_in": [
+      "digger1000",
+      "hipresstank",
+      "machine_pts",
+      "pipes",
+      "scrap_cars",
+      "scrap_metals"
+    ],
+    "cargoes_out": [
+      "digger1000",
+      "scrap_cars",
+      "scrap_metals"
+    ]
+  },
+  "avs_met_sml": {
+    "cities": [],
+    "cargoes_in": [
+      "digger1000",
+      "excavator",
+      "limestone",
+      "scrap_cars",
+      "scrap_metals",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "digger1000",
+      "excavator",
+      "moor_buoy",
+      "mtl_coil",
+      "sq_tub"
+    ]
+  },
+  "bit_rd_grg": {
+    "cities": [
+      "carlsbad",
+      "fresno",
+      "redding",
+      "santa_cruz",
+      "truckee",
+      "ukiah"
+    ],
+    "cargoes_in": [
+      "diesel",
+      "digger500",
+      "machine_pts",
+      "mbt",
+      "roadroller",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "digger500",
+      "mbt",
+      "roadroller"
+    ]
+  },
+  "bit_rd_svc": {
+    "cities": [
+      "bakersfield",
+      "barstow",
+      "los_angeles",
+      "oxnard",
+      "sacramento",
+      "san_diego",
+      "san_rafael",
+      "santa_maria"
+    ],
+    "cargoes_in": [
+      "cable",
+      "diesel",
+      "digger500",
+      "gravel",
+      "mbt",
+      "pipes",
+      "roadroller",
+      "sand",
+      "stones",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "cable",
+      "digger500",
+      "gravel",
+      "mbt",
+      "pipes",
+      "roadroller",
+      "sand",
+      "stones"
+    ]
+  },
+  "bit_rd_wrk": {
+    "cities": [
+      "carlsbad",
+      "hornbrook",
+      "huron",
+      "sacramento",
+      "san_rafael",
+      "truckee"
+    ],
+    "cargoes_in": [
+      "cable",
+      "ctubes",
+      "ctubes_b",
+      "digger500",
+      "gravel",
+      "mbt",
+      "pipes",
+      "roadroller",
+      "sand",
+      "soil",
+      "stones"
+    ],
+    "cargoes_out": [
+      "cable",
+      "digger500",
+      "mbt",
+      "roadroller"
+    ]
+  },
+  "bn_farm": {
+    "cities": [
+      "fresno",
+      "oakdale",
+      "redding"
+    ],
+    "cargoes_in": [
+      "diesel",
+      "fertilizer",
+      "harvester",
+      "hay",
+      "pellet_afood",
+      "pesticide",
+      "potassium",
+      "tractors",
+      "ventilation",
+      "wshavings"
+    ],
+    "cargoes_out": [
+      "butter",
+      "cheese",
+      "dry_milk",
+      "food",
+      "frozen_food",
+      "meat",
+      "milk",
+      "milk_t",
+      "rawmilk",
+      "yogurt"
+    ]
+  },
+  "cha_el_mkt": {
+    "cities": [
+      "los_angeles"
+    ],
+    "cargoes_in": [
+      "carcomp",
+      "computers",
+      "electro_comp",
+      "furniture",
+      "home_acc",
+      "househd_appl",
+      "office_suppl",
+      "toys",
+      "tvs"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "used_pack"
+    ]
+  },
+  "cha_el_whs": {
+    "cities": [
+      "los_angeles",
+      "san_francisc"
+    ],
+    "cargoes_in": [
+      "carcomp",
+      "computers",
+      "electro_comp",
+      "forklifts",
+      "home_acc",
+      "househd_appl",
+      "office_suppl",
+      "tvs"
+    ],
+    "cargoes_out": [
+      "carcomp",
+      "computers",
+      "electro_comp",
+      "home_acc",
+      "househd_appl",
+      "office_suppl",
+      "tvs"
+    ]
+  },
+  "chm_che_plnt": {
+    "cities": [
+      "bakersfield",
+      "oxnard"
+    ],
+    "cargoes_in": [
+      "ethane",
+      "hipresstank",
+      "hydrochlor",
+      "largetubes",
+      "lye",
+      "mercuric",
+      "pipes",
+      "potassium",
+      "propane",
+      "sulfuric",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "aromatics",
+      "colors",
+      "dynamite",
+      "fertilizer",
+      "nitrocel",
+      "pesticide",
+      "solvents"
+    ]
+  },
+  "chm_che_str": {
+    "cities": [],
+    "cargoes_in": [
+      "aromatics",
+      "colors",
+      "emptytank",
+      "fertilizer",
+      "largetubes",
+      "nitrocel",
+      "solvents"
+    ],
+    "cargoes_out": [
+      "aromatics",
+      "colors",
+      "fertilizer",
+      "hydrochlor",
+      "lye",
+      "mercuric",
+      "potassium",
+      "solvents",
+      "sulfuric"
+    ]
+  },
+  "cm_min_plnt": {
+    "cities": [],
+    "cargoes_in": [
+      "bulldozer",
+      "digger1000",
+      "emptytank",
+      "gravel",
+      "limestone",
+      "sand",
+      "soil",
+      "stones"
+    ],
+    "cargoes_out": [
+      "bulldozer",
+      "cement",
+      "digger1000",
+      "gravel",
+      "gypsum",
+      "limestone",
+      "mortar",
+      "sand",
+      "silica",
+      "soil",
+      "stones"
+    ]
+  },
+  "cm_min_qry": {
+    "cities": [
+      "barstow",
+      "santa_cruz"
+    ],
+    "cargoes_in": [
+      "cable",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "dynamite",
+      "emptytank",
+      "excavator",
+      "generator_c",
+      "largetubes"
+    ],
+    "cargoes_out": [
+      "gravel",
+      "limestone",
+      "sand",
+      "silica",
+      "soil",
+      "stones"
+    ]
+  },
+  "cm_min_str": {
+    "cities": [
+      "barstow",
+      "santa_maria",
+      "stockton"
+    ],
+    "cargoes_in": [
+      "bulldozer",
+      "digger1000",
+      "dynamite",
+      "emptytank",
+      "gravel",
+      "limestone",
+      "sand",
+      "soil",
+      "stones"
+    ],
+    "cargoes_out": [
+      "cement",
+      "digger1000",
+      "dynamite",
+      "gypsum",
+      "limestone",
+      "mortar",
+      "silica"
+    ]
+  },
+  "dc_car_dlr": {
+    "cities": [],
+    "cargoes_in": [
+      "carcomp",
+      "cars_pickup",
+      "diesel",
+      "office_suppl",
+      "petrol",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "cars_pickup"
+    ]
+  },
+  "dg_wd_hrv": {
+    "cities": [
+      "redding"
+    ],
+    "cargoes_in": [
+      "bulldozer",
+      "diesel",
+      "machine_pts"
+    ],
+    "cargoes_out": [
+      "logs",
+      "wshavings"
+    ]
+  },
+  "dg_wd_saw": {
+    "cities": [],
+    "cargoes_in": [
+      "empty_palet",
+      "forklifts",
+      "logs",
+      "machine_pts"
+    ],
+    "cargoes_out": [
+      "lumber",
+      "lumber_b",
+      "wshavings"
+    ]
+  },
+  "dg_wd_saw1": {
+    "cities": [],
+    "cargoes_in": [
+      "emptytank",
+      "forklifts",
+      "hipresstank",
+      "logs",
+      "machine_pts",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "lumber",
+      "lumber_b",
+      "sawpanels",
+      "wshavings"
+    ]
+  },
+  "dmc_car_dlr": {
+    "cities": [],
+    "cargoes_in": [
+      "carcomp",
+      "cars_pickup",
+      "diesel",
+      "office_suppl",
+      "petrol",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "cars_pickup"
+    ]
+  },
+  "du_farm": {
+    "cities": [
+      "carlsbad",
+      "eureka",
+      "san_rafael"
+    ],
+    "cargoes_in": [
+      "bottles",
+      "diesel",
+      "fertilizer",
+      "harvester",
+      "hay",
+      "soil",
+      "tractors"
+    ],
+    "cargoes_out": [
+      "beverages",
+      "dry_fruit",
+      "fruit_juic_t",
+      "fruits",
+      "harvester",
+      "tractors"
+    ]
+  },
+  "dw_air_pln": {
+    "cities": [],
+    "cargoes_in": [
+      "aircraft_eng",
+      "cable",
+      "computers",
+      "diesel",
+      "forklifts",
+      "mtl_coil",
+      "petrol",
+      "tyres",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "aircraft_eng",
+      "empty_palet",
+      "emptytank",
+      "scrap_metals",
+      "used_pack"
+    ]
+  },
+  "ed_mkt": {
+    "cities": [
+      "barstow",
+      "los_angeles",
+      "oxnard",
+      "redding",
+      "san_diego",
+      "san_francisc"
+    ],
+    "cargoes_in": [
+      "beverages",
+      "butter",
+      "cheese",
+      "clothes",
+      "dry_fruit",
+      "dry_milk",
+      "flour",
+      "food",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruits",
+      "home_acc",
+      "meat",
+      "milk",
+      "nuts",
+      "office_suppl",
+      "rice",
+      "salt",
+      "sugar",
+      "toys",
+      "tvs",
+      "vegetable",
+      "yogurt"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "used_pack"
+    ]
+  },
+  "ftf_food_pln": {
+    "cities": [],
+    "cargoes_in": [
+      "bottles",
+      "diesel",
+      "empty_palet",
+      "flour",
+      "food",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "fruits",
+      "machine_pts",
+      "meat",
+      "salt",
+      "sugar",
+      "vegetable",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "food",
+      "frozen_food",
+      "meat"
+    ]
+  },
+  "gal_oil_gst": {
+    "cities": [
+      "bakersfield",
+      "el_centro",
+      "fresno",
+      "hornbrook",
+      "los_angeles",
+      "oakdale",
+      "oakland",
+      "redding",
+      "sacramento",
+      "san_francisc",
+      "san_rafael",
+      "stockton",
+      "truckee"
+    ],
+    "cargoes_in": [
+      "diesel",
+      "petrol",
+      "propane"
+    ],
+    "cargoes_out": []
+  },
+  "gal_oil_ref": {
+    "cities": [
+      "los_angeles",
+      "oxnard",
+      "san_rafael"
+    ],
+    "cargoes_in": [
+      "crude_oil",
+      "frac_tank",
+      "hipresstank",
+      "largetubes",
+      "pipes",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "diesel",
+      "ethane",
+      "frac_tank",
+      "petrol",
+      "propane"
+    ]
+  },
+  "gal_oil_str": {
+    "cities": [
+      "fresno",
+      "redding"
+    ],
+    "cargoes_in": [
+      "crude_oil",
+      "diesel",
+      "emptytank",
+      "ethane",
+      "frac_tank",
+      "petrol",
+      "propane"
+    ],
+    "cargoes_out": [
+      "crude_oil",
+      "diesel",
+      "ethane",
+      "frac_tank",
+      "petrol",
+      "propane"
+    ]
+  },
+  "gm_chs_plnt": {
+    "cities": [],
+    "cargoes_in": [
+      "dry_fruit",
+      "dry_milk",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "fruits",
+      "lye",
+      "milk",
+      "milk_t",
+      "nuts",
+      "rawmilk",
+      "salt",
+      "sugar",
+      "vegetable"
+    ],
+    "cargoes_out": [
+      "butter",
+      "cheese",
+      "dry_milk",
+      "icecream",
+      "milk",
+      "milk_t",
+      "yogurt"
+    ]
+  },
+  "gm_food_plnt": {
+    "cities": [],
+    "cargoes_in": [
+      "butter",
+      "dry_fruit",
+      "dry_milk",
+      "flour",
+      "frozen_fruit",
+      "fruit_juic_t",
+      "fruits",
+      "grain",
+      "milk",
+      "milk_t",
+      "nuts",
+      "rawmilk",
+      "rice",
+      "salt",
+      "sugar",
+      "yogurt"
+    ],
+    "cargoes_out": [
+      "dry_fruit",
+      "food",
+      "frozen_food",
+      "nuts"
+    ]
+  },
+  "hds_met_shp": {
+    "cities": [],
+    "cargoes_in": [
+      "cable",
+      "diesel",
+      "machine_pts",
+      "mtl_coil",
+      "propane",
+      "scrap_metals",
+      "sq_tub",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "boat",
+      "emptytank",
+      "frac_tank",
+      "hipresstank",
+      "machine_pts",
+      "moor_buoy",
+      "plows",
+      "scrap_metals",
+      "ventilation"
+    ]
+  },
+  "hf_wd_pln": {
+    "cities": [],
+    "cargoes_in": [
+      "colors",
+      "empty_palet",
+      "lumber",
+      "lumber_b",
+      "sawpanels"
+    ],
+    "cargoes_out": [
+      "furniture",
+      "home_acc",
+      "house_pref",
+      "office_suppl",
+      "used_pack"
+    ]
+  },
+  "hms_con_svc": {
+    "cities": [
+      "barstow",
+      "eureka",
+      "los_angeles",
+      "san_diego",
+      "san_rafael",
+      "santa_cruz"
+    ],
+    "cargoes_in": [
+      "aircraft_eng",
+      "bulldozer",
+      "diesel",
+      "digger1000",
+      "digger500",
+      "excavator",
+      "forklifts",
+      "frac_tank",
+      "generator_c",
+      "harvester",
+      "machine_pts",
+      "mbt",
+      "plows",
+      "roadroller",
+      "tractors",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "aircraft_eng",
+      "bulldozer",
+      "digger1000",
+      "digger500",
+      "excavator",
+      "forklifts",
+      "frac_tank",
+      "generator_c",
+      "harvester",
+      "mbt",
+      "plows",
+      "roadroller",
+      "tractors"
+    ]
+  },
+  "hs_mkt": {
+    "cities": [],
+    "cargoes_in": [
+      "cement",
+      "colors",
+      "curtains",
+      "furniture",
+      "gypsum",
+      "home_acc",
+      "househd_appl",
+      "lumber",
+      "lumber_b",
+      "mortar",
+      "tableware"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "used_pack"
+    ]
+  },
+  "hs_whs": {
+    "cities": [],
+    "cargoes_in": [
+      "cement",
+      "colors",
+      "curtains",
+      "forklifts",
+      "furniture",
+      "gypsum",
+      "home_acc",
+      "househd_appl",
+      "lumber",
+      "lumber_b",
+      "mortar",
+      "tableware"
+    ],
+    "cargoes_out": [
+      "cement",
+      "colors",
+      "curtains",
+      "furniture",
+      "gypsum",
+      "home_acc",
+      "househd_appl",
+      "lumber",
+      "lumber_b",
+      "mortar",
+      "tableware"
+    ]
+  },
+  "kw_trk_dlr": {
+    "cities": [
+      "los_angeles"
+    ],
+    "cargoes_in": [
+      "diesel",
+      "electro_comp",
+      "forklifts",
+      "kw_t680",
+      "office_suppl",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "kw_t680"
+    ]
+  },
+  "kw_trk_pln": {
+    "cities": [],
+    "cargoes_in": [
+      "cable",
+      "colors",
+      "diesel",
+      "electro_comp",
+      "forklifts",
+      "machine_pts",
+      "mtl_coil",
+      "office_suppl",
+      "sq_tub",
+      "tyres",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "kw_t680",
+      "scrap_metals",
+      "used_pack"
+    ]
+  },
+  "mcs_con_sit": {
+    "cities": [
+      "santa_cruz",
+      "santa_maria"
+    ],
+    "cargoes_in": [
+      "bulldozer",
+      "cement",
+      "const_house",
+      "digger1000",
+      "digger500",
+      "dynamite",
+      "excavator",
+      "generator_c",
+      "roadroller",
+      "stones"
+    ],
+    "cargoes_out": [
+      "bulldozer",
+      "digger1000",
+      "digger500",
+      "emptytank",
+      "excavator",
+      "gravel",
+      "roadroller",
+      "soil"
+    ]
+  },
+  "oak_port": {
+    "cities": [
+      "oakland"
+    ],
+    "cargoes_in": [
+      "aromatics",
+      "beverages",
+      "bottles",
+      "carcomp",
+      "cars_big",
+      "cars_mix",
+      "cars_pickup",
+      "cars_small",
+      "clothes",
+      "computers",
+      "crude_oil",
+      "ctubes",
+      "ctubes_b",
+      "diesel",
+      "dry_fruit",
+      "dry_milk",
+      "electro_comp",
+      "flour",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "grain",
+      "kw_t680",
+      "largetubes",
+      "machine_pts",
+      "milk",
+      "milk_t",
+      "moor_buoy",
+      "nuts",
+      "office_suppl",
+      "pellet_afood",
+      "rice",
+      "salt",
+      "silica",
+      "sugar",
+      "tableware",
+      "toys",
+      "tvs",
+      "vegetable"
+    ],
+    "cargoes_out": [
+      "beverages",
+      "bottles",
+      "butter",
+      "carcomp",
+      "cheese",
+      "clothes",
+      "ctubes",
+      "ctubes_b",
+      "dry_fruit",
+      "dry_milk",
+      "electro_comp",
+      "emptytank",
+      "flour",
+      "food",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "furniture",
+      "grain",
+      "hipresstank",
+      "home_acc",
+      "househd_appl",
+      "icecream",
+      "kw_t680",
+      "largetubes",
+      "lumber",
+      "lumber_b",
+      "machine_pts",
+      "milk",
+      "milk_t",
+      "nuts",
+      "office_suppl",
+      "pellet_afood",
+      "potassium",
+      "rice",
+      "salt",
+      "sawpanels",
+      "sugar",
+      "tableware",
+      "toys",
+      "tvs",
+      "wshavings",
+      "yogurt"
+    ]
+  },
+  "oh_con_hom": {
+    "cities": [],
+    "cargoes_in": [
+      "cable",
+      "colors",
+      "curtains",
+      "electro_comp",
+      "furniture",
+      "house_pref",
+      "lumber",
+      "lumber_b",
+      "sawpanels"
+    ],
+    "cargoes_out": [
+      "house_pref"
+    ]
+  },
+  "pnp_wd_pln": {
+    "cities": [],
+    "cargoes_in": [
+      "cable",
+      "colors",
+      "gypsum",
+      "hipresstank",
+      "logs",
+      "solvents",
+      "ventilation",
+      "wshavings"
+    ],
+    "cargoes_out": [
+      "empty_palet"
+    ]
+  },
+  "pns_con_grg": {
+    "cities": [
+      "stockton"
+    ],
+    "cargoes_in": [
+      "bulldozer",
+      "diesel",
+      "digger1000",
+      "excavator",
+      "machine_pts",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "bulldozer",
+      "digger1000",
+      "excavator"
+    ]
+  },
+  "pns_con_sit": {
+    "cities": [
+      "carlsbad",
+      "los_angeles",
+      "sacramento",
+      "santa_cruz"
+    ],
+    "cargoes_in": [
+      "bulldozer",
+      "colors",
+      "const_house",
+      "ctubes",
+      "ctubes_b",
+      "digger1000",
+      "excavator",
+      "generator_c",
+      "gravel",
+      "largetubes",
+      "lumber",
+      "lumber_b",
+      "pipes",
+      "sand",
+      "sawpanels",
+      "soil",
+      "stones",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "bulldozer",
+      "const_house",
+      "digger1000",
+      "emptytank",
+      "excavator",
+      "generator_c"
+    ]
+  },
+  "pns_con_sit1": {
+    "cities": [
+      "fresno",
+      "san_francisc"
+    ],
+    "cargoes_in": [
+      "bulldozer",
+      "cement",
+      "colors",
+      "const_house",
+      "ctubes",
+      "ctubes_b",
+      "digger1000",
+      "excavator",
+      "generator_c",
+      "gravel",
+      "largetubes",
+      "lumber",
+      "lumber_b",
+      "pipes",
+      "sand",
+      "sawpanels",
+      "soil",
+      "stones",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "bulldozer",
+      "const_house",
+      "digger1000",
+      "emptytank",
+      "excavator",
+      "generator_c"
+    ]
+  },
+  "pns_con_sit2": {
+    "cities": [],
+    "cargoes_in": [
+      "cable",
+      "cement",
+      "colors",
+      "const_house",
+      "digger1000",
+      "generator_c",
+      "gravel",
+      "house_pref",
+      "lumber",
+      "lumber_b",
+      "pipes",
+      "sand",
+      "sawpanels",
+      "soil",
+      "stones"
+    ],
+    "cargoes_out": [
+      "const_house",
+      "digger1000",
+      "emptytank",
+      "generator_c"
+    ]
+  },
+  "pns_con_sit3": {
+    "cities": [],
+    "cargoes_in": [
+      "cable",
+      "colors",
+      "const_house",
+      "generator_c",
+      "gravel",
+      "mtl_coil",
+      "pipes",
+      "sand",
+      "soil",
+      "sq_tub",
+      "stones"
+    ],
+    "cargoes_out": [
+      "const_house",
+      "emptytank",
+      "generator_c"
+    ]
+  },
+  "pns_con_whs": {
+    "cities": [
+      "bakersfield",
+      "los_angeles",
+      "san_rafael"
+    ],
+    "cargoes_in": [
+      "cement",
+      "const_house",
+      "ctubes",
+      "ctubes_b",
+      "generator_c",
+      "gypsum",
+      "mortar",
+      "office_suppl",
+      "sawpanels"
+    ],
+    "cargoes_out": [
+      "cement",
+      "const_house",
+      "ctubes",
+      "ctubes_b",
+      "emptytank",
+      "generator_c",
+      "gypsum",
+      "hipresstank",
+      "largetubes",
+      "mortar",
+      "sawpanels",
+      "ventilation"
+    ]
+  },
+  "re_train": {
+    "cities": [
+      "bakersfield",
+      "barstow",
+      "oxnard"
+    ],
+    "cargoes_in": [
+      "aircraft_eng",
+      "aromatics",
+      "beverages",
+      "boat",
+      "cable",
+      "cars_big",
+      "cars_mix",
+      "cars_pickup",
+      "cars_small",
+      "const_house",
+      "ctubes",
+      "ctubes_b",
+      "dry_fruit",
+      "electro_comp",
+      "flour",
+      "forklifts",
+      "frac_tank",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "fruits",
+      "generator_c",
+      "grain",
+      "gravel",
+      "harvester",
+      "home_acc",
+      "house_pref",
+      "househd_appl",
+      "largetubes",
+      "lumber",
+      "lumber_b",
+      "meat",
+      "milk",
+      "milk_t",
+      "nuts",
+      "office_suppl",
+      "pellet_afood",
+      "pesticide",
+      "pipes",
+      "rawmilk",
+      "rice",
+      "salt",
+      "sand",
+      "silica",
+      "soil",
+      "stones",
+      "vegetable"
+    ],
+    "cargoes_out": [
+      "aircraft_eng",
+      "beverages",
+      "boat",
+      "bottles",
+      "butter",
+      "cable",
+      "carcomp",
+      "cars_big",
+      "cars_mix",
+      "cars_pickup",
+      "cheese",
+      "clothes",
+      "ctubes",
+      "ctubes_b",
+      "dry_milk",
+      "electro_comp",
+      "emptytank",
+      "fertilizer",
+      "flour",
+      "food",
+      "forklifts",
+      "frac_tank",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "furniture",
+      "grain",
+      "harvester",
+      "hipresstank",
+      "home_acc",
+      "house_pref",
+      "househd_appl",
+      "icecream",
+      "largetubes",
+      "lumber",
+      "lumber_b",
+      "lye",
+      "machine_pts",
+      "mercuric",
+      "milk",
+      "milk_t",
+      "nuts",
+      "office_suppl",
+      "pellet_afood",
+      "pesticide",
+      "pipes",
+      "potassium",
+      "rawmilk",
+      "salt",
+      "sawpanels",
+      "scrap_cars",
+      "tableware",
+      "toys",
+      "ventilation",
+      "wshavings",
+      "yogurt"
+    ]
+  },
+  "sc_frm": {
+    "cities": [
+      "el_centro",
+      "huron",
+      "santa_maria"
+    ],
+    "cargoes_in": [
+      "diesel",
+      "emptytank",
+      "fertilizer",
+      "harvester",
+      "hay",
+      "hipresstank",
+      "lumber",
+      "lumber_b",
+      "pesticide",
+      "plows",
+      "soil",
+      "tractors",
+      "wshavings"
+    ],
+    "cargoes_out": [
+      "dry_fruit",
+      "flour",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "fruits",
+      "grain",
+      "harvester",
+      "hay",
+      "nuts",
+      "plows",
+      "tractors",
+      "vegetable"
+    ]
+  },
+  "sc_frm_grg": {
+    "cities": [
+      "bakersfield",
+      "oxnard",
+      "san_rafael"
+    ],
+    "cargoes_in": [
+      "diesel",
+      "harvester",
+      "machine_pts",
+      "office_suppl",
+      "plows",
+      "tractors",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "fertilizer",
+      "harvester",
+      "plows",
+      "tractors",
+      "tyres"
+    ]
+  },
+  "sf_port": {
+    "cities": [
+      "san_francisc"
+    ],
+    "cargoes_in": [
+      "aromatics",
+      "beverages",
+      "bottles",
+      "cars_big",
+      "cars_mix",
+      "cars_pickup",
+      "cars_small",
+      "clothes",
+      "computers",
+      "const_house",
+      "crude_oil",
+      "ctubes",
+      "ctubes_b",
+      "curtains",
+      "diesel",
+      "dry_fruit",
+      "electro_comp",
+      "flour",
+      "forklifts",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "fruits",
+      "generator_c",
+      "grain",
+      "largetubes",
+      "meat",
+      "milk_t",
+      "moor_buoy",
+      "nuts",
+      "office_suppl",
+      "rice",
+      "salt",
+      "silica",
+      "sugar",
+      "tableware",
+      "toys",
+      "tvs",
+      "vegetable"
+    ],
+    "cargoes_out": [
+      "beverages",
+      "bottles",
+      "butter",
+      "carcomp",
+      "cheese",
+      "clothes",
+      "ctubes",
+      "ctubes_b",
+      "dry_milk",
+      "electro_comp",
+      "emptytank",
+      "food",
+      "forklifts",
+      "frozen_food",
+      "fruit_juic_t",
+      "furniture",
+      "hipresstank",
+      "home_acc",
+      "househd_appl",
+      "icecream",
+      "largetubes",
+      "lumber",
+      "lumber_b",
+      "machine_pts",
+      "milk",
+      "milk_t",
+      "office_suppl",
+      "potassium",
+      "rice",
+      "salt",
+      "sugar",
+      "tableware",
+      "toys",
+      "tvs",
+      "wshavings",
+      "yogurt"
+    ]
+  },
+  "sg_whs": {
+    "cities": [
+      "fresno",
+      "los_angeles",
+      "oxnard",
+      "redding",
+      "santa_maria"
+    ],
+    "cargoes_in": [
+      "cable",
+      "clothes",
+      "curtains",
+      "dry_fruit",
+      "dry_milk",
+      "electro_comp",
+      "empty_palet",
+      "fireworks",
+      "flour",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "furniture",
+      "grain",
+      "gypsum",
+      "home_acc",
+      "househd_appl",
+      "mortar",
+      "nuts",
+      "office_suppl",
+      "rice",
+      "tableware",
+      "toys",
+      "tvs",
+      "used_pack"
+    ],
+    "cargoes_out": [
+      "cable",
+      "clothes",
+      "curtains",
+      "dry_fruit",
+      "dry_milk",
+      "electro_comp",
+      "fireworks",
+      "flour",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "furniture",
+      "grain",
+      "gypsum",
+      "home_acc",
+      "househd_appl",
+      "mortar",
+      "nuts",
+      "office_suppl",
+      "rice",
+      "tableware",
+      "toys",
+      "tvs"
+    ]
+  },
+  "sh_shp_mar": {
+    "cities": [],
+    "cargoes_in": [
+      "boat",
+      "diesel",
+      "moor_buoy"
+    ],
+    "cargoes_out": [
+      "boat",
+      "moor_buoy"
+    ]
+  },
+  "sh_shp_plnt": {
+    "cities": [],
+    "cargoes_in": [
+      "cable",
+      "colors",
+      "computers",
+      "curtains",
+      "electro_comp",
+      "forklifts",
+      "furniture",
+      "home_acc",
+      "lumber",
+      "lumber_b",
+      "mtl_coil"
+    ],
+    "cargoes_out": [
+      "boat",
+      "scrap_metals",
+      "used_pack"
+    ]
+  },
+  "st_met_whs": {
+    "cities": [],
+    "cargoes_in": [
+      "colors",
+      "emptytank",
+      "forklifts",
+      "hipresstank",
+      "moor_buoy",
+      "mtl_coil",
+      "sq_tub",
+      "ventilation"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "emptytank",
+      "hipresstank",
+      "moor_buoy",
+      "mtl_coil",
+      "scrap_cars",
+      "scrap_metals",
+      "sq_tub",
+      "ventilation"
+    ]
+  },
+  "st_met_wrk": {
+    "cities": [],
+    "cargoes_in": [
+      "colors",
+      "forklifts",
+      "machine_pts",
+      "mtl_coil",
+      "sq_tub"
+    ],
+    "cargoes_out": [
+      "emptytank",
+      "hipresstank",
+      "largetubes",
+      "machine_pts",
+      "moor_buoy",
+      "pipes",
+      "scrap_cars",
+      "scrap_metals",
+      "ventilation"
+    ]
+  },
+  "tid_mkt": {
+    "cities": [],
+    "cargoes_in": [
+      "beverages",
+      "butter",
+      "cheese",
+      "clothes",
+      "dry_fruit",
+      "dry_milk",
+      "flour",
+      "food",
+      "frozen_food",
+      "fruits",
+      "home_acc",
+      "meat",
+      "milk",
+      "office_suppl",
+      "rice",
+      "salt",
+      "sugar",
+      "toys",
+      "tvs",
+      "vegetable",
+      "yogurt"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "used_pack"
+    ]
+  },
+  "vm_car_dlr": {
+    "cities": [
+      "bakersfield",
+      "eureka",
+      "los_angeles",
+      "redding",
+      "san_francisc",
+      "santa_maria"
+    ],
+    "cargoes_in": [
+      "carcomp",
+      "cars_big",
+      "cars_mix",
+      "cars_small",
+      "office_suppl",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "cars_big",
+      "cars_mix",
+      "cars_small"
+    ]
+  },
+  "vm_car_pln": {
+    "cities": [
+      "santa_cruz"
+    ],
+    "cargoes_in": [
+      "carcomp",
+      "diesel",
+      "forklifts",
+      "machine_pts",
+      "office_suppl",
+      "petrol",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "cars_big",
+      "cars_mix",
+      "cars_small",
+      "scrap_cars",
+      "scrap_metals"
+    ]
+  },
+  "vm_car_whs": {
+    "cities": [
+      "fresno",
+      "oxnard",
+      "san_diego",
+      "stockton"
+    ],
+    "cargoes_in": [
+      "carcomp",
+      "forklifts",
+      "machine_pts",
+      "office_suppl",
+      "tyres"
+    ],
+    "cargoes_out": [
+      "carcomp",
+      "machine_pts",
+      "tyres"
+    ]
+  },
+  "wal_food_mkt": {
+    "cities": [
+      "sacramento",
+      "santa_cruz",
+      "truckee"
+    ],
+    "cargoes_in": [
+      "beverages",
+      "butter",
+      "cheese",
+      "dry_fruit",
+      "dry_milk",
+      "flour",
+      "food",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruits",
+      "icecream",
+      "meat",
+      "milk",
+      "nuts",
+      "rice",
+      "salt",
+      "sugar",
+      "vegetable",
+      "yogurt"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "used_pack"
+    ]
+  },
+  "wal_food_whs": {
+    "cities": [
+      "eureka",
+      "fresno",
+      "oxnard",
+      "redding",
+      "sacramento"
+    ],
+    "cargoes_in": [
+      "beverages",
+      "butter",
+      "cheese",
+      "dry_fruit",
+      "dry_milk",
+      "empty_palet",
+      "flour",
+      "food",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "fruits",
+      "grain",
+      "icecream",
+      "milk",
+      "milk_t",
+      "nuts",
+      "office_suppl",
+      "rice",
+      "salt",
+      "sugar",
+      "used_pack",
+      "vegetable",
+      "yogurt"
+    ],
+    "cargoes_out": [
+      "beverages",
+      "butter",
+      "cheese",
+      "dry_fruit",
+      "dry_milk",
+      "flour",
+      "food",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "fruits",
+      "grain",
+      "icecream",
+      "milk",
+      "milk_t",
+      "nuts",
+      "rice",
+      "salt",
+      "sugar",
+      "vegetable",
+      "yogurt"
+    ]
+  },
+  "wal_mkt": {
+    "cities": [
+      "bakersfield",
+      "fresno",
+      "oxnard",
+      "san_diego",
+      "santa_maria",
+      "ukiah"
+    ],
+    "cargoes_in": [
+      "clothes",
+      "computers",
+      "fireworks",
+      "furniture",
+      "home_acc",
+      "househd_appl",
+      "office_suppl",
+      "tableware",
+      "toys",
+      "tvs"
+    ],
+    "cargoes_out": [
+      "empty_palet",
+      "used_pack"
+    ]
+  },
+  "wal_whs": {
+    "cities": [
+      "fresno",
+      "sacramento",
+      "santa_cruz"
+    ],
+    "cargoes_in": [
+      "clothes",
+      "computers",
+      "curtains",
+      "empty_palet",
+      "fireworks",
+      "forklifts",
+      "furniture",
+      "home_acc",
+      "househd_appl",
+      "office_suppl",
+      "tableware",
+      "toys",
+      "tvs",
+      "used_pack"
+    ],
+    "cargoes_out": [
+      "clothes",
+      "computers",
+      "fireworks",
+      "furniture",
+      "home_acc",
+      "househd_appl",
+      "office_suppl",
+      "tableware",
+      "toys",
+      "tvs"
+    ]
+  }
+}

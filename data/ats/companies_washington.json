@@ -1,0 +1,537 @@
+{
+  "avs_met_scr": {
+    "cities": [
+      "everett",
+      "port_angeles",
+      "seattle"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bit_rd_svc": {
+    "cities": [
+      "aberdeen_wa",
+      "yakima"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bn_farm": {
+    "cities": [
+      "colville",
+      "wenatchee",
+      "yakima"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cha_el_mkt": {
+    "cities": [
+      "vancouver"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cha_el_whs": {
+    "cities": [
+      "wenatchee"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_plnt": {
+    "cities": [
+      "seattle"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_qry": {
+    "cities": [
+      "vancouver"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_str": {
+    "cities": [
+      "colville",
+      "grand_coulee",
+      "kennewick",
+      "olympia",
+      "port_angeles",
+      "spokane",
+      "yakima"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dc_car_dlr": {
+    "cities": [
+      "tacoma"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dg_wd_hrv": {
+    "cities": [
+      "aberdeen_wa",
+      "bellingham",
+      "longview"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dg_wd_saw": {
+    "cities": [
+      "port_angeles"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dg_wd_saw1": {
+    "cities": [
+      "aberdeen_wa",
+      "bellingham",
+      "colville",
+      "longview",
+      "olympia"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dw_air_pln": {
+    "cities": [
+      "everett"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "ed_mkt": {
+    "cities": [
+      "aberdeen_wa",
+      "colville",
+      "omak"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "ftf_food_pln": {
+    "cities": [
+      "bellingham"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gal_oil_gst": {
+    "cities": [
+      "colville",
+      "grand_coulee",
+      "omak",
+      "spokane",
+      "tacoma",
+      "wenatchee",
+      "yakima"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gal_oil_ref": {
+    "cities": [
+      "tacoma"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gm_food_plnt": {
+    "cities": [
+      "yakima"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hms_con_svc": {
+    "cities": [
+      "everett",
+      "port_angeles",
+      "tacoma",
+      "wenatchee"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hs_mkt": {
+    "cities": [
+      "kennewick",
+      "olympia",
+      "spokane"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hs_whs": {
+    "cities": [
+      "wenatchee"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "kw_trk_dlr": {
+    "cities": [
+      "seattle"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "kw_trk_pln": {
+    "cities": [
+      "seattle"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pnp_wd_pln": {
+    "cities": [
+      "aberdeen_wa",
+      "longview",
+      "port_angeles"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit": {
+    "cities": [
+      "spokane"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit2": {
+    "cities": [
+      "grand_coulee",
+      "kennewick"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "port_sea": {
+    "cities": [
+      "seattle"
+    ],
+    "cargoes_in": [
+      "aromatics",
+      "beverages",
+      "bottles",
+      "carcomp",
+      "cars_big",
+      "cars_mix",
+      "cars_pickup",
+      "cars_small",
+      "clothes",
+      "computers",
+      "crude_oil",
+      "ctubes",
+      "ctubes_b",
+      "diesel",
+      "dry_fruit",
+      "dry_milk",
+      "electro_comp",
+      "flour",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "grain",
+      "kw_t680",
+      "largetubes",
+      "machine_pts",
+      "milk",
+      "milk_t",
+      "moor_buoy",
+      "nuts",
+      "office_suppl",
+      "pellet_afood",
+      "rice",
+      "salt",
+      "silica",
+      "sugar",
+      "tableware",
+      "toys",
+      "tvs",
+      "vegetable"
+    ],
+    "cargoes_out": [
+      "beverages",
+      "bottles",
+      "butter",
+      "carcomp",
+      "cheese",
+      "clothes",
+      "ctubes",
+      "ctubes_b",
+      "dry_fruit",
+      "dry_milk",
+      "electro_comp",
+      "emptytank",
+      "flour",
+      "food",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "furniture",
+      "grain",
+      "hipresstank",
+      "home_acc",
+      "househd_appl",
+      "icecream",
+      "largetubes",
+      "lumber",
+      "lumber_b",
+      "machine_pts",
+      "milk",
+      "milk_t",
+      "nuts",
+      "office_suppl",
+      "pellet_afood",
+      "potassium",
+      "rice",
+      "salt",
+      "sawpanels",
+      "sugar",
+      "tableware",
+      "toys",
+      "tvs",
+      "wshavings",
+      "yogurt"
+    ]
+  },
+  "port_tac": {
+    "cities": [
+      "tacoma"
+    ],
+    "cargoes_in": [
+      "aromatics",
+      "beverages",
+      "bottles",
+      "carcomp",
+      "cars_big",
+      "cars_mix",
+      "cars_pickup",
+      "cars_small",
+      "clothes",
+      "computers",
+      "crude_oil",
+      "ctubes",
+      "ctubes_b",
+      "diesel",
+      "dry_fruit",
+      "dry_milk",
+      "electro_comp",
+      "flour",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "grain",
+      "kw_t680",
+      "largetubes",
+      "machine_pts",
+      "milk",
+      "milk_t",
+      "moor_buoy",
+      "nuts",
+      "office_suppl",
+      "pellet_afood",
+      "rice",
+      "salt",
+      "silica",
+      "sugar",
+      "tableware",
+      "toys",
+      "tvs",
+      "vegetable"
+    ],
+    "cargoes_out": [
+      "beverages",
+      "bottles",
+      "butter",
+      "carcomp",
+      "cheese",
+      "clothes",
+      "ctubes",
+      "ctubes_b",
+      "dry_fruit",
+      "dry_milk",
+      "electro_comp",
+      "emptytank",
+      "flour",
+      "food",
+      "forklifts",
+      "frozen_food",
+      "frozen_fruit",
+      "frozen_veget",
+      "fruit_juic_t",
+      "furniture",
+      "grain",
+      "hipresstank",
+      "home_acc",
+      "househd_appl",
+      "icecream",
+      "largetubes",
+      "lumber",
+      "lumber_b",
+      "machine_pts",
+      "milk",
+      "milk_t",
+      "nuts",
+      "office_suppl",
+      "pellet_afood",
+      "potassium",
+      "rice",
+      "salt",
+      "sawpanels",
+      "sugar",
+      "tableware",
+      "toys",
+      "tvs",
+      "wshavings",
+      "yogurt"
+    ]
+  },
+  "re_train": {
+    "cities": [
+      "kennewick",
+      "seattle",
+      "spokane",
+      "yakima"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sc_frm": {
+    "cities": [
+      "colville",
+      "kennewick",
+      "omak",
+      "yakima"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sc_frm_grg": {
+    "cities": [
+      "colville"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sg_whs": {
+    "cities": [
+      "bellingham",
+      "colville",
+      "everett",
+      "olympia",
+      "wenatchee"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sh_shp_mar": {
+    "cities": [
+      "aberdeen_wa",
+      "colville",
+      "olympia",
+      "port_angeles"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sh_shp_plnt": {
+    "cities": [
+      "bellingham",
+      "everett"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "st_met_whs": {
+    "cities": [
+      "olympia",
+      "spokane",
+      "vancouver"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "st_met_wrk": {
+    "cities": [
+      "vancouver"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "tid_mkt": {
+    "cities": [
+      "grand_coulee",
+      "port_angeles",
+      "vancouver",
+      "wenatchee"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "vm_car_dlr": {
+    "cities": [
+      "port_angeles",
+      "spokane"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "vm_car_whs": {
+    "cities": [
+      "port_angeles"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_mkt": {
+    "cities": [
+      "spokane"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_whs": {
+    "cities": [
+      "olympia"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_mkt": {
+    "cities": [
+      "bellingham",
+      "everett",
+      "kennewick",
+      "olympia",
+      "seattle",
+      "yakima"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_whs": {
+    "cities": [
+      "kennewick",
+      "tacoma",
+      "wenatchee"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  }
+}

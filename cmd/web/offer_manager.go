@@ -13,14 +13,17 @@ import (
 	"xorm.io/builder"
 )
 
-var currentOffers map[string][]savefile.ApplicableOffer // key is SourceCompany
-var totalOffersForSync int
+var currentOffers = map[dlc_mapper.Game]map[string][]savefile.ApplicableOffer{dlc_mapper.ETS: nil, dlc_mapper.ATS: nil} // key is SourceCompany
+var totalOffersForSync = map[dlc_mapper.Game]int{dlc_mapper.ETS: 0, dlc_mapper.ATS: 0}
 var lastUpdatedSync time.Time
 
 var offersInDb = make([]string, 0)
 var jobToProcessMutex sync.Mutex
 var createNewJobsMutex sync.Mutex
-var jobsToProcess = make([]savefile.ApplicableOffer, 0)
+var jobsToProcess = map[dlc_mapper.Game][]savefile.ApplicableOffer{
+	dlc_mapper.ETS: make([]savefile.ApplicableOffer, 0),
+	dlc_mapper.ATS: make([]savefile.ApplicableOffer, 0),
+}
 var jobManagerInitialized bool
 
 func initOfferManager() error {
@@ -30,70 +33,72 @@ func initOfferManager() error {
 
 	go func() {
 		for {
-			jobToProcessMutex.Lock()
+			for _, game := range dlc_mapper.AllGames {
+				jobToProcessMutex.Lock()
 
-			dbOffers := make([]dbOffer, 0)
-			var ids []string
-			for _, offer := range jobsToProcess {
-				if internal.Contains(ids, offer.Id) {
-					continue
-				}
-				ids = append(ids, offer.Id)
-				dbOffer := dbOffer{}
-				_, _ = internal.MapToObject(offer, &dbOffer)
-
-				dbOffers = append(dbOffers, dbOffer)
-			}
-
-			jobsToProcess = make([]savefile.ApplicableOffer, 0)
-			jobToProcessMutex.Unlock()
-
-			batchSize := 100
-			lenJobs := len(dbOffers)
-
-			context := GetDb()
-
-			for i := 0; i < lenJobs; i += batchSize {
-				j := i + batchSize
-
-				if j > lenJobs {
-					j = lenJobs
-				}
-
-				currentOffers := dbOffers[i:j]
-				ids := make([]string, 0)
-
-				for _, offer := range currentOffers {
-					ids = append(ids, offer.Id)
-				}
-
-				createNewJobsMutex.Lock()
-				realOffersInDb := make([]dbOffer, 0)
-
-				_ = context.Where(builder.In("id", ids)).
-					Find(&realOffersInDb)
-
-				for _, dbOffer := range realOffersInDb { // ideally it should never happen
-					for _, offer := range currentOffers {
-						if offer.Id == dbOffer.Id {
-							offer.Id = "" // we need to skip that shit
-						}
-					}
-				}
-
-				for _, offer := range currentOffers {
-					if len(offer.Id) == 0 {
+				dbOffers := make([]dbOffer, 0)
+				var ids []string
+				for _, offer := range jobsToProcess[game] {
+					if internal.Contains(ids, offer.Id) {
 						continue
 					}
+					ids = append(ids, offer.Id)
+					dbOffer := dbOffer{}
+					_, _ = internal.MapToObject(offer, &dbOffer)
 
-					if _, er := context.Insert(offer); er != nil {
-						fmt.Println("shit") // todo log error
-					} else {
-						offersInDb = append(offersInDb, offer.Id)
-					}
+					dbOffers = append(dbOffers, dbOffer)
 				}
 
-				createNewJobsMutex.Unlock()
+				jobsToProcess[game] = make([]savefile.ApplicableOffer, 0)
+				jobToProcessMutex.Unlock()
+
+				batchSize := 100
+				lenJobs := len(dbOffers)
+
+				context := GetDb()
+
+				for i := 0; i < lenJobs; i += batchSize {
+					j := i + batchSize
+
+					if j > lenJobs {
+						j = lenJobs
+					}
+
+					currentOffers := dbOffers[i:j]
+					ids := make([]string, 0)
+
+					for _, offer := range currentOffers {
+						ids = append(ids, offer.Id)
+					}
+
+					createNewJobsMutex.Lock()
+					realOffersInDb := make([]dbOffer, 0)
+
+					_ = context.Where(builder.In("id", ids)).
+						Find(&realOffersInDb)
+
+					for _, dbOffer := range realOffersInDb { // ideally it should never happen
+						for _, offer := range currentOffers {
+							if offer.Id == dbOffer.Id {
+								offer.Id = "" // we need to skip that shit
+							}
+						}
+					}
+
+					for _, offer := range currentOffers {
+						if len(offer.Id) == 0 {
+							continue
+						}
+
+						if _, er := context.Insert(offer); er != nil {
+							fmt.Println("shit") // todo log error
+						} else {
+							offersInDb = append(offersInDb, offer.Id)
+						}
+					}
+
+					createNewJobsMutex.Unlock()
+				}
 			}
 
 			time.Sleep(3 * time.Second) // todo config
@@ -112,99 +117,103 @@ func initOfferManager() error {
 
 func updateList() error {
 	context := GetDb()
+	currentOffers[dlc_mapper.ETS] = make(map[string][]savefile.ApplicableOffer)
+	currentOffers[dlc_mapper.ATS] = make(map[string][]savefile.ApplicableOffer)
 
-	currentOffersArr := make([]*dbOffer, 0)
+	for _, game := range dlc_mapper.AllGames {
 
-	if err := context.OrderBy("required_dlc asc").Find(&currentOffersArr); err != nil {
-		return err
-	}
+		currentOffersArr := make([]*dbOffer, 0)
 
-	currentOffers = make(map[string][]savefile.ApplicableOffer)
-	tempOffers := make(map[string][]*dbOffer)
-	totalOffersForSync = 0
-	lastUpdatedSync = time.Now().UTC()
-	maxNonDlcJobs := 5
-	maxCargoThreshold := 20
-	segment3 := 0
-	segment4 := 0
-
-	for _, offer := range currentOffersArr {
-		val, ok := tempOffers[offer.SourceCompany]
-		offersInDb = append(offersInDb, offer.Id)
-
-		if !ok {
-			val = make([]*dbOffer, 0)
+		if err := context.Where("game = ?", game).OrderBy("required_dlc asc").Find(&currentOffersArr); err != nil {
+			return err
 		}
 
-		tempOffers[offer.SourceCompany] = append(val, offer)
-	}
+		tempOffers := make(map[string][]*dbOffer)
+		totalOffersForSync[game] = 0
+		lastUpdatedSync = time.Now().UTC()
+		maxNonDlcJobs := 5
+		maxCargoThreshold := 20
+		segment3 := 0
+		segment4 := 0
 
-	for key, offers := range tempOffers {
+		for _, offer := range currentOffersArr {
+			val, ok := tempOffers[offer.SourceCompany]
+			offersInDb = append(offersInDb, offer.Id)
 
-		rand.Shuffle(len(offers), func(i, j int) {
-			offers[i], offers[j] = offers[j], offers[i]
-		})
-
-		finalOffers := make([]*dbOffer, 0)
-
-		for _, offer := range offers {
-			if maxNonDlcJobs <= len(finalOffers) {
-				break
+			if !ok {
+				val = make([]*dbOffer, 0)
 			}
 
-			if offer.RequiredDlc == dlc_mapper.BaseGame {
+			tempOffers[offer.SourceCompany] = append(val, offer)
+		}
+
+		for key, offers := range tempOffers {
+
+			rand.Shuffle(len(offers), func(i, j int) {
+				offers[i], offers[j] = offers[j], offers[i]
+			})
+
+			finalOffers := make([]*dbOffer, 0)
+
+			for _, offer := range offers {
+				if maxNonDlcJobs <= len(finalOffers) {
+					break
+				}
+
+				if offer.RequiredDlc == dlc_mapper.BaseGame {
+					finalOffers = append(finalOffers, offer)
+				}
+			}
+
+			for _, offer := range offers {
+				if offer.RequiredDlc == dlc_mapper.BaseGame {
+					continue
+				}
+
+				if maxCargoThreshold <= len(finalOffers) {
+					break
+				}
+
 				finalOffers = append(finalOffers, offer)
 			}
-		}
 
-		for _, offer := range offers {
-			if offer.RequiredDlc == dlc_mapper.BaseGame {
-				continue
+			result := make([]savefile.ApplicableOffer, 0)
+
+			for _, offer := range finalOffers {
+				newOffer := savefile.ApplicableOffer{}
+				_, _ = internal.MapToObject(offer, &newOffer)
+
+				newOffer.Id = fmt.Sprintf("_nameless.19a.%04d.%04d", segment3, segment4)
+
+				result = append(result, newOffer)
+				segment4++
+
+				if segment4 == 9999 {
+					segment4 = 0
+					segment3++
+				}
 			}
 
-			if maxCargoThreshold <= len(finalOffers) {
-				break
-			}
+			totalOffersForSync[game] += len(finalOffers)
 
-			finalOffers = append(finalOffers, offer)
+			currentOffers[game][key] = result
 		}
-
-		result := make([]savefile.ApplicableOffer, 0)
-
-		for _, offer := range finalOffers {
-			newOffer := savefile.ApplicableOffer{}
-			_, _ = internal.MapToObject(offer, &newOffer)
-
-			newOffer.Id = fmt.Sprintf("_nameless.19a.%04d.%04d", segment3, segment4)
-
-			result = append(result, newOffer)
-			segment4++
-
-			if segment4 == 9999 {
-				segment4 = 0
-				segment3++
-			}
-		}
-
-		totalOffersForSync += len(finalOffers)
-
-		currentOffers[key] = result
 	}
 
 	return nil
 }
 
-func PopulateOffers(file *savefile.SaveFile, supportedDlc dlc_mapper.Dlc) {
-	for _, offer := range getOffers(supportedDlc, file.AvailableCompanies) {
+func PopulateOffers(file *savefile.SaveFile, game dlc_mapper.Game, supportedDlc dlc_mapper.Dlc) {
+	for _, offer := range getOffers(game, supportedDlc, file.AvailableCompanies) {
 		if err := file.AddOffer(offer); err != nil {
 			fmt.Println(err) // todo
 		}
 	}
 }
 
-func getOffers(supportedDlc dlc_mapper.Dlc, availableSources []string) []savefile.ApplicableOffer {
+func getOffers(game dlc_mapper.Game, supportedDlc dlc_mapper.Dlc, availableSources []string) []savefile.ApplicableOffer {
 	offersToAdd := make([]savefile.ApplicableOffer, 0)
-	for sourceCompany, offers := range currentOffers {
+	for sourceCompany, offers := range currentOffers[game] {
 		if !internal.Contains(availableSources, sourceCompany) {
 			continue
 		}
@@ -219,7 +228,7 @@ func getOffers(supportedDlc dlc_mapper.Dlc, availableSources []string) []savefil
 	return offersToAdd
 }
 
-func FillDbWithJobs(offers []savefile.ApplicableOffer) {
+func FillDbWithJobs(offers []savefile.ApplicableOffer, game dlc_mapper.Game) {
 	if offers == nil || len(offers) == 0 {
 		return
 	}
@@ -227,7 +236,8 @@ func FillDbWithJobs(offers []savefile.ApplicableOffer) {
 	go func() {
 		for _, offer := range offers {
 			offer.RequiredDlc = dlc_mapper.GetRequiredDlc(offer.SourceCompany, offer.Target,
-				offer.Cargo, offer.TrailerDefinition, offer.TrailerVariant)
+				offer.Cargo, offer.TrailerDefinition, offer.TrailerVariant, game)
+			offer.Game = game
 
 			if offer.RequiredDlc == dlc_mapper.None {
 				continue // skip unverified offers
@@ -247,7 +257,7 @@ func FillDbWithJobs(offers []savefile.ApplicableOffer) {
 
 			shouldAdd := true
 
-			for _, j := range jobsToProcess {
+			for _, j := range jobsToProcess[game] {
 				if j.Id == offer.Id {
 					shouldAdd = false
 					break
@@ -259,7 +269,7 @@ func FillDbWithJobs(offers []savefile.ApplicableOffer) {
 				continue
 			}
 
-			jobsToProcess = append(jobsToProcess, offer)
+			jobsToProcess[game] = append(jobsToProcess[game], offer)
 			jobToProcessMutex.Unlock()
 		}
 	}()

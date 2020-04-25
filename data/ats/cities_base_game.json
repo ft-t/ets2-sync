@@ -1,0 +1,68 @@
+{
+  "city.bakersfield": {
+    "country": "california"
+  },
+  "city.barstow": {
+    "country": "california"
+  },
+  "city.carlsbad": {
+    "country": "california"
+  },
+  "city.el_centro": {
+    "country": "california"
+  },
+  "city.eureka": {
+    "country": "california"
+  },
+  "city.fresno": {
+    "country": "california"
+  },
+  "city.hornbrook": {
+    "country": "california"
+  },
+  "city.huron": {
+    "country": "california"
+  },
+  "city.los_angeles": {
+    "country": "california"
+  },
+  "city.oakdale": {
+    "country": "california"
+  },
+  "city.oakland": {
+    "country": "california"
+  },
+  "city.oxnard": {
+    "country": "california"
+  },
+  "city.redding": {
+    "country": "california"
+  },
+  "city.sacramento": {
+    "country": "california"
+  },
+  "city.san_diego": {
+    "country": "california"
+  },
+  "city.san_francisc": {
+    "country": "california"
+  },
+  "city.san_rafael": {
+    "country": "california"
+  },
+  "city.santa_cruz": {
+    "country": "california"
+  },
+  "city.santa_maria": {
+    "country": "california"
+  },
+  "city.stockton": {
+    "country": "california"
+  },
+  "city.truckee": {
+    "country": "california"
+  },
+  "city.ukiah": {
+    "country": "california"
+  }
+}

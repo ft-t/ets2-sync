@@ -1,0 +1,44 @@
+{
+  "variants": [
+    "trailer.kb_loader",
+    "trailer.mag_55l_t3.forwarder",
+    "trailer.mag_55l_t3_t.forwarder",
+    "trailer.mag_55l_t3.harvester",
+    "trailer.mag_55l_t3_t.harvester",
+    "trailer.mag_55l_t2s.log_loader",
+    "trailer.mag_55_t2s_t.log_loader",
+    "trailer.mag_55_s2.log_loader",
+    "trailer.mag_55l_t2s.log_stacker",
+    "trailer.mag_55_t2s_t.log_stacker",
+    "trailer.mag_55_s2.log_stacker",
+    "trailer.mag_55l_t3.mulcher",
+    "trailer.mag_55l_t3.stumper",
+    "trailer.tub_grinder"
+  ],
+  "definitions": {
+    "trailer_def.forwarder.mag_55l_t3.forwarder": {
+      "countries": []
+    },
+    "trailer_def.kb_loader.kb_loader": {
+      "countries": []
+    },
+    "trailer_def.log_harvest.mag_55l_t3.harvester": {
+      "countries": []
+    },
+    "trailer_def.log_loader.mag_55l_t2s.log_loader": {
+      "countries": []
+    },
+    "trailer_def.log_stacker.mag_55l_t2s.log_stacker": {
+      "countries": []
+    },
+    "trailer_def.mulcher.mag_55l_t3.mulcher": {
+      "countries": []
+    },
+    "trailer_def.stumper.mag_55l_t3.stumper": {
+      "countries": []
+    },
+    "trailer_def.tub_grinder.tub_grinder": {
+      "countries": []
+    }
+  }
+}

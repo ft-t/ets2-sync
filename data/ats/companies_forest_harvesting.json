@@ -1,0 +1,127 @@
+{
+  "aport_pcc": {
+    "cities": [],
+    "cargoes_in": [
+      "log_loader",
+      "log_stacker"
+    ],
+    "cargoes_out": [
+      "log_loader",
+      "log_stacker"
+    ]
+  },
+  "dg_wd_hrv": {
+    "cities": [],
+    "cargoes_in": [
+      "forwarder",
+      "kb_loader",
+      "log_harvest",
+      "log_loader",
+      "log_stacker",
+      "mulcher",
+      "stumper",
+      "tub_grinder"
+    ],
+    "cargoes_out": [
+      "forwarder",
+      "kb_loader",
+      "log_harvest",
+      "log_loader",
+      "log_stacker",
+      "mulcher",
+      "stumper",
+      "tub_grinder"
+    ]
+  },
+  "hms_con_svc": {
+    "cities": [],
+    "cargoes_in": [
+      "forwarder",
+      "kb_loader",
+      "log_harvest",
+      "log_loader",
+      "log_stacker",
+      "mulcher",
+      "stumper",
+      "tub_grinder"
+    ],
+    "cargoes_out": [
+      "forwarder",
+      "kb_loader",
+      "log_harvest",
+      "log_loader",
+      "log_stacker",
+      "mulcher",
+      "stumper",
+      "tub_grinder"
+    ]
+  },
+  "oak_port": {
+    "cities": [],
+    "cargoes_in": [
+      "log_loader",
+      "log_stacker"
+    ],
+    "cargoes_out": [
+      "log_loader",
+      "log_stacker"
+    ]
+  },
+  "port_sea": {
+    "cities": [],
+    "cargoes_in": [
+      "forwarder",
+      "kb_loader",
+      "log_harvest",
+      "log_loader",
+      "log_stacker",
+      "mulcher",
+      "stumper",
+      "tub_grinder"
+    ],
+    "cargoes_out": [
+      "forwarder",
+      "kb_loader",
+      "log_harvest",
+      "log_loader",
+      "log_stacker",
+      "mulcher",
+      "stumper",
+      "tub_grinder"
+    ]
+  },
+  "port_tac": {
+    "cities": [],
+    "cargoes_in": [
+      "log_loader",
+      "log_stacker"
+    ],
+    "cargoes_out": [
+      "log_loader",
+      "log_stacker"
+    ]
+  },
+  "re_train": {
+    "cities": [],
+    "cargoes_in": [
+      "forwarder",
+      "kb_loader",
+      "log_harvest",
+      "log_loader",
+      "log_stacker",
+      "mulcher",
+      "stumper",
+      "tub_grinder"
+    ],
+    "cargoes_out": [
+      "forwarder",
+      "kb_loader",
+      "log_harvest",
+      "log_loader",
+      "log_stacker",
+      "mulcher",
+      "stumper",
+      "tub_grinder"
+    ]
+  }
+}

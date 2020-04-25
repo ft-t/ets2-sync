@@ -1,0 +1,1481 @@
+{
+  "variants": [
+    "trailer.acid",
+    "trailer.acid_l",
+    "trailer.bottom_dump",
+    "trailer.bdump_pup_2",
+    ".bdump_pup_2.dolly",
+    ".bdump_pup_2.second",
+    "trailer.bdump_rm_2",
+    ".bdump_rm_2.dolly",
+    ".bdump_rm_2.second",
+    "trailer.bottom_dumps",
+    "trailer.car_b",
+    "trailer.car_pickup.cargo_f150",
+    "trailer.car_r.cargo_magnum",
+    "trailer.car_r.cargo_mustng",
+    "trailer.car_r.cargo_tesla",
+    "trailer.car_pickup",
+    "trailer.car_r",
+    "trailer.cement",
+    "trailer.chemical",
+    "trailer.chemical_l",
+    "trailer.drybulk",
+    "trailer.drybulk_long",
+    ".drybulk_long.convertor",
+    ".drybulk_long.second",
+    "trailer.drybulk_rm2",
+    ".drybulk_rm2.dolly",
+    ".drybulk_rm2.second",
+    "trailer.drybulk2",
+    ".drybulk2.dolly",
+    ".drybulk2.second",
+    "trailer.dump_b",
+    "trailer.dump_b.cargo_cover",
+    "trailer.dump_b.cargo_gravel",
+    "trailer.dump_g.cargo_lime",
+    "trailer.dump_b.cargo_sand",
+    "trailer.dump_g.cargo_wshavs",
+    "trailer.dump_g",
+    ".fallback.trailer",
+    ".fallback.trailer.slave",
+    "trailer.food_tank",
+    "trailer.frac_tank_b",
+    "trailer.frac_tank_g",
+    "trailer.frac_tank_r",
+    "trailer.frac_tank_y",
+    "trailer.fuel",
+    "trailer.fuel_l",
+    "trailer.gas",
+    "trailer.gas_l",
+    "trailer.lowboy_boat.cargo_boat",
+    "trailer.lowboy_y.cargo_breel",
+    "trailer.lowboy_y.cargo_bull",
+    "trailer.lowboy_y.cargo_cat938",
+    "trailer.lowboy_y.cargo_dig500",
+    "trailer.lowboy_r.cargo_excv",
+    "trailer.lowboy_r.cargo_forklf",
+    "trailer.lowboy_r.cargo_roller",
+    "trailer.lowboy_r.cargo_tract",
+    "trailer.mag_55l_t3.potato",
+    "trailer.lowboy_r",
+    "trailer.lowboy_y",
+    "trailer.mag_55l_t3.c_harvester",
+    "trailer.mbt",
+    "trailer.scs_bulfed45",
+    "trailer.scs_chipvan3",
+    "trailer.scs_curt28",
+    "trailer.scs_curt45f",
+    "trailer.scs_curt45r",
+    "trailer.scs_curt45s",
+    "trailer.scs_curt53_3",
+    "trailer.scs_curt53_4",
+    "trailer.scs_curt53f",
+    "trailer.scs_curt53s",
+    "trailer.scs_curt_2",
+    ".scs_curt_2.dolly",
+    ".scs_curt_2.second",
+    "trailer.scs_curt_rm2",
+    ".scs_curt_rm2.dolly",
+    ".scs_curt_rm2.second",
+    "trailer.scs_curt_3",
+    ".scs_curt_3.dolly",
+    ".scs_curt_3.second",
+    ".scs_curt_3.dolly2",
+    ".scs_curt_3.third",
+    "trailer.scs_dry28",
+    "trailer.scs_dry45f",
+    "trailer.scs_dry45r",
+    "trailer.scs_dry53_3a",
+    "trailer.scs_dry53f",
+    "trailer.scs_dry2",
+    ".scs_dry2.dolly",
+    ".scs_dry2.second",
+    "trailer.scs_dry_rm",
+    ".scs_dry_rm.dolly",
+    ".scs_dry_rm.second",
+    "trailer.scs_dry3",
+    ".scs_dry3.dolly",
+    ".scs_dry3.second",
+    ".scs_dry3.dolly2",
+    ".scs_dry3.third",
+    "trailer.scs_flat28",
+    "trailer.scs_flat45f",
+    "trailer.scs_flat45r",
+    "trailer.scs_flat45s",
+    "trailer.scs_flat53_3",
+    "trailer.scs_flat53_4",
+    "trailer.scs_flat53f",
+    "trailer.scs_flat53s",
+    "trailer.scs_flat_2",
+    ".scs_flat_2.dolly",
+    ".scs_flat_2.second",
+    "trailer.scs_flat_rm2",
+    ".scs_flat_rm2.dolly",
+    ".scs_flat_rm2.second",
+    "trailer.scs_flat_3",
+    ".scs_flat_3.dolly",
+    ".scs_flat_3.second",
+    ".scs_flat_3.dolly2",
+    ".scs_flat_3.third",
+    "trailer.scs_fodt40",
+    "trailer.scs_gosck32",
+    "trailer.scs_gosck40",
+    "trailer.scs_grainh40",
+    "trailer.scs_grainhrm",
+    ".scs_grainhdl",
+    ".scs_grainhsc",
+    "trailer.scs_ins28",
+    "trailer.scs_ins45f",
+    "trailer.scs_ins45r",
+    "trailer.scs_ins53_3a",
+    "trailer.scs_ins53f",
+    "trailer.scs_ins2",
+    ".scs_ins2.dolly",
+    ".scs_ins2.second",
+    "trailer.scs_ins_rm",
+    ".scs_ins_rm.dolly",
+    ".scs_ins_rm.second",
+    "trailer.scs_ins3",
+    ".scs_ins3.dolly",
+    ".scs_ins3.second",
+    ".scs_ins3.dolly2",
+    ".scs_ins3.third",
+    "trailer.scs_log",
+    "trailer.scs_ref28",
+    "trailer.scs_ref45f",
+    "trailer.scs_ref45r",
+    "trailer.scs_ref53_3a",
+    "trailer.scs_ref53f",
+    "trailer.scs_ref2",
+    ".scs_ref2.dolly",
+    ".scs_ref2.second",
+    "trailer.scs_ref_rm",
+    ".scs_ref_rm.dolly",
+    ".scs_ref_rm.second",
+    "trailer.scs_ref3",
+    ".scs_ref3.dolly",
+    ".scs_ref3.second",
+    ".scs_ref3.dolly2",
+    ".scs_ref3.third",
+    "trailer.trans_k_t680.black",
+    ".trans_k_t680.black.second",
+    ".trans_k_t680.black.third",
+    "trailer.trans_k_t680.blue",
+    ".trans_k_t680.blue.second",
+    ".trans_k_t680.blue.third",
+    "trailer.trans_k_t680.red",
+    ".trans_k_t680.red.second",
+    ".trans_k_t680.red.third",
+    "trailer.trans_k_t680.white",
+    ".trans_k_t680.white.second",
+    ".trans_k_t680.white.third",
+    "trailer.trans_k_t680.yellow",
+    ".trans_k_t680.yellow.second",
+    ".trans_k_t680.yellow.third"
+  ],
+  "definitions": {
+    "trailer_def.aromatics.fuel": {
+      "countries": []
+    },
+    "trailer_def.aromatics.fuel_l": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.boat.lowboy_boat.cargo_boat": {
+      "countries": []
+    },
+    "trailer_def.bulldozer.lowboy_y.cargo_bull": {
+      "countries": []
+    },
+    "trailer_def.cable.lowboy_y.cargo_breel": {
+      "countries": []
+    },
+    "trailer_def.cars_big.car_r.cargo_magnum": {
+      "countries": []
+    },
+    "trailer_def.cars_mix.car_r.cargo_mustng": {
+      "countries": []
+    },
+    "trailer_def.cars_pickup.car_pickup.cargo_f150": {
+      "countries": []
+    },
+    "trailer_def.cars_small.car_r.cargo_tesla": {
+      "countries": []
+    },
+    "trailer_def.cement.cement": {
+      "countries": []
+    },
+    "trailer_def.cement.drybulk": {
+      "countries": []
+    },
+    "trailer_def.cement.drybulk2": {
+      "countries": []
+    },
+    "trailer_def.cement.drybulk_rm2": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.crude_oil.fuel": {
+      "countries": []
+    },
+    "trailer_def.crude_oil.fuel_l": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.diesel.fuel": {
+      "countries": []
+    },
+    "trailer_def.diesel.fuel_l": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.digger1000.lowboy_y.cargo_cat938": {
+      "countries": []
+    },
+    "trailer_def.digger500.lowboy_y.cargo_dig500": {
+      "countries": []
+    },
+    "trailer_def.ethane.gas": {
+      "countries": []
+    },
+    "trailer_def.ethane.gas_l": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.excavator.lowboy_r.cargo_excv": {
+      "countries": []
+    },
+    "trailer_def.forklifts.lowboy_r.cargo_forklf": {
+      "countries": []
+    },
+    "trailer_def.frac_tank.frac_tank_b": {
+      "countries": []
+    },
+    "trailer_def.frac_tank.frac_tank_g": {
+      "countries": []
+    },
+    "trailer_def.frac_tank.frac_tank_r": {
+      "countries": []
+    },
+    "trailer_def.frac_tank.frac_tank_y": {
+      "countries": []
+    },
+    "trailer_def.gravel.bdump_pup_2": {
+      "countries": []
+    },
+    "trailer_def.gravel.bdump_rm_2": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.gravel.bottom_dump": {
+      "countries": []
+    },
+    "trailer_def.gravel.dump_b.cargo_gravel": {
+      "countries": []
+    },
+    "trailer_def.harvester.mag_55l_t3.c_harvester": {
+      "countries": []
+    },
+    "trailer_def.hydrochlor.acid": {
+      "countries": []
+    },
+    "trailer_def.hydrochlor.acid_l": {
+      "countries": []
+    },
+    "trailer_def.kw_t680.trans_k_t680.black": {
+      "countries": []
+    },
+    "trailer_def.kw_t680.trans_k_t680.blue": {
+      "countries": []
+    },
+    "trailer_def.kw_t680.trans_k_t680.red": {
+      "countries": []
+    },
+    "trailer_def.kw_t680.trans_k_t680.white": {
+      "countries": []
+    },
+    "trailer_def.kw_t680.trans_k_t680.yellow": {
+      "countries": []
+    },
+    "trailer_def.limestone.bdump_pup_2": {
+      "countries": []
+    },
+    "trailer_def.limestone.bdump_rm_2": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.limestone.bottom_dump": {
+      "countries": []
+    },
+    "trailer_def.limestone.dump_g.cargo_lime": {
+      "countries": []
+    },
+    "trailer_def.lye.acid": {
+      "countries": []
+    },
+    "trailer_def.lye.acid_l": {
+      "countries": []
+    },
+    "trailer_def.mbt.mbt": {
+      "countries": []
+    },
+    "trailer_def.mercuric.chemical": {
+      "countries": []
+    },
+    "trailer_def.mercuric.chemical_l": {
+      "countries": []
+    },
+    "trailer_def.pesticide.chemical": {
+      "countries": []
+    },
+    "trailer_def.pesticide.chemical_l": {
+      "countries": []
+    },
+    "trailer_def.petrol.fuel": {
+      "countries": []
+    },
+    "trailer_def.petrol.fuel_l": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.propane.gas": {
+      "countries": []
+    },
+    "trailer_def.propane.gas_l": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.roadroller.lowboy_r.cargo_roller": {
+      "countries": []
+    },
+    "trailer_def.sand.bdump_pup_2": {
+      "countries": []
+    },
+    "trailer_def.sand.bdump_rm_2": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.sand.bottom_dump": {
+      "countries": []
+    },
+    "trailer_def.sand.dump_b.cargo_cover": {
+      "countries": []
+    },
+    "trailer_def.scrap_metals.dump_b.cargo_cover": {
+      "countries": []
+    },
+    "trailer_def.scs.box.bdouble_2_2.dryvan": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.bdouble_2_2.insulated": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.bdouble_2_2.reefer": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.bdouble_3_2.dryvan": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.bdouble_3_2.insulated": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.bdouble_3_2.reefer": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.double_p.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.double_p.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.double_p.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.rm_double_p.dryvan": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.rm_double_p.insulated": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.rm_double_p.reefer": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.single_28.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_28.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_28.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_32.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_32.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_32.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_32_2.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_32_2.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_32_2.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_45f.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_45f.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_45f.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_45r.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_45r.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_45r.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_45sp.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_45sp.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_45sp.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_48f.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_48f.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_48f.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_48r.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_48r.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_48r.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_48sp.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_48sp.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_48sp.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53_3.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53_3.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53_3.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53_4.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53_4.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53_4.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53_4s.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53_4s.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53_4s.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53f.dryvan": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53f.insulated": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53f.reefer": {
+      "countries": []
+    },
+    "trailer_def.scs.box.single_53r.dryvan": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.single_53r.insulated": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.single_53r.reefer": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.box.tp_double_1.dryvan": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.box.tp_double_1.insulated": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.box.tp_double_1.reefer": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.box.tp_double_2.dryvan": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.box.tp_double_2.insulated": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.box.tp_double_2.reefer": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.box.triple_p.dryvan": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.box.triple_p.insulated": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.box.triple_p.reefer": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.bulkfeed.single_45_3.bulkfeed": {
+      "countries": []
+    },
+    "trailer_def.scs.bulkfeed.single_45_3a.bulkfeed": {
+      "countries": []
+    },
+    "trailer_def.scs.bulkfeed.single_45_3s.bulkfeed": {
+      "countries": []
+    },
+    "trailer_def.scs.bulkfeed.single_45r.bulkfeed": {
+      "countries": []
+    },
+    "trailer_def.scs.bulkfeed.single_45sp.bulkfeed": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48_3.bellyvan": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48_3.mfloor": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48_3.van": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48f.bellyvan": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48f.mfloor": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48f.van": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48r.bellyvan": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48r.mfloor": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48r.van": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48sp.bellyvan": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48sp.mfloor": {
+      "countries": []
+    },
+    "trailer_def.scs.chipvan.single_48sp.van": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.bdouble_2_2.curtain": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.bdouble_2_2.flatbed": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.bdouble_2_2.flatbed_a": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.bdouble_3_2.curtain": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.bdouble_3_2.flatbed": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.bdouble_3_2.flatbed_a": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.double.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.double.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.double.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.double_p.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.double_p.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.double_p.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.rm_double.curtain": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.rm_double.flatbed": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.rm_double.flatbed_a": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.rm_double_p.curtain": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.rm_double_p.flatbed": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.rm_double_p.flatbed_a": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.single_28.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_28.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_28.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_32.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_32.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_32.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_32_2.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_32_2.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_32_2.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45_3.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45_3.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45_3.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45f.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45f.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45f.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45r.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45r.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45r.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45sp.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45sp.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_45sp.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48_3.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48_3.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48_3.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48f.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48f.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48f.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48r.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48r.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48r.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48sp.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48sp.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_48sp.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53_3.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53_3.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53_3.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53_4.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53_4.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53_4.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53_4a.curtain": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.single_53_4a.flatbed": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.single_53_4a.flatbed_a": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.single_53_4s.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53_4s.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53_4s.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53f.curtain": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53f.flatbed": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53f.flatbed_a": {
+      "countries": []
+    },
+    "trailer_def.scs.flatbed.single_53r.curtain": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.single_53r.flatbed": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.single_53r.flatbed_a": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.single_53sp.curtain": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.single_53sp.flatbed": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.single_53sp.flatbed_a": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.flatbed.tp_double_1.curtain": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.tp_double_1.flatbed": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.tp_double_1.flatbed_a": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.tp_double_2.curtain": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.tp_double_2.flatbed": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.tp_double_2.flatbed_a": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.triple.curtain": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.triple.flatbed": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.triple.flatbed_a": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.triple_p.curtain": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.triple_p.flatbed": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.flatbed.triple_p.flatbed_a": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.foodtank.double.foodtank": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.double_p.foodtank": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.rm_double.foodtank": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.foodtank.rm_double_p.foodtank": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.foodtank.single_28.foodtank": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.single_43r.foodtank": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.single_48_3.foodtank": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.single_48sp.foodtank": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.single_53_4.foodtank": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.single_53_4s.foodtank": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.tp_double_1.foodtank": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.foodtank.tp_double_2.foodtank": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.foodtank.triple.foodtank": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.foodtank.triple_p.foodtank": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.gooseneck.bdouble_3_2.container": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.gooseneck.bdouble_3_3.container": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.gooseneck.rmdouble.container": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.gooseneck.single_32.container": {
+      "countries": []
+    },
+    "trailer_def.scs.gooseneck.single_32_3.container": {
+      "countries": []
+    },
+    "trailer_def.scs.gooseneck.single_32e.container": {
+      "countries": []
+    },
+    "trailer_def.scs.gooseneck.single_40.container": {
+      "countries": []
+    },
+    "trailer_def.scs.gooseneck.single_40_3.container": {
+      "countries": []
+    },
+    "trailer_def.scs.gooseneck.single_40e.container": {
+      "countries": []
+    },
+    "trailer_def.scs.gooseneck.single_45.container": {
+      "countries": []
+    },
+    "trailer_def.scs.gooseneck.single_45_3.container": {
+      "countries": []
+    },
+    "trailer_def.scs.gooseneck.single_48sp.container": {
+      "countries": []
+    },
+    "trailer_def.scs.gooseneck.single_53_3.container": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.gooseneck.single_53_4.container": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.gooseneck.single_53f.container": {
+      "countries": []
+    },
+    "trailer_def.scs.gooseneck.single_53r.container": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.gooseneck.tp_double_1.container": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.gooseneck.tp_double_2.container": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.grainhopper.bdouble_3_2.grainhopper": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.grainhopper.double_p.grainhopper": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.double_p2.grainhopper": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.rm_double_p.grainhopper": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.scs.grainhopper.single_28.grainhopper": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_28_2.grainhopper": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_40r.belt": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_40r.grainhopper": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_50_3.belt": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_50_3.grainhopper": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_50_3a.belt": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_50_3a.grainhopper": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_50_3s.belt": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_50_3s.grainhopper": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_50sp.belt": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.single_50sp.grainhopper": {
+      "countries": []
+    },
+    "trailer_def.scs.grainhopper.tp_double_1.grainhopper": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.grainhopper.tp_double_2.grainhopper": {
+      "countries": [
+        "nevada",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.grainhopper.triple_p.grainhopper": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.scs.log.single_40_3.log_4": {
+      "countries": []
+    },
+    "trailer_def.scs.log.single_40_3.log_6": {
+      "countries": []
+    },
+    "trailer_def.scs.log.single_40r.log_4": {
+      "countries": []
+    },
+    "trailer_def.scs.log.single_40r.log_6": {
+      "countries": []
+    },
+    "trailer_def.scs.log.single_40sp.log_4": {
+      "countries": []
+    },
+    "trailer_def.scs.log.single_40sp.log_6": {
+      "countries": []
+    },
+    "trailer_def.soil.bdump_pup_2": {
+      "countries": []
+    },
+    "trailer_def.soil.bdump_rm_2": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.soil.bottom_dump": {
+      "countries": []
+    },
+    "trailer_def.soil.dump_b.cargo_gravel": {
+      "countries": []
+    },
+    "trailer_def.solvents.fuel": {
+      "countries": []
+    },
+    "trailer_def.solvents.fuel_l": {
+      "countries": [
+        "arizona",
+        "nevada",
+        "new_mexico",
+        "oregon",
+        "utah",
+        "washington"
+      ]
+    },
+    "trailer_def.stones.bdump_pup_2": {
+      "countries": []
+    },
+    "trailer_def.stones.bdump_rm_2": {
+      "countries": [
+        "nevada",
+        "oregon",
+        "utah"
+      ]
+    },
+    "trailer_def.stones.bottom_dump": {
+      "countries": []
+    },
+    "trailer_def.stones.dump_b.cargo_gravel": {
+      "countries": []
+    },
+    "trailer_def.sulfuric.acid": {
+      "countries": []
+    },
+    "trailer_def.sulfuric.acid_l": {
+      "countries": []
+    },
+    "trailer_def.tractors.lowboy_r.cargo_tract": {
+      "countries": []
+    }
+  }
+}

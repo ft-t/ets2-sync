@@ -1,0 +1,50 @@
+{
+  "city.aberdeen_wa": {
+    "country": "washington"
+  },
+  "city.bellingham": {
+    "country": "washington"
+  },
+  "city.colville": {
+    "country": "washington"
+  },
+  "city.everett": {
+    "country": "washington"
+  },
+  "city.grand_coulee": {
+    "country": "washington"
+  },
+  "city.kennewick": {
+    "country": "washington"
+  },
+  "city.longview": {
+    "country": "washington"
+  },
+  "city.olympia": {
+    "country": "washington"
+  },
+  "city.omak": {
+    "country": "washington"
+  },
+  "city.port_angeles": {
+    "country": "washington"
+  },
+  "city.seattle": {
+    "country": "washington"
+  },
+  "city.spokane": {
+    "country": "washington"
+  },
+  "city.tacoma": {
+    "country": "washington"
+  },
+  "city.vancouver": {
+    "country": "washington"
+  },
+  "city.wenatchee": {
+    "country": "washington"
+  },
+  "city.yakima": {
+    "country": "washington"
+  }
+}

@@ -1,0 +1,10 @@
+[
+  "cargo.forwarder",
+  "cargo.kb_loader",
+  "cargo.log_harvest",
+  "cargo.log_loader",
+  "cargo.log_stacker",
+  "cargo.mulcher",
+  "cargo.stumper",
+  "cargo.tub_grinder"
+]

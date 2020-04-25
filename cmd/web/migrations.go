@@ -15,4 +15,13 @@ var migrations = []*migrate.Migration{
 			return tx.DropTables(&dbOffer{})
 		},
 	},
+	{
+		ID: "add_game_202004231728",
+		Migrate: func(tx *xorm.Engine) error {
+			return tx.Sync2(&dbOffer{})
+		},
+		Rollback: func(tx *xorm.Engine) error {
+			return tx.DropTables(&dbOffer{})
+		},
+	},
 }

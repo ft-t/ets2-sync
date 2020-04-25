@@ -1,0 +1,199 @@
+{
+  "42p_print": {
+    "cities": [
+      "las_vegas"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bit_rd_svc": {
+    "cities": [
+      "las_vegas",
+      "winnemucca"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bit_rd_wrk": {
+    "cities": [
+      "ely"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cha_el_mkt": {
+    "cities": [
+      "las_vegas"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cha_el_whs": {
+    "cities": [
+      "carson_city"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "chm_che_str": {
+    "cities": [
+      "primm"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_qry": {
+    "cities": [
+      "carson_city",
+      "elko"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_str": {
+    "cities": [
+      "pioche"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "ed_mkt": {
+    "cities": [
+      "elko",
+      "las_vegas",
+      "reno"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gal_oil_gst": {
+    "cities": [
+      "elko",
+      "primm",
+      "tonopah"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gal_oil_ref": {
+    "cities": [
+      "ely"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gal_oil_str": {
+    "cities": [
+      "winnemucca"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "kw_trk_dlr": {
+    "cities": [
+      "elko"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit": {
+    "cities": [
+      "elko",
+      "reno"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit1": {
+    "cities": [
+      "carson_city"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_whs": {
+    "cities": [
+      "ely"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "re_train": {
+    "cities": [
+      "elko"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sc_frm": {
+    "cities": [
+      "jackpot",
+      "winnemucca"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sc_frm_grg": {
+    "cities": [
+      "carson_city",
+      "tonopah"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sg_whs": {
+    "cities": [
+      "jackpot"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "vm_car_dlr": {
+    "cities": [
+      "elko",
+      "las_vegas",
+      "reno"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "vm_car_whs": {
+    "cities": [
+      "las_vegas",
+      "reno"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_mkt": {
+    "cities": [
+      "ely"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_whs": {
+    "cities": [
+      "elko"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_mkt": {
+    "cities": [
+      "las_vegas",
+      "primm",
+      "reno"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_whs": {
+    "cities": [
+      "las_vegas",
+      "winnemucca"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  }
+}

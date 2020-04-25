@@ -1,0 +1,63 @@
+{
+  "variants": [
+    "trailer.flatbed.m_59_80_r63",
+    "trailer.home_trans.cargo_house",
+    "trailer.mag_3ls.lattice",
+    "trailer.mag_3ls_t.lattice",
+    "trailer.mag_3_s.lattice",
+    "trailer.mag_3ls.silo",
+    "trailer.mag_3ls_t.silo",
+    "trailer.mag_3_s.silo",
+    "trailer.mag_3l.aircon",
+    "trailer.mag_3l_t.aircon",
+    "trailer.mag_3l.h_helicopter",
+    "trailer.mag_3l_t.h_helicopter",
+    "trailer.mag_3l.pilot_boat",
+    "trailer.mag_3l_t.pilot_boat",
+    "trailer.mag_3shs.box",
+    "trailer.mag_3shs_t.box",
+    "trailer.mag_3_s.box",
+    "trailer.mag_3shs.mutt",
+    "trailer.mag_3shs_t.mutt",
+    "trailer.mag_3_s.mutt",
+    "trailer.mag_3l.mutt_h",
+    "trailer.mag_3_t.mutt_h",
+    "trailer.mag_3l.tank",
+    "trailer.mag_3_t.tank"
+  ],
+  "definitions": {
+    "trailer_def.flatbed.m_59_80_r63": {
+      "countries": []
+    },
+    "trailer_def.home_trans.cargo_house": {
+      "countries": []
+    },
+    "trailer_def.mag_3l.aircondition": {
+      "countries": []
+    },
+    "trailer_def.mag_3l.h_helicopter": {
+      "countries": []
+    },
+    "trailer_def.mag_3l.mutt_h": {
+      "countries": []
+    },
+    "trailer_def.mag_3l.pilot_boat": {
+      "countries": []
+    },
+    "trailer_def.mag_3l.tank": {
+      "countries": []
+    },
+    "trailer_def.mag_3ls.lattice": {
+      "countries": []
+    },
+    "trailer_def.mag_3ls.silo": {
+      "countries": []
+    },
+    "trailer_def.mag_3shs.box": {
+      "countries": []
+    },
+    "trailer_def.mag_3shs.mutt": {
+      "countries": []
+    }
+  }
+}
