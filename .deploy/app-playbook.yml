@@ -6,11 +6,23 @@
         path: "../dist"
         module: file
         state: absent
-    - name: "build app"
-      local_action:
-        module: shell
-        chdir: "../"
-        cmd: "GOOS=linux GOARCH=amd64 go build -o dist/{{app_name}}"
+    - name: "prepare release"
+      block:
+        - name: "build app"
+          local_action:
+            module: shell
+            chdir: "../"
+            cmd: "GOOS=linux GOARCH=amd64 go build -o dist/{{app_name}}"
+        - name: "copy resources"
+          local_action:
+            module: shell
+            chdir: "../"
+            cmd: "cp data dist/ -rf"
+        - name: "make archive"
+          local_action:
+            module: shell
+            chdir: "../dist"
+            cmd: "tar czvf release.tar.gz *"
     - name: "deploy files"
       become: true
       block:
@@ -18,36 +30,40 @@
           file:
             state: directory
             path: "{{app_folder}}"
-        - name: "copy executable"
+        - name: "ensure prev release removed"
+          file:
+            state: absent
+            path: "{{app_folder}}/release.tar.gz"
+        - name: "copy release"
           copy:
-            src: "../dist/{{app_name}}"
-            dest: "{{app_folder}}/{{app_name}}"
+            src: "../dist/release.tar.gz"
+            dest: "{{app_folder}}/release.tar.gz"
             mode: 0744
             force: yes
-        - name: "copy index.html"
-          copy:
-            src: "../index.html"
-            dest: "{{app_folder}}"
+        - name: "unpack"
+          shell:
+              chdir: "{{app_folder}}"
+              cmd: "tar zfx release.tar.gz"
+        - name: "set permissions"
+          file:
+            group: "{{app_user}}"
+            owner: "{{app_user}}"
             mode: 0744
-            force: yes
-        - name: "copy static files"
-          copy:
-            src: "../data"
-            dest: "{{app_folder}}"
-            mode: 0744
-            force: yes
-    - name: "generate systemd template"
-      become: true
-      template:
-        src: "./files/systemd.j2"
-        dest: "/etc/systemd/system/{{systemd_service_name}}.service"
-    - name: "restart service"
-      become: true
-      systemd:
-        daemon_reload: yes
-        enabled: yes
-        state: restarted
-        name: "{{systemd_service_name}}"
+            path: "{{app_folder}}"
+            recurse: true
+            state: directory
+        - name: "generate systemd template"
+          become: true
+          template:
+            src: "./files/systemd.j2"
+            dest: "/etc/systemd/system/{{systemd_service_name}}.service"
+        - name: "restart service"
+          become: true
+          systemd:
+            daemon_reload: yes
+            enabled: yes
+            state: restarted
+            name: "{{systemd_service_name}}"
     - name: "cleanup local"
       local_action:
         path: "../dist"

@@ -1,6 +1,6 @@
 ## EURO TRUCK 2 SYNC TOOL
 
-This is repository of Euro Truck 2 sync tool, which allows to sync job list with other players.
+This is repository of Euro Truck 2 and American Truck sync tool, which allows to sync job list with other players.
 
 ## Hosted version
 **Hosted version of this tool** [https://ft-t.github.io/](https://ft-t.github.io/)
@@ -17,8 +17,7 @@ You need to open `config.cfg` in the game folder in Documents, and change `g_dev
 
 ## [Dev] Compiling The Source Code
 
- - Golang 1.14+
- - Dep
+ - Golang 1.12+
 
 ## [Dev] Hosting own server
 
