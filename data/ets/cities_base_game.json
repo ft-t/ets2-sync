@@ -74,6 +74,9 @@
   "city.geneve": {
     "country": "switzerland"
   },
+  "city.genova_bridg": {
+    "country": "italy"
+  },
   "city.glasgow": {
     "country": "uk"
   },

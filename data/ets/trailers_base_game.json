@@ -25,7 +25,6 @@
     "trailer.overweight.excavator",
     ".fallback.trailer",
     ".fallback.slave",
-    "trailer.food_cistern",
     "trailer.overweight.forklifts",
     "trailer.fuel_cistern",
     "trailer.gls_trailer",
@@ -65,6 +64,7 @@
     "trailer.scs_flat_c_g",
     "trailer.scs_flat_c_r",
     "trailer.scs_flat_r",
+    "trailer.scs_fodt",
     "trailer.scs_gosck20",
     "trailer.scs_gosck220",
     "trailer.scs_gosck40",
@@ -96,6 +96,12 @@
     "trailer_def.cement.cement": {
       "countries": []
     },
+    "trailer_def.cement_ei.cement": {
+      "countries": []
+    },
+    "trailer_def.cement_wi.cement": {
+      "countries": []
+    },
     "trailer_def.chemicals.chcistern": {
       "countries": []
     },
@@ -105,25 +111,85 @@
     "trailer_def.concrete.cement_mix": {
       "countries": []
     },
+    "trailer_def.concrete_ei.cement_mix": {
+      "countries": []
+    },
+    "trailer_def.concrete_wi.cement_mix": {
+      "countries": []
+    },
     "trailer_def.diesel.fuel_cistern": {
       "countries": []
     },
     "trailer_def.diesel.willig.fuel_cistern": {
       "countries": []
     },
+    "trailer_def.diesel_ei.fuel_cistern": {
+      "countries": []
+    },
+    "trailer_def.diesel_ei.willig.fuel_cistern": {
+      "countries": []
+    },
+    "trailer_def.diesel_wi.fuel_cistern": {
+      "countries": []
+    },
+    "trailer_def.diesel_wi.willig.fuel_cistern": {
+      "countries": []
+    },
     "trailer_def.digger1000.overweight.digger1000": {
+      "countries": []
+    },
+    "trailer_def.digger100_ei.overweight.digger1000": {
+      "countries": []
+    },
+    "trailer_def.digger100_eo.overweight.digger1000": {
+      "countries": []
+    },
+    "trailer_def.digger100_wi.overweight.digger1000": {
+      "countries": []
+    },
+    "trailer_def.digger100_wo.overweight.digger1000": {
       "countries": []
     },
     "trailer_def.digger500.overweight.digger500": {
       "countries": []
     },
+    "trailer_def.digger500_ei.overweight.digger500": {
+      "countries": []
+    },
+    "trailer_def.digger500_eo.overweight.digger500": {
+      "countries": []
+    },
+    "trailer_def.digger500_wi.overweight.digger500": {
+      "countries": []
+    },
+    "trailer_def.digger500_wo.overweight.digger500": {
+      "countries": []
+    },
     "trailer_def.diggers.overweight.digger": {
+      "countries": []
+    },
+    "trailer_def.excav_soi_eo.s_ki_solid.cover": {
+      "countries": []
+    },
+    "trailer_def.excav_soi_wo.s_ki_solid.cover": {
       "countries": []
     },
     "trailer_def.excav_soil.s_ki_solid.cover": {
       "countries": []
     },
     "trailer_def.excavator.overweight.excavator": {
+      "countries": []
+    },
+    "trailer_def.excavator_ei.overweight.excavator": {
+      "countries": []
+    },
+    "trailer_def.excavator_eo.overweight.excavator": {
+      "countries": []
+    },
+    "trailer_def.excavator_wi.overweight.excavator": {
+      "countries": []
+    },
+    "trailer_def.excavator_wo.overweight.excavator": {
       "countries": []
     },
     "trailer_def.floorpanels.panel_trans.floor": {
@@ -139,6 +205,12 @@
       "countries": []
     },
     "trailer_def.gravel.s_ki_solid.gravel": {
+      "countries": []
+    },
+    "trailer_def.gravel_ei.s_ki_solid.gravel": {
+      "countries": []
+    },
+    "trailer_def.gravel_wi.s_ki_solid.gravel": {
       "countries": []
     },
     "trailer_def.hchemicals.chcistern": {
@@ -160,9 +232,6 @@
       "countries": []
     },
     "trailer_def.lpg.willig.fuel_cistern": {
-      "countries": []
-    },
-    "trailer_def.milk.food_cistern": {
       "countries": []
     },
     "trailer_def.mondeos.car_trans": {
@@ -199,6 +268,18 @@
       "countries": []
     },
     "trailer_def.sand.s_ki_solid.sand": {
+      "countries": []
+    },
+    "trailer_def.sand_ei.s_ki_solid.sand": {
+      "countries": []
+    },
+    "trailer_def.sand_wi.s_ki_solid.sand": {
+      "countries": []
+    },
+    "trailer_def.scrap_met_eo.s_ki_solid.cover": {
+      "countries": []
+    },
+    "trailer_def.scrap_met_wo.s_ki_solid.cover": {
       "countries": []
     },
     "trailer_def.scrap_metals.s_ki_solid.cover": {
@@ -1622,6 +1703,18 @@
     "trailer_def.scs.flatbed.single_4.flatbed_w": {
       "countries": []
     },
+    "trailer_def.scs.foodtank.single_2.chrome": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.single_2.paint": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.single_3.chrome": {
+      "countries": []
+    },
+    "trailer_def.scs.foodtank.single_3.paint": {
+      "countries": []
+    },
     "trailer_def.scs.gooseneck.bdouble_2_2.container": {
       "countries": [
         "denmark",
@@ -1807,6 +1900,12 @@
       "countries": []
     },
     "trailer_def.stones.s_ki_solid.cover": {
+      "countries": []
+    },
+    "trailer_def.stones_eo.s_ki_solid.cover": {
+      "countries": []
+    },
+    "trailer_def.stones_wo.s_ki_solid.cover": {
       "countries": []
     },
     "trailer_def.tractors.overweight.tractors": {

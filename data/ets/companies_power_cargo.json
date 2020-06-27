@@ -106,6 +106,8 @@
       "driller",
       "helicopter",
       "roller",
+      "roller_ei",
+      "roller_wi",
       "tracks",
       "tractor",
       "tube",
@@ -188,6 +190,8 @@
       "driller",
       "helicopter",
       "roller",
+      "roller_ei",
+      "roller_wi",
       "tracks",
       "tractor",
       "tube",
@@ -207,6 +211,13 @@
     "cities": [],
     "cargoes_in": [
       "tractor"
+    ],
+    "cargoes_out": []
+  },
+  "gen_br_east": {
+    "cities": [],
+    "cargoes_in": [
+      "roller_ei"
     ],
     "cargoes_out": []
   },
@@ -504,6 +515,7 @@
       "driller",
       "helicopter",
       "roller",
+      "roller_ei",
       "tracks",
       "tractor",
       "tube",
@@ -651,6 +663,8 @@
       "driller",
       "helicopter",
       "roller",
+      "roller_ei",
+      "roller_wi",
       "tracks",
       "tractor",
       "tube",
@@ -713,6 +727,8 @@
       "driller",
       "helicopter",
       "roller",
+      "roller_ei",
+      "roller_wi",
       "tracks",
       "tractor",
       "tube",

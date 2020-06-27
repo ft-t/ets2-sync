@@ -1,10 +1,14 @@
 [
   "cargo.asph_miller",
+  "cargo.cable_ree_ei",
+  "cargo.cable_ree_wi",
   "cargo.cable_reel",
   "cargo.concr_beams",
   "cargo.dozer",
   "cargo.locomotive",
   "cargo.metal_center",
+  "cargo.mobile_cr_ei",
+  "cargo.mobile_cr_wi",
   "cargo.mobile_crane",
   "cargo.transformat"
 ]
