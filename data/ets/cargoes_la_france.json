@@ -8,6 +8,7 @@
   "cargo.coconut_milk",
   "cargo.coconut_oil",
   "cargo.comp_process",
+  "cargo.conc_juice_t",
   "cargo.concen_juice",
   "cargo.corks",
   "cargo.cut_flowers",
@@ -15,6 +16,8 @@
   "cargo.emp_wine_bar",
   "cargo.emp_wine_bot",
   "cargo.fuel_oil",
+  "cargo.fuel_oil_ei",
+  "cargo.fuel_oil_wi",
   "cargo.granite_cube",
   "cargo.gummy_bears",
   "cargo.harvest_bins",
@@ -31,6 +34,7 @@
   "cargo.pumps",
   "cargo.silica",
   "cargo.soy_milk",
+  "cargo.soy_milk_t",
   "cargo.spher_valves",
   "cargo.steel_cord"
 ]

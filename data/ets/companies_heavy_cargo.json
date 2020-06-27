@@ -98,11 +98,15 @@
     ],
     "cargoes_out": [
       "asph_miller",
+      "cable_ree_ei",
+      "cable_ree_wi",
       "cable_reel",
       "concr_beams",
       "dozer",
       "locomotive",
       "metal_center",
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane",
       "transformat"
     ]
@@ -117,8 +121,12 @@
       "transformat"
     ],
     "cargoes_out": [
+      "cable_ree_ei",
+      "cable_ree_wi",
       "cable_reel",
       "dozer",
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane",
       "transformat"
     ]
@@ -129,6 +137,8 @@
       "mobile_crane"
     ],
     "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane"
     ]
   },
@@ -151,6 +161,8 @@
       "mobile_crane"
     ],
     "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane"
     ]
   },
@@ -215,14 +227,34 @@
     ],
     "cargoes_out": [
       "asph_miller",
+      "cable_ree_ei",
+      "cable_ree_wi",
       "cable_reel",
       "concr_beams",
       "dozer",
       "locomotive",
       "metal_center",
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane",
       "transformat"
     ]
+  },
+  "gen_br_east": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_ree_ei",
+      "mobile_cr_ei"
+    ],
+    "cargoes_out": []
+  },
+  "gen_br_west": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_ree_wi",
+      "mobile_cr_wi"
+    ],
+    "cargoes_out": []
   },
   "globeur": {
     "cities": [],
@@ -317,6 +349,8 @@
       "mobile_crane"
     ],
     "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane"
     ]
   },
@@ -444,6 +478,8 @@
       "mobile_crane"
     ],
     "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane"
     ]
   },
@@ -459,11 +495,13 @@
       "transformat"
     ],
     "cargoes_out": [
+      "cable_ree_ei",
       "cable_reel",
       "concr_beams",
       "dozer",
       "locomotive",
       "metal_center",
+      "mobile_cr_ei",
       "mobile_crane",
       "transformat"
     ]
@@ -477,6 +515,8 @@
       "transformat"
     ],
     "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane"
     ]
   },
@@ -531,6 +571,8 @@
       "mobile_crane"
     ],
     "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane"
     ]
   },
@@ -601,11 +643,15 @@
     ],
     "cargoes_out": [
       "asph_miller",
+      "cable_ree_ei",
+      "cable_ree_wi",
       "cable_reel",
       "concr_beams",
       "dozer",
       "locomotive",
       "metal_center",
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane",
       "transformat"
     ]
@@ -647,11 +693,15 @@
     ],
     "cargoes_out": [
       "asph_miller",
+      "cable_ree_ei",
+      "cable_ree_wi",
       "cable_reel",
       "concr_beams",
       "dozer",
       "locomotive",
       "metal_center",
+      "mobile_cr_ei",
+      "mobile_cr_wi",
       "mobile_crane",
       "transformat"
     ]

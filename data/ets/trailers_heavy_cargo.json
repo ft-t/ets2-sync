@@ -13,6 +13,12 @@
     "trailer_def.asph_miller.goldhofer.mpa_k_flat14.wirtgenw250i": {
       "countries": []
     },
+    "trailer_def.cable_ree_ei.goldhofer.stz_vl.coil": {
+      "countries": []
+    },
+    "trailer_def.cable_ree_wi.goldhofer.stz_vl.coil": {
+      "countries": []
+    },
     "trailer_def.cable_reel.goldhofer.stz_vl.coil": {
       "countries": []
     },
@@ -26,6 +32,12 @@
       "countries": []
     },
     "trailer_def.metal_center.goldhofer.stz_vl.m_centering": {
+      "countries": []
+    },
+    "trailer_def.mobile_cr_ei.goldhofer.mpa_k_flat14.t_c_3160": {
+      "countries": []
+    },
+    "trailer_def.mobile_cr_wi.goldhofer.mpa_k_flat14.t_c_3160": {
       "countries": []
     },
     "trailer_def.mobile_crane.goldhofer.mpa_k_flat14.t_c_3160": {

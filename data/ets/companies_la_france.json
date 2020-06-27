@@ -193,13 +193,15 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
       "gummy_bears",
       "iced_coffee",
       "olives",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "air_mails",
@@ -208,6 +210,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -221,6 +224,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -302,7 +306,9 @@
     ],
     "cargoes_out": [
       "boric_acid",
-      "fuel_oil"
+      "fuel_oil",
+      "fuel_oil_ei",
+      "fuel_oil_wi"
     ]
   },
   "cont_port_fr": {
@@ -385,6 +391,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -394,7 +401,8 @@
       "olives",
       "post_packag",
       "protec_cloth",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "aircft_tires",
@@ -403,6 +411,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "gummy_bears",
@@ -416,6 +425,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -446,22 +456,26 @@
       "basil",
       "coconut_milk",
       "coconut_oil",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "gummy_bears",
       "olives",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ],
     "cargoes_out": [
       "coconut_milk",
       "coconut_oil",
+      "conc_juice_t",
       "concen_juice",
       "gummy_bears",
       "iced_coffee",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -471,11 +485,13 @@
       "basil",
       "coconut_milk",
       "coconut_oil",
+      "conc_juice_t",
       "concen_juice",
       "gummy_bears",
       "iced_coffee",
       "olives",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": []
   },
@@ -487,13 +503,15 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
       "gummy_bears",
       "iced_coffee",
       "olives",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "air_mails",
@@ -502,6 +520,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -515,6 +534,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -574,6 +594,7 @@
       "chocolate",
       "coconut_milk",
       "coconut_oil",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "drymilk",
@@ -590,6 +611,7 @@
       "rice_c",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord",
       "sugar",
       "toys",
@@ -598,6 +620,7 @@
     ],
     "cargoes_out": [
       "beverages",
+      "beverages_t",
       "carrots",
       "carrots_c",
       "chem_sorb_c",
@@ -608,10 +631,10 @@
       "clothes_c",
       "coconut_milk",
       "coconut_oil",
+      "conc_juice_t",
       "concen_juice",
       "flour",
       "furniture",
-      "gifts",
       "gummy_bears",
       "iced_coffee",
       "limonades",
@@ -621,10 +644,25 @@
       "potatoes",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord",
       "tableware",
       "tyres"
     ]
+  },
+  "gen_br_east": {
+    "cities": [],
+    "cargoes_in": [
+      "fuel_oil_ei"
+    ],
+    "cargoes_out": []
+  },
+  "gen_br_west": {
+    "cities": [],
+    "cargoes_in": [
+      "fuel_oil_wi"
+    ],
+    "cargoes_out": []
   },
   "globeur": {
     "cities": [
@@ -643,6 +681,7 @@
       "beef_meat",
       "beverages",
       "beverages_c",
+      "beverages_t",
       "big_bag_seed",
       "boric_acid",
       "bottle_water",
@@ -662,6 +701,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "cont_trees",
       "corks",
@@ -681,7 +721,6 @@
       "flour",
       "fuel_oil",
       "furniture",
-      "gifts",
       "glass",
       "goat_cheese",
       "grapes",
@@ -704,6 +743,7 @@
       "med_equip",
       "med_vaccine",
       "milk",
+      "milk_t",
       "mondeos",
       "natur_rubber",
       "nonalco_beer",
@@ -733,6 +773,7 @@
       "scrap_metals",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord",
       "straw_bales",
       "sugar",
@@ -764,6 +805,7 @@
       "beef_meat",
       "beverages",
       "beverages_c",
+      "beverages_t",
       "big_bag_seed",
       "boric_acid",
       "bottle_water",
@@ -786,6 +828,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "concrete",
       "cont_trees",
@@ -810,7 +853,6 @@
       "forklifts",
       "fuel_oil",
       "furniture",
-      "gifts",
       "glass",
       "glass_packed",
       "goat_cheese",
@@ -837,6 +879,7 @@
       "mason_jars",
       "med_equip",
       "milk",
+      "milk_t",
       "mondeos",
       "natur_rubber",
       "nonalco_beer",
@@ -875,6 +918,7 @@
       "scrap_metals",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "spher_valves",
       "steel_cord",
       "straw_bales",
@@ -908,6 +952,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -917,7 +962,8 @@
       "olives",
       "post_packag",
       "protec_cloth",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "basil",
@@ -925,6 +971,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -937,6 +984,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -1036,6 +1084,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "fuel_oil",
       "gummy_bears",
@@ -1043,7 +1092,8 @@
       "iced_coffee",
       "olives",
       "protec_cloth",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "air_mails",
@@ -1052,6 +1102,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1071,6 +1122,7 @@
       "pumps",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "spher_valves",
       "steel_cord"
     ]
@@ -1083,6 +1135,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1092,13 +1145,15 @@
       "olives",
       "post_packag",
       "protec_cloth",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "basil",
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1112,6 +1167,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -1131,7 +1187,6 @@
       "princess"
     ],
     "cargoes_out": [
-      "gifts",
       "princess"
     ]
   },
@@ -1204,11 +1259,13 @@
       "basil",
       "coconut_milk",
       "coconut_oil",
+      "conc_juice_t",
       "concen_juice",
       "gummy_bears",
       "iced_coffee",
       "olives",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": []
   },
@@ -1220,6 +1277,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1230,7 +1288,8 @@
       "olives",
       "post_packag",
       "protec_cloth",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "basil",
@@ -1238,6 +1297,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1251,6 +1311,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -1281,6 +1342,7 @@
       "drymilk",
       "live_catt_fr",
       "milk",
+      "milk_t",
       "tractors"
     ]
   },
@@ -1311,6 +1373,7 @@
       "drymilk",
       "live_catt_fr",
       "milk",
+      "milk_t",
       "tractors"
     ]
   },
@@ -1341,6 +1404,7 @@
       "drymilk",
       "live_catt_fr",
       "milk",
+      "milk_t",
       "tractors"
     ]
   },
@@ -1373,7 +1437,6 @@
       "excavator",
       "forklifts",
       "fuel_oil",
-      "gifts",
       "hi_volt_cabl",
       "hipresstank",
       "packag_food",
@@ -1388,8 +1451,7 @@
       "empty_palet",
       "excav_soil",
       "excavator",
-      "forklifts",
-      "gifts"
+      "forklifts"
     ]
   },
   "polar_fish": {
@@ -1408,6 +1470,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1418,7 +1481,8 @@
       "olives",
       "post_packag",
       "protec_cloth",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "basil",
@@ -1426,9 +1490,11 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
+      "fuel_oil_ei",
       "gummy_bears",
       "harvest_bins",
       "iced_coffee",
@@ -1439,6 +1505,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -1450,7 +1517,9 @@
     ],
     "cargoes_out": [
       "boric_acid",
-      "fuel_oil"
+      "fuel_oil",
+      "fuel_oil_ei",
+      "fuel_oil_wi"
     ]
   },
   "quadrelli": {
@@ -1472,6 +1541,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1480,13 +1550,15 @@
       "olives",
       "post_packag",
       "protec_cloth",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "boric_acid",
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1500,6 +1572,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -1537,6 +1610,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1545,7 +1619,8 @@
       "iced_coffee",
       "olives",
       "silica",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "basil",
@@ -1553,6 +1628,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "gummy_bears",
@@ -1564,6 +1640,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -1584,7 +1661,6 @@
       "empty_palet",
       "flour",
       "forklifts",
-      "gifts",
       "nuts",
       "olives",
       "paper",
@@ -1603,8 +1679,8 @@
       "chocolate",
       "coconut_milk",
       "coconut_oil",
+      "conc_juice_t",
       "concen_juice",
-      "gifts",
       "gummy_bears",
       "iced_coffee",
       "limonades",
@@ -1612,6 +1688,7 @@
       "olives",
       "packag_food",
       "soy_milk",
+      "soy_milk_t",
       "vinegar",
       "vinegar_c"
     ]
@@ -1624,6 +1701,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1631,7 +1709,8 @@
       "iced_coffee",
       "olives",
       "silica",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "air_mails",
@@ -1640,6 +1719,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1653,6 +1733,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -1665,11 +1746,13 @@
     "cargoes_out": [
       "coconut_milk",
       "coconut_oil",
+      "conc_juice_t",
       "concen_juice",
       "gummy_bears",
       "iced_coffee",
       "olives",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ]
   },
   "tradeaux": {
@@ -1686,6 +1769,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1693,7 +1777,8 @@
       "iced_coffee",
       "olives",
       "silica",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "air_mails",
@@ -1702,6 +1787,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1715,6 +1801,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -1726,6 +1813,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1733,7 +1821,8 @@
       "iced_coffee",
       "olives",
       "silica",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "basil",
@@ -1741,9 +1830,12 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
+      "fuel_oil_ei",
+      "fuel_oil_wi",
       "gummy_bears",
       "harvest_bins",
       "iced_coffee",
@@ -1754,6 +1846,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -1765,13 +1858,15 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
       "gummy_bears",
       "iced_coffee",
       "olives",
-      "soy_milk"
+      "soy_milk",
+      "soy_milk_t"
     ],
     "cargoes_out": [
       "air_mails",
@@ -1780,6 +1875,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "corks",
       "cut_flowers",
@@ -1793,6 +1889,7 @@
       "protec_cloth",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord"
     ]
   },
@@ -1842,6 +1939,7 @@
       "beef_meat",
       "beverages",
       "beverages_c",
+      "beverages_t",
       "big_bag_seed",
       "boric_acid",
       "bottle_water",
@@ -1862,6 +1960,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "concrete",
       "cont_trees",
@@ -1882,7 +1981,6 @@
       "flour",
       "fuel_oil",
       "furniture",
-      "gifts",
       "glass",
       "goat_cheese",
       "grapes",
@@ -1903,6 +2001,7 @@
       "mason_jars",
       "med_equip",
       "milk",
+      "milk_t",
       "mondeos",
       "natur_rubber",
       "nonalco_beer",
@@ -1934,6 +2033,7 @@
       "scrap_metals",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord",
       "stone_dust",
       "straw_bales",
@@ -1964,6 +2064,7 @@
       "beef_meat",
       "beverages",
       "beverages_c",
+      "beverages_t",
       "big_bag_seed",
       "boric_acid",
       "bottle_water",
@@ -1984,6 +2085,7 @@
       "coconut_milk",
       "coconut_oil",
       "comp_process",
+      "conc_juice_t",
       "concen_juice",
       "concrete",
       "cont_trees",
@@ -2005,7 +2107,6 @@
       "flour",
       "forklifts",
       "furniture",
-      "gifts",
       "glass",
       "glass_packed",
       "goat_cheese",
@@ -2030,6 +2131,7 @@
       "med_equip",
       "med_vaccine",
       "milk",
+      "milk_t",
       "mondeos",
       "natur_rubber",
       "nonalco_beer",
@@ -2067,6 +2169,7 @@
       "scrap_metals",
       "silica",
       "soy_milk",
+      "soy_milk_t",
       "steel_cord",
       "straw_bales",
       "sugar",

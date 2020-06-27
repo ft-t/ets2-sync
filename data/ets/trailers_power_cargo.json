@@ -34,6 +34,18 @@
     "trailer_def.roller.schw_ovrwght.roller": {
       "countries": []
     },
+    "trailer_def.roller_ei.overweight.roller": {
+      "countries": []
+    },
+    "trailer_def.roller_ei.schw_ovrwght.roller": {
+      "countries": []
+    },
+    "trailer_def.roller_wi.overweight.roller": {
+      "countries": []
+    },
+    "trailer_def.roller_wi.schw_ovrwght.roller": {
+      "countries": []
+    },
     "trailer_def.tracks.overweight.tracks": {
       "countries": []
     },
