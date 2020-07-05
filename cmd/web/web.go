@@ -21,7 +21,7 @@ import (
 
 var expansionDLCs = map[Game][]Dlc{
 	ETS:         {GoingEast, Scandinavia, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea},
-	ETS_PROMODS: {GoingEast, Scandinavia, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea},
+	ETS_PROMODS: {},
 	ATS:         {Nevada, Arizona, NewMexico, Oregon, Washington, Utah},
 }
 var cargoDLCs = map[Game][]Dlc{
@@ -148,10 +148,6 @@ func start() {
 		for _, d := range dlcs {
 			val, _ := strconv.Atoi(d)
 			offersDlcs |= Dlc(val)
-		}
-
-		if game == ETS_PROMODS {
-			offersDlcs |= GoingEast | LaFrance | Italy | BeyondTheBalticSea | RoadToTheBlackSea | Scandinavia
 		}
 
 		buf := bytes.NewBuffer(nil)
