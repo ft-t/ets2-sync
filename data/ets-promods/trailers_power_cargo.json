@@ -1,0 +1,74 @@
+{
+  "variants": [
+    "trailer.overweight.aircond",
+    "trailer.overweight.driller",
+    "trailer.overweight.helicopter",
+    "trailer.overweight.roller",
+    "trailer.overweight.tracks",
+    "trailer.overweight.tractor",
+    "trailer.overweight.tube",
+    "trailer.overweight.yacht"
+  ],
+  "definitions": {
+    "trailer_def.aircond.overweight.aircond": {
+      "countries": []
+    },
+    "trailer_def.aircond.schw_ovrwght.aircond": {
+      "countries": []
+    },
+    "trailer_def.driller.overweight.driller": {
+      "countries": []
+    },
+    "trailer_def.driller.schw_ovrwght.driller": {
+      "countries": []
+    },
+    "trailer_def.helicopter.overweight.helicopter": {
+      "countries": []
+    },
+    "trailer_def.helicopter.schw_ovrwght.helicopter": {
+      "countries": []
+    },
+    "trailer_def.roller.overweight.roller": {
+      "countries": []
+    },
+    "trailer_def.roller.schw_ovrwght.roller": {
+      "countries": []
+    },
+    "trailer_def.roller_ei.overweight.roller": {
+      "countries": []
+    },
+    "trailer_def.roller_ei.schw_ovrwght.roller": {
+      "countries": []
+    },
+    "trailer_def.roller_wi.overweight.roller": {
+      "countries": []
+    },
+    "trailer_def.roller_wi.schw_ovrwght.roller": {
+      "countries": []
+    },
+    "trailer_def.tracks.overweight.tracks": {
+      "countries": []
+    },
+    "trailer_def.tracks.schw_ovrwght.tracks": {
+      "countries": []
+    },
+    "trailer_def.tractor.overweight.tractor": {
+      "countries": []
+    },
+    "trailer_def.tractor.schw_ovrwght.tractor": {
+      "countries": []
+    },
+    "trailer_def.tube.overweight.tube": {
+      "countries": []
+    },
+    "trailer_def.tube.schw_ovrwght.tube": {
+      "countries": []
+    },
+    "trailer_def.yacht.overweight.yacht": {
+      "countries": []
+    },
+    "trailer_def.yacht.schw_ovrwght.yacht": {
+      "countries": []
+    }
+  }
+}

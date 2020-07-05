@@ -1,0 +1,785 @@
+{
+  "acc": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_reel",
+      "metal_center",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "concr_beams",
+      "mobile_crane"
+    ]
+  },
+  "batisse_base": {
+    "cities": [],
+    "cargoes_in": [
+      "concr_beams",
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "batisse_hs": {
+    "cities": [],
+    "cargoes_in": [
+      "concr_beams"
+    ],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "batisse_road": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "dozer",
+      "mobile_crane"
+    ]
+  },
+  "batisse_wind": {
+    "cities": [],
+    "cargoes_in": [
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "bhb_raffin": {
+    "cities": [],
+    "cargoes_in": [],
+    "cargoes_out": [
+      "cable_reel",
+      "dozer",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "bjork": {
+    "cities": [],
+    "cargoes_in": [
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "c_navale": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_reel",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "cable_reel",
+      "mobile_crane"
+    ]
+  },
+  "cargotras": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_ree_ei",
+      "cable_ree_wi",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "cnp": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "cable_ree_ei",
+      "cable_ree_wi",
+      "cable_reel",
+      "dozer",
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "comoto": {
+    "cities": [],
+    "cargoes_in": [
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane"
+    ]
+  },
+  "costruzi_bas": {
+    "cities": [],
+    "cargoes_in": [
+      "concr_beams",
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "dozer",
+      "mobile_crane"
+    ]
+  },
+  "costruzi_fla": {
+    "cities": [],
+    "cargoes_in": [
+      "concr_beams",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane"
+    ]
+  },
+  "costruzi_hal": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "concr_beams",
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "dozer",
+      "mobile_crane"
+    ]
+  },
+  "costruzi_win": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "metal_center",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "dozer",
+      "mobile_crane"
+    ]
+  },
+  "drekkar": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ]
+  },
+  "exomar": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_ree_ei",
+      "cable_ree_wi",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "gen_br_east": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_ree_ei",
+      "mobile_cr_ei"
+    ],
+    "cargoes_out": []
+  },
+  "gen_br_west": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_ree_wi",
+      "mobile_cr_wi"
+    ],
+    "cargoes_out": []
+  },
+  "globeur": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "gnt": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ]
+  },
+  "itcc": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_reel",
+      "metal_center",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "concr_beams",
+      "mobile_crane"
+    ]
+  },
+  "konstnr": {
+    "cities": [],
+    "cargoes_in": [
+      "concr_beams",
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "konstnr_br": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "concr_beams",
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "dozer",
+      "mobile_crane"
+    ]
+  },
+  "konstnr_hs": {
+    "cities": [],
+    "cargoes_in": [
+      "concr_beams"
+    ],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "libellula": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_reel",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane"
+    ]
+  },
+  "lisette_log": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "lkwlog": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "marmo": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_reel",
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "dozer"
+    ]
+  },
+  "ms_stein": {
+    "cities": [],
+    "cargoes_in": [
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": []
+  },
+  "mvm_carriere": {
+    "cities": [],
+    "cargoes_in": [
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": []
+  },
+  "nbfc": {
+    "cities": [],
+    "cargoes_in": [
+      "metal_center"
+    ],
+    "cargoes_out": []
+  },
+  "nord_sten": {
+    "cities": [],
+    "cargoes_in": [
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": []
+  },
+  "norrsken": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ]
+  },
+  "nucleon": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "dozer",
+      "mobile_crane"
+    ]
+  },
+  "piac": {
+    "cities": [],
+    "cargoes_in": [
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane"
+    ]
+  },
+  "posped": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "cable_ree_ei",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_cr_ei",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "pp_chimica": {
+    "cities": [],
+    "cargoes_in": [
+      "cable_reel",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane"
+    ]
+  },
+  "quadrelli": {
+    "cities": [],
+    "cargoes_in": [
+      "dozer",
+      "mobile_crane"
+    ],
+    "cargoes_out": []
+  },
+  "quarry": {
+    "cities": [],
+    "cargoes_in": [
+      "dozer",
+      "metal_center",
+      "mobile_crane"
+    ],
+    "cargoes_out": []
+  },
+  "renar": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ]
+  },
+  "sag_tre": {
+    "cities": [],
+    "cargoes_in": [
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "sal": {
+    "cities": [],
+    "cargoes_in": [
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane"
+    ]
+  },
+  "sanbuilders": {
+    "cities": [],
+    "cargoes_in": [
+      "concr_beams",
+      "dozer",
+      "metal_center",
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "dozer",
+      "mobile_crane"
+    ]
+  },
+  "skoda": {
+    "cities": [],
+    "cargoes_in": [
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "spinelli": {
+    "cities": [],
+    "cargoes_in": [
+      "transformat"
+    ],
+    "cargoes_out": []
+  },
+  "stokes": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "te_logistica": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_ree_ei",
+      "cable_ree_wi",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "tradeaux": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "transinet": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_ree_ei",
+      "cable_ree_wi",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_cr_ei",
+      "mobile_cr_wi",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "tras_med": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ]
+  },
+  "tree_et": {
+    "cities": [],
+    "cargoes_in": [
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "voitureux": {
+    "cities": [],
+    "cargoes_in": [],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "vpc": {
+    "cities": [],
+    "cargoes_in": [
+      "mobile_crane"
+    ],
+    "cargoes_out": [
+      "mobile_crane"
+    ]
+  },
+  "wgcc": {
+    "cities": [],
+    "cargoes_in": [
+      "metal_center"
+    ],
+    "cargoes_out": []
+  },
+  "wilnet_trans": {
+    "cities": [],
+    "cargoes_in": [
+      "asph_miller",
+      "cable_reel",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "transformat"
+    ],
+    "cargoes_out": [
+      "asph_miller",
+      "cable_reel",
+      "concr_beams",
+      "dozer",
+      "locomotive",
+      "metal_center",
+      "mobile_crane",
+      "transformat"
+    ]
+  }
+}

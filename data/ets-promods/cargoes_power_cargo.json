@@ -1,0 +1,12 @@
+[
+  "cargo.aircond",
+  "cargo.driller",
+  "cargo.helicopter",
+  "cargo.roller",
+  "cargo.roller_ei",
+  "cargo.roller_wi",
+  "cargo.tracks",
+  "cargo.tractor",
+  "cargo.tube",
+  "cargo.yacht"
+]
