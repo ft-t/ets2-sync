@@ -13,11 +13,12 @@ import (
 type Game int
 
 const (
-	ETS = 1
-	ATS = 2
+	ETS         = 1
+	ATS         = 2
+	ETS_PROMODS = 3
 )
 
-var AllGames = []Game{ETS, ATS}
+var AllGames = []Game{ETS, ATS, ETS_PROMODS}
 
 type Dlc int
 
@@ -45,8 +46,9 @@ const (
 )
 
 var AllDLCs = map[Game][]Dlc{
-	ETS: {BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea, SpecialTransport, RoadToTheBlackSea},
-	ATS: {BaseGame, Arizona, Nevada, NewMexico, Oregon, Utah, Washington, ForestMachinery, SpecialTransport, HeavyCargo},
+	ETS:         {BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea, SpecialTransport, RoadToTheBlackSea},
+	ETS_PROMODS: {BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea, SpecialTransport, RoadToTheBlackSea},
+	ATS:         {BaseGame, Arizona, Nevada, NewMexico, Oregon, Utah, Washington, ForestMachinery, SpecialTransport, HeavyCargo},
 }
 
 func (t Game) ToString() string {
@@ -55,6 +57,8 @@ func (t Game) ToString() string {
 		return "ets"
 	case ATS:
 		return "ats"
+	case ETS_PROMODS:
+		return "ets-promods"
 	}
 
 	return "unk"
@@ -142,7 +146,6 @@ func GetRequiredDlc(source string, target string, cargo string, trailerDef strin
 	targetCountry := getCountryByCity(targetCity, game)
 	sourceCountry := getCountryByCity(sourceCity, game)
 
-
 	validators := []func() (Dlc, error){
 		func() (Dlc, error) { return mapCargoToDlc(cargo, game) },
 		func() (Dlc, error) { return mapCompanyToDlc(targetCompany, targetCity, game) },
@@ -191,9 +194,9 @@ func getCountryByCity(city string, game Game) string {
 		cityItem := map[string]cityFile{}
 		_ = json.Unmarshal(input, &cityItem)
 
-		for k,v := range cityItem {
+		for k, v := range cityItem {
 			cityName := k
-			if strings.HasPrefix(cityName,"city."){
+			if strings.HasPrefix(cityName, "city.") {
 				cityName = cityName[5:]
 			}
 
@@ -216,7 +219,6 @@ func mapCompanyToDlc(companyName string, cityName string, game Game) (Dlc, error
 
 	return None, errors.New("company not found")
 }
-
 
 func mapCargoToDlc(cargoName string, game Game) (Dlc, error) {
 	for _, d := range AllDLCs[game] {
@@ -241,7 +243,7 @@ func mapTrailerVariantToDlc(trailerVariant string, game Game) (Dlc, error) {
 func mapTrailerDefToDlc(trailerDef string, targetCountry string, sourceCountry string, game Game) (Dlc, error) {
 	for _, d := range AllDLCs[game] {
 		if res := readTrailerFile(game, d); res != nil {
-			if def, ok := res.Definitions[trailerDef]; ok  {
+			if def, ok := res.Definitions[trailerDef]; ok {
 				if len(def.Countries) == 0 { // that trailer is allowed for all counties
 					return d, nil
 				}
