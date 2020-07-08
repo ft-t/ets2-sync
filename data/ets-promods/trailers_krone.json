@@ -1,0 +1,46 @@
+{
+  "variants": [
+    "trailer.krone.boxliner20",
+    "trailer.krone.boxliner220",
+    "trailer.krone.boxliner40",
+    "trailer.coolliner17",
+    "trailer.dryliner17",
+    "trailer.profiliner17",
+    "trailer.profiline17d",
+    ".profiline17d.second",
+    "trailer.profilinehd"
+  ],
+  "definitions": {
+    "trailer_def.krone.boxliner.single_3.container": {
+      "countries": []
+    },
+    "trailer_def.krone.boxliner.single_3_220.container": {
+      "countries": []
+    },
+    "trailer_def.krone.boxliner.single_3_40.container": {
+      "countries": []
+    },
+    "trailer_def.krone.coolliner.single_3.reefer": {
+      "countries": []
+    },
+    "trailer_def.krone.dryliner.single_3.dryvan": {
+      "countries": []
+    },
+    "trailer_def.krone.profiliner.double_3_2.curtain": {
+      "countries": [
+        "denmark",
+        "norway",
+        "sweden",
+        "finland",
+        "germany",
+        "netherlands"
+      ]
+    },
+    "trailer_def.krone.profiliner.single_3.curtain": {
+      "countries": []
+    },
+    "trailer_def.krone.profilinerhd.single_3.flatbed": {
+      "countries": []
+    }
+  }
+}
