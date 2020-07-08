@@ -119,6 +119,7 @@ func updateList() error {
 	context := GetDb()
 	currentOffers[dlc_mapper.ETS] = make(map[string][]savefile.ApplicableOffer)
 	currentOffers[dlc_mapper.ATS] = make(map[string][]savefile.ApplicableOffer)
+	currentOffers[dlc_mapper.ETS_PROMODS] = make(map[string][]savefile.ApplicableOffer)
 
 	for _, game := range dlc_mapper.AllGames {
 
