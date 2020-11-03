@@ -22,7 +22,7 @@ import (
 var expansionDLCs = map[Game][]Dlc{
 	ETS:         {GoingEast, Scandinavia, LaFrance, Italy, BeyondTheBalticSea, RoadToTheBlackSea},
 	ETS_PROMODS: {},
-	ATS:         {Nevada, Arizona, NewMexico, Oregon, Washington, Utah},
+	ATS:         {Nevada, Arizona, NewMexico, Oregon, Washington, Utah, Idaho},
 }
 var cargoDLCs = map[Game][]Dlc{
 	ETS:         {PowerCargo, HeavyCargo, SpecialTransport},

@@ -43,12 +43,13 @@ const (
 	Utah               Dlc = 1 << 17
 	Washington         Dlc = 1 << 18
 	ForestMachinery    Dlc = 1 << 19
+	Idaho 			   Dlc = 1 << 20
 )
 
 var AllDLCs = map[Game][]Dlc{
 	ETS:         {BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea, SpecialTransport, RoadToTheBlackSea},
 	ETS_PROMODS: {BaseGame, Krone, Schwarzmuller, Scandinavia, GoingEast, LaFrance, Italy, PowerCargo, HeavyCargo, BeyondTheBalticSea, SpecialTransport, RoadToTheBlackSea},
-	ATS:         {BaseGame, Arizona, Nevada, NewMexico, Oregon, Utah, Washington, ForestMachinery, SpecialTransport, HeavyCargo},
+	ATS:         {BaseGame, Arizona, Nevada, NewMexico, Oregon, Utah, Washington, Idaho, ForestMachinery, SpecialTransport, HeavyCargo},
 }
 
 func (t Game) ToString() string {
@@ -106,6 +107,8 @@ func (t Dlc) ToString() string {
 		return "washington"
 	case ForestMachinery:
 		return "forest_harvesting"
+	case Idaho:
+		return "idaho"
 	}
 
 	return "unk"
