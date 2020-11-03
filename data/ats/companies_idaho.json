@@ -1,0 +1,325 @@
+{
+  "aport_phx": {
+    "cities": [],
+    "cargoes_in": [
+      "potatoes"
+    ],
+    "cargoes_out": []
+  },
+  "avs_met_scr": {
+    "cities": [
+      "coeur_dalene",
+      "lewiston"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bit_rd_svc": {
+    "cities": [
+      "ketchum"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "bn_farm": {
+    "cities": [
+      "salmon"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cha_el_whs": {
+    "cities": [
+      "boise",
+      "idaho_falls"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "chm_che_plnt": {
+    "cities": [
+      "pocatello"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_plnt": {
+    "cities": [
+      "pocatello",
+      "twin_falls"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "cm_min_str": {
+    "cities": [
+      "grangeville",
+      "salmon",
+      "sandpoint",
+      "twin_falls"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dc_car_dlr": {
+    "cities": [
+      "coeur_dalene",
+      "pocatello",
+      "salmon"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dg_wd_hrv": {
+    "cities": [
+      "coeur_dalene",
+      "grangeville",
+      "sandpoint"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dg_wd_saw": {
+    "cities": [
+      "grangeville"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "dg_wd_saw1": {
+    "cities": [
+      "boise",
+      "sandpoint"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "du_farm": {
+    "cities": [
+      "nampa"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "ed_mkt": {
+    "cities": [
+      "ketchum"
+    ],
+    "cargoes_in": [
+      "potatoes"
+    ],
+    "cargoes_out": []
+  },
+  "fb_farm_mkt": {
+    "cities": [
+      "grangeville",
+      "nampa",
+      "salmon",
+      "sandpoint"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "fb_farm_pln": {
+    "cities": [
+      "boise",
+      "lewiston"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "ftf_food_pln": {
+    "cities": [],
+    "cargoes_in": [
+      "potatoes"
+    ],
+    "cargoes_out": []
+  },
+  "gal_oil_gst": {
+    "cities": [
+      "idaho_falls",
+      "twin_falls"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "gm_chs_plnt": {
+    "cities": [],
+    "cargoes_in": [
+      "potatoes"
+    ],
+    "cargoes_out": []
+  },
+  "hms_con_svc": {
+    "cities": [
+      "coeur_dalene",
+      "grangeville",
+      "idaho_falls",
+      "sandpoint"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "hs_mkt": {
+    "cities": [
+      "coeur_dalene",
+      "idaho_falls",
+      "sandpoint",
+      "twin_falls"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "oak_port": {
+    "cities": [],
+    "cargoes_in": [
+      "potatoes"
+    ],
+    "cargoes_out": []
+  },
+  "oh_con_hom": {
+    "cities": [
+      "boise"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pnp_wd_pln": {
+    "cities": [
+      "lewiston"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_grg": {
+    "cities": [
+      "idaho_falls"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit": {
+    "cities": [
+      "boise"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit2": {
+    "cities": [
+      "boise",
+      "coeur_dalene",
+      "idaho_falls",
+      "ketchum",
+      "pocatello",
+      "sandpoint",
+      "twin_falls"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "pns_con_sit3": {
+    "cities": [
+      "coeur_dalene"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "re_train": {
+    "cities": [
+      "pocatello"
+    ],
+    "cargoes_in": [
+      "potatoes"
+    ],
+    "cargoes_out": []
+  },
+  "sc_frm": {
+    "cities": [
+      "grangeville",
+      "nampa",
+      "pocatello",
+      "twin_falls"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": [
+      "potatoes"
+    ]
+  },
+  "sf_port": {
+    "cities": [],
+    "cargoes_in": [
+      "potatoes"
+    ],
+    "cargoes_out": []
+  },
+  "sg_whs": {
+    "cities": [
+      "grangeville",
+      "ketchum",
+      "twin_falls"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "sh_shp_mar": {
+    "cities": [
+      "coeur_dalene"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "st_met_whs": {
+    "cities": [
+      "lewiston"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "tid_mkt": {
+    "cities": [],
+    "cargoes_in": [
+      "potatoes"
+    ],
+    "cargoes_out": []
+  },
+  "vm_car_whs": {
+    "cities": [
+      "idaho_falls",
+      "lewiston"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  },
+  "wal_food_mkt": {
+    "cities": [
+      "grangeville",
+      "nampa",
+      "salmon",
+      "twin_falls"
+    ],
+    "cargoes_in": [
+      "potatoes"
+    ],
+    "cargoes_out": []
+  },
+  "wal_food_whs": {
+    "cities": [
+      "boise"
+    ],
+    "cargoes_in": [
+      "potatoes"
+    ],
+    "cargoes_out": [
+      "potatoes"
+    ]
+  },
+  "wal_mkt": {
+    "cities": [
+      "coeur_dalene",
+      "sandpoint"
+    ],
+    "cargoes_in": [],
+    "cargoes_out": []
+  }
+}
