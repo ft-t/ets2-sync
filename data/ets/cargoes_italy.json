@@ -11,8 +11,6 @@
   "cargo.marb_blck",
   "cargo.marb_blck2",
   "cargo.marb_slab",
-  "cargo.metal_pip_ei",
-  "cargo.metal_pip_wi",
   "cargo.metal_pipes",
   "cargo.moto_tires",
   "cargo.motorcycles",
@@ -27,7 +25,5 @@
   "cargo.scooters",
   "cargo.seal_bearing",
   "cargo.sq_tub",
-  "cargo.sq_tub_ei",
-  "cargo.sq_tub_wi",
   "cargo.wrk_cloth"
 ]

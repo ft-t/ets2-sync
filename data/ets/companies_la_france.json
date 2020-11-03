@@ -306,9 +306,7 @@
     ],
     "cargoes_out": [
       "boric_acid",
-      "fuel_oil",
-      "fuel_oil_ei",
-      "fuel_oil_wi"
+      "fuel_oil"
     ]
   },
   "cont_port_fr": {
@@ -381,6 +379,24 @@
       "peas",
       "potatoes",
       "tomatoes"
+    ]
+  },
+  "domdepo": {
+    "cities": [],
+    "cargoes_in": [
+      "granite_cube"
+    ],
+    "cargoes_out": [
+      "granite_cube"
+    ]
+  },
+  "domdepo_ru": {
+    "cities": [],
+    "cargoes_in": [
+      "granite_cube"
+    ],
+    "cargoes_out": [
+      "granite_cube"
     ]
   },
   "drekkar": {
@@ -526,6 +542,7 @@
       "cut_flowers",
       "gummy_bears",
       "harvest_bins",
+      "hi_volt_cabl",
       "iced_coffee",
       "natur_rubber",
       "nylon_cord",
@@ -650,20 +667,6 @@
       "tyres"
     ]
   },
-  "gen_br_east": {
-    "cities": [],
-    "cargoes_in": [
-      "fuel_oil_ei"
-    ],
-    "cargoes_out": []
-  },
-  "gen_br_west": {
-    "cities": [],
-    "cargoes_in": [
-      "fuel_oil_wi"
-    ],
-    "cargoes_out": []
-  },
   "globeur": {
     "cities": [
       "bordeaux",
@@ -738,6 +741,7 @@
       "lavender",
       "limonades",
       "lumber",
+      "lux_yacht",
       "maple_syrup",
       "mason_jars",
       "med_equip",
@@ -764,7 +768,6 @@
       "pnut_butter",
       "post_packag",
       "potatoes",
-      "princess",
       "protec_cloth",
       "radiators",
       "rice",
@@ -875,6 +878,7 @@
       "limonades",
       "logs",
       "lumber",
+      "lux_yacht",
       "maple_syrup",
       "mason_jars",
       "med_equip",
@@ -903,7 +907,6 @@
       "potatoes",
       "precast_strs",
       "press_sl_val",
-      "princess",
       "protec_cloth",
       "pumps",
       "radiators",
@@ -1181,14 +1184,8 @@
       "lile_rousse",
       "marseille"
     ],
-    "cargoes_in": [
-      "diesel",
-      "fueltanker",
-      "princess"
-    ],
-    "cargoes_out": [
-      "princess"
-    ]
+    "cargoes_in": [],
+    "cargoes_out": []
   },
   "marmo": {
     "cities": [],
@@ -1430,29 +1427,15 @@
     "cargoes_in": [
       "backfl_prev",
       "boric_acid",
-      "bottle_water",
-      "concrete",
       "diesel_gen",
-      "digger1000",
-      "excavator",
-      "forklifts",
       "fuel_oil",
       "hi_volt_cabl",
-      "hipresstank",
-      "packag_food",
       "press_sl_val",
       "protec_cloth",
       "pumps",
-      "spher_valves",
-      "vent_tube"
+      "spher_valves"
     ],
-    "cargoes_out": [
-      "digger1000",
-      "empty_palet",
-      "excav_soil",
-      "excavator",
-      "forklifts"
-    ]
+    "cargoes_out": []
   },
   "polar_fish": {
     "cities": [],
@@ -1494,7 +1477,6 @@
       "concen_juice",
       "corks",
       "cut_flowers",
-      "fuel_oil_ei",
       "gummy_bears",
       "harvest_bins",
       "iced_coffee",
@@ -1517,9 +1499,7 @@
     ],
     "cargoes_out": [
       "boric_acid",
-      "fuel_oil",
-      "fuel_oil_ei",
-      "fuel_oil_wi"
+      "fuel_oil"
     ]
   },
   "quadrelli": {
@@ -1651,46 +1631,19 @@
       "nantes"
     ],
     "cargoes_in": [
-      "almond",
       "basil",
-      "beans",
-      "beef_meat",
-      "clothes",
-      "clothes_c",
-      "drymilk",
-      "empty_palet",
-      "flour",
-      "forklifts",
-      "nuts",
-      "olives",
-      "paper",
-      "peas",
-      "rice",
-      "sugar",
-      "vent_tube",
-      "vinegar",
-      "vinegar_c"
+      "olives"
     ],
     "cargoes_out": [
-      "beef_meat",
-      "bottle_water",
-      "carb_water",
-      "chewing_gums",
-      "chocolate",
       "coconut_milk",
       "coconut_oil",
       "conc_juice_t",
       "concen_juice",
       "gummy_bears",
       "iced_coffee",
-      "limonades",
-      "nonalco_beer",
       "olives",
-      "packag_food",
       "soy_milk",
-      "soy_milk_t",
-      "vinegar",
-      "vinegar_c"
+      "soy_milk_t"
     ]
   },
   "te_logistica": {
@@ -1834,8 +1787,6 @@
       "concen_juice",
       "corks",
       "cut_flowers",
-      "fuel_oil_ei",
-      "fuel_oil_wi",
       "gummy_bears",
       "harvest_bins",
       "iced_coffee",
@@ -1997,6 +1948,7 @@
       "lavender",
       "limonades",
       "lumber",
+      "lux_yacht",
       "maple_syrup",
       "mason_jars",
       "med_equip",
@@ -2023,7 +1975,6 @@
       "pnut_butter",
       "post_packag",
       "potatoes",
-      "princess",
       "protec_cloth",
       "radiators",
       "rice",
@@ -2126,6 +2077,7 @@
       "limonades",
       "lpg",
       "lumber",
+      "lux_yacht",
       "maple_syrup",
       "mason_jars",
       "med_equip",
@@ -2155,7 +2107,6 @@
       "post_packag",
       "potatoes",
       "precast_strs",
-      "princess",
       "protec_cloth",
       "radiators",
       "rice",

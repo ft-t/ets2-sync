@@ -1,8 +1,6 @@
 {
   "variants": [
-    "trailer.car_volvo",
-    "trailer.overweight.tubeair",
-    "trailer.overweight.windplant"
+    "trailer.car_volvo"
   ],
   "definitions": {
     "trailer_def.barley.s_ki_solid.cover": {
@@ -24,12 +22,6 @@
       "countries": []
     },
     "trailer_def.wheat.s_ki_solid.cover": {
-      "countries": []
-    },
-    "trailer_def.windml_eng.overweight.windplant": {
-      "countries": []
-    },
-    "trailer_def.windml_tube.overweight.tubeair": {
       "countries": []
     },
     "trailer_def.wood_bark.s_ki_solid.cover": {

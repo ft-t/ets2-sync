@@ -441,6 +441,20 @@
       "wood_bark"
     ]
   },
+  "cemelt_fl_ru": {
+    "cities": [],
+    "cargoes_in": [
+      "wooden_beams"
+    ],
+    "cargoes_out": []
+  },
+  "cemelt_fla": {
+    "cities": [],
+    "cargoes_in": [
+      "wooden_beams"
+    ],
+    "cargoes_out": []
+  },
   "cesare_smar": {
     "cities": [],
     "cargoes_in": [
@@ -613,6 +627,48 @@
       "wheat"
     ]
   },
+  "domdepo": {
+    "cities": [],
+    "cargoes_in": [
+      "elect_wiring",
+      "guard_rails",
+      "plumb_suppl",
+      "refl_posts",
+      "scaffoldings",
+      "stone_wool",
+      "wooden_beams"
+    ],
+    "cargoes_out": [
+      "elect_wiring",
+      "guard_rails",
+      "plumb_suppl",
+      "refl_posts",
+      "scaffoldings",
+      "stone_wool",
+      "wooden_beams"
+    ]
+  },
+  "domdepo_ru": {
+    "cities": [],
+    "cargoes_in": [
+      "elect_wiring",
+      "guard_rails",
+      "plumb_suppl",
+      "refl_posts",
+      "scaffoldings",
+      "stone_wool",
+      "wooden_beams"
+    ],
+    "cargoes_out": [
+      "elect_wiring",
+      "guard_rails",
+      "plumb_suppl",
+      "refl_posts",
+      "scaffoldings",
+      "stone_wool",
+      "wooden_beams"
+    ]
+  },
   "drekkar": {
     "cities": [
       "bergen",
@@ -696,6 +752,7 @@
       "limonades",
       "liver_paste",
       "lumber",
+      "lux_yacht",
       "maple_syrup",
       "mason_jars",
       "med_equip",
@@ -730,7 +787,6 @@
       "pot_flowers",
       "potatoes",
       "precast_strs",
-      "princess",
       "radiators",
       "refl_posts",
       "rice",
@@ -1942,10 +1998,10 @@
     "cargoes_in": [
       "diesel",
       "fueltanker",
-      "princess"
+      "lux_yacht"
     ],
     "cargoes_out": [
-      "princess"
+      "lux_yacht"
     ]
   },
   "ms_stein": {
@@ -2237,6 +2293,7 @@
       "limonades",
       "liver_paste",
       "lumber",
+      "lux_yacht",
       "maple_syrup",
       "mason_jars",
       "med_equip",
@@ -2270,7 +2327,6 @@
       "pot_flowers",
       "potatoes",
       "precast_strs",
-      "princess",
       "radiators",
       "refl_posts",
       "rice",
@@ -2396,6 +2452,7 @@
       "limonades",
       "liver_paste",
       "lumber",
+      "lux_yacht",
       "maple_syrup",
       "mason_jars",
       "med_equip",
@@ -2429,7 +2486,6 @@
       "pot_flowers",
       "potatoes",
       "precast_strs",
-      "princess",
       "radiators",
       "rice",
       "rice_c",
@@ -2771,6 +2827,20 @@
       "wood_bark"
     ]
   },
+  "radus": {
+    "cities": [],
+    "cargoes_in": [],
+    "cargoes_out": [
+      "empty_barr"
+    ]
+  },
+  "radus_ru": {
+    "cities": [],
+    "cargoes_in": [],
+    "cargoes_out": [
+      "empty_barr"
+    ]
+  },
   "renar": {
     "cities": [
       "kobenhavn",
@@ -2888,6 +2958,14 @@
       "windml_tube",
       "wood_bark"
     ]
+  },
+  "renat": {
+    "cities": [],
+    "cargoes_in": [
+      "elect_wiring",
+      "wooden_beams"
+    ],
+    "cargoes_out": []
   },
   "sag_tre": {
     "cities": [
