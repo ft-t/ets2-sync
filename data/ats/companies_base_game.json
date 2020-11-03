@@ -788,39 +788,8 @@
     "cities": [
       "los_angeles"
     ],
-    "cargoes_in": [
-      "diesel",
-      "electro_comp",
-      "forklifts",
-      "kw_t680",
-      "office_suppl",
-      "tyres"
-    ],
-    "cargoes_out": [
-      "kw_t680"
-    ]
-  },
-  "kw_trk_pln": {
-    "cities": [],
-    "cargoes_in": [
-      "cable",
-      "colors",
-      "diesel",
-      "electro_comp",
-      "forklifts",
-      "machine_pts",
-      "mtl_coil",
-      "office_suppl",
-      "sq_tub",
-      "tyres",
-      "ventilation"
-    ],
-    "cargoes_out": [
-      "empty_palet",
-      "kw_t680",
-      "scrap_metals",
-      "used_pack"
-    ]
+    "cargoes_in": [],
+    "cargoes_out": []
   },
   "mcs_con_sit": {
     "cities": [
@@ -879,7 +848,6 @@
       "frozen_veget",
       "fruit_juic_t",
       "grain",
-      "kw_t680",
       "largetubes",
       "machine_pts",
       "milk",
@@ -923,7 +891,6 @@
       "home_acc",
       "househd_appl",
       "icecream",
-      "kw_t680",
       "largetubes",
       "lumber",
       "lumber_b",

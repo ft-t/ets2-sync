@@ -39,7 +39,6 @@
     "trailer.dump_g",
     ".fallback.trailer",
     ".fallback.trailer.slave",
-    "trailer.food_tank",
     "trailer.frac_tank_b",
     "trailer.frac_tank_g",
     "trailer.frac_tank_r",
@@ -57,7 +56,6 @@
     "trailer.lowboy_r.cargo_forklf",
     "trailer.lowboy_r.cargo_roller",
     "trailer.lowboy_r.cargo_tract",
-    "trailer.mag_55l_t3.potato",
     "trailer.lowboy_r",
     "trailer.lowboy_y",
     "trailer.mag_55l_t3.c_harvester",
@@ -122,6 +120,7 @@
     "trailer.scs_gosck32",
     "trailer.scs_gosck40",
     "trailer.scs_grainh40",
+    "trailer.scs_grainh50",
     "trailer.scs_grainhrm",
     ".scs_grainhdl",
     ".scs_grainhsc",
@@ -157,22 +156,7 @@
     ".scs_ref3.dolly",
     ".scs_ref3.second",
     ".scs_ref3.dolly2",
-    ".scs_ref3.third",
-    "trailer.trans_k_t680.black",
-    ".trans_k_t680.black.second",
-    ".trans_k_t680.black.third",
-    "trailer.trans_k_t680.blue",
-    ".trans_k_t680.blue.second",
-    ".trans_k_t680.blue.third",
-    "trailer.trans_k_t680.red",
-    ".trans_k_t680.red.second",
-    ".trans_k_t680.red.third",
-    "trailer.trans_k_t680.white",
-    ".trans_k_t680.white.second",
-    ".trans_k_t680.white.third",
-    "trailer.trans_k_t680.yellow",
-    ".trans_k_t680.yellow.second",
-    ".trans_k_t680.yellow.third"
+    ".scs_ref3.third"
   ],
   "definitions": {
     "trailer_def.aromatics.fuel": {
@@ -181,6 +165,7 @@
     "trailer_def.aromatics.fuel_l": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -220,6 +205,7 @@
     },
     "trailer_def.cement.drybulk_rm2": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -231,6 +217,7 @@
     "trailer_def.crude_oil.fuel_l": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -244,6 +231,7 @@
     "trailer_def.diesel.fuel_l": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -263,6 +251,7 @@
     "trailer_def.ethane.gas_l": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -293,6 +282,7 @@
     },
     "trailer_def.gravel.bdump_rm_2": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -313,26 +303,12 @@
     "trailer_def.hydrochlor.acid_l": {
       "countries": []
     },
-    "trailer_def.kw_t680.trans_k_t680.black": {
-      "countries": []
-    },
-    "trailer_def.kw_t680.trans_k_t680.blue": {
-      "countries": []
-    },
-    "trailer_def.kw_t680.trans_k_t680.red": {
-      "countries": []
-    },
-    "trailer_def.kw_t680.trans_k_t680.white": {
-      "countries": []
-    },
-    "trailer_def.kw_t680.trans_k_t680.yellow": {
-      "countries": []
-    },
     "trailer_def.limestone.bdump_pup_2": {
       "countries": []
     },
     "trailer_def.limestone.bdump_rm_2": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -371,6 +347,7 @@
     "trailer_def.petrol.fuel_l": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -384,6 +361,7 @@
     "trailer_def.propane.gas_l": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -399,6 +377,7 @@
     },
     "trailer_def.sand.bdump_rm_2": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -415,6 +394,7 @@
     },
     "trailer_def.scs.box.bdouble_2_2.dryvan": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -423,6 +403,7 @@
     },
     "trailer_def.scs.box.bdouble_2_2.insulated": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -431,6 +412,7 @@
     },
     "trailer_def.scs.box.bdouble_2_2.reefer": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -439,6 +421,7 @@
     },
     "trailer_def.scs.box.bdouble_3_2.dryvan": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -447,6 +430,7 @@
     },
     "trailer_def.scs.box.bdouble_3_2.insulated": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -455,6 +439,7 @@
     },
     "trailer_def.scs.box.bdouble_3_2.reefer": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -472,6 +457,7 @@
     },
     "trailer_def.scs.box.rm_double_p.dryvan": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -480,6 +466,7 @@
     },
     "trailer_def.scs.box.rm_double_p.insulated": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -488,6 +475,7 @@
     },
     "trailer_def.scs.box.rm_double_p.reefer": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -614,6 +602,7 @@
     "trailer_def.scs.box.single_53r.dryvan": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -624,6 +613,7 @@
     "trailer_def.scs.box.single_53r.insulated": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -634,6 +624,7 @@
     "trailer_def.scs.box.single_53r.reefer": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -679,6 +670,7 @@
     },
     "trailer_def.scs.box.triple_p.dryvan": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -686,6 +678,7 @@
     },
     "trailer_def.scs.box.triple_p.insulated": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -693,6 +686,7 @@
     },
     "trailer_def.scs.box.triple_p.reefer": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -751,6 +745,7 @@
     },
     "trailer_def.scs.flatbed.bdouble_2_2.curtain": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -759,6 +754,7 @@
     },
     "trailer_def.scs.flatbed.bdouble_2_2.flatbed": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -767,6 +763,7 @@
     },
     "trailer_def.scs.flatbed.bdouble_2_2.flatbed_a": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -775,6 +772,7 @@
     },
     "trailer_def.scs.flatbed.bdouble_3_2.curtain": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -783,6 +781,7 @@
     },
     "trailer_def.scs.flatbed.bdouble_3_2.flatbed": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -791,6 +790,7 @@
     },
     "trailer_def.scs.flatbed.bdouble_3_2.flatbed_a": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -817,6 +817,7 @@
     },
     "trailer_def.scs.flatbed.rm_double.curtain": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -825,6 +826,7 @@
     },
     "trailer_def.scs.flatbed.rm_double.flatbed": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -833,6 +835,7 @@
     },
     "trailer_def.scs.flatbed.rm_double.flatbed_a": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -841,6 +844,7 @@
     },
     "trailer_def.scs.flatbed.rm_double_p.curtain": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -849,6 +853,7 @@
     },
     "trailer_def.scs.flatbed.rm_double_p.flatbed": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -857,6 +862,7 @@
     },
     "trailer_def.scs.flatbed.rm_double_p.flatbed_a": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -983,6 +989,7 @@
     "trailer_def.scs.flatbed.single_53_4a.curtain": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -993,6 +1000,7 @@
     "trailer_def.scs.flatbed.single_53_4a.flatbed": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1003,6 +1011,7 @@
     "trailer_def.scs.flatbed.single_53_4a.flatbed_a": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1031,6 +1040,7 @@
     "trailer_def.scs.flatbed.single_53r.curtain": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1041,6 +1051,7 @@
     "trailer_def.scs.flatbed.single_53r.flatbed": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1051,6 +1062,7 @@
     "trailer_def.scs.flatbed.single_53r.flatbed_a": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1061,6 +1073,7 @@
     "trailer_def.scs.flatbed.single_53sp.curtain": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1071,6 +1084,7 @@
     "trailer_def.scs.flatbed.single_53sp.flatbed": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1081,6 +1095,7 @@
     "trailer_def.scs.flatbed.single_53sp.flatbed_a": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1126,6 +1141,7 @@
     },
     "trailer_def.scs.flatbed.triple.curtain": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -1133,6 +1149,7 @@
     },
     "trailer_def.scs.flatbed.triple.flatbed": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -1140,6 +1157,7 @@
     },
     "trailer_def.scs.flatbed.triple.flatbed_a": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -1147,6 +1165,7 @@
     },
     "trailer_def.scs.flatbed.triple_p.curtain": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -1154,6 +1173,7 @@
     },
     "trailer_def.scs.flatbed.triple_p.flatbed": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -1161,6 +1181,7 @@
     },
     "trailer_def.scs.flatbed.triple_p.flatbed_a": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -1174,6 +1195,7 @@
     },
     "trailer_def.scs.foodtank.rm_double.foodtank": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -1182,6 +1204,7 @@
     },
     "trailer_def.scs.foodtank.rm_double_p.foodtank": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -1220,6 +1243,7 @@
     },
     "trailer_def.scs.foodtank.triple.foodtank": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -1227,6 +1251,7 @@
     },
     "trailer_def.scs.foodtank.triple_p.foodtank": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -1234,6 +1259,7 @@
     },
     "trailer_def.scs.gooseneck.bdouble_3_2.container": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -1242,6 +1268,7 @@
     },
     "trailer_def.scs.gooseneck.bdouble_3_3.container": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -1250,6 +1277,7 @@
     },
     "trailer_def.scs.gooseneck.rmdouble.container": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -1286,6 +1314,7 @@
     "trailer_def.scs.gooseneck.single_53_3.container": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1296,6 +1325,7 @@
     "trailer_def.scs.gooseneck.single_53_4.container": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1309,6 +1339,7 @@
     "trailer_def.scs.gooseneck.single_53r.container": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1330,6 +1361,7 @@
     },
     "trailer_def.scs.grainhopper.bdouble_3_2.grainhopper": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -1344,6 +1376,7 @@
     },
     "trailer_def.scs.grainhopper.rm_double_p.grainhopper": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah",
@@ -1400,6 +1433,7 @@
     },
     "trailer_def.scs.grainhopper.triple_p.grainhopper": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -1428,6 +1462,7 @@
     },
     "trailer_def.soil.bdump_rm_2": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"
@@ -1445,6 +1480,7 @@
     "trailer_def.solvents.fuel_l": {
       "countries": [
         "arizona",
+        "idaho",
         "nevada",
         "new_mexico",
         "oregon",
@@ -1457,6 +1493,7 @@
     },
     "trailer_def.stones.bdump_rm_2": {
       "countries": [
+        "idaho",
         "nevada",
         "oregon",
         "utah"

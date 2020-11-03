@@ -4,12 +4,8 @@
   "cargo.concr_beams2",
   "cargo.concr_cent",
   "cargo.concr_stair",
-  "cargo.metal_bea_ei",
-  "cargo.metal_bea_wi",
   "cargo.metal_beams",
   "cargo.re_bars",
-  "cargo.re_bars_ei",
-  "cargo.re_bars_wi",
   "cargo.train_part",
   "cargo.train_part2"
 ]

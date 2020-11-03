@@ -356,5 +356,13 @@
       "transformer"
     ],
     "cargoes_out": []
+  },
+  "ws_trk_pln": {
+    "cities": [],
+    "cargoes_in": [
+      "coil",
+      "transformer"
+    ],
+    "cargoes_out": []
   }
 }

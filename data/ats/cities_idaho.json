@@ -1,0 +1,35 @@
+{
+  "city.boise": {
+    "country": "idaho"
+  },
+  "city.coeur_dalene": {
+    "country": "idaho"
+  },
+  "city.grangeville": {
+    "country": "idaho"
+  },
+  "city.idaho_falls": {
+    "country": "idaho"
+  },
+  "city.ketchum": {
+    "country": "idaho"
+  },
+  "city.lewiston": {
+    "country": "idaho"
+  },
+  "city.nampa": {
+    "country": "idaho"
+  },
+  "city.pocatello": {
+    "country": "idaho"
+  },
+  "city.salmon": {
+    "country": "idaho"
+  },
+  "city.sandpoint": {
+    "country": "idaho"
+  },
+  "city.twin_falls": {
+    "country": "idaho"
+  }
+}
