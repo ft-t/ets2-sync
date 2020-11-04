@@ -1,94 +1,25 @@
 {
   "variants": [
-    "trailer.schw_ovrwght.aircond",
-    "trailer.schw_ovrwght.driller",
-    "trailer.schw_ovrwght.helicopter",
-    "trailer.schw_ovrwght.roller",
-    "trailer.schw_ovrwght.tracks",
-    "trailer.schw_ovrwght.tractor",
-    "trailer.schw_ovrwght.tube",
-    "trailer.schw_ovrwght.yacht",
-    "trailer.schw_food",
-    "trailer.schw_ovrwght.boat",
-    "trailer.schw_ovrwght.catg",
-    "trailer.schw_ovrwght.digger500",
-    "trailer.schw_ovrwght.excavator",
-    "trailer.schw_ovrwght.forklifts",
-    "trailer.schw_ovrwght.tractors",
-    "trailer.schw_ovrwght.twocats",
     "trailer.schw_food",
     "trailer.schw_curtain",
+    "trailer.schw_lowl",
     "trailer.schw_reefer",
     "trailer.schw_slidep"
   ],
   "definitions": {
-    "trailer_def.digger1000.schw_ovrwght.catg": {
-      "countries": []
-    },
-    "trailer_def.digger100_ei.schw_ovrwght.catg": {
-      "countries": []
-    },
-    "trailer_def.digger100_eo.schw_ovrwght.catg": {
-      "countries": []
-    },
-    "trailer_def.digger100_wi.schw_ovrwght.catg": {
-      "countries": []
-    },
-    "trailer_def.digger100_wo.schw_ovrwght.catg": {
-      "countries": []
-    },
-    "trailer_def.digger500.schw_ovrwght.digger500": {
-      "countries": []
-    },
-    "trailer_def.digger500_ei.schw_ovrwght.digger500": {
-      "countries": []
-    },
-    "trailer_def.digger500_eo.schw_ovrwght.digger500": {
-      "countries": []
-    },
-    "trailer_def.digger500_wi.schw_ovrwght.digger500": {
-      "countries": []
-    },
-    "trailer_def.digger500_wo.schw_ovrwght.digger500": {
-      "countries": []
-    },
-    "trailer_def.diggers.schw_ovrwght.twocats": {
-      "countries": []
-    },
-    "trailer_def.excavator.schw_ovrwght.excavator": {
-      "countries": []
-    },
-    "trailer_def.excavator_ei.schw_ovrwght.excavator": {
-      "countries": []
-    },
-    "trailer_def.excavator_eo.schw_ovrwght.excavator": {
-      "countries": []
-    },
-    "trailer_def.excavator_wi.schw_ovrwght.excavator": {
-      "countries": []
-    },
-    "trailer_def.excavator_wo.schw_ovrwght.excavator": {
-      "countries": []
-    },
-    "trailer_def.forklifts.schw_ovrwght.forklifts": {
-      "countries": []
-    },
-    "trailer_def.princess.schw_ovrwght.boat": {
-      "countries": []
-    },
     "trailer_def.schwmuller.cisternfood.single_3.cisternfood": {
       "countries": []
     },
     "trailer_def.schwmuller.curtain.single_3.curtain": {
       "countries": []
     },
+    "trailer_def.schwmuller.lowloader.single_3.lowloader": {
+      "countries": []
+    },
     "trailer_def.schwmuller.reefer.single_3.reefer": {
       "countries": []
     },
     "trailer_def.schwmuller.slidepost.single_3.slidepost": {
-      "countries": []
-    },
-    "trailer_def.tractors.schw_ovrwght.tractors": {
       "countries": []
     }
   }
