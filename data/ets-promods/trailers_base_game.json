@@ -44,8 +44,6 @@
     "trailer.orlen",
     "trailer.orlen2",
     "trailer.overweight.boat",
-    "trailer.overweight.tubeair",
-    "trailer.overweight.windplant",
     "trailer.panel_trans.floor",
     "trailer.panel_trans.glass",
     "trailer.panel_trans.wall",
@@ -57,6 +55,7 @@
     "trailer.schmitz.universal_pm",
     "trailer.scs_brick_b",
     "trailer.scs_brick_r",
+    "trailer.scs_brick_y",
     "trailer.scs_curt",
     "trailer.scs_curt_a",
     "trailer.scs_curt_b2",
@@ -113,6 +112,13 @@
     ".hu_ins_2.second",
     "trailer.scs_ins_s",
     "trailer.scs_log",
+    "trailer.scs_lowbed_3",
+    "trailer.scs_lowbed41",
+    "trailer.scs_lowbed_4",
+    "trailer.scs_lowlowd2",
+    "trailer.scs_lowlow2e",
+    "trailer.scs_lowlowd4",
+    "trailer.scs_lowlow4e",
     "trailer.scs_ref",
     "trailer.scs_ref_a",
     "trailer.scs_ref_b2",
@@ -159,12 +165,6 @@
     "trailer_def.cement.cement": {
       "countries": []
     },
-    "trailer_def.cement_ei.cement": {
-      "countries": []
-    },
-    "trailer_def.cement_wi.cement": {
-      "countries": []
-    },
     "trailer_def.chemicals.chcistern": {
       "countries": []
     },
@@ -174,109 +174,22 @@
     "trailer_def.concrete.cement_mix": {
       "countries": []
     },
-    "trailer_def.concrete_ei.cement_mix": {
-      "countries": []
-    },
-    "trailer_def.concrete_wi.cement_mix": {
-      "countries": []
-    },
     "trailer_def.diesel.fuel_cistern": {
       "countries": []
     },
     "trailer_def.diesel.willig.fuel_cistern": {
       "countries": []
     },
-    "trailer_def.diesel_ei.fuel_cistern": {
-      "countries": []
-    },
-    "trailer_def.diesel_ei.willig.fuel_cistern": {
-      "countries": []
-    },
-    "trailer_def.diesel_wi.fuel_cistern": {
-      "countries": []
-    },
-    "trailer_def.diesel_wi.willig.fuel_cistern": {
-      "countries": []
-    },
-    "trailer_def.digger1000.overweight.digger1000": {
-      "countries": []
-    },
-    "trailer_def.digger100_ei.overweight.digger1000": {
-      "countries": []
-    },
-    "trailer_def.digger100_eo.overweight.digger1000": {
-      "countries": []
-    },
-    "trailer_def.digger100_wi.overweight.digger1000": {
-      "countries": []
-    },
-    "trailer_def.digger100_wo.overweight.digger1000": {
-      "countries": []
-    },
-    "trailer_def.digger500.overweight.digger500": {
-      "countries": []
-    },
-    "trailer_def.digger500_ei.overweight.digger500": {
-      "countries": []
-    },
-    "trailer_def.digger500_eo.overweight.digger500": {
-      "countries": []
-    },
-    "trailer_def.digger500_wi.overweight.digger500": {
-      "countries": []
-    },
-    "trailer_def.digger500_wo.overweight.digger500": {
-      "countries": []
-    },
-    "trailer_def.diggers.overweight.digger": {
-      "countries": []
-    },
-    "trailer_def.excav_soi_eo.s_ki_solid.cover": {
-      "countries": []
-    },
-    "trailer_def.excav_soi_wo.s_ki_solid.cover": {
-      "countries": []
-    },
     "trailer_def.excav_soil.s_ki_solid.cover": {
       "countries": []
     },
-    "trailer_def.excavator.overweight.excavator": {
-      "countries": []
-    },
-    "trailer_def.excavator_ei.overweight.excavator": {
-      "countries": []
-    },
-    "trailer_def.excavator_eo.overweight.excavator": {
-      "countries": []
-    },
-    "trailer_def.excavator_wi.overweight.excavator": {
-      "countries": []
-    },
-    "trailer_def.excavator_wo.overweight.excavator": {
-      "countries": []
-    },
     "trailer_def.floorpanels.panel_trans.floor": {
-      "countries": []
-    },
-    "trailer_def.forklifts.overweight.forklifts": {
       "countries": []
     },
     "trailer_def.fuel_oil.fuel_cistern": {
       "countries": []
     },
     "trailer_def.fuel_oil.willig.fuel_cistern": {
-      "countries": []
-    },
-    "trailer_def.fuel_oil_ei.fuel_cistern": {
-      "countries": []
-    },
-    "trailer_def.fuel_oil_ei.willig.fuel_cistern": {
-      "countries": []
-    },
-    "trailer_def.fuel_oil_wi.fuel_cistern": {
-      "countries": []
-    },
-    "trailer_def.fuel_oil_wi.willig.fuel_cistern": {
       "countries": []
     },
     "trailer_def.glass.panel_trans.glass": {
@@ -295,12 +208,6 @@
       "countries": []
     },
     "trailer_def.gravel.s_ki_solid.gravel": {
-      "countries": []
-    },
-    "trailer_def.gravel_ei.s_ki_solid.gravel": {
-      "countries": []
-    },
-    "trailer_def.gravel_wi.s_ki_solid.gravel": {
       "countries": []
     },
     "trailer_def.hchemicals.chcistern": {
@@ -393,9 +300,6 @@
     "trailer_def.potahydro.chcistern": {
       "countries": []
     },
-    "trailer_def.princess.overweight.boat": {
-      "countries": []
-    },
     "trailer_def.reindeer.schw_reefer": {
       "countries": []
     },
@@ -408,19 +312,7 @@
     "trailer_def.sand.s_ki_solid.sand": {
       "countries": []
     },
-    "trailer_def.sand_ei.s_ki_solid.sand": {
-      "countries": []
-    },
-    "trailer_def.sand_wi.s_ki_solid.sand": {
-      "countries": []
-    },
     "trailer_def.scania_tr.truck_trans.scania": {
-      "countries": []
-    },
-    "trailer_def.scrap_met_eo.s_ki_solid.cover": {
-      "countries": []
-    },
-    "trailer_def.scrap_met_wo.s_ki_solid.cover": {
       "countries": []
     },
     "trailer_def.scrap_metals.s_ki_solid.cover": {
@@ -2674,6 +2566,57 @@
     "trailer_def.scs.log.single_4.wood": {
       "countries": []
     },
+    "trailer_def.scs.lowbed.single_2s.short": {
+      "countries": []
+    },
+    "trailer_def.scs.lowbed.single_3.short": {
+      "countries": []
+    },
+    "trailer_def.scs.lowbed.single_3s.short": {
+      "countries": []
+    },
+    "trailer_def.scs.lowbed.single_41_ln.long": {
+      "countries": []
+    },
+    "trailer_def.scs.lowbed.single_41_sh.short": {
+      "countries": []
+    },
+    "trailer_def.scs.lowbed.single_4_ln.long": {
+      "countries": []
+    },
+    "trailer_def.scs.lowbed.single_4_sh.short": {
+      "countries": []
+    },
+    "trailer_def.scs.lowbed.single_5_ln.long": {
+      "countries": []
+    },
+    "trailer_def.scs.lowbed.single_5_sh.short": {
+      "countries": []
+    },
+    "trailer_def.scs.lowloader.single_2_ln.long": {
+      "countries": []
+    },
+    "trailer_def.scs.lowloader.single_2_sh.short": {
+      "countries": []
+    },
+    "trailer_def.scs.lowloader.single_3_1.short": {
+      "countries": []
+    },
+    "trailer_def.scs.lowloader.single_3_ln.long": {
+      "countries": []
+    },
+    "trailer_def.scs.lowloader.single_3_sh.short": {
+      "countries": []
+    },
+    "trailer_def.scs.lowloader.single_4_1.short": {
+      "countries": []
+    },
+    "trailer_def.scs.lowloader.single_4_ln.long": {
+      "countries": []
+    },
+    "trailer_def.scs.lowloader.single_4_sh.short": {
+      "countries": []
+    },
     "trailer_def.seafood.schw_reefer": {
       "countries": []
     },
@@ -2690,15 +2633,6 @@
       "countries": []
     },
     "trailer_def.stones.s_ki_solid.cover": {
-      "countries": []
-    },
-    "trailer_def.stones_eo.s_ki_solid.cover": {
-      "countries": []
-    },
-    "trailer_def.stones_wo.s_ki_solid.cover": {
-      "countries": []
-    },
-    "trailer_def.tractors.overweight.tractors": {
       "countries": []
     },
     "trailer_def.transmis.cargo20": {
@@ -2738,12 +2672,6 @@
       "countries": []
     },
     "trailer_def.wheat.s_ki_solid.cover": {
-      "countries": []
-    },
-    "trailer_def.windml_eng.overweight.windplant": {
-      "countries": []
-    },
-    "trailer_def.windml_tube.overweight.tubeair": {
       "countries": []
     },
     "trailer_def.wood_bark.s_ki_solid.cover": {

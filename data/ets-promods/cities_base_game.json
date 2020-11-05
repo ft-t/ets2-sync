@@ -1,4 +1,7 @@
 {
+  "city.Gdynia": {
+    "country": "poland"
+  },
   "city.aalborg": {
     "country": "denmark"
   },
@@ -8,17 +11,11 @@
   "city.aberdeen": {
     "country": "uk"
   },
-  "city.adana": {
-    "country": "turkey"
-  },
   "city.ajaccio": {
     "country": "france"
   },
   "city.akranes": {
     "country": "iceland"
-  },
-  "city.albacete": {
-    "country": "spain"
   },
   "city.alban": {
     "country": "france"
@@ -26,14 +23,8 @@
   "city.alexandria": {
     "country": "egypt"
   },
-  "city.alicante": {
-    "country": "spain"
-  },
   "city.alkarak": {
     "country": "jordan"
-  },
-  "city.almeria": {
-    "country": "spain"
   },
   "city.amman": {
     "country": "jordan"
@@ -50,17 +41,11 @@
   "city.angers": {
     "country": "france"
   },
-  "city.antakya": {
-    "country": "turkey"
-  },
   "city.antwerp": {
     "country": "belgium"
   },
   "city.aqaba": {
     "country": "jordan"
-  },
-  "city.aranda": {
-    "country": "spain"
   },
   "city.artand": {
     "country": "romania"
@@ -74,9 +59,6 @@
   "city.bacau": {
     "country": "romania"
   },
-  "city.badajoz": {
-    "country": "spain"
-  },
   "city.banjaluka": {
     "country": "bosnia"
   },
@@ -85,9 +67,6 @@
   },
   "city.bari": {
     "country": "italy"
-  },
-  "city.barnstaple": {
-    "country": "uk"
   },
   "city.basel": {
     "country": "switzerland"
@@ -119,9 +98,6 @@
   "city.bialystok": {
     "country": "poland"
   },
-  "city.bilacerkva": {
-    "country": "ukraine"
-  },
   "city.bilbao": {
     "country": "spain"
   },
@@ -149,9 +125,6 @@
   "city.bonn": {
     "country": "germany"
   },
-  "city.bor": {
-    "country": "czech"
-  },
   "city.bordeaux": {
     "country": "france"
   },
@@ -176,9 +149,6 @@
   "city.brest": {
     "country": "france"
   },
-  "city.bristol": {
-    "country": "uk"
-  },
   "city.brno": {
     "country": "czech"
   },
@@ -194,14 +164,8 @@
   "city.budapest": {
     "country": "hungary"
   },
-  "city.budejovice": {
-    "country": "czech"
-  },
   "city.burgas": {
     "country": "bulgaria"
-  },
-  "city.burgos": {
-    "country": "spain"
   },
   "city.busko": {
     "country": "poland"
@@ -245,9 +209,6 @@
   "city.cardiff": {
     "country": "uk"
   },
-  "city.carlisle": {
-    "country": "uk"
-  },
   "city.cassino": {
     "country": "italy"
   },
@@ -271,12 +232,6 @@
   },
   "city.cherb": {
     "country": "france"
-  },
-  "city.chernihiv": {
-    "country": "ukraine"
-  },
-  "city.chernivtsi": {
-    "country": "ukraine"
   },
   "city.chur": {
     "country": "switzerland"
@@ -302,9 +257,6 @@
   "city.contreras": {
     "country": "spain"
   },
-  "city.cork": {
-    "country": "ireland"
-  },
   "city.craiova": {
     "country": "romania"
   },
@@ -319,9 +271,6 @@
   },
   "city.damietta": {
     "country": "egypt"
-  },
-  "city.daugavpils": {
-    "country": "latvia"
   },
   "city.debrecen": {
     "country": "hungary"
@@ -341,9 +290,6 @@
   "city.douglas": {
     "country": "iom"
   },
-  "city.dover": {
-    "country": "uk"
-  },
   "city.dresden": {
     "country": "germany"
   },
@@ -358,12 +304,6 @@
   },
   "city.dumfries": {
     "country": "uk"
-  },
-  "city.durres": {
-    "country": "albania"
-  },
-  "city.dusseldorf": {
-    "country": "germany"
   },
   "city.dziwnowek": {
     "country": "poland"
@@ -395,9 +335,6 @@
   "city.europabr": {
     "country": "austria"
   },
-  "city.europoort": {
-    "country": "netherlands"
-  },
   "city.evie": {
     "country": "uk"
   },
@@ -406,9 +343,6 @@
   },
   "city.feldkirch": {
     "country": "Austria"
-  },
-  "city.felixstowe": {
-    "country": "uk"
   },
   "city.firenze": {
     "country": "italy"
@@ -428,9 +362,6 @@
   "city.frederikshv": {
     "country": "denmark"
   },
-  "city.freiburg": {
-    "country": "germany"
-  },
   "city.furth": {
     "country": "germany"
   },
@@ -440,13 +371,7 @@
   "city.galway": {
     "country": "ireland"
   },
-  "city.gardermoen": {
-    "country": "norway"
-  },
   "city.gdansk": {
-    "country": "poland"
-  },
-  "city.gdyne": {
     "country": "poland"
   },
   "city.gedser": {
@@ -459,9 +384,6 @@
     "country": "switzerland"
   },
   "city.genova": {
-    "country": "italy"
-  },
-  "city.genova_bridg": {
     "country": "italy"
   },
   "city.giurgiu": {
@@ -488,9 +410,6 @@
   "city.goteborg": {
     "country": "sweden"
   },
-  "city.granada": {
-    "country": "spain"
-  },
   "city.graz": {
     "country": "austria"
   },
@@ -509,9 +428,6 @@
   "city.grumantbyen": {
     "country": "svalbard"
   },
-  "city.gudalajara": {
-    "country": "spain"
-  },
   "city.hainburg": {
     "country": "Austria"
   },
@@ -527,20 +443,11 @@
   "city.haparanda": {
     "country": "sweden"
   },
-  "city.harwich": {
-    "country": "uk"
-  },
-  "city.haugesund": {
-    "country": "norway"
-  },
   "city.heilbronn": {
     "country": "germany"
   },
   "city.helsingborg": {
     "country": "sweden"
-  },
-  "city.helsinki": {
-    "country": "finland"
   },
   "city.heysham": {
     "country": "uk"
@@ -554,29 +461,14 @@
   "city.holmavik": {
     "country": "iceland"
   },
-  "city.hrkr": {
-    "country": "czech"
-  },
   "city.huesca": {
     "country": "spain"
-  },
-  "city.hull": {
-    "country": "uk"
   },
   "city.hunedoara": {
     "country": "romania"
   },
   "city.iasi": {
     "country": "romania"
-  },
-  "city.iisalmi": {
-    "country": "finland"
-  },
-  "city.ijmuiden": {
-    "country": "netherlands"
-  },
-  "city.ilomantsi": {
-    "country": "finland"
   },
   "city.ilowa": {
     "country": "poland"
@@ -596,14 +488,8 @@
   "city.irun": {
     "country": "spain"
   },
-  "city.iskenderun": {
-    "country": "turkey"
-  },
   "city.istanbul": {
     "country": "turkey"
-  },
-  "city.ivanofrank": {
-    "country": "ukraine"
   },
   "city.jaca": {
     "country": "spain"
@@ -623,9 +509,6 @@
   "city.jonquera": {
     "country": "spain"
   },
-  "city.kajaani": {
-    "country": "finland"
-  },
   "city.kaliningrad": {
     "country": "russia"
   },
@@ -633,12 +516,6 @@
     "country": "sweden"
   },
   "city.kalmar": {
-    "country": "sweden"
-  },
-  "city.kamianets": {
-    "country": "ukraine"
-  },
-  "city.kapellskar": {
     "country": "sweden"
   },
   "city.kapikule": {
@@ -649,9 +526,6 @@
   },
   "city.karlskrona": {
     "country": "sweden"
-  },
-  "city.karlsruhe": {
-    "country": "germany"
   },
   "city.kassel": {
     "country": "germany"
@@ -665,29 +539,17 @@
   "city.kemi": {
     "country": "finland"
   },
-  "city.kesan": {
-    "country": "turkey"
-  },
-  "city.khmelnytskyi": {
-    "country": "ukraine"
-  },
   "city.kiel": {
     "country": "germany"
   },
   "city.kielce": {
     "country": "poland"
   },
-  "city.kirklareli": {
-    "country": "turkey"
-  },
   "city.kirkwall": {
     "country": "uk"
   },
   "city.klagenfurt": {
     "country": "austria"
-  },
-  "city.klaipeda": {
-    "country": "lithuania"
   },
   "city.kobenhavn": {
     "country": "denmark"
@@ -698,26 +560,17 @@
   "city.kokkola": {
     "country": "finland"
   },
-  "city.koln": {
-    "country": "germany"
+  "city.koper": {
+    "country": "slovenia"
   },
   "city.korce": {
     "country": "albania"
-  },
-  "city.korosten": {
-    "country": "ukraine"
   },
   "city.kosice": {
     "country": "slovakia"
   },
   "city.koszalin": {
     "country": "poland"
-  },
-  "city.kotka": {
-    "country": "finland"
-  },
-  "city.kouvola": {
-    "country": "finland"
   },
   "city.kovel": {
     "country": "ukraine"
@@ -743,19 +596,10 @@
   "city.krosno": {
     "country": "poland"
   },
-  "city.kuhmo": {
-    "country": "finland"
-  },
   "city.kunda": {
     "country": "estonia"
   },
   "city.kuusamo": {
-    "country": "finland"
-  },
-  "city.kyiv": {
-    "country": "ukraine"
-  },
-  "city.lahti": {
     "country": "finland"
   },
   "city.larnaka": {
@@ -766,9 +610,6 @@
   },
   "city.larochelle": {
     "country": "france"
-  },
-  "city.laspezia": {
-    "country": "italy"
   },
   "city.laurent": {
     "country": "france"
@@ -796,15 +637,6 @@
   },
   "city.leskovac": {
     "country": "serbia"
-  },
-  "city.liege": {
-    "country": "belgium"
-  },
-  "city.lieksa": {
-    "country": "finland"
-  },
-  "city.liepaja": {
-    "country": "latvia"
   },
   "city.lile_rousse": {
     "country": "france"
@@ -869,9 +701,6 @@
   "city.luga": {
     "country": "russia"
   },
-  "city.luleburgaz": {
-    "country": "turkey"
-  },
   "city.lutsk": {
     "country": "ukraine"
   },
@@ -890,9 +719,6 @@
   "city.madaba": {
     "country": "jordan"
   },
-  "city.madrid": {
-    "country": "spain"
-  },
   "city.mafraq": {
     "country": "jordan"
   },
@@ -901,9 +727,6 @@
   },
   "city.mainz": {
     "country": "germany"
-  },
-  "city.malaga": {
-    "country": "spain"
   },
   "city.malmo": {
     "country": "sweden"
@@ -926,17 +749,8 @@
   "city.maribor": {
     "country": "slovenia"
   },
-  "city.marsamatruh": {
-    "country": "egypt"
-  },
   "city.marseille": {
     "country": "france"
-  },
-  "city.mazeikiai": {
-    "country": "lithuania"
-  },
-  "city.mersin": {
-    "country": "turkey"
   },
   "city.messina": {
     "country": "italy"
@@ -956,14 +770,8 @@
   "city.modena": {
     "country": "italy"
   },
-  "city.monaco": {
-    "country": "monaco"
-  },
   "city.montana": {
     "country": "bulgaria"
-  },
-  "city.montdemarsan": {
-    "country": "france"
   },
   "city.montpellier": {
     "country": "france"
@@ -979,9 +787,6 @@
   },
   "city.munchen": {
     "country": "germany"
-  },
-  "city.murcia": {
-    "country": "spain"
   },
   "city.naantali": {
     "country": "finland"
@@ -1004,9 +809,6 @@
   "city.newcastle": {
     "country": "uk"
   },
-  "city.newport": {
-    "country": "uk"
-  },
   "city.nice": {
     "country": "france"
   },
@@ -1021,9 +823,6 @@
   },
   "city.novisad": {
     "country": "serbia"
-  },
-  "city.novohradvol": {
-    "country": "ukraine"
   },
   "city.novovolynsk": {
     "country": "ukraine"
@@ -1045,9 +844,6 @@
   },
   "city.odense": {
     "country": "denmark"
-  },
-  "city.odessa": {
-    "country": "ukraine"
   },
   "city.ohrid": {
     "country": "macedonia"
@@ -1121,26 +917,14 @@
   "city.pancevo": {
     "country": "serbia"
   },
-  "city.panevezys": {
-    "country": "lithuania"
-  },
   "city.paris": {
     "country": "france"
   },
   "city.parma": {
     "country": "italy"
   },
-  "city.parnu": {
-    "country": "estonia"
-  },
   "city.pau": {
     "country": "france"
-  },
-  "city.pecs": {
-    "country": "Hungary"
-  },
-  "city.penzance": {
-    "country": "uk"
   },
   "city.pernik": {
     "country": "bulgaria"
@@ -1184,9 +968,6 @@
   "city.plymouth": {
     "country": "uk"
   },
-  "city.plzen": {
-    "country": "czech"
-  },
   "city.poitiers": {
     "country": "france"
   },
@@ -1226,9 +1007,6 @@
   "city.ramsey": {
     "country": "iom"
   },
-  "city.razgrad": {
-    "country": "bulgaria"
-  },
   "city.reims": {
     "country": "france"
   },
@@ -1249,12 +1027,6 @@
   },
   "city.rijeka": {
     "country": "croatia"
-  },
-  "city.rimini": {
-    "country": "italy"
-  },
-  "city.rivne": {
-    "country": "ukraine"
   },
   "city.roadworks_a7": {
     "country": "germany"
@@ -1289,20 +1061,11 @@
   "city.rzeszow": {
     "country": "poland"
   },
-  "city.saarbrucken": {
-    "country": "germany"
-  },
   "city.safawi": {
     "country": "jordan"
   },
-  "city.salamanca": {
-    "country": "spain"
-  },
   "city.salzburg": {
     "country": "austria"
-  },
-  "city.sanfernando": {
-    "country": "spain"
   },
   "city.sangiovanni": {
     "country": "italy"
@@ -1310,32 +1073,14 @@
   "city.sanok": {
     "country": "poland"
   },
-  "city.sarajevo": {
-    "country": "bosnia"
-  },
-  "city.sarny": {
-    "country": "ukraine"
-  },
   "city.sassari": {
     "country": "italy"
   },
   "city.senj": {
     "country": "croatia"
   },
-  "city.sevilla": {
-    "country": "spain"
-  },
   "city.sheffield": {
     "country": "uk"
-  },
-  "city.shkoder": {
-    "country": "albania"
-  },
-  "city.shumen": {
-    "country": "bulgaria"
-  },
-  "city.siauliai": {
-    "country": "lithuania"
   },
   "city.sibenik": {
     "country": "croatia"
@@ -1355,17 +1100,8 @@
   "city.sligo": {
     "country": "ireland"
   },
-  "city.sliven": {
-    "country": "bulgaria"
-  },
-  "city.sodertalje": {
-    "country": "sweden"
-  },
   "city.sofia": {
     "country": "bulgaria"
-  },
-  "city.sollum": {
-    "country": "egypt"
   },
   "city.soria": {
     "country": "spain"
@@ -1418,9 +1154,6 @@
   "city.stuttgart": {
     "country": "germany"
   },
-  "city.stzagora": {
-    "country": "bulgaria"
-  },
   "city.subotica": {
     "country": "serbia"
   },
@@ -1438,9 +1171,6 @@
   },
   "city.svalsatwest": {
     "country": "svalbard"
-  },
-  "city.swansea": {
-    "country": "uk"
   },
   "city.swinoujscie": {
     "country": "poland"
@@ -1481,9 +1211,6 @@
   "city.terni": {
     "country": "italy"
   },
-  "city.ternopil": {
-    "country": "ukraine"
-  },
   "city.teruel": {
     "country": "spain"
   },
@@ -1499,20 +1226,11 @@
   "city.tornio": {
     "country": "finland"
   },
-  "city.torrevieja": {
-    "country": "spain"
-  },
   "city.toulouse": {
     "country": "france"
   },
   "city.tours": {
     "country": "france"
-  },
-  "city.tralee": {
-    "country": "ireland"
-  },
-  "city.travemunde": {
-    "country": "germany"
   },
   "city.trelleborg": {
     "country": "sweden"
@@ -1532,9 +1250,6 @@
   "city.truckstope45": {
     "country": "denmark"
   },
-  "city.turku": {
-    "country": "finland"
-  },
   "city.uig": {
     "country": "uk"
   },
@@ -1543,9 +1258,6 @@
   },
   "city.ulm": {
     "country": "germany"
-  },
-  "city.uman": {
-    "country": "ukraine"
   },
   "city.uppsala": {
     "country": "sweden"
@@ -1556,17 +1268,11 @@
   "city.uzhhorod": {
     "country": "ukraine"
   },
-  "city.uzunkopru": {
-    "country": "turkey"
-  },
   "city.valencia": {
     "country": "spain"
   },
   "city.valga": {
     "country": "estonia"
-  },
-  "city.valladolid": {
-    "country": "spain"
   },
   "city.valmiera": {
     "country": "latvia"
@@ -1586,9 +1292,6 @@
   "city.venezia": {
     "country": "italy"
   },
-  "city.ventspils": {
-    "country": "latvia"
-  },
   "city.verona": {
     "country": "italy"
   },
@@ -1601,23 +1304,11 @@
   "city.viitasaari": {
     "country": "finland"
   },
-  "city.vilnius": {
-    "country": "lithuania"
-  },
   "city.vinaros": {
     "country": "spain"
   },
-  "city.vinnytsia": {
-    "country": "ukraine"
-  },
   "city.virovitica": {
     "country": "croatia"
-  },
-  "city.vitoria": {
-    "country": "spain"
-  },
-  "city.vlore": {
-    "country": "albania"
   },
   "city.vranje": {
     "country": "serbia"
@@ -1660,9 +1351,6 @@
   },
   "city.zgorzelec": {
     "country": "poland"
-  },
-  "city.zhytomyr": {
-    "country": "ukraine"
   },
   "city.zrenjanin": {
     "country": "serbia"
